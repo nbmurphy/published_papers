@@ -1,0 +1,1065 @@
+This is TeX, Version 3.1415 (C version 6.1.2.1) (format=latex 6.2.12)  25 SEP 2013 16:57
+**&latex2e Murphy_et_al_Comm_Math_Sci_09-25-2013.tex
+(Murphy_et_al_Comm_Math_Sci_09-25-2013.tex
+LaTeX2e(BETA TEST RELEASE)  <2005/12/01>
+Babel <v3.7h> and hyphenation patterns for english, loaded.
+(cmslatex.cls
+Document Class: cmslatex 1996/10/11 v1.2 LaTeX document class
+(/usr/local/lib/tex/latex2e/unpacked/leqno.clo
+File: leqno.clo 1998/08/17 v1.1c Standard LaTeX option (left equation numbers)
+)
+(/usr/local/lib/tex/latex2e/unpacked/siam10.clo
+File: siam10.clo 1994/10/01 v1.0 SIAM LaTeX file (size option)
+)
+\c@section=\count79
+\c@subsection=\count80
+\c@subsubsection=\count81
+\c@paragraph=\count82
+\c@subparagraph=\count83
+\c@rmnum=\count84
+\c@muni=\count85
+\c@theorem=\count86
+\c@figure=\count87
+\c@table=\count88
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/lib/tex/latex2e/unpacked/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/lib/tex/latex2e/unpacked/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/lib/tex/latex2e/unpacked/graphics.sty
+Package: graphics 2001/07/07 v1.0n Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/lib/tex/inputs/trig.sty
+Package: trig 1994/10/16 v1.08 sin cos tan (DPC)
+)
+(/usr/local/lib/tex/latex2e/unpacked/graphics.cfg)
+Package graphics Info: Driver file: dvips.def on input line 80.
+
+(/usr/local/lib/tex/latex2e/unpacked/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/local/lib/tex/latex2e/unpacked/amssymb.sty
+Package: amssymb 2002/01/22 v2.2d
+
+(/usr/local/lib/tex/latex2e/unpacked/amsfonts.sty
+Package: amsfonts 2001/10/25 v2.2f
+\@emptytoks=\toks15
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 132.
+))
+(/usr/local/lib/tex/latex2e/unpacked/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/lib/tex/latex2e/unpacked/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/lib/tex/latex2e/unpacked/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks16
+\ex@=\dimen105
+))
+(/usr/local/lib/tex/latex2e/unpacked/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen106
+)
+(/usr/local/lib/tex/latex2e/unpacked/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count89
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count90
+\leftroot@=\count91
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count92
+\DOTSCASE@=\count93
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen107
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count94
+\c@MaxMatrixCols=\count95
+\dotsspace@=\muskip10
+\c@parentequation=\count96
+\dspbrk@lvl=\count97
+\tag@help=\toks17
+\row@=\count98
+\column@=\count99
+\maxfields@=\count100
+\andhelp@=\toks18
+\eqnshift@=\dimen108
+\alignsep@=\dimen109
+\tagshift@=\dimen110
+\tagwidth@=\dimen111
+\totwidth@=\dimen112
+\lineht@=\dimen113
+\@envbody=\toks19
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/local/lib/tex/latex2e/unpacked/mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup6
+)
+\c@thm=\count101
+
+(Murphy_et_al_Comm_Math_Sci_09-25-2013.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Try loading font information for U+msa on input line 105.
+
+(/usr/local/lib/tex/latex2e/unpacked/umsa.fd
+File: umsa.fd 2002/01/19 v2.2g AMS font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 105.
+
+(/usr/local/lib/tex/latex2e/unpacked/umsb.fd
+File: umsb.fd 2002/01/19 v2.2g AMS font definitions
+)
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 105.
+
+(/usr/local/lib/tex/latex2e/unpacked/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+
+LaTeX Warning: Citation `MILTON:2002:TC' on page 1 undefined on input line 176.
+
+
+
+LaTeX Warning: Citation `Papanicolaou:RF-835' on page 1 undefined on input line
+ 178.
+
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 1 undefined on input line 180.
+
+
+
+LaTeX Warning: Citation `Golden:JSP-655' on page 1 undefined on input line 180.
+
+
+
+LaTeX Warning: Citation `Simeonova:MMS:1113' on page 1 undefined on input line 
+184.
+
+
+LaTeX Warning: Citation `Bergman:PRL-1285' on page 1 undefined on input line 19
+0.
+
+
+LaTeX Warning: Citation `Milton:APL-300' on page 1 undefined on input line 191.
+
+
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 1 undefined on input line 192.
+
+
+
+LaTeX Warning: Citation `Jonckheere_Luck_JPA_1998' on page 1 undefined on input
+ line 203.
+
+
+LaTeX Warning: Citation `Murphy:JMP:063506' on page 1 undefined on input line 2
+05.
+
+
+LaTeX Warning: Citation `Jonckheere_Luck_JPA_1998' on page 1 undefined on input
+ line 205.
+
+
+LaTeX Warning: Citation `MILTON:2002:TC' on page 1 undefined on input line 208.
+
+
+[1
+
+]
+
+LaTeX Warning: Citation `Bergman:PRL-1285' on page 2 undefined on input line 21
+9.
+
+
+LaTeX Warning: Citation `Milton:APL-300' on page 2 undefined on input line 219.
+
+
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 2 undefined on input line 219.
+
+
+
+LaTeX Warning: Citation `Bergman:AP-78' on page 2 undefined on input line 219.
+
+
+LaTeX Warning: Citation `Cherkaeva:WRM-437' on page 2 undefined on input line 2
+24.
+
+
+LaTeX Warning: Citation `Cherkaeva:IP-1203' on page 2 undefined on input line 2
+24.
+
+
+LaTeX Warning: Citation `Cherkaeva:IP-065008' on page 2 undefined on input line
+ 224.
+
+
+LaTeX Warning: Citation `Zhang:JCP-5390' on page 2 undefined on input line 224.
+
+
+
+LaTeX Warning: Citation `Bonifasi-Lista:PMB-3063' on page 2 undefined on input 
+line 224.
+
+
+LaTeX Warning: Citation `Cherkaev:JBiomech-345' on page 2 undefined on input li
+ne 224.
+
+
+LaTeX Warning: Citation `Day:JPCM-99' on page 2 undefined on input line 224.
+
+
+LaTeX Warning: Citation `Golden:JBM:337' on page 2 undefined on input line 224.
+
+
+
+LaTeX Warning: Citation `Orum:PRSLA:2012' on page 2 undefined on input line 226
+.
+
+
+LaTeX Warning: Citation `Cherkaeva:IP-1203' on page 2 undefined on input line 2
+27.
+
+
+LaTeX Warning: Citation `Cherkaeva:IP-1203' on page 2 undefined on input line 2
+32.
+
+
+LaTeX Warning: Citation `Cherkaeva:IP-065008' on page 2 undefined on input line
+ 232.
+
+
+LaTeX Warning: Citation `Zhang:JCP-5390' on page 2 undefined on input line 232.
+
+
+
+LaTeX Warning: Citation `Bonifasi-Lista:PMB-3063' on page 2 undefined on input 
+line 232.
+
+
+LaTeX Warning: Citation `Cherkaev:JBiomech-345' on page 2 undefined on input li
+ne 232.
+
+
+LaTeX Warning: Citation `Day:JPCM-99' on page 2 undefined on input line 232.
+
+
+LaTeX Warning: Citation `Golden:JBM:337' on page 2 undefined on input line 232.
+
+
+
+LaTeX Warning: Citation `Stauffer-92' on page 2 undefined on input line 234.
+
+
+LaTeX Warning: Citation `Torquato:RHM-02' on page 2 undefined on input line 234
+.
+
+
+LaTeX Warning: Citation `Golden:PRL-3935' on page 2 undefined on input line 237
+.
+
+
+LaTeX Warning: Citation `Murphy:JMP:063506' on page 2 undefined on input line 2
+37.
+
+
+LaTeX Warning: Citation `Murphy:JMP:063506' on page 2 undefined on input line 2
+38.
+
+
+LaTeX Warning: Citation `Murphy_Thermo_Stat_Mech' on page 2 undefined on input 
+line 241.
+
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 2 undefined on input line 272.
+
+
+
+LaTeX Warning: Citation `Bruno:JSP-365' on page 2 undefined on input line 274.
+
+
+LaTeX Warning: Citation `Golden:CMP-467' on page 2 undefined on input line 274.
+
+
+
+LaTeX Warning: Citation `Bruno:JSP-365' on page 2 undefined on input line 277.
+
+
+LaTeX Warning: Citation `Papanicolaou:RF-835' on page 2 undefined on input line
+ 296.
+
+[2]
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 3 undefined on input line 309.
+
+
+
+LaTeX Warning: Citation `Papanicolaou:RF-835' on page 3 undefined on input line
+ 309.
+
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 3 undefined on input line 319.
+
+
+
+LaTeX Warning: Citation `Papanicolaou:RF-835' on page 3 undefined on input line
+ 319.
+
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 3 undefined on input line 327.
+
+
+
+LaTeX Warning: Citation `Papanicolaou:RF-835' on page 3 undefined on input line
+ 327.
+
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 3 undefined on input line 338.
+
+
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 3 undefined on input line 340.
+
+
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 3 undefined on input line 350.
+
+
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 3 undefined on input line 351.
+
+
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 3 undefined on input line 381.
+
+
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 3 undefined on input line 397.
+
+
+
+LaTeX Warning: Citation `Papanicolaou:RF-835' on page 3 undefined on input line
+ 397.
+
+
+LaTeX Warning: Citation `Jackson-1999' on page 3 undefined on input line 398.
+
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 3 undefined on input line 421.
+
+
+
+LaTeX Warning: Citation `Jackson-1999' on page 3 undefined on input line 437.
+
+[3]
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 4 undefined on input line 466.
+
+
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 4 undefined on input line 499.
+
+
+
+LaTeX Warning: Citation `Deift:2000:RMT' on page 4 undefined on input line 502.
+
+
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 4 undefined on input line 502.
+
+
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 4 undefined on input line 509.
+
+
+
+LaTeX Warning: Citation `Murphy:JMP:063506' on page 4 undefined on input line 5
+10.
+
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 4 undefined on input line 528.
+
+
+
+LaTeX Warning: Citation `Murphy:JMP:063506' on page 4 undefined on input line 5
+28.
+
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 4 undefined on input line 540.
+
+
+
+LaTeX Warning: Citation `Folland:95' on page 4 undefined on input line 540.
+
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 4 undefined on input line 552.
+
+
+
+LaTeX Warning: Citation `Jackson-1999' on page 4 undefined on input line 556.
+
+[4]
+
+LaTeX Warning: Citation `Murphy:JMP:063506' on page 5 undefined on input line 5
+66.
+
+
+LaTeX Warning: Citation `Jackson-1999' on page 5 undefined on input line 570.
+
+
+LaTeX Warning: Citation `Jackson-1999' on page 5 undefined on input line 572.
+
+
+LaTeX Warning: Citation `Jackson-1999' on page 5 undefined on input line 576.
+
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 5 undefined on input line 618.
+
+
+
+LaTeX Warning: Citation `Rudin:87' on page 5 undefined on input line 621.
+
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 5 undefined on input line 623.
+
+
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 5 undefined on input line 627.
+
+
+
+LaTeX Warning: Citation `Folland:95' on page 5 undefined on input line 627.
+
+
+LaTeX Warning: Citation `Rudin:87' on page 5 undefined on input line 627.
+
+
+LaTeX Warning: Citation `Stone:64' on page 5 undefined on input line 631.
+
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 5 undefined on input line 646.
+
+
+
+LaTeX Warning: Citation `Reed-1980' on page 5 undefined on input line 655.
+
+
+LaTeX Warning: Citation `Stone:64' on page 5 undefined on input line 655.
+
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 5 undefined on input line 657.
+
+
+
+LaTeX Warning: Citation `Bergman:PRC-377' on page 5 undefined on input line 657
+.
+
+
+LaTeX Warning: Citation `Bergman:AP-78' on page 5 undefined on input line 657.
+
+
+LaTeX Warning: Citation `Murphy:JMP:063506' on page 5 undefined on input line 6
+57.
+
+[5]
+
+LaTeX Warning: Citation `Henrici:1974:v2' on page 6 undefined on input line 687
+.
+
+
+LaTeX Warning: Citation `MILTON:2002:TC' on page 6 undefined on input line 687.
+
+
+
+LaTeX Warning: Citation `Murphy:JMP:063506' on page 6 undefined on input line 7
+02.
+
+
+LaTeX Warning: Citation `Reed-1980' on page 6 undefined on input line 738.
+
+
+LaTeX Warning: Citation `Stone:64' on page 6 undefined on input line 738.
+
+
+LaTeX Warning: Citation `Folland:99' on page 6 undefined on input line 750.
+
+
+LaTeX Warning: Citation `Folland:99' on page 6 undefined on input line 756.
+
+
+LaTeX Warning: Citation `Rudin:87' on page 6 undefined on input line 756.
+
+[6]
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 7 undefined on input line 762.
+
+
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 7 undefined on input line 765.
+
+
+
+LaTeX Warning: Citation `Golden:IMA-97' on page 7 undefined on input line 765.
+
+
+LaTeX Warning: Citation `Bruno:JSP-365' on page 7 undefined on input line 765.
+
+
+LaTeX Warning: Citation `Bruno:JSP-365' on page 7 undefined on input line 768.
+
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 7 undefined on input line 772.
+
+
+
+LaTeX Warning: Citation `Bruno:JSP-365' on page 7 undefined on input line 772.
+
+
+LaTeX Warning: Citation `Bergman:PRL-1285' on page 7 undefined on input line 78
+0.
+
+
+LaTeX Warning: Citation `Milton:APL-300' on page 7 undefined on input line 780.
+
+
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 7 undefined on input line 780.
+
+
+
+LaTeX Warning: Citation `Bergman:AP-78' on page 7 undefined on input line 780.
+
+
+LaTeX Warning: Citation `Milton:JAP-5294' on page 7 undefined on input line 783
+.
+
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 7 undefined on input line 783.
+
+
+
+LaTeX Warning: Citation `Milton:JAP-5294' on page 7 undefined on input line 793
+.
+
+
+LaTeX Warning: Citation `Golden:1986:BCP' on page 7 undefined on input line 793
+.
+
+
+LaTeX Warning: Citation `Akhiezer:Book:1965' on page 7 undefined on input line 
+795.
+
+
+LaTeX Warning: Citation `Folland:95' on page 7 undefined on input line 821.
+
+[7]
+
+LaTeX Warning: Citation `Murphy:JMP:063506' on page 8 undefined on input line 8
+80.
+
+
+LaTeX Warning: Citation `Murphy_Thermo_Stat_Mech' on page 8 undefined on input 
+line 880.
+
+
+LaTeX Warning: Citation `Reed-1980' on page 8 undefined on input line 893.
+
+
+LaTeX Warning: Citation `Murphy:JMP:063506' on page 8 undefined on input line 8
+94.
+
+
+LaTeX Warning: Citation `Murphy_Thermo_Stat_Mech' on page 8 undefined on input 
+line 894.
+
+
+LaTeX Warning: Citation `Murphy_Thermo_Stat_Mech' on page 8 undefined on input 
+line 903.
+
+
+LaTeX Warning: Citation `Murphy_Thermo_Stat_Mech' on page 8 undefined on input 
+line 905.
+
+
+LaTeX Warning: Citation `Golden:CMP-467' on page 8 undefined on input line 937.
+
+
+
+LaTeX Warning: Citation `Bruno:JSP-365' on page 8 undefined on input line 937.
+
+
+LaTeX Warning: Citation `Golden:CMP-467' on page 8 undefined on input line 942.
+
+
+
+LaTeX Warning: Citation `Golden:CMP-467' on page 8 undefined on input line 958.
+
+
+
+LaTeX Warning: Citation `Bruno:JSP-365' on page 8 undefined on input line 958.
+
+[8]
+
+LaTeX Warning: Citation `Golden:CMP-467' on page 9 undefined on input line 971.
+
+
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 9 undefined on input line 985.
+
+
+
+LaTeX Warning: Citation `Bruno:JSP-365' on page 9 undefined on input line 985.
+
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 9 undefined on input line 1000
+.
+
+
+LaTeX Warning: Citation `Bruno:JSP-365' on page 9 undefined on input line 1014.
+
+
+[9]
+
+LaTeX Warning: Citation `Demmel:1997' on page 10 undefined on input line 1113.
+
+
+LaTeX Warning: Citation `Horn_Johnson-1990' on page 10 undefined on input line 
+1136.
+
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 10 undefined on input line 117
+5.
+
+[10]
+
+LaTeX Warning: Citation `MILTON:2002:TC' on page 11 undefined on input line 124
+0.
+
+
+LaTeX Warning: Citation `Golden:JBM:337' on page 11 undefined on input line 130
+3.
+
+
+LaTeX Warning: Citation `Murphy:JMP:063506' on page 11 undefined on input line 
+1303.
+
+
+LaTeX Warning: Citation `Stone:64' on page 11 undefined on input line 1325.
+
+[11] [12]
+
+LaTeX Warning: Citation `Durrett:Book:Probability' on page 13 undefined on inpu
+t line 1442.
+
+
+LaTeX Warning: Citation `Demmel:1997' on page 13 undefined on input line 1491.
+
+[13]
+
+LaTeX Warning: Citation `Demmel:1997' on page 14 undefined on input line 1587.
+
+
+LaTeX Warning: Citation `Halmos-1958' on page 14 undefined on input line 1587.
+
+[14] [15]
+
+LaTeX Warning: Citation `Bruno:JSP-365' on page 16 undefined on input line 1862
+.
+
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 16 undefined on input line 186
+2.
+
+
+LaTeX Warning: Citation `Bergman:PRC-377' on page 16 undefined on input line 18
+71.
+
+
+LaTeX Warning: Citation `Bergman:PRL-1285' on page 16 undefined on input line 1
+871.
+
+
+LaTeX Warning: Citation `Milton:APL-300' on page 16 undefined on input line 187
+1.
+
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 16 undefined on input line 187
+1.
+
+
+LaTeX Warning: Citation `Bergman:AP-78' on page 16 undefined on input line 1871
+.
+
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 16 undefined on input line 187
+3.
+
+
+LaTeX Warning: Citation `Golden:1986:BCP' on page 16 undefined on input line 18
+73.
+
+[16]
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 17 undefined on input line 196
+0.
+
+
+LaTeX Warning: Citation `Dunford_Schwartz:LinOp_PtI' on page 17 undefined on in
+put line 1964.
+
+
+LaTeX Warning: Citation `Karlin_Studden:Book:1966' on page 17 undefined on inpu
+t line 1967.
+
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 17 undefined on input line 196
+7.
+
+
+LaTeX Warning: Citation `MILTON:2002:TC' on page 17 undefined on input line 197
+9.
+
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 17 undefined on input line 198
+1.
+
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 17 undefined on input line 198
+4.
+
+
+LaTeX Warning: Citation `Golden:1986:BCP' on page 17 undefined on input line 20
+36.
+
+[17]
+
+LaTeX Warning: Citation `Golden:1986:BCP' on page 18 undefined on input line 20
+61.
+
+
+LaTeX Warning: Citation `Milton:JAP-5286' on page 18 undefined on input line 20
+62.
+
+
+LaTeX Warning: Citation `Bergman:AP-78' on page 18 undefined on input line 2062
+.
+
+
+LaTeX Warning: Citation `Scaife-1989' on page 18 undefined on input line 2071.
+
+
+LaTeX Warning: Citation `Bergman:AP-78' on page 18 undefined on input line 2080
+.
+
+
+LaTeX Warning: Citation `Bergman:AP-78' on page 18 undefined on input line 2092
+.
+
+
+LaTeX Warning: Citation `Golden:1986:BCP' on page 18 undefined on input line 20
+92.
+
+
+LaTeX Warning: Citation `Bergman:AP-78' on page 18 undefined on input line 2098
+.
+
+
+LaTeX Warning: Citation `Golden:1986:BCP' on page 18 undefined on input line 20
+98.
+
+
+LaTeX Warning: Citation `Golden:1986:BCP' on page 18 undefined on input line 21
+10.
+
+
+LaTeX Warning: Citation `Golden:1986:BCP' on page 18 undefined on input line 21
+19.
+
+[18]
+
+LaTeX Warning: Citation `Golden:1986:BCP' on page 19 undefined on input line 21
+31.
+
+
+LaTeX Warning: Citation `Milton:JAP-5286' on page 19 undefined on input line 21
+33.
+
+
+LaTeX Warning: Citation `Golden:1986:BCP' on page 19 undefined on input line 21
+35.
+
+
+LaTeX Warning: Citation `Keller:1964:TCC' on page 19 undefined on input line 21
+36.
+
+
+LaTeX Warning: Citation `Schulgasser:1976:CFR' on page 19 undefined on input li
+ne 2136.
+
+
+LaTeX Warning: Citation `MILTON:2002:TC' on page 19 undefined on input line 213
+7.
+
+
+LaTeX Warning: Citation `Milton:APL-300' on page 19 undefined on input line 213
+9.
+
+
+LaTeX Warning: Citation `Bergman:AP-78' on page 19 undefined on input line 2139
+.
+
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 19 undefined on input line 215
+5.
+
+
+LaTeX Warning: Citation `Milton:JAP-5294' on page 19 undefined on input line 21
+57.
+
+
+LaTeX Warning: Citation `Golden:1986:BCP' on page 19 undefined on input line 21
+63.
+
+
+LaTeX Warning: Citation `Golden:1986:BCP' on page 19 undefined on input line 21
+67.
+
+File: Anisotropic_RRN_p=0_5.eps Graphic file (type eps)
+<Anisotropic_RRN_p=0_5.eps>
+File: A_Locally_Isotropic_RRN_11.eps Graphic file (type eps)
+ <A_Locally_Isotropic_RRN_11.eps>
+
+LaTeX Warning: Citation `Backstrom:2007:Book' on page 19 undefined on input lin
+e 2267.
+
+[19]
+File: A_Duality_RRN_11.eps Graphic file (type eps)
+ <A_Duality_RRN_11.eps>
+
+LaTeX Warning: Citation `Jonckheere_Luck_JPA_1998' on page 20 undefined on inpu
+t line 2311.
+
+
+LaTeX Warning: Citation `Murphy:JMP:063506' on page 20 undefined on input line 
+2323.
+
+[20]
+File: 3D_Spectral_Measures_Gamma_GammaCurl.eps Graphic file (type eps)
+ <3D_Spectral_Measures_Gamma_GammaCurl.eps>
+
+LaTeX Warning: Citation `MILTON:2002:TC' on page 21 undefined on input line 235
+3.
+
+
+LaTeX Warning: Citation `MILTON:2002:TC' on page 21 undefined on input line 235
+8.
+
+[21]
+File: 2D_GammaCurl_and_3D_Gamma_Bounds.eps Graphic file (type eps)
+ <2D_GammaCurl_and_3D_Gamma_Bounds.eps>
+
+LaTeX Warning: Citation `Stauffer-92' on page 22 undefined on input line 2413.
+
+
+LaTeX Warning: Citation `Torquato:RHM-02' on page 22 undefined on input line 24
+13.
+
+
+LaTeX Warning: Citation `Stauffer-92' on page 22 undefined on input line 2421.
+
+
+LaTeX Warning: Citation `Torquato:RHM-02' on page 22 undefined on input line 24
+21.
+
+[22]
+File: Effective_Parameter_Behavior.eps Graphic file (type eps)
+ <Effective_Parameter_Behavior.eps> [23]
+
+LaTeX Warning: Citation `Murphy:JMP:063506' on page 24 undefined on input line 
+2496.
+
+[24]
+
+LaTeX Warning: Citation `Backstrom:2007:Book' on page 25 undefined on input lin
+e 2525.
+
+
+Underfull \vbox (badness 3291) has occurred while \output is active []
+
+ [25]
+File: Spectral_Function_Symmetries.eps Graphic file (type eps)
+
+<Spectral_Function_Symmetries.eps>
+
+LaTeX Warning: Citation `Murphy:JMP:063506' on page 26 undefined on input line 
+2554.
+
+
+LaTeX Warning: Citation `Murphy:JMP:063506' on page 26 undefined on input line 
+2570.
+
+
+LaTeX Warning: Citation `Golden:JMP-5627' on page 26 undefined on input line 25
+70.
+
+[26]
+
+LaTeX Warning: Citation `MILTON:2002:TC' on page 27 undefined on input line 265
+7.
+
+
+LaTeX Warning: Citation `Murphy:JMP:063506' on page 27 undefined on input line 
+2672.
+
+
+LaTeX Warning: Citation `Murphy_Thermo_Stat_Mech' on page 27 undefined on input
+ line 2679.
+
+
+LaTeX Warning: Citation `Murphy_Multiscale_Sea_Ice' on page 27 undefined on inp
+ut line 2680.
+
+
+LaTeX Warning: Citation `Golden:JBM:337' on page 27 undefined on input line 268
+1.
+
+
+LaTeX Warning: Citation `McLaughlin:SIAM_JAM:780' on page 27 undefined on input
+ line 2685.
+
+
+LaTeX Warning: Citation `Avellaneda:CMP-339' on page 27 undefined on input line
+ 2685.
+
+
+LaTeX Warning: Citation `Murphy_Advective_Diffusion' on page 27 undefined on in
+put line 2685.
+
+
+LaTeX Warning: Citation `Avellaneda:PRE:3249' on page 27 undefined on input lin
+e 2686.
+
+
+LaTeX Warning: Citation `Barabash:JPCM:10323' on page 27 undefined on input lin
+e 2688.
+
+
+LaTeX Warning: Citation `Gully_Golden_Polycrystalline' on page 27 undefined on 
+input line 2688.
+
+
+LaTeX Warning: Citation `Ou:2012:411' on page 27 undefined on input line 2690.
+
+
+LaTeX Warning: Citation `Ou:MMAS:655' on page 27 undefined on input line 2690.
+
+[27]
+
+LaTeX Warning: Citation `Reed-1980' on page 28 undefined on input line 2708.
+
+
+LaTeX Warning: Citation `Stone:64' on page 28 undefined on input line 2708.
+
+
+LaTeX Warning: Citation `Halmos-1958' on page 28 undefined on input line 2709.
+
+
+LaTeX Warning: Citation `Horn_Johnson-1990' on page 28 undefined on input line 
+2709.
+
+
+LaTeX Warning: Citation `Reed-1980' on page 28 undefined on input line 2747.
+
+
+LaTeX Warning: Citation `Stone:64' on page 28 undefined on input line 2747.
+
+
+LaTeX Warning: Citation `Reed-1980' on page 28 undefined on input line 2760.
+
+
+LaTeX Warning: Citation `Golden:CMP-473' on page 28 undefined on input line 276
+4.
+
+
+LaTeX Warning: Citation `Reed-1980' on page 28 undefined on input line 2764.
+
+
+LaTeX Warning: Citation `Stone:64' on page 28 undefined on input line 2764.
+
+
+LaTeX Warning: Citation `Reed-1980' on page 28 undefined on input line 2767.
+
+
+LaTeX Warning: Citation `Golden:JBM:337' on page 28 undefined on input line 279
+2.
+
+
+LaTeX Warning: Citation `Murphy:JMP:063506' on page 28 undefined on input line 
+2792.
+
+
+LaTeX Warning: Citation `Halmos-1958' on page 28 undefined on input line 2800.
+
+[28]
+
+LaTeX Warning: Citation `Halmos-1958' on page 29 undefined on input line 2807.
+
+
+LaTeX Warning: Citation `Keener-2000' on page 29 undefined on input line 2807.
+
+
+LaTeX Warning: Citation `Halmos-1958' on page 29 undefined on input line 2877.
+
+[29]
+No file Murphy_et_al_Comm_Math_Sci_09-25-2013.bbl.
+[30] (Murphy_et_al_Comm_Math_Sci_09-25-2013.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 1829 strings out of 28583
+ 20608 string characters out of 471185
+ 77295 words of memory out of 524286
+ 4707 multiletter control sequences out of 27000
+ 15876 words of font info for 60 fonts, out of 800000 for 255
+ 14 hyphenation exceptions out of 2003
+ 27i,16n,24p,1098b,332s stack positions out of 300i,40n,60p,3000b,4000s
+
+Output written on Murphy_et_al_Comm_Math_Sci_09-25-2013.dvi (30 pages, 172144 b
+ytes).

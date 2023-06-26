@@ -1,0 +1,358 @@
+\begin{thebibliography}{10}
+
+\bibitem{Akhiezer:Book:1965}
+{\sc N.~I. Akhiezer}, {\em The Classical Moment Problem}, Oliver \& Boyd, 1965.
+
+\bibitem{Avellaneda:CMP-339}
+{\sc M.~Avellaneda and A.~Majda}, {\em An integral representation and bounds on
+  the effective diffusivity in passive advection by laminar and turbulent
+  flows}, Comm. Math. Phys., 138 (1991), pp.~339--391.
+
+\bibitem{Avellaneda:PRE:3249}
+{\sc M.~Avellaneda and M.~Vergassola}, {\em Stieltjes integral representation
+  of effective diffusivities in time-dependent flows}, Phys. Rev. E, 52 (1995),
+  pp.~3249--3251.
+
+\bibitem{Backstrom:2007:Book}
+{\sc L.~G.~E. Backstrom}, {\em Capacitance Measurements of Bulk Salinity and
+  Brine Movement in First-year Sea Ice}, University of Alaska Fairbanks, 2007.
+
+\bibitem{Barabash:JPCM:10323}
+{\sc S.~Barabash and D.~Stroud}, {\em Spectral representation for the effective
+  macroscopic response of a polycrystal: application to third-order non-linear
+  susceptibility}, J. Phys., Condens. Matter, 11 (1999), pp.~10323--10334.
+
+\bibitem{Bergman:PRC-377}
+{\sc D.~J. Bergman}, {\em The dielectric constant of a composite material --
+  {A} problem in classical physics}, Phys. Rep. C, 43 (1978), pp.~377--407.
+
+\bibitem{Bergman:PRL-1285}
+\leavevmode\vrule height 2pt depth -1.6pt width 23pt, {\em Exactly solvable
+  microscopic geometries and rigorous bounds for the complex dielectric
+  constant of a two-component composite material}, Phys. Rev. Lett., 44 (1980),
+  pp.~1285--1287.
+
+\bibitem{Bergman:AP-78}
+\leavevmode\vrule height 2pt depth -1.6pt width 23pt, {\em Rigorous bounds for
+  the complex dielectric constant of a two--component composite}, Ann. Phys.,
+  138 (1982), pp.~78--114.
+
+\bibitem{Bonifasi-Lista:PMB-3063}
+{\sc C.~Bonifasi-Lista and E.~Cherkaev}, {\em Electrical impedance spectroscopy
+  as a potential tool for recovering bone porosity}, Phys. Med. Biol., 54
+  (2009), pp.~3063--3082.
+
+\bibitem{Bruno:PRSLA-353}
+{\sc O.~Bruno}, {\em The effective conductivity of strongly heterogeneous
+  composites}, Proc. R. Soc. London A, 433 (1991), pp.~353--381.
+
+\bibitem{Bruno:JSP-365}
+{\sc O.~Bruno and K.~Golden}, {\em Interchangeability and bounds on the
+  effective conductivity of the square lattice}, J. Stat. Phys., 61 (1990),
+  pp.~365--386.
+
+\bibitem{Cheng:1997:629}
+{\sc H.~Cheng and L.~Greengard}, {\em On the numerical evaluation of
+  electrostatic fields in dense random dispersions of cylinders}, J. Comput.
+  Phys., 136 (1997), pp.~629--639.
+
+\bibitem{Cherkaev:IP-1203}
+{\sc E.~Cherkaev}, {\em Inverse homogenization for evaluation of effective
+  properties of a mixture}, Inverse Problems, 17 (2001), pp.~1203--1218.
+
+\bibitem{Cherkaev:2004:331}
+\leavevmode\vrule height 2pt depth -1.6pt width 23pt, {\em Spectral coupling of
+  effective properties of a random mixture}, in IUTAM Symposium on Asymptotics,
+  Singularities and Homogenisation in Problems of Mechanics, A.~B. Movchan,
+  ed., vol.~113 of Solid Mechanics and Its Applications, Springer Netherlands,
+  2004, pp.~331--340.
+
+\bibitem{Cherkaev:JBiomech-345}
+{\sc E.~Cherkaev and C.~Bonifasi-Lista}, {\em Characterization of structure and
+  properties of bone by spectral measure method}, J. Biomech., 44 (2011),
+  pp.~345--351.
+
+\bibitem{Cherkaev:WRM-437}
+{\sc E.~Cherkaev and K.~M. Golden}, {\em Inverse bounds for microstructural
+  parameters of composite media derived from complex permittivity
+  measurements}, Waves in Random Media, 8 (1998), pp.~437--450.
+
+\bibitem{Cherkaev:IP-065008}
+{\sc E.~Cherkaev and M.-J. Ou}, {\em De-homogenization: Reconstruction of
+  moments of the spectral measure of composite}, Inverse Problems, 24 (2008),
+  p.~065008 (19pp.).
+
+\bibitem{Cherkaev:PBCM:0921}
+{\sc E.~Cherkaev and D.~Zhang}, {\em Coupling of the effective properties of a
+  random mixture through the reconstructed spectral representation}, Physica B:
+  Condensed Matter, 338 (2003), pp.~16--23.
+
+\bibitem{Darling:Differential_Forms:1994}
+{\sc R.~W.~R. Darling}, {\em Differential Forms and Connections}, Cambridge
+  University Press, 1994.
+
+\bibitem{Day:JPCM-96}
+{\sc A.~R. Day and M.~F. Thorpe}, {\em The spectral function of random resistor
+  networks}, J. Phys., Condens. Matter, 8 (1996), pp.~4389--4409.
+
+\bibitem{Day:JPCM-99}
+\leavevmode\vrule height 2pt depth -1.6pt width 23pt, {\em The spectral
+  function of composites: the inverse problem}, J. Phys., Condens. Matter, 11
+  (1999), pp.~2551--2568.
+
+\bibitem{Deift:2000:RMT}
+{\sc P.~Deift}, {\em Orthogonal Polynomials and Random Matrices: a
+  {Riemann--Hilbert} Approach}, Courant Institute of Mathematical Sciences, New
+  York, NY, 2000.
+
+\bibitem{Demmel:1997}
+{\sc J.~W. Demmel}, {\em Applied Numerical Linear Algebra}, SIAM, 1997.
+
+\bibitem{Dunford_Schwartz:LinOp_PtI}
+{\sc N.~Dunford and J.~T. Schwartz}, {\em Linear Operators, Part I}, John Wiley
+  \& Sons, Inc., Hoboken, NJ, 1988.
+
+\bibitem{Durrett:Book:Probability}
+{\sc R.~Durrett}, {\em Probability: Theory and Examples}, 4th Edition,
+  Cambridge University Press, 2010.
+
+\bibitem{Folland:95}
+{\sc G.~B. Folland}, {\em Introduction to Partial Differential Equations},
+  Princeton University Press, Princeton, NJ, 1995.
+
+\bibitem{Folland:99}
+\leavevmode\vrule height 2pt depth -1.6pt width 23pt, {\em Real Analysis:
+  Modern Techniques and Their Applications}, Wiley--Interscience, New York, NY,
+  1999.
+
+\bibitem{Golden:JMPS-333}
+{\sc K.~Golden}, {\em Bounds on the complex permittivity of a multicomponent
+  material}, J. Mech. Phys. Solids, 34 (1986), pp.~333--358.
+
+\bibitem{Golden:CMP-467}
+{\sc K.~M. Golden}, {\em Exponent inequalities for the bulk conductivity of a
+  hierarchical model}, Commun. Math. Phys., 143 (1992), pp.~467--499.
+
+\bibitem{Golden:JMP-5627}
+\leavevmode\vrule height 2pt depth -1.6pt width 23pt, {\em Statistical
+  mechanics of conducting phase transitions}, J. Math. Phys., 36 (1995),
+  pp.~5627--5642.
+
+\bibitem{Golden:PRL-3935}
+\leavevmode\vrule height 2pt depth -1.6pt width 23pt, {\em Critical behavior of
+  transport in lattice and continuum percolation models}, Phys. Rev. Lett., 78
+  (1997), pp.~3935--3938.
+
+\bibitem{Golden:IMA-97}
+\leavevmode\vrule height 2pt depth -1.6pt width 23pt, {\em The interaction of
+  microwaves with sea ice}, in Wave Propagation in Complex Media, IMA Volumes
+  in Mathematics and its Applications, Vol. 96, G.~Papanicolaou, ed., Springer
+  -- Verlag, 1997, pp.~75--94.
+
+\bibitem{Golden:JBM:337}
+{\sc K.~M. Golden, N.~B. Murphy, and E.~Cherkaev}, {\em Spectral analysis and
+  connectivity of porous microstructures in bone}, J. Biomech., 44 (2011),
+  pp.~337--344.
+
+\bibitem{Golden:CMP-473}
+{\sc K.~M. Golden and G.~Papanicolaou}, {\em Bounds for effective parameters of
+  heterogeneous media by analytic continuation}, Commun. Math. Phys., 90
+  (1983), pp.~473--491.
+
+\bibitem{Golden:JSP-655}
+\leavevmode\vrule height 2pt depth -1.6pt width 23pt, {\em Bounds for effective
+  parameters of multicomponent media by analytic continuation}, J. Stat. Phys.,
+  40 (1985), pp.~655--667.
+
+\bibitem{Greengard:2006:64}
+{\sc L.~Greengard and J.-Y. Lee}, {\em Electrostatics and heat conduction in
+  high contrast composite materials}, J. Comput. Phys., 211 (2006), pp.~64--76.
+
+\bibitem{Greengard:1994:379}
+{\sc L.~Greengard and M.~Moura}, {\em On the numerical evaluation of
+  electrostatic fields in composite materials}, Acta Numerica, 3 (1994),
+  pp.~379--410.
+
+\bibitem{Gully_Golden_Polycrystalline}
+{\sc A.~Gully, J.~Lin, E.~Cherkaev, and K.~M. Golden}, {\em Polycrystalline
+  bounds on the complex permittivity of sea ice}.
+\newblock In Preparation, 2014.
+
+\bibitem{Halmos-1958}
+{\sc P.~R. Halmos}, {\em Finite Dimensional Vector Spaces}, Van
+  Nostrand--Reinhold, Princeton, NJ, 1958.
+
+\bibitem{Helsing:JCP:7533}
+{\sc J.~Helsing}, {\em The effective conductivity of arrays of squares: Large
+  random unit cells and extreme contrast ratios.}, J. Comput. Phys., 230
+  (2011), pp.~7533--7547.
+
+\bibitem{Helsing:JCP:1171}
+\leavevmode\vrule height 2pt depth -1.6pt width 23pt, {\em The effective
+  conductivity of random checkerboards}, J. Comput. Phys., 230 (2011),
+  pp.~1171--1181.
+
+\bibitem{Helsing:NJP:115005}
+{\sc J.~Helsing, R.~C. McPhedran, and G.~W. Milton}, {\em Spectral
+  super-resolution in metamaterial composites}, New J. Phys., 13 (2011),
+  p.~115005 (17pp.).
+
+\bibitem{Helsing:2008:8820}
+{\sc J.~Helsing and R.~Ojala}, {\em Corner singularities for elliptic problems:
+  Integral equations, graded meshes, quadrature, and compressed inverse
+  preconditioning}, J. Comput. Phys., 227 (2008), pp.~8820--8840.
+
+\bibitem{Henrici:1974:v2}
+{\sc P.~Henrici}, {\em Applied and Computational Complex Analysis. Volume 2.},
+  John Wiley \& Sons Inc., New York, 1974.
+
+\bibitem{Horn_Johnson-1990}
+{\sc R.~A. Horn and C.~R. Johnson}, {\em {Matrix Analysis}}, Cambridge
+  University Press, 1990.
+
+\bibitem{Jackson-1999}
+{\sc J.~D. Jackson}, {\em Classical Electrodynamics}, John Wiley and Sons,
+  Inc., New York, 1999.
+
+\bibitem{Jonckheere_Luck_JPA_1998}
+{\sc T.~Jonckheere and J.~M. Luck}, {\em Dielectric resonances of binary random
+  networks}, J. Phys. A: Math. Gen., 31 (1998), pp.~3687--3717.
+
+\bibitem{Karlin_Studden:Book:1966}
+{\sc S.~Karlin and W.~J. Studden}, {\em Tchebycheff systems: with applications
+  in analysis and statistics}, John Wiley \& Sons, Inc., Hoboken, NJ, 1966.
+
+\bibitem{Keener-2000}
+{\sc J.~P. Keener}, {\em Principles of applied mathematics: transformation and
+  approximation}, Westview Press, Cambridge, MA, 2000.
+
+\bibitem{Keller:1964:TCC}
+{\sc J.~B. Keller}, {\em A theorem on the conductivity of a composite medium},
+  J. Math. Phys., 5 (1964), pp.~548--549.
+
+\bibitem{Kreyszig:JWS-1989}
+{\sc E.~Kreyszig}, {\em Introductory functional analysis with aplications},
+  John Wiley \& Sons. Inc., New York, 1989.
+
+\bibitem{McLaughlin:SIAM_JAM:780}
+{\sc D.~{McLaughlin}, G.~Papanicolaou, and O.~Pironneau}, {\em Convection of
+  microstructure and related problems}, SIAM J. Appl. Math., 45 (1985),
+  pp.~780--797.
+
+\bibitem{McPhedran:APA:19}
+{\sc R.~C. McPhedran, D.~R. McKenzie, and G.~W. Milton}, {\em Extraction of
+  structural information from measured transport properties of composites},
+  Appl. Phys. A, 29 (1982), pp.~19--27.
+
+\bibitem{McPhedran:MRSP:1990:195}
+{\sc R.~C. Mcphedran and G.~W. Milton}, {\em Inverse transport problems for
+  composite media}, MRS Proceedings, 195 (1990).
+
+\bibitem{Milton:APL-300}
+{\sc G.~W. Milton}, {\em Bounds on the complex dielectric constant of a
+  composite material}, Appl. Phys. Lett., 37 (1980), pp.~300--302.
+
+\bibitem{Milton:JAP-5286}
+\leavevmode\vrule height 2pt depth -1.6pt width 23pt, {\em Bounds on the
+  complex permittivity of a two‐ component composite material}, J. Appl.
+  Phys., 52 (1981), pp.~5286--5293.
+
+\bibitem{Milton:JAP-5294}
+\leavevmode\vrule height 2pt depth -1.6pt width 23pt, {\em Bounds on the
+  transport and optical properties of a two-component composite material}, J.
+  Appl. Phys., 52 (1981), pp.~5294--5304.
+
+\bibitem{MILTON:2002:TC}
+\leavevmode\vrule height 2pt depth -1.6pt width 23pt, {\em Theory of
+  Composites}, Cambridge University Press, Cambridge, 2002.
+
+\bibitem{Murphy:JMP:063506}
+{\sc N.~B. Murphy and K.~M. Golden}, {\em The {Ising} model and critical
+  behavior of transport in binary composite media}, J. Math. Phys., 53 (2012),
+  p.~063506 (25pp.).
+
+\bibitem{Murphy_RMT_of_Composites}
+\leavevmode\vrule height 2pt depth -1.6pt width 23pt, {\em Random matrix theory
+  for phase transitions in composite media}.
+\newblock Submitted, 2014.
+
+\bibitem{Murphy_Multiscale_Sea_Ice}
+{\sc N.~B. Murphy, C.~Hohenegger, C.~S. Sampson, D.~K. Perovich, H.~Eicken,
+  E.~Cherkaev, B.~Alali, and K.~M. Golden}, {\em Spectral analysis of
+  multiscale sea ice structures in the climate system}.
+\newblock In Preparation, 2014.
+
+\bibitem{Murphy_Thermo_Stat_Mech}
+{\sc N.~B. Murphy, P.~Sheng, and K.~M. Golden}, {\em Statistical mechanics of
+  homogenization for composite media}.
+\newblock In Preparation, 2014.
+
+\bibitem{Murphy_Advective_Diffusion}
+{\sc N.~B. Murphy, J.~Zhu, and K.~M. Golden}, {\em Spectral analysis of
+  advective diffusion}.
+\newblock In Preparation, 2014.
+
+\bibitem{Orum:PRSLA:2012}
+{\sc C.~Orum, E.~Cherkaev, and K.~M. Golden}, {\em Recovery of inclusion
+  separations in strongly heterogeneous composites from effective property
+  measurements}, Proc. Roy. Soc. London A, 468 (2012), pp.~784--809.
+
+\bibitem{Ou:MMAS:655}
+{\sc M.~J. Ou and E.~Cherkaev}, {\em On the integral representation formula for
+  a two-component elastic composite}, Mathematical Methods in the Applied
+  Sciences, 29 (2006), pp.~655--644.
+
+\bibitem{Ou:2012:411}
+{\sc M.~Y. Ou}, {\em {Two-parameter integral representation formula for the
+  effective elastic moduli of two-phase composites.}}, Complex Var. Elliptic
+  Equ., 57 (2012), pp.~411--424.
+
+\bibitem{Papanicolaou:RF-835}
+{\sc G.~Papanicolaou and S.~Varadhan}, {\em Boundary value problems with
+  rapidly oscillating coefficients}, in Colloquia Mathematica Societatis
+  J{\'a}nos Bolyai 27, Random Fields (Esztergom, Hungary 1979), North-Holland,
+  1982, pp.~835--873.
+
+\bibitem{Reed-1980}
+{\sc M.~C. Reed and B.~Simon}, {\em Functional Analysis}, Academic Press, San
+  Diego CA, 1980.
+
+\bibitem{Rudin:87}
+{\sc W.~Rudin}, {\em Real and Complex Analysis}, McGraw-Hill, Inc., New York,
+  NY, 1987.
+
+\bibitem{Scaife-1989}
+{\sc B.~K.~P. Scaife}, {\em Principles of Dielectrics}, Clarendon Press,
+  Oxford, 1989.
+
+\bibitem{Schulgasser:1976:CFR}
+{\sc K.~Schulgasser}, {\em On the conductivity of fiber reinforced materials},
+  J. Math. Phys., 17 (1976), pp.~382--387.
+
+\bibitem{Simeonova:MMS:1113}
+{\sc L.~B. Simeonova, D.~C. Dobson, O.~Eso, and K.~M. Golden}, {\em Spatial
+  bounds on the effective complex permittivity for time-harmonic waves in
+  random media}, Multiscale Modeling and Simulation, 9 (2011), pp.~1113--1143.
+
+\bibitem{Stakgold:BVP:2000}
+{\sc I.~Stakgold}, {\em Boundary Value Problems of Mathematical Physics:
+  2-Volume Set}, Classics in Applied Mathematics, SIAM, 2000.
+
+\bibitem{Stauffer-92}
+{\sc D.~Stauffer and A.~Aharony}, {\em Introduction to Percolation Theory},
+  Taylor and Francis, London, second~ed., 1992.
+
+\bibitem{Stone:64}
+{\sc M.~H. Stone}, {\em Linear Transformations in {Hilbert} Space}, American
+  Mathematical Society, Providence, RI, 1964.
+
+\bibitem{Torquato:RHM-02}
+{\sc S.~Torquato}, {\em Random Heterogeneous Materials: Microstructure and
+  Macroscopic Properties}, Springer-Verlag, New York, 2002.
+
+\bibitem{Zhang:JCP-5390}
+{\sc D.~Zhang and E.~Cherkaev}, {\em Reconstruction of spectral function from
+  effective permittivity of a composite material using rational function
+  approximations}, J. Comput. Phys., 228 (2009), pp.~5390--5409.
+
+\end{thebibliography}

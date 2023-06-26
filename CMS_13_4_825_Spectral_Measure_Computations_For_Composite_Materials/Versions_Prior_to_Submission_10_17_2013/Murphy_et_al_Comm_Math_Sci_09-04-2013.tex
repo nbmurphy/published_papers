@@ -1,0 +1,2341 @@
+\documentclass{cmslatex}
+%\usepackage{latexsym, amssymb, enumerate, amsmath}
+\usepackage{graphicx,amssymb,amsmath,amsfonts,mathrsfs}
+ 
+\sloppy
+
+\thinmuskip = 0.5\thinmuskip \medmuskip = 0.5\medmuskip
+\thickmuskip = 0.5\thickmuskip \arraycolsep = 0.3\arraycolsep
+
+\renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
+
+\def\open#1{\setbox0=\hbox{$#1$}
+\baselineskip = 0pt \vbox{\hbox{\hspace*{0.4 \wd0}\tiny
+$\circ$}\hbox{$#1$}} \baselineskip = 10pt\!}
+
+\newcommand{\ph}{\hat{\phi}}
+\newcommand{\pt}{\tilde{\phi}} 
+\newcommand{\pc}{\check{\phi}}
+\newcommand{\gh}{\hat{\gamma}}
+\newcommand{\Dh}{\hat{\Delta}}
+\newcommand{\dha}{\hat{\delta}}
+\newcommand{\qh}{\hat{q}}
+\newcommand{\xh}{\hat{x}}
+\newcommand{\HM}{\mathcal{H}_{\text{max}}}
+\newcommand{\Hm}{\mathcal{H}_{\text{min}}}
+\newcommand{\sech}{\rm \hspace{0.7mm}sech}
+\newcommand{\I}{\mathrm{i}}
+\newcommand{\hh}{\hat{h}}
+\newcommand{\mh}{m_r}
+\newcommand{\mt}{m_i}
+\newcommand{\M}{\mathbf{M}}
+\newcommand{\X}{\mathbf{X}}
+\newcommand{\T}{\mathbf{T}}
+\newcommand{\Hb}{\mathbf{H}}
+\newcommand{\K}{\mathbf{K}}
+\newcommand{\J}{\mathbf{J}}
+
+\newcommand\bsig{\mbox{\boldmath${\sigma}$}}
+\newcommand\beps{\mbox{\boldmath${\epsilon}$}}
+\newcommand\bxi{\mbox{\boldmath${\xi}$}}
+\newcommand\bmu{\mbox{\boldmath${\mu}$}}
+\newcommand\balpha{\mbox{\boldmath${\alpha}$}}
+\newcommand\brho{\mbox{\boldmath${\rho}$}}
+\newcommand\bDelta{\mbox{\boldmath${\Delta}$}}
+
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+
+    %\theoremstyle{definition}
+
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{notation}[thm]{Notation}
+\newtheorem{example}[thm]{Example}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{prob}[thm]{Problem}
+
+    %\theoremstyle{remark}
+
+\newtheorem{rem}[thm]{Remark}
+    % Use the standard latex environments for theorems, etc. Here is one
+          % possible method of declaring them: It numbers all results by the
+          % section, and uses a common numbering system for the different
+          % environmentts.
+
+\begin{document}
+
+\title{Spectral measure computations \\ for composite materials
+\thanks{%{Received date / Revised version date}
+          % The correct dates will be entered by the CMS editor}}
+}}
+          %For each author, make a block with the following four
+          %macros:
+% \author{full name
+% \thanks {address, (email).}
+% \and full name \thanks {address, (email).}}
+%
+\author{N. B. Murphy
+\thanks {University of Utah, Department of Mathematics, 155 S 1400 E
+  RM 233, Salt Lake City, UT 84112-009, USA, (murphy@math.utah.edu)}
+%
+\and E. Cherkaev
+\thanks {University of Utah, Department of Mathematics, 155 S 1400 E
+  RM 233, Salt Lake City, UT 84112-009, USA, (elena@math.utah.edu).}
+%
+\and C. Hohenegger
+\thanks {University of Utah, Department of Mathematics, 155 S 1400 E
+  RM 233, Salt Lake City, UT 84112-009, USA, (choheneg@math.utah.edu).}
+%
+\and K. M. Golden
+\thanks {University of Utah, Department of Mathematics, 155 S 1400 E
+  RM 233, Salt Lake City, UT 84112-009, USA, (golden@math.utah.edu).}
+}
+          %{Put the URL for your home page here if you have one}
+
+          %Use \thanks statements for acknowledgments of grants and
+          %support. They will appear below all the authors' addresses, so be
+          %specific about which author is thanking whom:
+
+          %\thanks{}
+
+\pagestyle{myheadings} \markboth{Spectral measure computations}{Murphy et. al.}\maketitle
+
+\begin{abstract}
+The analytic continuation method of homogenization theory provides
+Stieltjes integral representations for the effective parameters of
+composite media, involving spectral measures of self-adjoint random
+operators which depend only on the composite geometry. On finite bond
+lattices, these random operators are represented by random matrices
+and the spectral measures are given explicitly in terms of their
+eigenvalues and eigenvectors. Here we provide the mathematical
+foundation for rigorous computation of spectral measures for such
+composite media. We also introduce a large family of random bond
+lattices and directly compute the associated spectral measures and
+effective parameters. The computed spectral measures agree with known
+theoretical results, and the behavior of the effective parameters is
+shown to be consistent with rigorous bounds. 
+\end{abstract}
+
+\begin{keywords}
+composite materials, random resistor network, percolation,
+homogenization, spectral measure, random matrix 
+\smallskip
+
+{\bf subject classifications.}
+% GENERAL: Conference proceedings and collections of papers:
+% Conference proceedings and collections of papers 
+00B15,
+% Measures, integration, derivative, holomorphy (all involving inﬁnite-
+% dimensional spaces): Measures and integration on abstract linear spaces
+%46G12,
+% OPERATOR THEORY: Special classes of linear operators: Hermitian and
+% normal operators (spectral measures, functional calculus, etc.)
+47B15,
+% NUMERICAL ANALYSIS: Numerical linear algebra: Eigenvalues, eigenvectors
+65C60,
+% MECHANICS OF DEFORMABLE SOLIDS: Generalities, axiomatics,
+% foundations of continuum mechanics of solids:
+% Random materials and composite materials 
+%74A40,
+% MECHANICS OF DEFORMABLE SOLIDS: Generalities, axiomatics,
+% foundations of continuum mechanics of solids: Nonsimple materials
+%74E30,
+% FUNCTIONS OF A COMPLEX VARIABLE: Analytic continuation 
+30B40,
+% OPTICS, ELECTROMAGNETIC THEORY: General: Composite media; random media
+78A48,
+% OPTICS, ELECTROMAGNETIC THEORY: Basic methods: Spectral methods
+%78M22,
+% CLASSICAL THERMODYNAMICS, HEAT TRANSFER: Basic methods: Spectral
+% methods
+%80M22,
+% CLASSICAL THERMODYNAMICS, HEAT TRANSFER: Basic methods: Homogenization
+80M40,
+% PROBABILITY THEORY AND STOCHASTIC PROCESSES: Special processes:
+% Interacting random processes; statistical mechanics type models;
+% percolation theory
+60K35
+\end{keywords}
+
+
+\section{Introduction}\label{Introduction}
+%
+Over the years a broad range of mathematical techniques have been
+developed that reduce the analysis of complex composite materials,
+with rapidly varying structures in space, to solving averaged, or
+\emph{homogenized} equations that do not have rapidly varying data,
+and involve an effective parameter. Homogenization for the effective
+parameter problem in composite media with rapidly varying coefficients
+of thermal conductivity, or equivalently \cite{MILTON:2002:TC}
+electrical conductivity and permittivity, and magnetic permeability,
+was developed by Papanicolaou and Varadhan \cite{Papanicolaou:RF-835}
+for the steady state, static case. This work was extended
+\cite{Golden:CMP-473,Golden:JSP-655} by Golden and Papanicolaou to the
+quasi-static frequency dependent case with complex
+parameters. Analysis of the effective dielectric problem for the fully
+frequency dependent case described by the Helmholtz equation is given
+in \cite{Simeonova:MMS:1113}. 
+
+The effective parameter problem for \emph{two-component} media in the
+quasi-static limit was developed by Bergman \cite{Bergman:PRL-1285},
+Milton \cite{Milton:APL-300}, and Golden and Papanicolaou
+\cite{Golden:CMP-473}, leading to Stieltjes integral representations 
+for the effective parameters of composite media. The
+Golden-Papanicolaou formulation of this analytic continuation method
+(ACM) is based on the spectral theorem and resolvent formulas
+involving random self-adjoint operators. This formulation demonstrated
+that the measures underlying these integral representations are
+\emph{spectral measures} associated with these random operators, which
+depend only on the composite geometry. These measures contain all the
+information about the mixture geometry, and provide a link between
+microgeometry and transport. Local geometry is encoded in
+``geometric'' resonances in the measures
+\cite{Jonckheere_Luck_JPA_1998}, while global connectivity is encoded
+by spectral gaps in the measures at the spectral endpoints
+\cite{Murphy:JMP:063506,Jonckheere_Luck_JPA_1998}. A remarkable
+feature of the method is that once the spectral measures are found for 
+a given composite geometry, by the symmetries in the governing
+equations \cite{MILTON:2002:TC}, the effective electrical, magnetic,
+and thermal transport properties are \emph{all} completely determined
+by these measures.
+
+
+The integral representations yield rigorous \emph{forward bounds} on
+the effective parameters of composites, given partial information on
+the microgeometry
+\cite{Bergman:PRL-1285,Milton:APL-300,Golden:CMP-473,Bergman:AP-78}. One  
+can also use the integral representations to obtain inverse bounds,
+where data on the electromagnetic response of a sample, for example,
+is used to bound its structural parameters, such as the volume
+fractions of the components
+\cite{Cherkaeva:WRM-437,Cherkaeva:IP-1203,Cherkaeva:IP-065008,Zhang:JCP-5390,Bonifasi-Lista:PMB-3063,Cherkaev:JBiomech-345,Day:JPCM-99,Golden:J_Biomech:337},
+and even the separation of the inclusions in matrix particle
+composites \cite{Orum:PRSLA:2012}. For classes of composites which
+undergo a percolation transition, the integral representations have
+been used to obtain detailed information regarding the critical
+behavior of the effective parameters in the scaling regime
+\cite{Golden:PRL-3935,Murphy:JMP:063506}. Furthermore, the
+relationship between the effective parameters and the system energy
+has also led to a physically consistent statistical mechanics model
+for two-component dielectric media which is also mathematically
+tractable \cite{Murphy_Thermo_Stat_Mech}.  
+
+
+
+Despite the many applications which have stemmed from the ACM,
+explicit computations of the effective parameters have been obtained
+for only a handful of composite microstructures. To help overcome
+this limitation, here we develop a mathematical framework which
+provides a rigorous way to directly compute the spectral measures and
+effective parameters for finite lattice composite microstructures. A
+projection method is introduced which provides a numerically efficient
+way to accomplish these computations. We also introduce a large class
+of locally isotropic, statistically isotropic, and anisotropic random
+bond networks and directly compute the associated spectral measures
+and effective parameters. Our numerical calculations of the spectral
+measures are in excellent agreement with known theoretical results.
+Moreover, the behavior of the associated effective parameters are
+consistent with rigorous bounds.     
+
+\section{Mathematical Methods}\label{sec:Mathematical_Methods} 
+% {\it The analytic continuation method (general operator
+%   case). Spectral measure decomposition. Geometric resonances and gaps
+%   in the spectral measure. Lattice systems (random matrix case) and
+%   the direct calculation of the spectral measure. Forward bounds. What
+%   new structure we found regarding the spectral measure
+%   decomposition.} 
+%
+We now formulate the effective parameter problem for random
+two-phase conductive media in the lattice and continuum
+settings. In Section \ref{sec:Continuum_Setting} we review and extend
+the ACM for the continuum setting \cite{Golden:CMP-473}, while the
+\emph{infinite} 
+lattice setting \cite{Bruno:JSP-365,Golden:CMP-467} is reviewed in
+Section \ref{sec:Infinite_Lattice_Setting}. The mathematical framework
+underlying the infinite lattice case is analogous to that of
+the continuum case \cite{Bruno:JSP-365}, and the integral
+representations for the effective parameters follow with minor
+modifications in the theory. In the \emph{finite} lattice setting, the
+integral representations for the effective parameters are analogous to
+that of the continuum and infinite lattice cases. However,
+significant modifications must be made to the underlying mathematical
+framework. A key theoretical contribution of this manuscript is the
+formulation of the ACM for the finite lattice case, which is discussed
+in Section \ref{sec:Finite_Lattice_Setting}.  
+
+
+\subsection{Continuum Setting}\label{sec:Continuum_Setting}
+%
+Consider a random two-phase conductive medium filling all of
+$\mathbb{R}^d$, which is determined by the probability space
+$(\Omega,P)$. Here $\Omega$ is the set of all  geometric realizations of our
+random medium, which is indexed by the parameter $\omega\in\Omega$ representing
+one particular geometric realization, and $P$ is the associated
+probability measure. Let $\bsig(\vec{x},\omega)$ be the local complex
+conductivity tensor associated with the conductive medium, which has 
+components $\sigma_{jk}(\vec{x},\omega)$, $j,k=1,\ldots,d$, which are (spatially)
+stationary random fields.
+
+
+A \emph{stationary} random field $f\in L^2(\Omega,P)$,
+$f:\mathbb{R}^d\times\Omega\to\mathbb{R}$, is a field such that the 
+joint distribution of $f(\vec{x}_1,\omega),\ldots,f(\vec{x}_n,\omega)$ and that of
+$f(\vec{x}_1+\vec{\xi},\omega),\ldots,f(\vec{x}_n+\vec{\xi},\omega)$ is the same for all
+$\vec{\xi}\in\mathbb{R}^d$ and $n\in\mathbb{N}$
+\cite{Golden:CMP-473,Papanicolaou:RF-835}. In particular, the ensemble
+average $\langle\cdot\rangle$ of $f(\vec{x},\omega)$ over $\Omega$ is 
+invariant under the translation group $\tau_y:\Omega\to\Omega$ defined by
+$f(\tau_{-y}\vec{x},\omega)=f(\vec{x}+\vec{y},\omega)$ for all
+$\vec{x},\vec{y}\in\mathbb{R}^d$, with $\tau_x\tau_y=\tau_{x+y}$. Consequently, 
+$\langle f(\vec{x},\omega)\rangle=\langle f(0,\omega)\rangle$ and we can focus on the origin and drop the
+$\vec{x}$ notation by writing $f(0,\omega)=f(\omega)$, with
+$f(\tau_{-x}\,\omega)=f(\vec{x},\omega)$. We shall assume that there is such a group
+of transformations that is one-to-one and preserves the measure $P$,
+i.e. $P(\tau_xA)=P(A)$ for all $P$-measurable sets $A$
+\cite{Golden:CMP-473,Papanicolaou:RF-835}.
+
+The group of transformations $\tau_x$ acting on $\Omega$ induces a group of
+operators $T_x$ on the Hilbert space $L^2(\Omega,P)$ defined by
+$(T_xf)(\omega)=f(\tau_{-x}\,\omega)$ for all $f\in L^2(\Omega,P)$. Since $\tau_x$ is measure
+preserving, the operators $T_x$ form a unitary group and therefore
+have closed densely defined infinitesimal generators $L_i$ in each
+direction $i=1,\ldots,d$ with domain $\mathscr{D}_i\subset L^2(\Omega,P)$
+\cite{Golden:CMP-467,Papanicolaou:RF-835}. Thus,  
+%
+\begin{align*}
+  L_i=\left.\frac{\partial}{\partial x_i}T_x \right|_{x=0}, \quad i=1,\ldots,d,
+\end{align*}
+%
+where $x_i$
+%$x_i=(\vec{x}_i)$
+is the $i^{\,\text{th}}$ component of the vector
+$\vec{x}$ and differentiation is defined in the sense of convergence
+in $L^2(\Omega,P)$ for elements of $\mathscr{D}_i$
+\cite{Golden:CMP-467}. The closed subset
+$\mathscr{D}=\cap_{i=1}^d\mathscr{D}_i$ of $L^2(\Omega,P)$ is a Hilbert space
+\cite{Golden:CMP-467} with inner product $\langle \cdot,\cdot\rangle_D$ given by  $\langle
+f,g\rangle_D=\langle f,g\rangle_{L^2}+\sum_{i=1}^d\langle L_if,L_ig\rangle_{L^2}$, where $\langle\cdot,\cdot\rangle_{L^2}$
+is the $L^2(\Omega,P)$ inner product. 
+
+
+
+Consider the Hilbert space $\mathscr{H}=\bigotimes_{i=1}^dL^2(\Omega,P)$ with inner
+product $\langle\cdot,\cdot\rangle$ defined by $\langle\vec{\xi},\vec{\zeta}\rangle=\langle\vec{\xi}\cdot\vec{\zeta}\rangle$, where
+$\vec{\xi}\cdot\vec{\zeta}=\vec{\xi}^{\;\,T}\vec{\zeta}$ denotes the dot-product 
+on $\mathbb{R}^d$ and $\langle\cdot\rangle$ means ensemble average over $\Omega$ or, by an
+ergodic theorem \cite{Golden:CMP-473}, spatial average over all of
+${\mathbb{R}}^d$. Define the Hilbert spaces \cite{Golden:CMP-473} of
+``curl free'' $\mathscr{H}_\times$ and ``divergence free''
+$\mathscr{H}_{\bullet}$ random fields  
+%
+\begin{align}\label{eq:curlfreeHilbert}
+  &\mathscr{H}_\times=
+  \left\{\vec{Y}\in \mathscr{H} \ | \ \vec{\nabla} \times\vec{Y}=0 \text{ weakly and }
+    \langle\vec{Y}\rangle=0
+  \right\}, \\
+&\mathscr{H}_{\bullet}=
+\left\{\vec{Y}\in \mathscr{H} \ | \ \vec{\nabla}\cdot\vec{Y}=0 \text{ weakly and }
+    \langle\vec{Y}\rangle=0\right\},\notag 
+\end{align}  
+%
+% \begin{align}\label{eq:curlfreeHilbert_Precise}
+%   &\mathscr{H}_\times=
+%   \left\{Y_i(\omega)\in L^2(\Omega,P), \ i=1,\ldots,d \ | \ L_iY_j-L_jY_i=0 \text{ weakly and }
+%     \langle Y_i\rangle=0\right\},
+%     \\
+%   &\mathscr{H}_\bullet=
+%   \left\{Y_i(\omega)\in L^2(\Omega,P), \ i=1,\ldots,d \ \Big| \ \sum_{i=1}^dL_iY_i=0 \text{ weakly and }
+%     \langle Y_i\rangle=0\right\}.
+%     \notag
+% \end{align}
+% %
+% where $j=1,\ldots,d$.
+%
+where we have used the simplified notation $\langle\vec{Y}\rangle=0 \iff \langle Y_i\rangle=0$ for
+all $i=1,\ldots,d$, $\vec{\nabla}\cdot\vec{Y}=\sum_{i=1}^dL_iY_i$, and $\vec{\nabla} \times\vec{Y}=0$
+means $L_iY_j-L_jY_i=0$ for all $i,j=1,\ldots,d$. Consider the following
+variational problems \cite{Golden:CMP-473}. Find
+$\vec{E}_f\in\mathscr{H}_\times$ and $\vec{J}_f\in\mathscr{H}_\bullet$ such that     
+%
+\begin{align}
+ \label{eq:Weak_Curl_Free_Variational_Form}
+ &\langle\bsig(\vec{E}_0+\vec{E}_f)\cdot\vec{Y}\rangle=0 \quad  \forall \
+  \vec{Y}\in\mathscr{H}_\times &&\text{and}
+%
+ &&\langle\brho(\vec{J}_0+\vec{J}_f)\cdot\vec{Y}\rangle=0 \quad  \forall \
+  \vec{Y}\in\mathscr{H}_{\bullet}\,,  
+\end{align}
+%
+respectively. When the bilinear forms
+$\Psi(\vec{\xi},\vec{\zeta})=\bsig\,\vec{\xi}\cdot\vec{\zeta}\;$ and
+$\Phi(\vec{\xi},\vec{\zeta})=\brho\,\vec{\xi}\cdot\vec{\zeta}\;$ are bounded and
+coercive, these problems have unique solutions
+\cite{Golden:CMP-473,Papanicolaou:RF-835} satisfying the quasi-static
+limit of Maxwell's equations  \cite{Jackson-1999} 
+%
+\begin{align}   \label{eq:Maxwells_Equations_E}  
+ &\vec{\nabla}\times\vec{E}=0, \quad
+  \vec{\nabla}\cdot\vec{J}=0,\quad
+  \vec{J}=\bsig\vec{E},\quad
+  %\vec{E}=\vec{E}_0+\vec{E}_f, \quad
+  \langle\vec{E}\,\rangle=\vec{E}_0, \\
+%
+  %\label{eq:Maxwells_Equations_D}
+   &\vec{\nabla}\times\vec{E}=0, \quad
+   \vec{\nabla}\cdot\vec{J}=0, \quad
+   \vec{E}=\brho\vec{J},\quad
+   %\vec{J}=\vec{J}_0+\vec{J}_f,\quad
+   \langle\vec{J}\,\rangle=\vec{J}_0.
+   \notag  
+\end{align}
+%
+Here, $\vec{E}(\vec{x},\omega)=\vec{E}_0+\vec{E}_f(\vec{x},\omega)$ is the
+random electric field, where $\vec{E}_0=\langle\vec{E}\rangle$ and $\vec{E}_f$ is
+the fluctuating field of mean zero about the (constant) average
+$\vec{E}_0$. Similarly,
+$\vec{J}(\vec{x},\omega)=\vec{J}_0+\vec{J}_f(\vec{x},\omega)$ is the random 
+current density. Moreover, $\vec{E}_f$ and $\vec{J}_f$ are stationary
+random fields \cite{Golden:CMP-473}. 
+% In component form equation \eqref{eq:Maxwells_Equations_E} is given by
+% %
+% \begin{align}   \label{eq:Maxwells_Equations_Component}  
+%   \partial_{x_j}E_i-\partial_{x_i}E_j=0, \quad
+%   \sum_{j=1}^d\partial_{x_j}D_j=0, \quad
+%   D_j=\sum_{k=1}^d\sigma_{jk}E_k, \quad
+% %  \vec{E}=\vec{E}_0+\vec{E}_f, \quad
+%   \langle\vec{E}\,\rangle=\vec{E}_0, 
+% \end{align}
+
+
+
+
+As $\vec{E}_f\in\mathscr{H}_\times$ and $\vec{J}_f\in\mathscr{H}_\bullet$, equation
+\eqref{eq:Weak_Curl_Free_Variational_Form} yields the energy (power)
+\cite{Jackson-1999} constraints $\langle\vec{J}\cdot\vec{E}_f\rangle=0$ and
+$\langle\vec{E}\cdot\vec{J}_f\rangle=0$, respectively, which leads to the following
+reduced energy representations $\langle\vec{J}\cdot\vec{E}\rangle=\langle\vec{J}\rangle\cdot\vec{E}_0$
+and $\langle\vec{E}\cdot\vec{J}\rangle=\langle\vec{E}\rangle\cdot\vec{J}_0$. The effective complex
+conductivity and resistivity tensors, $\bsig^*$ and $\brho^*$, are
+defined by   
+%
+\begin{align}\label{eq:eff_eps_def}
+    \langle \vec{J} \,\rangle=  \bsig^* \vec{E}_0
+    \quad \text{and} \quad    
+    \langle \vec{E} \,\rangle=  \brho^*\vec{J}_0.
+\end{align}
+%
+Consequently, we have the following energy representations involving
+the effective parameters
+$\langle\vec{J}\cdot\vec{E}\rangle=\bsig^*\vec{E}_0\cdot\vec{E}_0=\brho^*\vec{J}_0\cdot\vec{J}_0$.
+
+
+
+We assume that the composite is a locally isotropic medium so that 
+$\sigma_{jk}(\vec{x},\omega)=\sigma(\vec{x},\omega)\delta_{jk}$ and
+$\rho_{jk}(\vec{x},\omega)=\rho(\vec{x},\omega)\delta_{jk}$, where $\delta_{jk}$ is the
+Kronecker delta and $j,k=1,\ldots,d$. We further assume that the composite
+is a two-component medium, so that $\sigma(\vec{x},\omega)$ takes the
+\emph{complex} values $\sigma_1$ and $\sigma_2$, and $\rho(\vec{x},\omega)$ takes the
+values $1/\sigma_1$ and $1/\sigma_2$, and satisfy \cite{Golden:CMP-473}
+% 
+\begin{align}\label{eq:two-phase_eps}
+  \sigma(\vec{x},\omega)=\sigma_1\chi_1(\vec{x},\omega)+\sigma_2\chi_2(\vec{x},\omega), \qquad
+  \rho(\vec{x},\omega)=\chi_1(\vec{x},\omega)/\sigma_1+\chi_2(\vec{x},\omega)/\sigma_2.
+\end{align}
+%
+%$\sigma(\vec{x},\omega)=\sigma_1\chi_1(\vec{x},\omega)+\sigma_2\chi_2(\vec{x},\omega)$,
+Here $\chi_i(\vec{x},\omega)$ is the characteristic function of medium
+$i=1,2$, which equals one for all $\omega\in\Omega$ having medium $i$ at $\vec{x}$
+and zero otherwise, with $\chi_1=1-\chi_2$. For simplicity, we focus on one
+component of these tensors, $\sigma^*_{jk}$ and $\rho^*_{jk}$, for some
+$j,k=1,\ldots,d$.  
+
+
+
+Due to the homogeneity of these functions,
+e.g. $\sigma_{jk}^*(a\sigma_1,a\sigma_2)=a\sigma_{jk}^*(\sigma_1,\sigma_2)$ for any complex number
+$a$, they depend only on the ratio $h=\sigma_1/\sigma_2$, and we define the
+tensor-valued functions $\mathbf{m}(h)=\bsig^*/\sigma_2$,
+$\mathbf{w}(z)=\bsig^*/\sigma_1$, $\tilde{\mathbf{m}}(h)=\sigma_1\brho^*$, and
+$\tilde{\mathbf{w}}(z)=\sigma_2\brho^*$ with components  
+%
+\begin{align}\label{eq:m_h}
+  m_{jk}(h)=\sigma_{jk}^*/\sigma_2, \quad
+  w_{jk}(z)=\sigma_{jk}^*/\sigma_1, \quad
+   \tilde{m}_{jk}(h)=\sigma_1\rho_{jk}^*, \quad
+   \tilde{w}_{jk}(z)=\sigma_2\rho_{jk}^*.
+\end{align}
+%
+where $z=1/h$. The dimensionless functions $m_{jk}(h)$ and
+$\tilde{m}_{jk}(h)$ are analytic off the negative real axis in the
+$h$-plane, while $w_{jk}(z)$ and $\tilde{w}_{jk}(z)$ are analytic off
+the negative real axis in the $z$-plane \cite{Golden:CMP-473}. Each
+take the corresponding upper half plane to the upper half plane and
+are therefore examples of Herglotz functions
+\cite{Deift:2000:RMT,Golden:CMP-473}.
+
+
+
+A key step in the ACM is
+obtaining Stieltjes integral representations for $\bsig^*$ and
+$\brho^*$. These follow from resolvent representations for the
+electric field \cite{Golden:CMP-473} and current density
+\cite{Murphy:JMP:063506}         
+%
+\begin{align}\label{eq:Resolvent_representations_E_D}
+  &\vec{E}=s(sI-\Gamma\chi_1)^{-1}\vec{E}_0=t(tI-\Gamma\chi_2)^{-1}\vec{E}_0 ,
+  \quad
+   s\in\mathbb{C}\backslash[0,1],\\
+  &\vec{J}=t(tI-\Upsilon\chi_1)^{-1}\vec{J}_0=s(sI-\Upsilon\chi_2)^{-1}\vec{J}_0 ,
+  \quad
+   t\in\mathbb{C}\backslash[0,1].\notag 
+\end{align}
+%
+Here, we have defined the complex variables $s=1/(1-h)$ and
+$t=1/(1-z)=1-s$, $I$ is the identity operator on $\mathbb{R}^d$, the
+operator $\Gamma=\vec{\nabla}(\Delta^{-1})\vec{\nabla}\cdot$ is based on convolution with the
+free-space Green's function for the Laplacian $\Delta=\nabla\cdot\nabla=\nabla^{\,2}$, and the
+operator $\Upsilon=-\vec{\nabla}\times(\bDelta^{-1})\vec{\nabla}\times$ involves the vector
+Laplacian $\bDelta=- \vec{\nabla}\times\vec{\nabla}\times + \vec{\nabla}\vec{\nabla}\cdot $
+\cite{Golden:CMP-473,Murphy:JMP:063506}.    
+
+
+
+When the current density $\vec{J}(\vec{x},\omega)$ and the electric
+field $\vec{E}(\vec{x},\omega)$ are sufficiently smooth in a neighborhood
+of $\vec{x}\in\mathbb{R}^d$ for $\omega\in\Omega$, equation
+\eqref{eq:Resolvent_representations_E_D} is obtained as
+follows. On the Hilbert space $L^2(\Omega,P)$, the operator $\Delta^{-1}$ is
+well defined in terms of convolution with respect to the free-space
+Green's function of the Laplacian $\Delta$
+\cite{Golden:CMP-473,Folland:95}. Similarly, on the Hilbert space 
+$\mathscr{H}=\bigotimes_{i=1}^dL^2(\Omega,P)$, the inverse $\bDelta^{-1}$ of the
+vector Laplacian $\bDelta$ is defined in terms of component-wise
+convolution with respect to the free-space Green's function of the
+Laplacian.
+
+ 
+
+Applying the integro-differential operator $\vec{\nabla}(\Delta^{-1})$ to the
+formula $\vec{\nabla}\cdot\vec{J}=0$ in equation
+\eqref{eq:Maxwells_Equations_E} yields $\Gamma\vec{J}=0$, where
+$\Gamma=\vec{\nabla}(\Delta^{-1})\vec{\nabla}\cdot$ is an orthogonal projection
+\cite{Golden:CMP-473} from $\mathscr{H}$ onto the Hilbert space
+$\mathscr{H}_\times$ of curl-free random fields,
+$\Gamma:\mathscr{H}\mapsto\mathscr{H}_\times$. More specifically, for every
+sufficiently smooth $\vec{\zeta}\in\mathscr{H}_\times$ there exists
+\cite{Jackson-1999} a scalar potential $\varphi$ which is unique up to a 
+constant such that $\vec{\zeta}=\vec{\nabla}\varphi$, so that $\Gamma\vec{\zeta}=\vec{\zeta}$.
+%IS THIS TRUE NOW THAT WE ARE DEALING WITH THE $L_i$ AS DIFFERENTIAL
+%OPERATORS? 
+
+
+
+
+Similarly we have $\Upsilon\vec{E}=0$, where
+$\Upsilon=\vec{\nabla}\times(\bDelta^{-1})\vec{\nabla}\times$ is an orthogonal projection from 
+$\mathscr{H}$ onto the Hilbert space 
+$\mathscr{H}_{\bullet}$ of divergence-free random fields (of transverse
+gauge) \cite{Murphy:JMP:063506}. This can be seen as  
+follows. For every sufficiently smooth $\vec{\zeta}\in\mathscr{H}_\bullet$ we have
+$\vec{\zeta}=\vec{\nabla}\times(\vec{A}+\vec{C})$, where $\vec{A}$ is a vector
+potential associated with $\vec{\zeta}$ and the arbitrary vector field
+$\vec{C}$ satisfies $\vec{\nabla}\times\vec{C}=0$ \cite{Jackson-1999}. Without
+loss of generality, $\vec{C}$ can be chosen so that $\vec{A}$
+satisfies $\vec{\nabla}\cdot\vec{A}=0$ \cite{Jackson-1999}. Hence,
+$\vec{\nabla}\times\vec{\zeta}=\vec{\nabla}\times\vec{\nabla}\times\vec{A}
+=\vec{\nabla}(\vec{\nabla}\cdot\vec{A})-\bDelta\vec{A}=-\bDelta\vec{A}$. The vector 
+$\vec{C}$ chosen in this manner gives the transverse \emph{gauge} of
+$\vec{\zeta}$ \cite{Jackson-1999}. Choosing the members of 
+$\mathscr{H}_\bullet$ to have transverse gauge, the action of
+$\vec{\nabla}\times\vec{\nabla}\times$ on $\mathscr{H}_\bullet$ is given by that of
+$-\bDelta$. Therefore, the action of $\Upsilon$ on $\mathscr{H}_\bullet$ is given
+by that of 
+%$\Upsilon=\vec{\nabla}\times(\vec{\nabla}\times\vec{\nabla}\times)^{-1}\vec{\nabla}\times=\vec{\nabla}\times(\bDelta^{-1})\vec{\nabla}\times$, 
+%
+\begin{align}\label{eq:GammaCurl}
+  \Upsilon=\vec{\nabla}\times(\vec{\nabla}\times\vec{\nabla}\times)^{-1}\vec{\nabla}\times
+  =\vec{\nabla}\times(\bDelta^{-1})\vec{\nabla}\times, 
+\end{align}
+%
+and it is clear from the above discussion that $\Upsilon\vec{\zeta}=\vec{\zeta}$ for
+all such $\vec{\zeta}\in\mathscr{H}_\bullet$.
+%IS THIS TRUE NOW THAT WE ARE DEALING WITH THE $L_i$ AS DIFFERENTIAL
+%OPERATORS? 
+
+
+
+
+
+We now derive the formulas in equation
+\eqref{eq:Resolvent_representations_E_D}.
+Write $\sigma$ and $\rho$ in 
+equation \eqref{eq:two-phase_eps} as $\sigma=\sigma_2(1-\chi_1/s)=\sigma_1(1-\chi_2/t)$ and
+$\rho=(1-\chi_2/s)/\sigma_1=(1-\chi_1/t)/\sigma_2$. Note that
+$\vec{E}=\vec{E}_0+\vec{E}_f$, where $\vec{E}_0$ is a \emph{constant}
+field and $\vec{E}_f\in\mathscr{H}_\times$ so that
+$\Gamma\vec{E}=\vec{E}_f$, and similarly
+$\Upsilon\vec{J}=\vec{J}_f$. Consequently, from $\Gamma\vec{J}=0$ and $\Upsilon\vec{E}=0$
+we have the following formulas which are equivalent to that in 
+\eqref{eq:Resolvent_representations_E_D}  
+% 
+\begin{align}\label{eq:Proj_rep_Ef_Jf}
+  \vec{E}_f=\frac{1}{s}\Gamma\chi_1\vec{E}=\frac{1}{t}\Gamma\chi_2\vec{E}, \qquad
+  \vec{J}_f=\frac{1}{t}\Upsilon\chi_1\vec{J}=\frac{1}{s}\Upsilon\chi_2\vec{J}.
+\end{align}
+%
+%Here we have defined  $s=1/(1-h)$ and $t=1/(1-z)=1-s$, where
+%$h=\sigma_1/\sigma_2$ and $z=1/h$.
+
+
+
+On the Hilbert space $\mathscr{H}_\times$, the operators $\Gamma$ and $\chi_i$,
+$i=1,2$, are projectors \cite{Golden:CMP-473}. Therefore 
+$M_i=\chi_i\Gamma\chi_i$, $i=1,2$, are compositions of projection operators on
+$\mathscr{H}_\times$, and are consequently positive definite and bounded by
+1 in the underlying operator norm \cite{Rudin:87}. They are
+self-adjoint with respect to the $\mathscr{H}$-inner-product $\langle\cdot,\cdot\rangle$
+\cite{Golden:CMP-473}. Therefore, on the Hilbert space $\mathscr{H}_\times$
+with weight $\chi_1$ in the inner-product, $\langle\cdot,\cdot\rangle_1=\langle\chi_1\,\cdot,\cdot\rangle$ for
+example, $\Gamma\chi_1$ is a bounded linear self-adjoint operator with
+spectrum in the interval $[0,1]$ \cite{Golden:CMP-473}. Hence the
+resolvent operator $(sI-\Gamma\chi_1)^{-1}$ in
+\eqref{eq:Resolvent_representations_E_D} is also self-adjoint with
+respect to the same inner-product, and is bounded for
+$s\in\mathbb{C}\backslash[0,1]$ \cite{Stone:64}.     
+
+
+
+
+
+To obtain integral representations for $\bsig^*$ and
+$\brho^*$, it is more convenient to consider the functions 
+$F_{jk}(s)=\delta_{jk}-m_{jk}(h)$ and $E_{jk}(s)=\delta_{jk}-\tilde{m}_{jk}(h)$
+which are analytic off $[0,1]$ in the $s$-plane, and
+$G_{jk}(t)=\delta_{jk}-w_{jk}(z)$ and $H_{jk}(t)=\delta_{jk}-\tilde{w}_{jk}(z)$
+which are analytic off $[0,1]$ in the $t$-plane
+\cite{Golden:CMP-473}. For the formulation of the effective parameter
+problem involving $\mathscr{H}_\times$ and $\bsig^*$, define the
+coordinate system so that in \eqref{eq:eff_eps_def} the constant
+vector $\vec{E}_0$ is given by $\vec{E}_0=E_0\,\vec{e}_j$, where
+$\vec{e}_j$ is a standard basis vector on $\mathbb{R}^d$ in the
+$j^{\,\text{th}}$ direction for some $j=1,\ldots,d$. In the other
+formulation involving $\mathscr{H}_\bullet$ and $\brho^*$, define
+$\vec{J}_0=J_0\,\vec{e}_j$. Equations \eqref{eq:eff_eps_def} and 
+\eqref{eq:Resolvent_representations_E_D}, and the spectral theorem
+\cite{Reed-1980,Stone:64} then yield the following integral
+representations
+\cite{Golden:CMP-473,Bergman:PRC-377,Bergman:AP-78,Murphy:JMP:063506}  
+for the effective parameters $\sigma^*_{jk}$ and $\rho^*_{jk}$ (see Section
+\ref{sec:The_Spectral_Theorem_Continuum} for more details)
+%
+\begin{align}\label{eq:Stieltjes_F}
+  &m_{jk}(h)=\delta_{jk}-F_{jk}(s), \qquad
+  F_{jk}(s)=\langle\chi_1(sI-\Gamma\chi_1)^{-1}\vec{e}_j\cdot\vec{e}_k\rangle=\int_0^1\frac{\mu_{jk}(d\lambda)}{s-\lambda}\,,
+  \\
+  &w_{jk}(z)=\delta_{jk}-G_{jk}(t), \qquad
+  G_{jk}(t)=\langle\chi_2(tI-\Gamma\chi_2)^{-1}\vec{e}_j\cdot\vec{e}_k\rangle=\int_0^1\frac{\alpha_{jk}(d\lambda)}{t-\lambda}\,,
+  \notag \\
+  &\tilde{m}_{jk}(h)=\delta_{jk}-E_{jk}(s), \qquad
+  E_{jk}(s)=\langle\chi_2(sI-\Upsilon\chi_2)^{-1}\vec{e}_j\cdot\vec{e}_k\rangle=\int_0^1\frac{\eta_{jk}(d\lambda)}{s-\lambda}\,,
+  \notag \\
+  &\tilde{w}_{jk}(z)=\delta_{jk}-H_{jk}(t), \qquad
+  H_{jk}(t)=\langle\chi_1(tI-\Upsilon\chi_1)^{-1}\vec{e}_j\cdot\vec{e}_k\rangle=\int_0^1\frac{\kappa_{jk}(d\lambda)}{t-\lambda}\,.
+  \notag
+\end{align}
+%
+Here $\mu_{jk}$ and $\alpha_{jk}$ are \emph{spectral measures} associated
+with the random operators $\chi_1\Gamma\chi_1$ and $\chi_2\Gamma\chi_2$, respectively, while
+$\eta_{jk}$ and $\kappa_{jk}$ are spectral measures associated
+with the random operators $\chi_2\Upsilon\chi_2$ and $\chi_1\Upsilon\chi_1$, respectively. More
+specifically, for example, $\mu_{jk}(d\lambda)=\langle R(d\lambda)\vec{e}_i,\vec{e}_j\rangle_1$,
+where $R(d\lambda)$ is the projection valued measure associated with the
+operator $\chi_1\Gamma\chi_1$ acting on $\mathscr{H}_\times$ (see Section
+\ref{sec:The_Spectral_Theorem} for more details).   
+
+
+
+Through the Stieltjes--Perron inversion theorem 
+\cite{Henrici:1974:v2,MILTON:2002:TC}, it can be shown
+\cite{Murphy:JMP:063506} that the measures $\mu_{jk}$ and $\alpha_{jk}$, and
+the measures $\eta_{jk}$ and $\kappa_{jk}$ are related by (see Section
+\ref{sec:Stieltjes-Perron} for details)   
+%
+\begin{align}\label{eq:Measure_Relations}
+  &\lambda\alpha_{jk}(\lambda)=(1-\lambda)\mu_{jk}(1-\lambda) +
+       \lambda\,(\,m_{jk}(0)\delta_0(d\lambda)+w_{jk}(0)(\lambda-1)\delta_1(d\lambda)\,),
+  \\
+  &\lambda\kappa_{jk}(\lambda)=(1-\lambda)\eta_{jk}(1-\lambda) +
+       \lambda\,(\,\tilde{m}_{jk}(0)\delta_0(d\lambda)+\tilde{w}_{jk}(0)(\lambda-1)\delta_1(d\lambda)\,),
+  \notag     
+\end{align}
+%
+where $\delta_a(d\lambda)$ is the delta measure concentrated at $\lambda=a$. Equations
+\eqref{eq:Stieltjes_F} and \eqref{eq:Measure_Relations} demonstrate
+the many symmetries between the functions $m_{jk}(h)$, $w_{jk}(z)$,
+$\tilde{m}_{jk}(h)$, and $\tilde{w}_{jk}(z)$, and the respective 
+measures $\mu_{jk}$, $\alpha_{jk}$, $\eta_{ij}$, and $\kappa_{jk}$. Because of these
+symmetries, for simplicity, we will focus on $m_{jk}(h)$ and $\mu_{jk}$,
+and will reintroduce the other functions and measures where
+appropriate.  
+
+
+
+A key feature of equations \eqref{eq:eff_eps_def}, \eqref{eq:m_h}, and
+\eqref{eq:Stieltjes_F} is that the parameter information in $h$ and
+$E_0$ is \emph{separated} from the geometry of the composite, which is
+encoded in the spectral measure $\mu_{jk}$ via its moments 
+$\mu_{jk}^n=\int_0^1\lambda^n\mu_{jk}(d\lambda)$, $n=0,1,2,\ldots$. For example, the mass
+$\mu_{jk}^0$ of the measure $\mu_{jk}$ is given by $\mu_{jk}^0=p_1\delta_{jk}$,
+where $p_1=\langle\chi_1\rangle$ is the volume fraction of material component 1.  To
+see this, recall from Section \ref{sec:The_Spectral_Theorem_Continuum}
+that the projection valued measure $R(d\lambda)$ satisfies
+$\int_0^1R(d\lambda)=I$. Moreover, recall that the associated projection
+operator $R(\lambda)$ is self-adjoint on $\mathscr{H}_\times$ for $\lambda\in[0,1]$
+\cite{Reed-1980,Stone:64}. Consequently, we have
+% 
+\begin{align}\label{eq:Mass_Sign_Measures}
+   &\mu_{jk}^0=\int_0^1\mu_{jk}(d\lambda)=\int_0^1\langle R(d\lambda)\vec{e}_j\cdot\vec{e}_k\rangle_1
+        =\langle1\rangle_1\,\vec{e}_j\cdot\vec{e}_k
+        =\langle\chi_1\rangle\,\delta_{jk},\\
+   &\mu_{kk}(d\lambda)=\langle R(d\lambda)\vec{e}_k\cdot\vec{e}_k\rangle_1
+       =\langle R(d\lambda)\vec{e}_k\cdot R(d\lambda)\vec{e}_k\rangle_1
+       =\|R(d\lambda)\vec{e}_k\|_1^2>0,\notag
+\end{align}
+%
+where we have used a Fubini theorem \cite{Folland:99}
+and $\|\cdot\|_1$ denotes the norm induced by the inner-product
+$\langle\cdot,\cdot\rangle_1$. From equation \eqref{eq:Mass_Sign_Measures} we see,
+generically, that the diagonal components $\mu_{kk}$, $k=1,\ldots,d$, of
+$\bmu$ are positive measures of mass $p_1$, while the off-diagonal
+components $\mu_{jk}$, $j\neq k=1,\ldots,d$, have zero mass and are consequently
+signed measures \cite{Folland:99,Rudin:87}.
+
+
+
+The higher order moments $\mu_{jk}^n$, $n=1,2,3,\ldots$, in principle, may be
+found using a perturbation expansion of $F_{jk}(s)$ about a
+homogeneous medium $(\sigma_1=\sigma_2, \ s=\infty)$ \cite{Golden:CMP-473}. In
+particular $\mu_{jk}^0=p_1\delta_{jk}$, generically, and $\mu_{jk}^1=(p_1p_2/d)\,\delta_{jk}$
+for a statistically isotropic random medium 
+\cite{Golden:CMP-473,Golden:IMA-97,Bruno:JSP-365}, where
+$p_2=1-p_1=\langle\chi_2\rangle$ is the volume fraction of material component 2. In
+the case of a square bond lattice, which is an example of an
+infinitely interchangeable random medium,
+$\mu_{kk}^2=p_1p_2(1+(d-2)p_2)/d^2$ for any dimension $d$ and
+$\mu_{kk}^3=p_1p_2(p_2^2-p_2-1)/8$ for $d=2$. In general, the moments
+$\mu_{jk}^n$ depend on the $(n+1)$-point correlation functions of the
+random medium \cite{Golden:CMP-473,Bruno:JSP-365}.
+
+
+
+
+A principal application of the ACM is to derive \emph{forward bounds}
+on the diagonal components $\sigma_{kk}^*$ of the tensor $\bsig^*$,
+$k=1,\ldots,d$, given partial information on the microgeometry
+\cite{Bergman:PRL-1285,Milton:APL-300,Golden:CMP-473,Bergman:AP-78}. This
+information may be given in terms of the moments $\mu_{kk}^n$,
+$n=0,1,2,\ldots$, of the measure $\mu_{kk}$
+\cite{Milton:JAP-5294,Golden:CMP-473}. Given this information, the 
+bounds on $\sigma_{kk}^*$ follow from the special structure of $F_{kk}(s)$
+in \eqref{eq:Stieltjes_F}. More specifically, it is a \emph{linear}
+functional of the \emph{positive} measure $\mu_{kk}$.  The bounds are
+obtained by fixing the contrast parameter $s$, varying over an
+admissible set of measures $\mu_{kk}$ (or geometries) which is
+determined by the known information regarding the two-component
+composite.  Knowledge of the moments $\mu_{kk}^n$  for $n=1,\ldots,J$ confines
+$\sigma_{kk}^*$ to a region of the complex plane which is bounded by arcs
+of circles, and the region becomes progressively smaller as more
+moments are known \cite{Milton:JAP-5294,Golden:1986:BCP}. When 
+all the moments are known the measure $\mu_{kk}$ is uniquely determined 
+\cite{Akhiezer:Book:1965}, hence  $\sigma_{kk}^*$ is explicitly known. The
+bounding procedure is reviewed in Section
+\ref{sec:Bounding_Procedure}.
+
+
+
+We conclude this section with some final remarks regarding the energy
+constraints $\langle\vec{J}\cdot\vec{E}_f\rangle=0=\langle\vec{E}\cdot\vec{J}_f\rangle$, which follow from
+equation \eqref{eq:Weak_Curl_Free_Variational_Form} and are at
+the heart of the existence and uniqueness of solutions to equation
+\eqref{eq:Maxwells_Equations_E}. We first note
+that the formulas $\Gamma\vec{E}=\vec{E}_f$ and $\Upsilon\vec{J}=\vec{J}_f$ are
+sufficient conditions for these constraints. The sufficiency
+of these conditions can be seen by writing $\sigma=\sigma_2(1-\chi_1/s)$ and
+$\rho=(1-\chi_1/t)/\sigma_2$ in $\vec{J}=\sigma\vec{E}$ and $\vec{E}=\rho\vec{J}$,
+respectively, to obtain           
+% 
+\begin{align}\label{eq:Field_Rep_s}
+  \langle\vec{J}\cdot\vec{E}_f\rangle=\sigma_2(\langle\vec{E}\cdot\vec{E}_f\rangle-\langle\chi_1\vec{E}\cdot\vec{E}_f\rangle/s),
+ \quad
+  \langle\vec{E}\cdot\vec{J}_f\rangle=(\langle\vec{J}\cdot\vec{J}_f\rangle-\langle\chi_1\vec{J}\cdot\vec{J}_f\rangle/t)/\sigma_2, 
+\end{align}
+%
+for $s\neq0$ $(h\neq\pm\infty)$ or $t\neq0$ $(h\neq0)$. Now, if we have $\Gamma\vec{E}=\vec{E}_f$ then 
+$\vec{\nabla}\cdot\vec{J}=0$ yields equation \eqref{eq:Proj_rep_Ef_Jf}
+($\vec{E}_f=\Gamma\chi_1\vec{E}/s$). Therefore, as $\Gamma$ is a self-adjoint
+operator on $\mathscr{H}$ \cite{Folland:95}, we have     
+%
+\begin{align}\label{eq:Suff_Cond}
+  \langle\chi_1\vec{E}\cdot\vec{E}_f\rangle=\langle\chi_1\vec{E}\cdot\Gamma\vec{E}\rangle
+                    =\langle\Gamma\chi_1\vec{E}\cdot\vec{E}\rangle
+                    =s\langle\vec{E}_f\cdot\vec{E}\rangle.
+ %  \langle\chi_1\vec{J}\cdot\vec{J}_f\rangle=\langle\chi_1\vec{J}\cdot\Upsilon\vec{J}\rangle
+%                     =\langle\Upsilon\chi_1\vec{J}\cdot\vec{J}\rangle
+%                     =t\langle\vec{J}_f\cdot\vec{J}\rangle.                        
+\end{align}
+%
+Consequently, from equation \eqref{eq:Field_Rep_s}
+we have $\langle\vec{J}\cdot\vec{E}_f\rangle=0$ for $s\neq0$. The argument involving the
+operator $\Upsilon$ and the vector field $\vec{J}_f$ is analogous.
+
+
+ We see from equation \eqref{eq:Field_Rep_s} that the energy
+ constraints are equivalent to the following ``field representations''
+ for the contrast parameters $s$ and $t$
+%
+\begin{align}\label{eq:Field_Rep_s_t}
+  \langle\chi_1\vec{E}\cdot\vec{E}_f\rangle/\langle\vec{E}\cdot\vec{E}_f\rangle
+  =s=1-t
+  =1- \langle\chi_1\vec{J}\cdot\vec{J}_f\rangle/\langle\vec{J}\cdot\vec{J}_f\rangle,
+\end{align}
+%
+%$s=\langle\chi_1\vec{E}\cdot\vec{E}_f\rangle/\langle\vec{E}\cdot\vec{E}_f\rangle$,
+when $\langle\vec{E}\cdot\vec{E}_f\rangle\neq0$ (if and only if
+$\langle\chi_1\vec{E}\cdot\vec{E}_f\rangle\neq0$), for example. We also note that equation 
+\eqref{eq:Field_Rep_s_t} provides a relationship between the
+members $\vec{E}_f$ and $\vec{J}_f$ of the Hilbert spaces
+$\mathscr{H}_\times$ and $\mathscr{H}_{\bullet}$, respectively. Moreover, since
+$h=1-1/s$ and $h\geq0$ for $h\in\mathbb{R}$, this implies, for example,
+that $|\langle\vec{E}\cdot\vec{E}_f\rangle|\leq|\langle\chi_1\vec{E}\cdot\vec{E}_f\rangle|$ for
+$h\in\mathbb{R}$. Furthermore, the energy constraints provide the
+limiting behavior of the ratio
+$\mathcal{R}(h)=\langle\vec{E}\cdot\vec{E}_f\rangle/\langle\chi_1\vec{E}\cdot\vec{E}_f\rangle=1/s$  
+%
+\begin{align*}
+  \lim_{h\to0}\mathcal{R}(h)=1, \quad
+  \lim_{h\to1}\mathcal{R}(h)=0, \quad
+  \lim_{h\to+\infty}\mathcal{R}(h)=-\infty,
+\end{align*}
+%
+which is otherwise a very complicated object in the absence of these
+energy constraints.
+%Analogous formulas involving the vector field $\vec{J}_f$ also hold. 
+
+
+
+
+
+\subsection{Lattice Setting}
+\label{sec:Lattice_Setting}
+%
+In this section we formulate the effective parameter problem for the
+infinite and finite, two-component bond lattice on $\mathbb{Z}^d$. The
+infinite bond lattice, reviewed in Section
+\ref{sec:Infinite_Lattice_Setting}, is a special case of the
+stationary random medium considered in Section
+\ref{sec:Continuum_Setting}. In Section
+\ref{sec:Finite_Lattice_Setting} we develop the mathematical framework
+for the ACM in the finite lattice setting, a key theoretical
+contribution of this work. 
+
+
+
+\subsubsection{Infinite Lattice Setting}
+\label{sec:Infinite_Lattice_Setting}
+%
+Consider a two-component bond lattice on all of $\mathbb{Z}^d$
+determined by the probability space $(\Omega,P)$, and let
+$\bsig(\vec{x},\omega)$ be the local complex conductivity tensor with
+components $\sigma_{jk}(\vec{x},\omega)=\sigma^j(\vec{x},\omega)\delta_{jk}$, $j,k=1,\ldots,d$. Here
+$\sigma^j(\vec{x},\omega)$ is the conductivity of the bond emanating from 
+$\vec{x}\in\mathbb{Z}^d$ in the positive $j^{\,\text{th}}$ direction, 
+which is a stationary random field that takes the \emph{complex} values
+$\sigma_1$ and $\sigma_2$ with probabilities $p_1$ and $p_2=1-p_1$,
+respectively \cite{Golden:CMP-467,Bruno:JSP-365}. The configuration
+space $\Omega=\{\sigma_1,\sigma_2\}^{d\mathbb{Z}^d}$ represents the set of all
+realizations of the random medium and the 
+probability measure $P$ is compatible with stationarity. Analogous to equation
+\eqref{eq:two-phase_eps}, the local conductivity $\sigma^j(\vec{x},\omega)$ of
+the two-phase random medium takes the form \cite{Golden:CMP-467}
+%
+\begin{align}\label{eq:two-phase_sigma}
+  \sigma^j(\vec{x},\omega)=\sigma_1\chi_1^j(\vec{x},\omega)+\sigma_2\chi_2^j(\vec{x},\omega), \quad j=1,\ldots,d.
+\end{align}
+%
+Here $\chi_i^j(\vec{x},\omega)$ is the characteristic function of medium
+$i=1,2$, which equals one for all realizations $\omega\in\Omega$ having medium $i$
+in the $j^{\,\text{th}}$ positive bond at $\vec{x}$, and equals zero
+otherwise.
+
+
+
+
+In this lattice setting, the differential operators $\vec{\nabla}\times$ and
+$\vec{\nabla}\cdot$ in equation \eqref{eq:Maxwells_Equations_E} are given 
+\cite{Golden:CMP-467,Bruno:JSP-365} in terms of forward and backward
+difference operators $D_j^+$ and $D_j^-$, respectively, where
+%
+\begin{align}\label{eq:Difference_Operators}
+  D_j^+=T_j^+-I, \quad D_j^-=I-T_j^-, \quad j=1,\ldots,d.
+\end{align}
+%
+Here $I$ is the identity operator on $\mathbb{Z}^d$, and 
+$T_j^+=T_{+\vec{e}_j}$ and $T_j^-=T_{-\vec{e}_j}$ are the generators (through 
+composition) of the unitary group $T_x$ acting on $L^2(\Omega,P)$ defined
+by $(T_xf)(0,\omega)=f(\vec{x},\omega)$, for any $f\in L^2(\Omega,P)$
+%$f:\mathbb{Z}^d\times\Omega\to\mathbb{R}$,
+which is a stationary random field
+\cite{Golden:CMP-467}. Define $\mathscr{H}=\bigotimes_{i=1}^dL^2(\Omega,P)$ and let
+$\vec{E},\vec{J}\in \mathscr{H}$ be  
+the random electric field and current density,
+respectively, where $\vec{E}(\vec{x},\omega)=(E^1(\vec{x},\omega),\ldots
+E^d(\vec{x},\omega))$ and $E^j(\vec{x},\omega)$ is the electric field in the
+bond emanating from $\vec{x}$ in the positive $j^{\,\text{th}}$
+direction, and similarly for $\vec{J}(\vec{x},\omega)$. 
+
+
+As in Section \ref{sec:Continuum_Setting} we write
+$\vec{E}=\vec{E}_0+\vec{E}_f$, where $\vec{E}_f$ is the fluctuating
+field of mean zero about the (constant) average $\vec{E}_0$. 
+The variational problem in \eqref{eq:Weak_Curl_Free_Variational_Form}
+for this lattice setting has a unique solution satisfying Kirchhoff's
+circuit laws \cite{Golden:CMP-473,Bruno:JSP-365}      
+%
+\begin{align}\label{eq:Kirchhiff's__Equations}
+  D_i^+E^j-D_j^+E^i=0, \quad
+  \sum_{k=1}^dD_k^-J^k=0, \quad
+  J^i=\sigma^iE^i, \quad
+%  \vec{E}=\vec{E}_0+\vec{E}_f, \quad
+  \langle\vec{E}\rangle=\vec{E}_0,
+\end{align}
+%
+where $i,j=1,\ldots,d$ and the components $E^i(\vec{x},\omega)$ and
+$J^i(\vec{x},\omega)$ of $\vec{E}(\vec{x},\omega)$ and $\vec{J}(\vec{x},\omega)$ are
+stationary random fields.  
+Equation \eqref{eq:Kirchhiff's__Equations} is a direct analogue of
+equation \eqref{eq:Maxwells_Equations_E} when written in component
+form \cite{Golden:CMP-473}. Analogous to equation
+\eqref{eq:eff_eps_def}, the effective complex 
+conductivity tensor $\bsig^*$ is defined by
+$\langle\vec{J}\rangle=\bsig^*\vec{E}_0$, which has components
+$\sigma^*_{jk}=\sigma_2\,m_{jk}(h)$, $j,k=1,\ldots,d$, where $h=\sigma_1/\sigma_2$. The
+representation formula for $m_{jk}(h)$ in \eqref{eq:Stieltjes_F}
+still holds in this infinite lattice setting,  
+with $\Gamma$ in \eqref{eq:Resolvent_representations_E_D} now given by 
+%
+\begin{align}\label{eq:Discrete_Gamma}
+  \Gamma=\nabla^+(\Delta^{-1})\nabla^-, \quad \nabla^\pm = (D_1^\pm,\ldots,D_d^\pm),
+\end{align}
+%
+where $\Delta^{-1}$ is based on discrete convolution with the lattice
+Green's function for the Laplacian $\Delta=\nabla^2$ \cite{Bruno:JSP-365}. The
+formulation of the ACM for the effective resistivity tensor $\brho^*$
+in the infinite lattice setting is a direct analogue of that for
+$\bsig^*$ given here.
+
+
+\subsubsection{Finite Lattice Setting}
+\label{sec:Finite_Lattice_Setting}
+%
+Consider a finite, two-component bond lattice on
+$\mathbb{Z}_L^d\subset\mathbb{Z}^d$ determined by the probability space
+$(\Omega,P)$, where
+%
+\begin{align}\label{eq:ZLd}
+  \mathbb{Z}_L^d=\{\vec{x}\in\mathbb{Z}^d \ | \ 1\leq x_i\leq L, \ i=1,\ldots,d\},   
+\end{align}
+%
+$L\in\mathbb{N}$, $L\geq2$, and $x_i=(\vec{x}\,)_i$ is the $i^{\,\text{th}}$
+component of the vector $\vec{x}$. Let $\bsig(\vec{x},\omega)$ be the local
+complex conductivity tensor with components
+$\sigma_{jk}(\vec{x},\omega)=\sigma^j(\vec{x},\omega)\delta_{jk}$, $j,k=1,\ldots,d$, where
+$\sigma^j(\vec{x},\omega)$ is defined in equation \eqref{eq:two-phase_sigma} for
+$\vec{x}\in \mathbb{Z}_L^d$ and $\omega\in\Omega$. The configuration space
+$\Omega=\{\sigma_1,\sigma_2\}^{d\mathbb{Z}_L^d}$ represents the set of all $2^N$
+realizations of the finite random bond lattice, where $N=d\,L^d$, and
+$P$ is the associated probability measure. Define
+$\mathscr{H}=\bigotimes_{i=1}^dL^2(\Omega,P)$ and let
+$\vec{E},\vec{J}\in \mathscr{H}$ be the random
+electric field and current density, respectively, which satisfy
+Kirchhoff's circuit laws \eqref{eq:Kirchhiff's__Equations} with
+appropriate boundary conditions. Analogous to equation 
+\eqref{eq:eff_eps_def}, the effective complex conductivity tensor
+$\bsig^*$ is defined by $\langle\vec{J}\rangle=\bsig^*\vec{E}_0$, which
+has components $\sigma_{jk}^*=\sigma_2m_{jk}(h)$, $\vec{E}_0=\langle\vec{E}\rangle$, and
+$\langle\cdot\rangle$ denotes ensemble average over $\Omega$.
+
+
+
+
+In this section we obtain discrete versions of the integral
+representations for $m_{jk}(h)$ and $\tilde{w}_{jk}(z)$ in
+\eqref{eq:Stieltjes_F} for this finite bond lattice setting, involving
+spectral measures $\mu_{jk}$ and $\kappa_{jk}$ associated with real-symmetric
+random matrices. The integral representations for $\tilde{m}_{jk}(h)$ and
+$w_{jk}(z)$ are analogous. Toward this goal, we define a bijective
+mapping $\Theta$ from the two-dimensional set $\mathbb{Z}_L^d$ onto the one
+dimensional set $\mathbb{N}_L\subset\mathbb{N}$ given by 
+%$\Theta:\mathbb{Z}_L^d\to\mathbb{N}_L$, by
+% 
+\begin{align}\label{eq:Bijection_Z_N}
+  \mathbb{N}_L=\{i\in\mathbb{N} \ | \ i\leq dL^d\}, \qquad
+  \Theta(\vec{x}\,)=x_1+\sum_{k=2}^d(x_k-1)L^{k-1}.
+  %\quad x_k=1,\ldots,L, \ \forall \ k.
+\end{align}
+%
+Under the bijection $\Theta$ the components $E^j(\vec{x},\omega)$, $j=1,\ldots,d$, of
+the random electric field
+$\vec{E}(\vec{x},\omega)=(E^1(\vec{x},\omega),\ldots ,E^d(\vec{x},\omega))$ are mapped to
+vector valued functions $E^j(\vec{x},\omega)\mapsto\vec{E}^j(\omega)=(E^j_1(\omega),\ldots,
+E^j_{L^d}(\omega))$ so that
+% 
+\begin{align}\label{eq:bijection_vector_mapping}
+  \Theta(\vec{E}(\vec{x},\omega))=(\vec{E}^1(\omega),\ldots ,\vec{E}^d(\omega))\in\mathbb{R}^N
+\end{align}
+%
+%$\vec{E}(\vec{x},\omega)\mapsto(\vec{E}^1(\omega),\ldots \vec{E}^d(\omega))\in\mathbb{R}^N$,
+for each $\omega\in\Omega$, and similarly for $\vec{J}(\vec{x},\omega)$. Moreover, the
+bijection $\Theta$ maps the standard basis vector
+$\vec{e}_1=(1,0,\ldots,0)\in\mathbb{Z}^d$, for example, to the
+vector $(\vec{1},\vec{0},\ldots,\vec{0})\in\mathbb{Z}^N$, where
+$\vec{1}$ and $\vec{0}$ are vectors of ones and zeros of length
+$L^d$, respectively, and similarly for the $\vec{e}_j$ for
+$j=2,\ldots,d$. Therefore, the vectors $\hat{e}_i=\Theta(\vec{e}_i)/L^{d/2}$,
+$i=1,\ldots,d$, serve as the standard basis vectors on $\mathbb{N}_L$, with
+$\hat{e}_i\cdot\hat{e}_j=\delta_{ij}$.
+% In view of equation
+% \eqref{eq:bijection_vector_mapping} it is natural to decompose the
+% set $\mathbb{N}_L$ as follows
+% %
+% \begin{align}\label{eq:decompose}
+%   \mathbb{N}_L=\cup_{j=1}^d\mathbb{N}_L^j, \quad
+%   \mathbb{N}_L^j=\{i\in\mathbb{N}_L \ | \ (j-1)L+1\leq i\leq jL\}, \quad
+%   j=1,\ldots,d. 
+% \end{align}
+% %
+
+
+On $\mathbb{N}_L$ the difference operators $D_j^\pm$, $j=1,\ldots,d$, in
+equation \eqref{eq:Difference_Operators} are given in terms of finite 
+difference matrices $D_j$
+%of size $L^d\times L^d$
+\cite{Demmel:1997}. Moreover, the Laplacian $\Delta$ and
+the projection operator $\Gamma$ in \eqref{eq:Discrete_Gamma} are replaced 
+by the real-symmetric matrices $\Delta=\nabla^{\,T}\nabla$ and $\Gamma=\nabla(\Delta^{-1})\nabla^{\,T}$,
+respectively, where $\nabla=(D_1,\ldots,D_d)^T$. The matrices $\Delta$ and $\Gamma$
+depend only on the topology and the boundary conditions 
+of the underlying finite bond lattice $\mathbb{Z}_L^d$, and $\Gamma$ is a
+projection matrix satisfying $\Gamma^{\,2}=\Gamma$.
+
+
+The projection matrix representation of the operator $\Upsilon$ on
+$\mathbb{N}_L$ is obtained as follows. In three dimensions the curl
+operation $\vec{\nabla}\times$ is given by 
+%
+\begin{align}\label{eq:Curl_3D}
+  \vec{\nabla}\times\vec{\zeta}=
+     \text{Det}\left[
+  \begin{array}{ccc}
+    \vec{e}_1 &\vec{e}_2 &\vec{e}_3\\
+       \partial_1    &   \partial_2    &   \partial_3   \\
+       \zeta_1    &   \zeta_2    &   \zeta_3   
+    \end{array}
+    \right]
+    =C\vec{\zeta}, \quad
+    C=
+    \left[
+    \begin{array}{ccc}
+       0  & -\partial_3  &   \partial_2 \\
+       \partial_3 &  0   &  -\partial_1 \\
+      -\partial_2 &  \partial_1  &   0
+    \end{array}
+    \right],    
+\end{align}
+%
+where $\vec{\zeta}=\vec{\zeta}(\vec{x})$ for $\vec{x}\in\mathbb{R}^3$, we
+have denoted $\partial_i$, $i=1,2,3$, to be partial differentiation in the
+$i^{\;\text{th}}$ direction $\vec{e}_i$, and $C$ is the curl
+operator $\vec{\nabla}\times$ in matrix form. One can check directly
+that $C^{\,2}=-C^TC=-\bDelta+\vec{\nabla}\vec{\nabla}\cdot$, where $\bDelta$ is the vector
+Laplacian. For dimensions $d>3$, the condition $\vec{\nabla}\times\vec{\zeta}=0$ is
+given by $\partial_j\zeta_j-\partial_j\zeta_i=0$, $i,j=1,\ldots,d$,
+\cite{Golden:CMP-473}. Consequently, the matrix curl operator $C$
+analogous to that in \eqref{eq:Curl_3D} for $d>3$ becomes increasingly 
+rectangular with increasing dimension. The two-dimensional case 
+follows from \eqref{eq:Curl_3D} by setting
+$\vec{\zeta}(\vec{x})=[\zeta_1(\vec{x}),\zeta_2(\vec{x}),0]^T$ with
+$\vec{x}=[x_1,x_2,0]^T$, yielding   
+%
+\begin{align}\label{eq:Curl_2D}
+  \vec{\nabla}\times\vec{\zeta}=(\partial_1\zeta_2-\partial_2\zeta_1)\vec{e}_3
+%  =
+%   \left[
+%     \begin{array}{ccc}
+%        -\partial_2  &   \partial_1 \\      
+%     \end{array}
+%   \right]
+%  
+  %  \left[
+%     \begin{array}{ccc}
+%        \zeta_1  \\
+%        \zeta_2   
+%     \end{array}
+%   \right]\vec{e}_3
+%  
+  =(\vec{\nabla}\cdot R\vec{\zeta}_2)\vec{e}_3,
+%
+  \quad
+%  
+  \vec{\nabla}\cdot
+    =\left[
+    \begin{array}{ccc}
+       \partial_1  &   \partial_2 \\      
+    \end{array}
+  \right],
+  \quad
+  R=
+  \left[
+    \begin{array}{ccc}
+        0  &  1  \\
+       -1  &  0  
+    \end{array}
+  \right],
+ %  \quad
+%   \vec{\zeta}_2=
+%   \left[
+%     \begin{array}{ccc}
+%        \zeta_1  \\
+%        \zeta_2   
+%     \end{array}
+%   \right].
+\end{align}
+%
+where $R$ is a $90^\circ$ rotation matrix, we have defined $\vec{\zeta}_2=[\zeta_1
+\ \zeta_2]^T$, and the action of $\vec{\nabla}\cdot R$ on $\vec{\zeta}_2$ is given by that
+of $[ - \partial_2 \ \partial_1]$. 
+
+
+In view of equation \eqref{eq:Curl_3D}, the matrix
+representation of the curl operator $\vec{\nabla}\times$ on $\mathbb{N}_L$ in
+\emph{three dimensions} is given by $C$ in \eqref{eq:Curl_3D} under the
+mapping $\partial_i\mapsto D_i$, $i=1,2,3$. In two dimensions, pointwise rotations
+of fields by $90^\circ$ convert curl free fields to divergence free
+fields, and vice versa \cite{MILTON:2002:TC}. With this in mind and in
+view of equation \eqref{eq:Curl_2D}, in \emph{two dimensions} it is
+natural to define the curl operator by $\vec{\nabla}\times=\vec{\nabla}\cdot R=[ - \partial_2 \
+\partial_1]$ so that on $\mathbb{N}_L$ we have 
+%
+\begin{align}
+  \vec{\nabla}\times\vec{\zeta}=C^T\vec{\zeta}, \quad
+  C^T=
+  \left[
+    \begin{array}{ccc}
+       -D_2  &   D_1
+    \end{array}
+  \right],
+\end{align}
+%
+where $C$ satisfies $C^TC=\nabla^T\nabla=\Delta$, the matrix representation of the
+Laplacian. From the above discussion and in view of equation
+\eqref{eq:GammaCurl}, it is natural to define the matrix
+representation of $\Upsilon$ on $\mathbb{N}_L$ by 
+%
+\begin{align}\label{eq:GammaCurl_NL}
+  \Upsilon=C(C^TC)^{-1}C^T,
+\end{align}
+%
+which is clearly a projection matrix $\Upsilon^2=\Upsilon$.
+
+
+We now discuss the matrix representation of the characteristic
+function $\chi_1^j(\vec{x},\omega)$ on $\mathbb{N}_L$. By writing the
+constitutive relation $J^j(\vec{x},\omega)=\sigma^j(\vec{x},\omega)E^j(\vec{x},\omega)$
+displayed in equation \eqref{eq:Kirchhiff's__Equations} as
+$J^j(\vec{x},\omega)=\sigma_2(1-\chi_1^j(\vec{x},\omega)/s)E^j(\vec{x},\omega)$, 
+we see that the characteristic
+function $\chi_1^j(\vec{x},\omega)$ in \eqref{eq:two-phase_sigma} operates,
+according to the probability measure $P$, on the electric field
+$E^j(\vec{x},\omega)$ in each individual bond $j=1,\ldots,d$ emanating from
+$\vec{x}\in\mathbb{Z}_L^d$. In view of this and equation
+\eqref{eq:bijection_vector_mapping}, on
+$\mathbb{N}_L$ the characteristic function $\chi_1^j(\vec{x},\omega)$ is
+represented by a block diagonal matrix 
+%
+\begin{align}\label{eq:block_diag_chi}  
+  \chi_1(\omega)=\text{diag}(\chi_1^1(\omega),\ldots,\chi_1^d(\omega)),
+\end{align}
+%
+where $\chi_1^j(\omega)$, $j=1,\ldots,d$, is a diagonal matrix of size $L^d\times L^d$ with
+zeros and ones distributed according to $P$ along the main
+diagonal. Moreover, the matrix $\chi_1^j(\omega)$ acts on the vector
+$\vec{E}^j(\omega)=\Theta(E^j(\vec{x},\omega))$ in
+\eqref{eq:bijection_vector_mapping} for each $j=1,\ldots,d$. Consequently, 
+$\chi_1(\omega)$ is also a real-symmetric projection matrix of size $N\times N$,
+which determines the geometry and component connectivity of the
+two-phase random medium. In summary, on $\mathbb{N}_L$ the operators
+$M_1=\chi_1\Gamma\chi_1$ and $K_1=\chi_1\Upsilon\chi_1$ are represented by real-symmetric
+random matrices of size $N\times N$
+\cite{Golden:J_Biomech:337,Murphy:JMP:063506}. The matrix
+representations of the operators $M_2=\chi_2\Gamma\chi_2$ and $K_2=\chi_2\Upsilon\chi_2$ are
+analogously determined with use of the identity $\chi_2(\omega)=I-\chi_1(\omega)$,
+where $I$ is the identity matrix on $\mathbb{R}^N$.
+
+
+
+
+
+We now discuss the fundamental difference in the mathematical
+framework between the \emph{infinite}
+settings formulated in Sections \ref{sec:Continuum_Setting},
+\ref{sec:Infinite_Lattice_Setting}, and
+\ref{sec:The_Spectral_Theorem_Continuum}, and the \emph{finite}
+lattice setting formulated here and in Section
+\ref{sec:The_Spectral_Theorem_Finite_Lattice}. In the infinite
+settings, the (infinite-dimensional) operator $\Gamma\chi_1$ appears in the integral
+representation \eqref{eq:Stieltjes_F} for the effective parameter,
+involving the $\mathscr{H}$-inner-product 
+weighted by $\chi_1(\vec{x},\omega)$. In this abstract (infinite-dimensional)
+Hilbert space formulation of the effective parameter problem, the
+resolvent $(sI-\Gamma\chi_1)^{-1}$ is a linear self-adjoint operator which is
+bounded for $s\in\mathbb{C}\backslash[0,1]$ \cite{Stone:64}. In contrast, the
+finite lattice formulation of the effective parameter problem involves
+a finite dimensional Hilbert space, and the operators $\Gamma$ and $\chi_1$
+are matrices. In this case, the matrix $\Gamma\chi_1$ is \emph{not} symmetric,
+it typically has complex spectrum, and it may not even have a full set
+of eigenvectors. Consequently, the integral formulas in equations
+\eqref{eq:Discrete_Spectral_Theorem} and
+\eqref{eq:Discrete_Stieltjes_F_Derivation}, which were derived for the 
+\emph{symmetric} matrix $M_1=\chi_1\Gamma\chi_1$, fail to hold for the matrix
+$\Gamma\chi_1$ in general. Due to this fundamental difference in the theory
+for the finite lattice setting, the mathematical framework must be 
+significantly modified from that for the infinite settings. The ACM
+for the finite lattice case is summarized by the following theorem.
+
+\vspace{0.15in}
+% 
+\begin{theorem}\label{thm:Discrete_Spectral_Theorem_ACM}
+  For each $\omega\in\Omega$,  let $N_1(\omega)={\rm Trace}(\chi_1(\omega))$ be the number of
+  ones along the main diagonal of $\chi_1(\omega)$, with
+  $N_0(\omega)=N-N_1(\omega)$. Also, let $M_1(\omega)=U(\omega)\Lambda(\omega)U(\omega)$ be the spectral
+  decomposition of $M_1(\omega)$. Here, the columns of $U(\omega)$ consist of
+  the orthonormal eigenvectors $\vec{u}_i(\omega)$, $i=1,\ldots,N$, of $M_1(\omega)$
+  and the diagonal matrix $\Lambda(\omega)={\rm diag}(\lambda_1(\omega),\ldots,\lambda_N(\omega))$ involves
+  its eigenvalues $\lambda_i(\omega)$. Then, there exists a permutation matrix
+  $\Pi(\omega)$ of size $N\times N$, an orthogonal matrix $U_1(\omega)$ of size $N_1(\omega)\times
+  N_1(\omega)$, and a diagonal matrix $\Lambda_1(\omega)$ of size $N_1(\omega)\times N_1(\omega)$
+  such that       
+  %
+  \begin{align}\label{eq:Spec_Decomp_chi_Gamma_chi}
+    %
+U=\Pi^{\,T}\left[
+  \begin{array}{ccc}
+    I_0&0_{01}\\
+    0_{10}&U_1   
+    \end{array}
+\right],
+\qquad
+\Lambda=\left[
+  \begin{array}{ccc}
+    O_{00}&O_{01}\\
+    O_{10}&\Lambda_1   
+    \end{array}
+\right],
+  \end{align}
+  %
+  where $I_0$ is the identity matrix of size $N_0(\omega)\times N_0(\omega)$ and $O_{ab}$
+  is a matrix of zeros of size $N_a(\omega)\times N_b(\omega)$, for $a,b=0,1$. 
+  If the electric field
+  %$\vec{E}(\omega)$
+  satisfies
+  $\vec{E}(\omega)=\vec{E}_0+\vec{E}_f(\omega)$, with $\vec{E}_0=\langle\vec{E}(\omega)\rangle$
+  and $\Gamma\vec{E}(\omega)=\vec{E}_f(\omega)$, then the effective complex
+  conductivity tensor $\bsig^*$ has components
+  $\sigma_{jk}^*=\sigma_2\,m_{jk}(h)$, $j,k=1,\ldots,d$,  which satisfy       
+%
+\begin{align}\label{eq:Stieltjes_F_Discrete}
+  &m_{jk}(h)=\delta_{jk}-F_{jk}(s), 
+  &&F_{jk}(s)=\int_0^1\frac{\mu_{jk}(d\lambda)}{s-\lambda}\,, 
+  &&\mu_{jk}(d\lambda)=\sum_{i=1}^N\langle \delta_{\lambda_i}(d\lambda)\chi_1R_i\hat{e}_j\cdot\hat{e}_k\rangle.  
+\end{align}
+%
+where $R_i=\vec{u}_i\vec{u}_i^{\,T}$. Moreover, the mass $\mu_{jk}^0$ of the
+measure $\mu_{jk}$ satisfies 
+%
+\begin{align}\label{eq:Measure_Mass_theorem}
+  \mu_{jk}^0=\langle\chi_1\hat{e}_k\cdot\hat{e}_k\rangle\,\delta_{jk}=d\,\frac{\langle N_1^k(\omega)\rangle}{N}\,\delta_{jk},
+\end{align}
+%
+where $N_1^k(\omega)={\rm Trace}(\chi_1^k(\omega))$ is the total number of type-one
+bonds in the positive $k^{\text{th}}$ direction for $\omega\in\Omega$ and the
+matrix $\chi_1^k(\omega)$ is defined in equation \eqref{eq:block_diag_chi}. 
+% 
+\end{theorem}
+
+Before we prove Theorem \ref{thm:Discrete_Spectral_Theorem_ACM}, we
+first discuss some consequences of equation
+\eqref{eq:Measure_Mass_theorem}. In particular, we use this
+formula to explicitly determine $\mu^0_{kk}$ for some important
+examples of a large class of composite micro-geometries. Namely, the
+class of geometries such that $N_1^k(\omega)$ is a non-random constant
+$N_1^k$ for all $k=1,\ldots,d$, i.e. $N_1^k(\omega)=N_1^k$ for all
+$\omega\in\Omega$. Consequently, $N_1(\omega)=N_1$ for all $\omega\in\Omega$ and
+$N_1=\sum_kN_1^k$. Let $p_1^k=N_1^k/N$ be the number fraction of type-one
+bonds in the positive $k^{\text{th}}$ direction, so that
+$p_1=\sum_kp_1^k$. By equation \eqref{eq:Measure_Mass_theorem}, for this
+class of composites we have
+% 
+\begin{align}\label{eq:Meas_mass_Anisotropic}
+  \mu_{jk}^0=d\,p_1^k\,\delta_{jk}.
+\end{align}
+%
+Given a fixed number fraction $p_1=N_1/N$ of type-one bonds, one can
+define a class of highly anisotropic composite geometries by fixing
+$p_1^k$ close to $p_1$ for some $k=1,\ldots,d$,
+i.e. $p_1-p_1^k\ll1$. A class of locally isotropic random media is
+obtained by requiring that every bond emanating from
+$\vec{x}\in\mathbb{Z}^d_L$ in the positive direction is of the same
+type, i.e. $\chi_1^j(\omega)=\chi_1^k(\omega)$ hence $N_1^j(\omega)=N_1^k(\omega)$ for all
+$j,k=1,\ldots,d$ and $\omega\in\Omega$. In this case $N_1^k(\omega)=N_1/d$, thus
+$p_1^k=p_1/d$ for all $k=1,\ldots,d$ and $\omega\in\Omega$. Consequently, equations
+\eqref{eq:Measure_Mass_theorem} and \eqref{eq:Meas_mass_Anisotropic}
+yield 
+%
+\begin{align}\label{eq:Meas_mass_Isotropic_iid}
+  \mu_{jk}^0=p_1\,\delta_{jk}.
+\end{align}
+%
+In this case, equations \eqref{eq:Measure_Mass_theorem} and
+\eqref{eq:Meas_mass_Isotropic_iid} provide a direct
+analogue of equation \eqref{eq:Mass_Sign_Measures} for the continuum
+and infinite lattice settings.  Equation
+\eqref{eq:Meas_mass_Isotropic_iid} also holds when each of the $N$ 
+bonds are chosen (independently) to be type-one with probability
+$p_1=N_1/N$ and type-two with probability $1-p_1$. In this case the
+$N_1^k(\omega)$, $k=1,\ldots,d$, are independent, identically distributed random 
+variables with mean $\langle N_1^k(\omega)\rangle=p_1$.
+
+\indent
+\textbf{Proof of Theorem \ref{thm:Discrete_Spectral_Theorem_ACM}.}
+Taking $\vec{E}=\vec{E}_0+\vec{E}_f$ with the 
+condition $\Gamma\vec{E}=\vec{E}_f$ as a definition greatly simplifies the
+proof of Theorem \ref{thm:Discrete_Spectral_Theorem_ACM}, by avoiding
+the formulation and proof of some technical lemmas regarding the
+commutativity of the matrices $D_j$, $D_j^{\,T}$, and $(\Delta^{-1})$ for
+$j=1,\ldots,d$. This is a natural assumption to make, since in equation 
+\eqref{eq:Suff_Cond} we showed that the condition $\Gamma\vec{E}=\vec{E}_f$
+is sufficient for the energy constraint $\langle\vec{J}\cdot\vec{E}_f\rangle=0$, which
+is at the heart of the existence of solutions to equations
+\eqref{eq:Maxwells_Equations_E} and \eqref{eq:Kirchhiff's__Equations}
+in the (infinite) continuum and lattice settings,
+respectively. In the finite lattice setting where $\Gamma$ and $\chi_1$ are
+matrices, this condition leads to equation \eqref{eq:Proj_rep_Ef_Jf}
+exactly as in Section \eqref{sec:Continuum_Setting}, which is
+equivalent to the formula $(sI-\Gamma\chi_1)\vec{E}=s\vec{E}_0$  and the  
+resolvent representation of the electric field in
+\eqref{eq:Resolvent_representations_E_D}. As discussed above in this
+section, the matrix $\Gamma\chi_1$ is not symmetric and we therefore multiply
+this formula by the matrix $\chi_1$, yielding the following equation
+involving the real-symmetric random matrix $M_1=\chi_1\Gamma\chi_1$ 
+%
+\begin{align}\label{eq:Discrete_Resolvent}
+  (s\chi_1-\chi_1\Gamma\chi_1)\vec{E}=s\chi_1\vec{E}_0.
+\end{align}
+%
+
+Define the sets $\mathbb{N}_L^1(\omega)$ and $\mathbb{N}_L^0(\omega)$ by
+%
+\begin{align}\label{eq:Zero_One_indices}
+  \mathbb{N}_L^1(\omega)=\{i\in\mathbb{N}_L \ | \ (\chi_1(\omega))_{ii}=1\}, \qquad
+  \mathbb{N}_L^0(\omega)=\mathbb{N}_L\backslash \mathbb{N}_L^1(\omega).
+\end{align}
+%
+Also, define elementary permutation matrices \cite{Demmel:1997} $\Pi_{i,j}$,
+$i,j=1,\ldots,N$, such that $\Pi_{i,j}=\Pi_{i,j}^{\,-1}=\Pi_{i,j}^{\,T}$ and
+$\Pi_{i,j}\vec{\xi}$ is the vector $\vec{\xi}$ with the $i^{\,\text{th}}$
+and $j^{\,\text{th}}$ entries interchanged. Since $\chi_1(\omega)$ is a
+diagonal matrix with $N_1(\omega)$ ones and $N_0(\omega)$ zeros along it's main
+diagonal, it is clear that there exists a permutation matrix $\Pi(\omega)$
+such that 
+%
+\begin{align}\label{eq:chi_Perm}
+  \Pi(\omega)\chi_1(\omega)\Pi^{\,T}(\omega)=
+  \left[
+  \begin{array}{ccc}
+    0_{00}&0_{01}\\
+    0_{10}&I_1   
+    \end{array}
+\right],
+\quad
+\Pi(\omega)=\prod_{i,j\in\mathbb{N}_L}\Pi_{i,j}(\omega),
+\end{align}
+%
+for each $\omega\in\Omega$, where $i\in\mathbb{N}_L^1(\omega)$, $j\in\mathbb{N}_L^0(\omega)$,
+and $I_1$ is the identity matrix of size $N_1(\omega)\times N_1(\omega)$. Therefore,
+as $\Pi^{\,T}=\Pi^{\,-1}$ we have
+%
+\begin{align}\label{eq:Spec_Decomp_chi_Gamma_chi_Proof}
+  \chi_1\Gamma\chi_1&=
+  \Pi^{\,T}
+  \left[
+  \begin{array}{ccc}
+    0_{00}&0_{01}\\
+    0_{10}&I_1   
+    \end{array}
+\right]
+\Gamma_\Pi
+\left[
+  \begin{array}{ccc}
+    0_{00}&0_{01}\\
+    0_{10}&I_1   
+    \end{array}
+\right]
+\Pi
+=
+\Pi^{\,T}
+\left[
+  \begin{array}{ccc}
+    0_{00}&0_{01}\\
+    0_{10}&\Gamma_1   
+    \end{array}
+\right]
+\Pi
+%\\
+%&=
+=
+\Pi^{\,T}
+\left[
+  \begin{array}{ccc}
+    0_{00}&0_{01}\\
+    0_{10}&U_1\Lambda_1U_1^{\,T} 
+    \end{array}
+\right]
+\Pi
+\notag\\
+&=
+%=
+\Pi^{\,T}
+\left[
+  \begin{array}{ccc}
+    I_0&0_{01}\\
+    0_{10}&U_1 
+    \end{array}
+\right]    
+\left[
+  \begin{array}{ccc}
+    0_{00}&0_{01}\\
+    0_{10}&\Lambda_1
+    \end{array}
+\right]    
+\left[
+  \begin{array}{ccc}
+    I_0&0_{01}\\
+    0_{10}&U_1^{\,T} 
+    \end{array}
+\right]    
+\Pi,
+%\notag
+\end{align}
+%
+where $\Gamma_\Pi=\Pi\,\Gamma\,\Pi^{\,T}$, $\Gamma_1$ is the (real-symmetric) lower right
+principal sub-matrix of $\Gamma_\Pi$ of size $N_1(\omega)\times N_1(\omega)$, and 
+$\Gamma_1=U_1\Lambda_1U_1^{\,T}$ is its eigenvalue decomposition. As $\Gamma_1$ is a
+real-symmetric matrix, $U_1$ is an orthogonal matrix. Moreover, since
+$\Gamma_\Pi=\Pi\,\Gamma\,\Pi^{\,T}$ is a similarity transformation of a projection matrix
+and $\Pi\chi_1\Pi^{\,T}$ is a projection matrix, $\Lambda_1$ is a diagonal matrix
+with entries $\lambda_j^{\Pi_1}\in[0,1]$, $j=1,\ldots,N_1 (\omega)$, along the main diagonal
+\cite{Demmel:1997}. Equation
+\eqref{eq:Spec_Decomp_chi_Gamma_chi_Proof} and $\chi_1\Gamma\chi_1=U\Lambda U^{\,T}$ 
+imply equation \eqref{eq:Spec_Decomp_chi_Gamma_chi} in the statement
+of the theorem, where $U$ is an orthogonal matrix and $\Lambda$ is a
+diagonal matrix with entries $\lambda_j\in[0,1]$, $j=1,\ldots,N$, along the main
+diagonal.    
+
+
+From $\Pi^{\T}=\Pi^{\,-1}$ and equations \eqref{eq:Discrete_Resolvent},
+\eqref{eq:chi_Perm}, and \eqref{eq:Spec_Decomp_chi_Gamma_chi_Proof} we
+have 
+%
+\begin{align}\label{eq:Discrete_Resolvent_Pi}
+  \left[
+  \begin{array}{ccc}
+    0_{00}&0_{01}\\
+    0_{10}&(sI_1-U_1\Lambda_1U_1^T)
+    \end{array}
+\right]
+\Pi\vec{E}
+=
+\left[
+  \begin{array}{ccc}
+    0_{00}&0_{01}\\
+    0_{10}&sI_1
+    \end{array}
+\right]
+\Pi\vec{E}_0.
+\end{align}
+%
+Define the coordinate system such that $\vec{E}_0=E_0\hat{e}_j$, for
+some $j=1,\ldots,d$, and write 
+%
+\begin{align}\label{Pi_coordinates_E}
+  \Pi\vec{E}=
+  \left[
+  \begin{array}{ccc}
+    \vec{E}^{\,\Pi_0}\\
+    \vec{E}^{\,\Pi_1}
+    \end{array}
+\right],
+\quad
+ \Pi\vec{E}_0=
+  \left[
+  \begin{array}{ccc}
+    \vec{E}_0^{\,\Pi_0}\\
+    \vec{E}_0^{\,\Pi_1}
+    \end{array}
+\right]
+=
+E_0
+\left[
+  \begin{array}{ccc}
+    \hat{e}_j^{\,\Pi_0}\\
+    \hat{e}_j^{\,\Pi_1}
+    \end{array}
+\right],
+\quad
+ \Pi\vec{u}_i=
+  \left[
+  \begin{array}{ccc}
+    \vec{u}_i^{\,\Pi_0}\\
+    \vec{u}_i^{\,\Pi_1}
+    \end{array}
+\right],
+\end{align}
+%
+where $\vec{E}^{\,\Pi_0}\in\mathbb{R}^{N_0}$,
+$\vec{E}^{\,\Pi_1}\in\mathbb{R}^{N_1}$, and similarly for the vectors
+$\Pi\vec{E}_0$ and $\Pi\vec{u}_i$. From equation
+\eqref{eq:Discrete_Resolvent_Pi} we have
+$(sI_1-U_1\Lambda_1U_1^{\,T})\vec{E}^{\,\Pi_1}=s\vec{E}_0^{\,\Pi_1}$, which
+yields the following resolvent representation for $\vec{E}^{\,\Pi_1}$
+that is a direct analogue of equation
+\eqref{eq:Resolvent_representations_E_D} 
+%
+\begin{align}\label{eq:Resolvent_representations_E_Pi}
+  \vec{E}^{\,\Pi_1}=s(sI_1-U_1\Lambda_1U_1^{\,T})^{-1}\vec{E}_0^{\,\Pi_1}, \quad
+  s\in\mathbb{C}\backslash[0,1].
+\end{align}
+%
+
+Equation \eqref{eq:Resolvent_representations_E_Pi} leads to a
+Stieltjes integral representation for $\bsig^*$ with components
+$\sigma^*_{jk}=\bsig^*\hat{e}_j\cdot\hat{e}_k$ as follows. Recall the
+definition of the effective complex conductivity tensor $\bsig^*$:
+%$ \bsig^*\vec{E}_0=\langle\vec{J}\rangle=\sigma_2\langle(1-\chi_1/s)\vec{E}\rangle=\sigma_2(\vec{E}_0-\langle\chi_1\vec{E}\rangle/s)$.
+%
+\begin{align}\label{eq:Eff_Cond_Tens_Def}
+  \bsig^*\vec{E}_0=\langle\vec{J}\rangle 
+                =\sigma_2\langle(1-\chi_1/s)\vec{E}\rangle
+                =\sigma_2(\vec{E}_0 -\langle\chi_1\vec{E}\rangle/s).
+\end{align}
+%
+Since the symmetric matrix $\chi_1$ satisfies $\chi_1^2=\chi_1$ and
+$\Pi^{\,T}=\Pi^{-1}$, equations \eqref{eq:chi_Perm} and
+\eqref{Pi_coordinates_E} yield the following projection identity  
+%
+\begin{align}\label{eq:Projection_Identity}
+ \chi_1\vec{E}\cdot\hat{e}_k=\vec{E}^{\,\Pi_1}\cdot\hat{e}_k^{\,\Pi_1}.
+\end{align}
+%
+%$\langle\chi_1\vec{E}\cdot\hat{e}_k\rangle=\langle\vec{E}^{\,\Pi_1}\cdot\hat{e}_k^{\,\Pi_1}\rangle$.
+Therefore, equations \eqref{eq:Discrete_Stieltjes_F_Derivation},
+\eqref{eq:Zero_One_indices}, and
+\eqref{Pi_coordinates_E}--\eqref{eq:Projection_Identity} 
+% \eqref{Pi_coordinates_E},
+% \eqref{eq:Resolvent_representations_E_Pi},
+% \eqref{eq:Eff_Cond_Tens_Def}, and \eqref{eq:Projection_Identity}
+imply that  
+%
+\begin{align}\label{eq:Disc_Stieltjes_Rep_Sigma}
+  \delta_{ij}-\sigma^*_{jk}/\sigma_2&=\langle\chi_1\vec{E}\cdot\hat{e}_k\rangle/(sE_0)
+          =\langle\vec{E}^{\,\Pi_1}\cdot\hat{e}_k^{\,\Pi_1}\rangle/(sE_0)
+          \notag\\
+          &=\langle(sI_1-U_1\Lambda_1U_1^{\,T})^{-1}\hat{e}_j^{\,\Pi_1}\cdot\hat{e}_k^{\,\Pi_1}\rangle          
+          =\sum_{i\in\mathbb{N}_L^1}\left\langle
+          \frac{R_i^{\,\Pi_1}\hat{e}_j^{\,\Pi_1}}{s-\lambda_i^{\Pi_1}}\cdot\hat{e}_k^{\,\Pi_1}
+          \right\rangle,  
+\end{align}
+%
+where $R_i^{\,\Pi_1}$, $i\in N_L^1(\omega)$, is the projection matrix of size
+$N_1(\omega)\times N_1(\omega)$ associated with the columns $\vec{u}_i^{\,\Pi_1}$ of
+the orthogonal matrix $U_1$. 
+
+
+
+We now show that equation \eqref{eq:Disc_Stieltjes_Rep_Sigma} is
+equivalent to equation \eqref{eq:Stieltjes_F_Discrete}. Since
+$\Pi^{\,T}=\Pi^{-1}$, equations \eqref{eq:Spec_Decomp_chi_Gamma_chi} and 
+\eqref{eq:chi_Perm} imply that
+%
+\begin{align}\label{eq:Projection_Eigenspace}
+  \chi_1U=\Pi^{\,T}\left[
+  \begin{array}{ccc}
+    0_{00}&0_{01}\\
+    0_{10}&U_1  
+    \end{array}
+\right].
+\end{align}
+%
+Recalling the definitions of $\vec{u}_i$ and $R_i$ from the
+statement of the theorem, equation \eqref{eq:Projection_Eigenspace}
+implies that 
+%
+\begin{align}\label{eq:chi_ui_chi_Ri}
+  \chi_1\vec{u}_i=
+  \begin{cases}
+  \vec{u}_i, &\text{ for } i\in\mathbb{N}_L^1  \\
+  0,        &\text{ for } i\in\mathbb{N}_L^0
+  \end{cases}
+  \quad \Rightarrow \quad
+   \chi_1R_i=
+  \begin{cases}
+  R_i, &\text{ for } i\in\mathbb{N}_L^1  \\
+  0,  &\text{ for } i\in\mathbb{N}_L^0
+  \end{cases}.
+\end{align}
+%
+Similar to equation \eqref{eq:Projection_Identity} we have the
+projection identity
+$\vec{u}_i^{\,\Pi_1}\cdot\hat{e}_j^{\,\Pi_1}=\chi_1\vec{u}_i\cdot\hat{e}_j$. This and
+equation \eqref{eq:chi_ui_chi_Ri} yield another important projection
+identity 
+%
+\begin{align*}
+  R_i^{\,\Pi_1}\hat{e}_j^{\,\Pi_1}\cdot\hat{e}_k^{\,\Pi_1}
+  =
+   (\vec{u}_i^{\,\Pi_1}\cdot\hat{e}_j^{\,\Pi_1})(\vec{u}_i^{\,\Pi_1}\cdot\hat{e}_k^{\,\Pi_1}) 
+  =(\chi_1\vec{u}_i\cdot\hat{e}_j)(\chi_1\vec{u}_i\cdot\hat{e}_k)
+  =\chi_1R_i\hat{e}_j\cdot\hat{e}_k.
+\end{align*}
+%
+Therefore, equation \eqref{eq:chi_ui_chi_Ri} implies that
+%
+\begin{align*}
+ \sum_{i\in\mathbb{N}_L^1}\left\langle
+          \frac{R_i^{\,\Pi_1}\hat{e}_j^{\,\Pi_1}}{s-\lambda_i^{\Pi_1}}\cdot\hat{e}_k^{\,\Pi_1}
+          \right\rangle 
+ =
+ \sum_{i\in\mathbb{N}_L^1}\left\langle
+          \frac{\chi_1R_i\hat{e}_j}{s-\lambda_i^{\Pi_1}}\cdot\hat{e}_k
+          \right\rangle 
+          =
+ \sum_{i=1}^N\left\langle
+          \frac{\chi_1R_i\hat{e}_j}{s-\lambda_i}\cdot\hat{e}_k
+          \right\rangle ,
+\end{align*}
+%
+which proves our claim that equation \eqref{eq:Disc_Stieltjes_Rep_Sigma} is
+equivalent to equation \eqref{eq:Stieltjes_F_Discrete}. Note
+that the equivalence of equations \eqref{eq:Disc_Stieltjes_Rep_Sigma}
+and \eqref{eq:Stieltjes_F_Discrete} implies that the spectral 
+measure $\mu_{jk}$ in \eqref{eq:Stieltjes_F_Discrete} satisfies 
+%
+\begin{align}\label{eq:measure_equivalence}
+  \mu_{jk}(d\lambda)=\sum_{i=1}^N \langle\delta_{\lambda_i}(d\lambda)\chi_1R_i\hat{e}_j\cdot\hat{e}_k\rangle
+         \equiv\sum_{i\in\mathbb{N}_L}
+          \langle\delta_{\lambda_i^{\Pi_1}}(d\lambda)R_i^{\,\Pi_1}\hat{e}_j^{\,\Pi_1}\cdot\hat{e}_k^{\,\Pi_1}\rangle.
+\end{align}
+%
+
+We now discuss the analogue of equation \eqref{eq:Mass_Sign_Measures}
+for the finite lattice setting and prove equation
+\eqref{eq:Measure_Mass_theorem} in the statement of the
+theorem. Recall that the projection matrices $R_i^{\,\Pi_1}$,
+$i\in\mathbb{N}_L$, are symmetric. Therefore, by equations
+\eqref{eq:Matrix_Rep_Spec_Theorem} and \eqref{eq:measure_equivalence}
+we have   
+%
+\begin{align}\label{eq:Measure_Mass_Lattice}
+  &\mu^0_{jk}=\int_0^1\mu_{jk}(d\lambda)
+       =\int_0^1\sum_{i=1}^N \langle\delta_{\lambda_i}(d\lambda)\chi_1R_i\hat{e}_j\cdot\hat{e}_k\rangle
+       =\langle\chi_1\hat{e}_j\cdot\hat{e}_k\rangle
+       =\langle\chi_1\hat{e}_k\cdot\hat{e}_k\rangle\,\delta_{jk}, \notag\\
+ &\mu_{kk}(d\lambda)=\sum_{i\in\mathbb{N}_L}
+             \langle\delta_{\lambda_i^{\Pi_1}}(d\lambda)R_i^{\,\Pi_1}\hat{e}_k^{\,\Pi_1}\cdot\hat{e}_k^{\,\Pi_1}\rangle
+          %=\sum_{i\in\mathbb{N}_L}
+          %   \langle\delta_{\lambda_i^{\Pi_1}}(d\lambda)R_i^{\,\Pi_1}\hat{e}_k^{\,\Pi_1}\cdot R_i^{\,\Pi_1}\hat{e}_k^{\,\Pi_1}\rangle
+         =\sum_{i\in\mathbb{N}_L}
+             \langle\delta_{\lambda_i^{\Pi_1}}(d\lambda)|R_i^{\,\Pi_1}\hat{e}_k^{\,\Pi_1}|^2\rangle\geq0,            
+\end{align}
+%
+where $|\cdot|$ denotes the $l^2$ norm on $\mathbb{R}^{N_1(\omega)}$.
+Therefore, as in the continuum and infinite lattice settings, the
+diagonal components $\mu_{kk}$ of the matrix valued measure $\bmu$ are
+positive measures of mass $\langle\chi_1\hat{e}_k\cdot\hat{e}_k\rangle$ while the
+off-diagonal components $\mu_{jk}$, for $j\neq k$, have zero mass and are
+consequently signed measures. Using equation
+\eqref{eq:block_diag_chi} we may write $\mu^0_{jk}$ in
+\eqref{eq:Measure_Mass_Lattice} in a more suggestive form. Recall that  
+$\hat{e}_1=(\vec{1},\vec{0},\ldots,\vec{0})/L^{d/2}$, where $\vec{1}$ and
+$\vec{0}$ are vectors of ones and zeros of length $L^d$, respectively,
+and similarly for the $\vec{e}_j$ for $j=2,\ldots,d$ (see Section
+\ref{sec:Finite_Lattice_Setting} for details). Since $\chi_1$ is a symmetric
+projection matrix, equations \eqref{eq:block_diag_chi} and
+\eqref{eq:Measure_Mass_Lattice} imply that
+%
+\begin{align}\label{eq:Measure_Mass_Lattice_Trace}
+  \mu^0_{jk}%=\langle\chi_1\hat{e}_k\cdot\hat{e}_k\rangle\,\delta_{jk}
+       =\langle\chi_1\hat{e}_k\cdot\chi_1\hat{e}_k\rangle\,\delta_{jk}
+       =\frac{1}{L^d}\langle\chi_1^k\vec{1}\cdot \chi_1^k\vec{1}\rangle\,\delta_{jk}
+       =\frac{1}{L^d}\langle\text{Trace}(\chi_1^k)\rangle\,\delta_{jk}
+       =d\,\frac{\langle N_1^k(\omega)\rangle}{N}\,\delta_{jk},       
+\end{align}
+%
+where $N_1^k(\omega)={\rm Trace}(\chi_1^k(\omega))$ is the total number of type-one
+bonds in the positive $k^{\text{th}}$ direction for $\omega\in\Omega$ and
+$N=d\,L^d$. This proves equation \eqref{eq:Measure_Mass_theorem} and
+concludes our proof of Theorem \ref{thm:Discrete_Spectral_Theorem_ACM}
+$\Box\,$.       
+
+
+\subsection{Bounding Procedure}\label{sec:Bounding_Procedure}
+%
+A key feature of the integral representations for $F_{jk}(s)$,
+$j,k=1,\ldots,d$, displayed in equations \eqref{eq:Stieltjes_F} and
+\eqref{eq:Stieltjes_F_Discrete}, is that parameter information in $s$
+and $E_0$ is \emph{separated} from the geometry of the composite,
+which is encoded in the spectral measure $\mu_{jk}$ via its moments  
+$\mu^n_{jk}$, $n=0,1,2,\ldots$ \cite{Bruno:JSP-365,Golden:CMP-473}. Another
+important feature of the representation for $F_{jk}(s)$ is that it
+is a \emph{linear} functional of the measure $\mu_{jk}$. Moreover, the
+diagonal components $\mu_{kk}$ are \emph{positive} measures. These
+properties are also shared by the function $E_{jk}(s)$ given in
+equation \eqref{eq:Stieltjes_F} and its discrete counterpart in
+\eqref{eq:Stieltjes_F_Discrete}. These important properties of these
+functions may be exploited to obtain rigorous bounds for the diagonal
+components of the effective parameters.  
+
+
+
+In this section we review a bounding procedure which was 
+introduced in \cite{Golden:CMP-473}. The bounds incorporate
+the moments $\mu_{kk}^n$ and $\eta_{kk}^n$ of the measures $\mu_{kk}$ and
+$\eta_{kk}$.  In the infinite continuum and lattice settings, by equation
+\eqref{eq:Mass_Sign_Measures} and the symmetries between $F_{kk}(s)$
+and $E_{kk}(s)$, the masses of these measures are generically given by
+$\mu_{kk}^0=p_1$ and $\eta_{kk}^0=p_2$. However, in the finite lattice
+setting, these symmetries and equation
+\eqref{eq:Measure_Mass_Lattice_Trace} yield $\mu_{kk}^0=d\,\langle N_1^k(\omega)\rangle/N$
+and $\eta_{kk}^0=d\,\langle N_2^k(\omega)\rangle/N$. Here $N_1^k(\omega)={\rm Trace}(\chi_1^k(\omega))$
+is the total number of type-one bonds in the positive $k^{\text{th}}$ 
+direction for $\omega\in\Omega$, and similarly for $N_2^k(\omega)$. This is a
+fundamental difference between the infinite and finite lattice
+settings. We discuss the bounding procedure for the infinite continuum
+and lattice settings in Section \ref{sec:Bounds_infinite_setting} and
+that for the finite lattice setting in Section
+\ref{sec:Bounds_finite_lattice_setting}.   
+
+
+\subsubsection{Continuum and infinite lattice settings}
+\label{sec:Bounds_infinite_setting}
+%
+In this section, we will discuss the bounding procedure in terms of
+the diagonal components $\sigma^*_{kk}$, $k=1,\ldots,d$, of the effective
+complex conductivity tensor $\bsig^*$. For
+simplicity, we will focus on one such component and set
+$\sigma^*=\sigma_{kk}^*$, $F(s)=F_{kk}(s)$, $m(h)=m_{kk}(h)$, $\mu=\mu_{kk}$,
+$E(s)=E_{kk}(s)$, $\tilde{m}(h)=\tilde{m}_{kk}(h)$, and
+$\eta=\eta_{kk}$. Here $\sigma^*=\sigma_2m(h)=\sigma_1/\tilde{m}(h)$, $F(s)=1-m(h)$, and
+$E(s)=1-\tilde{m}(h)$. We will also exploit the symmetries between
+equations \eqref{eq:Stieltjes_F} and \eqref{eq:Stieltjes_Es}, and
+initially focus on the function $F(s)$ and the measure $\mu$,
+introducing the function $E(s)$ and the measure $\eta$ when
+appropriate.
+
+
+
+
+Bounds on $\sigma^*$ are obtained as follows. By equation
+\eqref{eq:Mass_Sign_Measures} the support of the measure $\mu$ is
+contained in the interval $[0,1]$ and its mass is given by $\mu^0=p_1$,
+where $0\leq p_1\leq1$. Consider the set $\mathscr{M}$ of positive Borel
+measures on $[0,1]$ with mass $\leq1$. By equation
+\eqref{eq:Stieltjes_F}, for fixed $s\in\mathbb{C}\backslash[0,1]$, $F(s)$ is a
+linear functional of the measure $\mu$, $F:\mathscr{M}\mapsto\mathbb{C}$, and
+we write $F(s)=F(s,\mu)$ and $m(h)=m(h,\mu)$. Suppose that we know the
+moments $\mu^n$ of the measure $\mu$ for $n=1,\ldots,J$ and let
+% 
+\begin{align}\label{eq:Measure_Set}
+  \mathscr{M}_J^\mu
+     =\left\{\nu\in\mathscr{M} \ \Big| \   \int_0^1\lambda^n\nu(d\lambda)=\mu^n, \  n=0,\ldots,J\right\}  . 
+\end{align}
+%
+The set $A_J^\mu\subset\mathbb{C}$ which represents the possible
+values of the function $m(h,\mu)=1-F(s,\mu)$ that is compatible with the
+known information about the random medium is given by
+%
+\begin{align}\label{eq:Bounding_Set}
+  A_J^\mu
+     =\left\{\ m(h,\mu)\in\mathbb{C} \ | \
+       \ h\not\in(-\infty,0], \ \mu\in \mathscr{M}_J^\mu\right\}. 
+\end{align}
+%
+
+
+
+The set of measures $\mathscr{M}_J^\mu$ is a compact, convex
+subset of $\mathscr{M}$ with the topology of weak convergence
+\cite{Golden:CMP-473}. Since the mapping $F(s,\mu)$ in
+\eqref{eq:Stieltjes_F} is linear in $\mu$ it follows that
+$A_J^\mu$ is a compact convex subset of the complex plane
+$\mathbb{C}$. The extreme points of $\mathscr{M}_0^\mu$ are the one 
+point measures $\alpha\delta_a$, $0\leq\alpha,a\leq1$ \cite{Dunford_Schwartz:LinOp_PtI},
+while the extreme points of $\mathscr{M}_J^\mu$ for $J>0$ are weak limits
+of convex combinations of measures of the form \cite{Golden:CMP-473} 
+%
+\begin{align}\label{eq:Discrete_Measure}
+  \mu_J(d\lambda)=\sum_{i=1}^{J+1}\alpha_i\delta_{\lambda_i}(d\lambda), \quad
+  \alpha_i\geq0, \quad 0\leq\lambda_1<\cdots<\lambda_{J+1}<1, \quad
+  \sum_{i=1}^{J+1}\alpha_i\lambda_i^n=\mu^n,
+%  \quad   n=0,1,2,\ldots.
+\end{align}
+%
+for $n=0,1,\ldots,J$. It is important to note that, except for the case of 
+multi-rank laminates \cite{MILTON:2002:TC}, (ELENA, IS THIS WORDING AND
+REFERENCE CORRECT?) not every measure $\mu\in\mathscr{M}_J^\mu$ gives rise
+to a function $m(h,\mu)$ that is the effective (relative) conductivity a
+random medium \cite{Golden:CMP-473}. Therefore, in 
+general, the set $A_J^\mu$ will \emph{contain} the exact range of values
+of the effective conductivity \cite{Golden:CMP-473}. This is
+sufficient for the bounding procedure discussed in this section.
+
+
+
+
+
+
+By the symmetries between equations \eqref{eq:Stieltjes_F} and
+\eqref{eq:Stieltjes_Es}, and equation \eqref{eq:Mass_Sign_Measures},
+the support of the measure $\eta$ is contained in the interval $[0,1]$
+and its mass is given by $\eta^0=p_2=1-p_1$, where $0\leq p_2\leq1$. We can
+therefore define compact, convex sets $\mathscr{M}_J^\eta\subset\mathscr{M}$
+and $A_J^\eta\subset\mathbb{C}$ which are analogous to those defined in
+equations \eqref{eq:Measure_Set} and \eqref{eq:Bounding_Set},
+respectively, involving the functions
+$\tilde{m}(h,\eta)=1-E(s,\eta)=\sigma_1/\sigma^*$. Moreover, the extreme points of
+$\mathscr{M}_0^\eta$ are the one point measures $\alpha\delta_a$, $0\leq\alpha,a\leq1$ 
+while the extreme points of $\mathscr{M}_J^\eta$ are weak limits
+of convex combinations of measures of the form given in equation
+\eqref{eq:Discrete_Measure}. 
+
+
+
+Consequently, in order to determine the extreme
+points of the sets $A_J^\mu$ and $A_J^\eta$ it suffices to determine the
+range of values in $\mathbb{C}$ of the functions $m(h,\mu_J)=1-F(s,\mu_J)$
+and $\tilde{m}(h,\eta_J)=1-E(s,\eta_J)$, respectively, where  
+%
+\begin{align}\label{eq:Discrete_mh}
+  F(s,\mu_J)=\sum_{i=1}^{J+1}\frac{\alpha_i}{s-\lambda_i}\,, \qquad
+  E(s,\eta_J)=\sum_{i=1}^{J+1}\frac{\alpha_i}{s-\lambda_i}\,,
+\end{align}
+as the $\alpha_i$ and $\lambda_i$ vary under the constraints given in equation
+\eqref{eq:Discrete_Measure}. While $F(s,\mu_J)$ and $E(s,\eta_J)$ in
+\eqref{eq:Discrete_mh} may not run over all points in $A_J^\mu$ and
+$A_J^\eta$ as the $\alpha_i$ and $\lambda_i$ vary, they run over the
+extreme points of these sets, which is sufficient due to their
+convexity. It is important to note that, as the effective complex
+conductivity $\sigma^*$ is given by $\sigma^*=\sigma_2m(h,\mu)=\sigma_1/\tilde{m}(h,\eta)$, the
+regions $A_J^\mu$ and $A_J^\eta$ have to be mapped to the common
+$\sigma^*$-plane to provide bounds for $\sigma^*$.    
+
+
+
+
+
+In this section we discuss two different bounds for $\sigma^*$. The first
+bound assumes that only the masses $\mu^0=p_1$ and $\eta^0=p_2$ of the
+measures $\mu$ and $\eta$ are known. While the second bound also assumes
+that the random medium is statistically isotropic, so that the first
+moments of these measures are also known, and are given by
+\cite{Golden:1986:BCP}   
+%
+\begin{align}\label{eq:First_Moments}
+  \mu^1=\frac{p_1p_2}{d}\,, \qquad
+  \eta^1=\frac{p_1p_2(d-1)}{d}\,.
+\end{align}
+%
+
+
+Consider the first case, where $J=0$  in \eqref{eq:Discrete_mh} and the
+volume fraction $p_1=1-p_2$ is fixed with $\mu^0=p_1$ and
+$\eta^0=p_2=1-p_1$, so that $F(s,\mu_J)=p_1/(s-\lambda)$ and
+$E(s,\eta_J)=p_2/(s-\tilde{\lambda})$. By the above discussion, the values of 
+$F(s,\mu$) and $E(s,\eta)$ lie inside the circles $C_0(\lambda)$ and
+$\tilde{C}_0(\tilde{\lambda})$, respectively, given by  
+%
+\begin{align}\label{eq:0th_order_Bounds}
+    C_0(\lambda)=\frac{\mu^0}{s-\lambda}\,, \quad -\infty\leq\lambda\leq \infty, \qquad
+    \tilde{C}_0(\tilde{\lambda})=\frac{\eta^0}{s-\tilde{\lambda}}\,, \quad
+    -\infty\leq\tilde{\lambda}\leq \infty. 
+\end{align}
+%
+In the $\sigma^*$-plane, the intersection of these two regions is bounded by
+two circular arcs corresponding to $0\leq\lambda\leq p_2$ and $0\leq\tilde{\lambda}\leq p_1$
+in \eqref{eq:0th_order_Bounds}, and the values of $\sigma^*$ lie inside
+this region \cite{Golden:1986:BCP}. These bounds are optimal
+\cite{Milton:JAP-5286,Bergman:AP-78}, and are obtained by a composite
+of uniformly aligned spheroids of material 1 in all sizes coated with
+confocal shells of material 2, and vice versa. The arcs are traced out
+as the aspect ratio varies. When the value of the component
+permittivities $\sigma_1$ and $\sigma_2$ are real and positive, the bounding
+region collapses to the interval
+$1/(p_1/\sigma_1+p_2/\sigma_2)\leq\sigma^*\leq p_1\sigma_1+p_2\sigma_2$, which are the Wiener
+bounds. The lower and upper bounds are obtained by parallel slabs of
+the two materials aligned perpendicular and parallel to the field
+$\vec{E}_0$, respectively \cite{Scaife-1989}.
+
+
+
+Now consider the second case, where $J=1$ in \eqref{eq:Discrete_mh},
+the volume fraction $p_1=1-p_2$ is fixed, and the random medium is
+statistically isotropic so that the first moments $\mu^1$ and $\eta^1$ of
+the measures $\mu$ and $\eta$ are given, respectively, by that in equation  
+\eqref{eq:First_Moments}.  A convenient way of including this
+information is to use the transformations \cite{Bergman:AP-78}
+%
+\begin{align}\label{eq:Aux_Fs_Es}
+  F_1(s)=\frac{1}{p_1}-\frac{1}{sF(s)}\,, \qquad
+  E_1(s)=\frac{1}{p_2}-\frac{1}{sE(s)}\,.
+\end{align}
+%
+Due to the symmetries between $F_1(s)$ and $E_1(s)$ in
+\eqref{eq:Aux_Fs_Es} we will first focus on the function $F_1(s)$ and
+introduce the function $E_1(s)$ when appropriate. The function
+$F_1(s)$ is an upper half plane function analytic off $[0,1]$ and
+therefore has an integral representation
+\cite{Bergman:AP-78,Golden:1986:BCP} analogous to that in equations
+\eqref{eq:Stieltjes_F} and \eqref{eq:Stieltjes_Es}, involving a
+measure $\mu_1$, say, which is supported in the interval $[0,1]$. Since
+only the mass $\mu^0=p_1$ and the first moment $\mu^1=p_1p_2/d$ of the
+measure $\mu$ are known, the transformation \eqref{eq:Aux_Fs_Es}
+determines only the mass $\mu_1^0=p_2/(p_1d)$ of the measure $\mu_1$
+\cite{Bergman:AP-78,Golden:1986:BCP}. This reveals the utility of the
+transformation $F_1(s)$ in \eqref{eq:Aux_Fs_Es}, it reduces the second
+case $(J=1)$ for $F(s)$ to the first case $(J=0)$ for $F_1(s)$.
+
+
+
+By our previous analysis, the values of $F_1(s)$ lie inside a circle
+$p_2/(p_1d(s-\lambda))$, $-\infty\leq\lambda\leq\infty$. Similarly, the values of $E_1(s)$ lie
+inside a circle $p_1(d-1)/(p_2d(s-\tilde{\lambda}))$,
+$-\infty\leq\tilde{\lambda}\leq\infty$. Since $F$ and $E$ are fractional linear in $F_1$ and
+$E_1$, respectively, these circles are transformed to the circles
+$C_1(\lambda)$ in the $F$-plane and $\tilde{C}_1(\tilde{\lambda})$ in the
+$E$-plane given by \cite{Golden:1986:BCP}
+%
+\begin{align}\label{eq:Isotropic_Bounds}
+  C_1(\lambda)=\frac{p_1(s-\lambda)}{s(s-\lambda-p_2/d)}\,, \quad  %&-\infty\leq\lambda\leq\infty, \quad
+  \tilde{C}_1(\tilde{\lambda})=\frac{p_2(s-\tilde{\lambda})}{s(s-\tilde{\lambda}-p_1(d-1)/d)}\,,
+   \qquad -\infty\leq\lambda,\tilde{\lambda}\leq\infty. %\notag
+\end{align}
+%
+In the $\sigma^*$-plane the intersection of these two circular regions is
+bounded by two circular arcs \cite{Golden:1986:BCP} corresponding to
+$0\leq\lambda\leq(d-1)/d$ and $0\leq\tilde{\lambda}\leq1/d$ in \eqref{eq:Isotropic_Bounds}.
+
+
+
+
+The vertices of the region,
+$C_1(0)=p_1/(s-p_2/d)$ and $\tilde{C}(0)=p_2/(s-p_1(d-1)/d)$, are
+attained by the Hashin--Shtrikman geometries (spheres of all
+sizes of material 1 in the volume fraction $p_1$ coated with spherical
+shells of material 2 in the volume fraction $p_2$ filling all of
+$\mathbb{R}^d$, and vice versa), and lie on the arcs of the first
+order bounds \cite{Golden:1986:BCP}. While there are at least five
+points on the arc $C_1(\lambda)$ in \eqref{eq:Isotropic_Bounds} that are
+attainable by composite microstructures \cite{Milton:JAP-5286}, the
+arc $\tilde{C}_1(\tilde{\lambda})$ in \eqref{eq:Isotropic_Bounds} violates
+\cite{Golden:1986:BCP} the interchange inequality $m(h)m(1/h)\geq1$
+\cite{Keller:1964:TCC,Schulgasser:1976:CFR}, which becomes an equality
+in two dimensions \cite{MILTON:2002:TC}.  Consequently the isotropic
+bounds in \eqref{eq:Isotropic_Bounds} are not optimal, but have been
+improved \cite{Milton:APL-300,Bergman:AP-78} by incorporating the
+interchange inequality. When $\sigma_1$ and $\sigma_2$ are real and positive
+with $\sigma_1\leq\sigma_2$, the region collapses to the interval
+%
+\begin{align*}
+  \sigma_1+p_2\left/  \left(\frac{1}{\sigma_2-\sigma_1}+\frac{p_1}{d\sigma_1}\right)\right.
+  \leq\sigma^*\leq 
+  \sigma_1+p_1\left/  \left(\frac{1}{\sigma_1-\sigma_2}+\frac{p_2}{d\sigma_2}\right)\right.,
+\end{align*}
+%
+which are the Hashin--Shtrikman bounds.
+
+
+The higher moments $\mu^n$, $n\geq2$ depend on $(n+1)$-point correlation
+functions \cite{Golden:CMP-473} and cannot be calculated in general,
+although the interchange inequality forces relations among them
+\cite{Milton:JAP-5294}. If the moments $\mu^0,\ldots,\mu^J$ are known then the
+transformation $F_1$ in \eqref{eq:Aux_Fs_Es} can be iterated to
+produce an upper half plane function $F_J$ with a integral
+representation, involving a positive measure $\mu_J$ which is supported
+on the interval $[0,1]$. As in the case where $J=1$, the first $J$
+moments of the measure $\mu$ determine only the mass $\mu_J^0$ of the
+measure $\mu_J$ \cite{Golden:1986:BCP}, and the function $F_J(s)$ can
+easily be extremized by the above procedure, and similarly for a
+function $E_J(s)$ associated with the moments $\eta^0,\ldots,\eta^J$. The
+resulting bounds form a nested sequence of lens-shaped regions
+\cite{Golden:1986:BCP}.
+
+
+
+
+\subsubsection{Finite lattice setting}
+\label{sec:Bounds_finite_lattice_setting}
+%
+In this section we discuss the bounding procedure of the ACM for the
+finite lattice setting. For explicitness, we again discuss the
+procedure in terms of the components $\sigma^*_{kk}$, $k=1,\ldots,d$, of the
+effective complex conductivity tensor $\bsig^*$. Recall that
+$N_1^k(\omega)={\rm Trace}(\chi_1^k(\omega))$ denotes the total number of type-one
+bonds in the positive $k^{\text{th}}$ direction for $\omega\in\Omega$, and
+similarly for $N_2^k(\omega)$. A key difference in the ACM between the
+continuum and finite lattice settings is that the masses $\mu_{kk}^0$
+and $\eta_{kk}^0$ of the measures $\mu_{kk}$ and $\eta_{kk}$ are given by
+$\mu_{kk}^0=p_1$ and $\eta_{kk}^0=p_2$ in the continuum case, while
+$\mu_{kk}^0=d\,\langle N_1^k(\omega)\rangle/N$ and $\eta_{kk}^0=d\,\langle N_2^k(\omega)\rangle/N$ in the
+finite lattice case (WE NEED TO RESOLVE THIS FOR THE INFINITE LATTICE
+SETTING). The measure masses of both cases are the same for locally
+isotropic media, where $N_1^k(\omega)=N_1/d$ for all $k=1,\ldots,d$ and $\omega\in\Omega$,
+and for statistically isotropic media, where $\langle N_1^k(\omega)\rangle=N_1/d$, with
+$p_1=N_1/N$ denoting the number fraction of type-one bonds (see the 
+paragraph following the statement of Theorem
+\ref{thm:Discrete_Spectral_Theorem_ACM} for more details). 
+
+
+
+
+
+While the bounding \emph{procedure} is the same for both cases, this
+fundamental difference between the continuum and finite lattice
+settings effects the bounds given in Section
+\eqref{sec:Bounds_infinite_setting}. The bounds given in equation
+\eqref{eq:0th_order_Bounds} depend only on the masses $\mu_{kk}^0$ and
+$\eta_{kk}^0$ of the measures $\mu_{kk}$ and $\eta_{kk}$. They are related as
+follows. Note that $\chi_1^k(\omega)+\chi_2^k(\omega)=I_{L^d}$, where $I_{L^d}$ is the
+identity matrix of size $L^d\times L^d$. By the linearity of the trace
+operation, we therefore have
+$\text{Trace}(\chi_1^k(\omega))+\text{Trace}(\chi_2^k(\omega))=\text{Trace}(I_{L^d})$   
+or equivalently $N_1^k(\omega)+N_2^k(\omega)=L^d=N/d$. Averaging this formula
+over $\Omega$ and rearranging yields
+%$\mu_{kk}^0+\eta_{kk}^0=1$, for each $k=1,\ldots,d$.
+%
+\begin{align*}
+  \mu_{kk}^0+\eta_{kk}^0=1, \quad  k=1,\ldots,d.
+\end{align*}
+%
+By the discussion in Section \ref{sec:Bounds_infinite_setting}, the
+values of $F_{kk}(s)$ and $E_{kk}(s)$ lie inside the circles
+$C^k_0(\lambda)$ and $\tilde{C}^k_0(\tilde{\lambda})$, respectively, given by
+equation \eqref{eq:0th_order_Bounds}  
+%
+\begin{align}\label{eq:0th_order_Bounds_finite_lattice}
+    C_0^k(\lambda)=\frac{\mu_{kk}^0}{s-\lambda}\,, \quad -\infty\leq\lambda\leq \infty, \qquad
+    \tilde{C}^k_0(\tilde{\lambda})=\frac{\eta_{kk}^0}{s-\tilde{\lambda}}\,, \quad
+    -\infty\leq\tilde{\lambda}\leq \infty. 
+\end{align}
+%  
+In the $\sigma^*_{kk}$-plane, the intersection of these two regions is bounded by
+two circular arcs corresponding to $0\leq\lambda\leq\eta_{kk}^0$ and $0\leq\tilde{\lambda}\leq\mu_{kk}^0$
+in \eqref{eq:0th_order_Bounds_finite_lattice}, and the values of
+$\sigma^*_{kk}$ lie inside this region \cite{Golden:1986:BCP}. The
+isotropic bounds given in equation \eqref{eq:Isotropic_Bounds} do not
+hold for anisotropic media, where $\langle N_1^j(\omega)\rangle\neq\langle N_1^k(\omega)\rangle$ for some
+$j\neq k$. However, in Section \ref{sec:Numerical_Results} we show that
+the isotropic bounds in \eqref{eq:Isotropic_Bounds} capture the data
+for locally isotropic and statistically isotropic random media in the
+finite lattice setting. 
+
+
+
+
+
+
+
+\section{Numerical Results}\label{sec:Numerical_Results}
+{\it Eigenvalue densities, Spectral measures, forward bounds on
+  effective parameters. What the new data and bounds tell us about the
+  transitional behavior of the multiscale sea ice structures.}
+%
+In this section we discuss how the theoretical framework developed in
+Sections \ref{sec:Finite_Lattice_Setting} and
+\ref{sec:The_Spectral_Theorem_Finite_Lattice} can be used to directly
+calculate the spectral measure $\bmu$, hence the effective parameters
+for various composite microstructures. In Section \ref{} we calculate
+$\bmu$ and  
+%
+\section{Conclusion}
+{\it What's new in this electromagnetic/thermal case and what can it tell us about sea ice? How could this potentially allow small scale processes to be up-scaled into coarsened climate models? How can the electromagnetic response of sea ice provide information regarding the fluid flow processes? Inverse problems. Spectral measures for the effective elasticity tensor of the ice pack....}
+
+\newpage
+
+% redefine the command that creates the equation no.
+  \setcounter{equation}{1}  % reset equation counter
+  \setcounter{section}{0}  % reset section counter
+  \renewcommand{\theequation}{A-\arabic{equation}}
+\renewcommand{\thesection}{A-\arabic{section}}
+\section{Appendix} \label{sec:Appendix}
+
+
+%
+ 
+%
+In this section we provide many of the details to, and derivations of
+the formulas given in Section \ref{sec:Mathematical_Methods}. Much of this
+appendix is devoted to reviewing well established results, in order to
+clarify the technical details underlying the mathematical
+framework. However, a key theoretical contribution of this work is
+given in Theorem \ref{thm:Discrete_Spectral_Theorem_ACM} of Section
+\ref{sec:The_Spectral_Theorem_Finite_Lattice} below.   
+
+
+
+
+
+
+
+
+
+\subsection{The Stieltjes--Perron Inversion Theorem}
+\label{sec:Stieltjes-Perron}
+TAKE THIS FROM GRAEME'S BOOK
+$m_{jk}(h)=h\,w_{jk}(z)$, and
+$\tilde{m}_{jk}(h)=h\,\tilde{w}_{jk}(z)$
+
+\subsection{The Spectral Theorem Under the ACM}
+\label{sec:The_Spectral_Theorem}
+%
+In this section we discuss the spectral theorem
+\cite{Reed-1980,Stone:64} as it pertains to the ACM. In Section
+\ref{sec:The_Spectral_Theorem_Continuum} we review the spectral
+theorem for the operators  $M_i=\chi_i\Gamma\chi_i$, $i=1,2$, in the continuum
+and infinite lattice settings discussed in Sections
+\ref{sec:Continuum_Setting} and \ref{sec:Infinite_Lattice_Setting},
+respectively.  In Section
+\ref{sec:The_Spectral_Theorem_Finite_Lattice} we discuss the spectral
+theorem in the finite lattice setting, where the operators $M_i$,
+$i=1,2$, are real-symmetric random matrices. In each case we obtain
+the Stieltjes integral representation for $\bsig^*$ and $\bsig^*$
+given in equations \eqref{eq:Stieltjes_F} and
+\eqref{eq:Stieltjes_F_Discrete}, respectively, involving a matrix
+valued spectral measure $\bmu$.     
+%
+\subsubsection{Continuum  and Infinite Lattice Settings}
+\label{sec:The_Spectral_Theorem_Continuum} 
+%
+Due to the inherent symmetries in the ACM between the continuum and
+infinite lattice settings discussed in Sections
+\ref{sec:Continuum_Setting} and \ref{sec:Infinite_Lattice_Setting},
+respectively, here we focus on the continuum setting. The
+associated discussion regarding the infinite lattice setting is a
+direct parallel to that given here. In the paragraph preceeding that
+which involves equation \eqref{}, we argued that on the Hilbert space
+$\mathscr{H}_\times$ with weight $\chi_1$ in the inner-product,
+$\langle\cdot,\cdot\rangle_1=\langle\chi_1\,\cdot,\cdot\rangle$, $\Gamma\chi_1$ is a bounded linear self-adjoint operator. 
+By the spectral theorem for such operators, there exists an increasing
+family of self-adjoint projection operators $\{R(\lambda)\}$ - the resolution
+of the identity - that satisfy $R(0)=0$ and $R(1)=I$ such that
+%
+\begin{align}\label{eq:Spectral_Theorem}
+  f(M_1)=\int f(\lambda)R(d\lambda), \quad
+  \langle f(M_1)\,\vec{e}_j\cdot\vec{e}_k\rangle_1= \int_0^1f(\lambda)\mu_{jk}(d\lambda), 
+  %\mu_{jk}(\lambda)=\langle R(\lambda)\vec{e}_j,\vec{e}_k\rangle_1
+\end{align}
+%
+for all bounded continuous functions $f:\mathbb{C}\mapsto\mathbb{C}$. Here
+$0$ and $I$ are the null and identity operators on $\mathbb{R}^d$,
+respectively, $R(d\lambda)$ is the projection valued measure associated with
+the operator $R(\lambda)$ \cite{Reed-1980}, and
+$\mu_{jk}(d\lambda)=\langle R(d\lambda)\,\vec{e}_j\cdot\vec{e}_k\rangle_1$, $j,k=1,\ldots,d$, are the
+components of the matrix valued \emph{spectral measure} $\bmu(d\lambda)$ in
+the $(\vec{e}_j,\vec{e}_k)$ state
+\cite{Golden:CMP-473,Reed-1980,Stone:64}. As the spectrum of the
+operator $M_1$ is contained in the interval $[0,1]$, the support
+$\Sigma_{jk}$ of the measure $\mu_{jk}$ satisfies $\Sigma_{jk}\subseteq[0,1]$
+\cite{Reed-1980}. Note that setting $f(M_1)=I$ ($f(\lambda)=1$) in equation
+\eqref{eq:Spectral_Theorem} implies that the projection valued measure
+satisfies $\int_0^1R(d\lambda)=I$. Setting $f(\lambda)=(s-\lambda)^{-1}$ in
+\eqref{eq:Spectral_Theorem} yields the the integral formula for
+$F_{jk}(s)$ and $\sigma_{jk}^*=\sigma_2m_{jk}(h)$ in equation \eqref{eq:Stieltjes_F}.
+
+
+
+
+
+% It is worth mentioning a few direct consequences of what we have
+% established in this section. We first note that
+% and the spectral theorem leads to a Herglotz integral representation
+% of $\langle E_f^2\rangle=\langle\vec{E}\cdot\vec{E}_f\rangle=\langle\chi_1\vec{E}\cdot\vec{E}_f\rangle/s$ involving
+% the measure $\bmu$ \cite{Murphy:JMP:063506}  
+% %
+% \begin{align}
+%   \frac{\langle E_f^2\rangle}{E_0^2}=\frac{1}{s}\left(\langle\chi_1\vec{E}_f\cdot\vec{E}_0\rangle 
+%                                +\langle\chi_1E_f^2\rangle
+%                               \right)
+%                   =\int_0^1\frac{\lambda\,\mu_{jj}(d\lambda)}{(s-\lambda)^2}\,,
+% \end{align}
+% %
+% which, in turn, leads to a detailed decomposition of the system energy
+% in terms of Hergloz functions involving the measure $\mu_{jj}$,
+% $j=1,\ldots,d$ (see Section \ref{sec:The_Spectral_Theorem} for details).
+% (FINISH THIS PARAGRAPH LATER AND VERIFY THAT THE POSITIVITY OF THE
+% CONTRAST PARAMETER $h\in\mathbb{R}$ GIVES THE CORRECT SIGN FOR THE
+% HERGLOTZ REPRESENTATIONS FOR THE QUANTITIES $\langle\vec{E}\cdot\vec{E}_f\rangle$ and 
+% $\langle\chi_1\vec{E}\cdot\vec{E}_f\rangle$ in equation \eqref{eq:Field_Rep_s})
+
+
+
+
+
+\subsubsection{Finite Lattice Setting}
+\label{sec:The_Spectral_Theorem_Finite_Lattice}
+%
+In this section we derive a discrete version of the spectral theorem
+given in equation  \eqref{eq:Spectral_Theorem}. This leads to
+the discrete integral representation for the effective
+conductivity tensor $\bsig^*$ displayed in equation
+\eqref{eq:Stieltjes_F_Discrete}. Toward this goal, we defined in
+Section \ref{sec:Finite_Lattice_Setting} a bijective mapping
+$\Theta:\mathbb{Z}_L^d\to\mathbb{N}_L$ from the finite $d$-dimensional bond
+lattice $\mathbb{Z}_L^d$ defined in \eqref{eq:ZLd} onto the one
+dimensional set $\mathbb{N}_L$ defined in equation
+\eqref{eq:Bijection_Z_N}. Moreover we showed that, under the mapping
+$\Theta$, the random operator $M_1=\chi_1\Gamma\chi_1$ can be represented as a
+\emph{real-symmetric} random matrix of size $N\times N$, where $N=d\,L^d$
+\cite{Golden:J_Biomech:337,Murphy:JMP:063506}. More specifically, $\Gamma$
+is a \emph{non-random} real-symmetric projection matrix ($\Gamma^2=\Gamma$) and
+$\chi_1$ is a \emph{random} diagonal projection matrix with zeros and
+ones along the main diagonal, and has the block diagonal form
+displayed in equation \eqref{eq:block_diag_chi}. Since $M_1(\omega)$ is a
+composition of projection matrices, it is positive definite,
+$M_1(\omega)\vec{\xi}\cdot\vec{\xi}=(\Gamma\chi_1(\omega)\vec{\xi})\cdot(\Gamma\chi_1(\omega)\vec{\xi})\geq0$ for every
+$\omega\in\Omega$ and $\vec{\xi}\in\mathbb{R}^N$, and consequently has spectra
+$\Sigma^\lambda(\omega)\subseteq[0,1]$ \cite{Halmos-1958}.   
+
+
+
+
+
+
+It is well known \cite{Halmos-1958,Keener-2000} that the eigenvectors
+$\vec{u}_i(\omega)$, $i=1,\ldots,N$, of the symmetric matrix $M_1(\omega)$ form an orthonormal
+basis for $\mathbb{R}^N$, for each $\omega\in\Omega$, i.e., 
+$\vec{u}_j^{\,T}\vec{u}_k=\delta_{jk}$  and for every
+$\vec{\xi}\in\mathbb{R}^N$ we have
+$\vec{\xi}=\sum_{i=1}^N(\vec{u}_i^{\,T}\vec{\xi}\,)\vec{u}_i  
+=\left(\sum_{i=1}^N\vec{u}_i\vec{u}_i^{\,T}\right)\vec{\xi}\,$. Consequently,       
+%
+\begin{align}\label{eq:Matrix_Rep_Spec_Theorem}
+  \sum_{i=1}^NR_i(\omega)=I, \quad
+  R_i(\omega)=\vec{u}_i(\omega)\vec{u}_i^{\,T}(\omega),  \quad
+  \forall \     \omega\in\Omega,
+\end{align}
+%
+where $I$ is the identity operator on $\mathbb{R}^N$ and the matrix
+$R_i$ is the orthogonal projector ($R_iR_j=R_i\delta_{ij}$) onto the
+eigenspace spanned by $\vec{u}_i$, which is associated with the
+\emph{real} eigenvalue $\lambda_i(\omega)\in\Sigma^\lambda(\omega)$. 
+
+
+Since $M_1\vec{u}_i=\lambda_i\vec{u}_i$, for each $i=1,\ldots,N$, equation
+\eqref{eq:Matrix_Rep_Spec_Theorem} implies that we also have
+$M_1R_i=\lambda_iR_i$ which, in turn, implies that the matrix  $M_1$ has the
+spectral decomposition $M_1=\sum_{i=1}^N\lambda_iR_i$. By the orthogonality of
+the projection matrices $R_i$ and by induction we have
+$M_1^n=\sum_{i=1}^N\lambda_i^nR_i$ for all $n\in\mathbb{N}$, which implies that
+$f(M_1)=\sum_{i=1}^Nf(\lambda_i)R_i$ for any polynomial
+$f:\mathbb{C}\mapsto\mathbb{C}$.  This formula is a discrete version of the
+first formula in equation \eqref{eq:Spectral_Theorem} for polynomial
+$f(\lambda)$, and leads to a discrete version of the functional
+representation of  $f(M_1)$ in \eqref{eq:Spectral_Theorem} involving a
+matrix valued spectral measure $\bmu(d\lambda)$ with components $\mu_{jk}(d\lambda)$
+%
+\begin{align}\label{eq:Discrete_Spectral_Theorem}
+%f(M_1)=\sum_{i=1}^Nf(\lambda_i)R_i, \quad
+  \langle f(M_1)\hat{e}_j\cdot\hat{e}_k\rangle= \int_0^1f(\lambda)\mu_{jk}(d\lambda), \quad
+  \mu_{jk}(d\lambda)=\sum_{i=1}^N\langle\delta_{\lambda_i}(d\lambda)R_i\,\hat{e}_j\cdot\hat{e}_k\rangle.
+\end{align}
+%
+Here $R(d\lambda)=\sum_i\delta_{\lambda_i}(d\lambda)R_i$ is a discrete version of the
+projection valued measure introduced in equation
+\eqref{eq:Spectral_Theorem}, $\delta_{\lambda_i}(d\lambda)$ is the Dirac measure
+concentrated at $\lambda_i$, the orthonormal vectors
+$\hat{e}_i=\Theta(\vec{e}_i)/L^{d/2}$, for $i=1,\ldots,d$, represent the standard
+basis vectors on $\mathbb{N}_L$, and $\langle\cdot\rangle$ denotes ensemble
+average over $\Omega$. The spectral end points $\lambda_{jk}^0$ and $\lambda_{jk}^1$ of the
+support $\Sigma_{jk}\subseteq[\lambda_{jk}^0,\lambda_{jk}^1]\subseteq[0,1]$ of the measure $\mu_{jk}$ in
+\eqref{eq:Discrete_Spectral_Theorem} are given by
+$\lambda_{jk}^0=\inf A_{jk}$ and $\lambda_{jk}^1=\sup A_{jk}$, where
+%
+\begin{align*}
+ % \lambda_{jk}^0=\inf A_{jk}, \quad \lambda_{jk}^1=\sup A_{jk}, \quad
+  A_{jk}= \cup_{\omega\in\Omega}\{\lambda_i(\omega)\in\Sigma^\lambda(\omega), \   i=1,\ldots,N \ | \ R_i(\omega)\hat{e}_j\cdot\hat{e}_k\neq0\}
+  % \lambda_{jk}^0&=\inf \cup_{\omega\in\Omega}\{\lambda_i(\omega)\in\Sigma^\lambda(\omega), \
+%   i=1,\ldots,N \ | \ R_i(\omega)\hat{e}_j\cdot\hat{e}_k\neq0\},\\
+%   \lambda_{jk}^1&=\sup \cup_{\omega\in\Omega}\{\lambda_i(\omega)\in\Sigma^\lambda(\omega), \
+%   i=1,\ldots,N \ | \ R_i(\omega)\hat{e}_j\cdot\hat{e}_k\neq0\},\notag
+\end{align*}
+%
+and $\Sigma^\lambda_1(\omega)\subseteq[0,1]$ is the support of the eigenvalues of the matrix
+$M_1(\omega)$ for $\omega\in\Omega$. 
+
+
+
+We now show that equation \eqref{eq:Discrete_Spectral_Theorem} also
+holds for the function $f(\lambda)=(s-\lambda)^{-1}$ when $s\not\in[0,1]$. For each
+$\omega\in\Omega$, let $U(\omega)$ denote the matrix with columns consisting of the
+eigenvectors $\vec{u}_i(\omega)$ of $M_1(\omega)$ and let
+$\Lambda(\omega)=\text{diag}(\lambda_1(\omega),\ldots,\lambda_N(\omega))$ denote the diagonal matrix of the
+corresponding eigenvalues $\lambda_i(\omega)$, $i=1,\ldots,N$, so that $M_1=U\Lambda U^T$
+\cite{Halmos-1958}. By the orthogonality, $U^TU=UU^T=I$, of the matrix
+$U$ we have   
+%
+\begin{align}\label{eq:Discrete_Stieltjes_F_Derivation}
+     \langle f(M_1)\hat{e}_j\cdot\hat{e}_k\rangle
+        &=\langle(sI-U\Lambda U^T)^{-1}\hat{e}_j\cdot\hat{e}_k\rangle
+        = \langle U(sI-\Lambda)^{-1}U^T\hat{e}_j\cdot\hat{e}_k\rangle\\
+        &=\langle(sI-\Lambda)^{-1}U^T\hat{e}_j\cdot U^T\hat{e}_k\rangle
+       % =\sum_{i=1}^N\left\langle
+       %      \frac{(\vec{u}_i^{\,T}\hat{e}_j)(\vec{u}_i^{\,T}\hat{e}_k)}{s-\lambda_i}
+       %        \right\rangle
+        =\sum_{i=1}^N\left\langle
+          \frac{R_i\hat{e}_j}{s-\lambda_i}\cdot\hat{e}_k
+          \right\rangle.               
+%        m_{ij}(i)=\langle R_i\hat{e}_i,\hat{e}_j\rangle
+%                =\langle(\vec{u}_i^{\,T}\hat{e}_i)(\vec{u}_i^{\,T}\hat{e}_j)\rangle,
+        \notag
+\end{align}
+%
+Equation \eqref{eq:Discrete_Stieltjes_F_Derivation} is equivalent to equation
+\eqref{eq:Discrete_Spectral_Theorem} when the function
+$f(\lambda)=(s-\lambda)^{-1}$, $s\in\mathbb{C}\backslash[0,1]$.
+
+
+
+
+
+
+
+
+\medskip
+
+{\bf Acknowledgement.}
+\medskip
+
+\bibliographystyle{siam}
+\bibliography{murphy}
+\end{document}

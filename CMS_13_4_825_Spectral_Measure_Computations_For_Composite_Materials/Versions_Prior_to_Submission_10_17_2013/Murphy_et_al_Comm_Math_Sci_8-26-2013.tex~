@@ -1,0 +1,295 @@
+\documentclass{cmslatex}
+%\usepackage{latexsym, amssymb, enumerate, amsmath}
+\usepackage{graphicx,amssymb,amsmath,amsfonts,mathrsfs}
+ 
+\sloppy
+
+\thinmuskip = 0.5\thinmuskip \medmuskip = 0.5\medmuskip
+\thickmuskip = 0.5\thickmuskip \arraycolsep = 0.3\arraycolsep
+
+\renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
+
+\def\open#1{\setbox0=\hbox{$#1$}
+\baselineskip = 0pt \vbox{\hbox{\hspace*{0.4 \wd0}\tiny
+$\circ$}\hbox{$#1$}} \baselineskip = 10pt\!}
+
+\newcommand{\ph}{\hat{\phi}}
+\newcommand{\pt}{\tilde{\phi}} 
+\newcommand{\pc}{\check{\phi}}
+\newcommand{\gh}{\hat{\gamma}}
+\newcommand{\Dh}{\hat{\Delta}}
+\newcommand{\dha}{\hat{\delta}}
+\newcommand{\qh}{\hat{q}}
+\newcommand{\xh}{\hat{x}}
+\newcommand{\HM}{\mathcal{H}_{\text{max}}}
+\newcommand{\Hm}{\mathcal{H}_{\text{min}}}
+\newcommand{\sech}{\rm \hspace{0.7mm}sech}
+\newcommand{\I}{\mathrm{i}}
+\newcommand{\hh}{\hat{h}}
+\newcommand{\mh}{m_r}
+\newcommand{\mt}{m_i}
+\newcommand{\M}{\mathbf{M}}
+\newcommand{\X}{\mathbf{X}}
+\newcommand{\T}{\mathbf{T}}
+\newcommand{\Hb}{\mathbf{H}}
+\newcommand{\K}{\mathbf{K}}
+\newcommand{\J}{\mathbf{J}}
+
+\newcommand\bsig{\mbox{\boldmath${\sigma}$}}
+\newcommand\beps{\mbox{\boldmath${\epsilon}$}}
+\newcommand\bxi{\mbox{\boldmath${\xi}$}}
+\newcommand\bmu{\mbox{\boldmath${\mu}$}}
+\newcommand\balpha{\mbox{\boldmath${\alpha}$}}
+\newcommand\brho{\mbox{\boldmath${\rho}$}}
+
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+
+    %\theoremstyle{definition}
+
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{notation}[thm]{Notation}
+\newtheorem{example}[thm]{Example}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{prob}[thm]{Problem}
+
+    %\theoremstyle{remark}
+
+\newtheorem{rem}[thm]{Remark}
+    % Use the standard latex environments for theorems, etc. Here is one
+          % possible method of declaring them: It numbers all results by the
+          % section, and uses a common numbering system for the different
+          % environmentts.
+
+\begin{document}
+
+\title{Spectral measure computations \\ for composite materials
+\thanks{%{Received date / Revised version date}
+          % The correct dates will be entered by the CMS editor}}
+}}
+          %For each author, make a block with the following four
+          %macros:
+% \author{full name
+% \thanks {address, (email).}
+% \and full name \thanks {address, (email).}}
+%
+\author{N. B. Murphy
+\thanks {University of Utah, Department of Mathematics, 155 S 1400 E
+  RM 233, Salt Lake City, UT 84112-009, USA, (murphy@math.utah.edu)}
+%
+\and E. Cherkaev
+\thanks {University of Utah, Department of Mathematics, 155 S 1400 E
+  RM 233, Salt Lake City, UT 84112-009, USA, (elena@math.utah.edu).}
+%
+\and C. Hohenegger
+\thanks {University of Utah, Department of Mathematics, 155 S 1400 E
+  RM 233, Salt Lake City, UT 84112-009, USA, (choheneg@math.utah.edu).}
+%
+\and K. M. Golden
+\thanks {University of Utah, Department of Mathematics, 155 S 1400 E
+  RM 233, Salt Lake City, UT 84112-009, USA, (golden@math.utah.edu).}
+}
+          %{Put the URL for your home page here if you have one}
+
+          %Use \thanks statements for acknowledgements of grants and
+          %support. They will appear below all the authors' addresses, so be
+          %specific about which author is thanking whom:
+
+          %\thanks{}
+
+\pagestyle{myheadings} \markboth{Spectral measure computations}{Murphy et. al.}\maketitle
+
+\begin{abstract}
+The analytic continuation method of homogenization theory provies
+Stieltjes integral representations for the effective parameters of
+composite media, involving spectral measures of self-adjoint random
+operators which depend only on the composite geometry. On finite bond
+lattices, these random operators are represented by random matrices
+and the spectral measures are given explicitely in terms of their
+eigenvalues and eigenvectors. Here we develop a projection method
+which provides the mathematical foundation for numerically efficient,
+rigorous computation of spectral measures for such composite media. We
+also introduce a large family of random bond lattices and directly
+compute the associated spectral measures and effective parameters. The
+behavior of the effective parameters is shown to be consistent with
+rigorous bounds, and the computed spectral measures are consistent
+with known theoretical results. 
+\end{abstract}
+
+\begin{keywords}
+composite materials, random resistor network, percolation,
+homogenization, spectral measure 
+\smallskip
+
+{\bf subject classifications.}
+% GENERAL: Conference proceedings and collections of papers:
+% Conference proceedings and collections of papers 
+00B15,
+% Measures, integration, derivative, holomorphy (all involving inﬁnite-
+% dimensional spaces): Measures and integration on abstract linear spaces
+46G12,
+% OPERATOR THEORY: Special classes of linear operators: Hermitian and
+% normal operators (spectral measures, functional calculus, etc.)
+47B15,
+% NUMERICAL ANALYSIS: Numerical linear algebra: Eigenvalues, eigenvectors
+65C60,
+% MECHANICS OF DEFORMABLE SOLIDS: Generalities, axiomatics,
+% foundations of continuum mechanics of solids:
+% Random materials and composite materials 
+%74A40,
+% MECHANICS OF DEFORMABLE SOLIDS: Generalities, axiomatics,
+% foundations of continuum mechanics of solids: Nonsimple materials
+%74E30,
+% FUNCTIONS OF A COMPLEX VARIABLE: Analytic continuation 
+30B40,
+% OPTICS, ELECTROMAGNETIC THEORY: General: Composite media; random media
+78A48,
+% OPTICS, ELECTROMAGNETIC THEORY: Basic methods: Spectral methods
+78M22,
+% CLASSICAL THERMODYNAMICS, HEAT TRANSFER: Basic methods: Spectral
+% methods
+80M22,
+% CLASSICAL THERMODYNAMICS, HEAT TRANSFER: Basic methods: Homogenization
+80M40,
+% PROBABILITY THEORY AND STOCHASTIC PROCESSES: Special processes:
+% Interacting random processes; statistical mechanics type models;
+% percolation theory
+60K35
+\end{keywords}
+
+
+\section{Introduction}\label{Introduction}
+%
+Over the years a broad range of mathematical techniques have been
+developed that reduce the analysis of complex composite materials,
+with rapidly varying structures in space, to solving averaged, or
+\emph{homogenized} equations that do not have rapidly varying data,
+and involve an effective parameter. Homogenization for the effective
+parameter problem in composite media with rapidly varying coefficients
+of thermal conductivity, or equivalently \cite{MILTON:2002:TC}
+electrical conductivity and permittivity, and magnetic permeability,
+was developed by Papanicolaou and Varadhan \cite{Papanicolaou:RF-835}
+for the steady state, static case. This work was extended
+\cite{Golden:CMP-473,Golden:JSP-655} by Golden and Papanicolaou to the
+quasi-static frequency dependent case with complex
+parameters. Analysis of the effective dielectric problem for the fully
+frequency dependent case described by the Helmholtz equation is given
+in \cite{Simeonova:MMS:1113}. 
+
+The effective parameter problem for \emph{two component} media in the
+quasi-static limit was developed by Bergman \cite{Bergman:PRL-1285},
+Milton \cite{Milton:APL-300}, and Golden and Papanicolaou
+\cite{Golden:CMP-473}, leading to Stieltjes integral representations 
+for the effective parameters of composite media. The
+Golden-Papanicolaou formulation of this analytic continuation method
+(ACM) is based on the spectral theorem and resolvent formulas
+involving random self-adjoint operators. This formulation demonstrated
+that the measures underlying these integral representations are
+\emph{spectral measures} associated with these random operators, which
+depend only on the composite geometry. The spectral measures contain
+all the information about the mixture geometry, and provide a link
+between microgeometry and transport. Local geometry is encoded
+in ``geometric'' resonances in the measure \cite{Jonckheere_Luck_JPA_1998},
+while global connectivity is encoded by spectral gaps in the measure
+at the spectral endpoints
+\cite{Murphy:JMP:063506,Golden:PRL-3935,Jonckheere_Luck_JPA_1998}. A
+remarkable feature of the method is that once the spectral measures
+are found for a given composite geometry, by the symmetries in the
+governing equations \cite{MILTON:2002:TC}, the effective electrical,
+magnetic, and thermal transport properties are \emph{all} completely
+determined. 
+
+The integral representations yield rigorous \emph{forward bounds} on
+the effective parameters of composites, given partial information on
+the microgeometry
+\cite{Bergman:PRL-1285,Milton:APL-300,Golden:CMP-473,Bergman:AP-78}. One  
+can also use the integral representations to obtain inverse bounds,
+where data on the electromagnetic response of a sample, for example,
+is used to bound its structural parameters, such as the volume
+fractions of the components
+\cite{Cherkaeva:WRM-437,Cherkaeva:IP-1203,Cherkaeva:IP-065008,Zhang:JCP-5390,Bonifasi-Lista:PMB-3063,Cherkaev:JBiomech-345,Day:JPCM-99,Golden:J_Biomech:337},
+and even the separation of the inclusions in matrix particle
+composites \cite{Orum:PRSLA:2012}. The integral representations have
+also been used to obtain detailed information regarding critical
+transitions in the behavior of the effective parameters as a composite
+medium undergoes a percolation transition
+\cite{Golden:PRL-3935,Murphy:JMP:063506}.
+
+Dispite the many applications which have stemmed from the ACM,
+explicit results are available for only a handfull of composite
+microstructures. To help overcome this limitation, here we develop a
+mathematical framework which provides a rigorous way to directly
+compute the spectral measures, hence the effective properties, for
+finite lattices. 
+
+
+
+\section{Put title of the next section here}\label{an apprpriate
+label}
+
+          %If you have subsections use:
+\subsection{Subsection title}\label{another label}
+
+Don't forget to give each section, subsection, equation, theorem,
+corollary, etc. a unique label, and when you refer to the results
+later in the text use \ref{<labelname>} instead of explicitly
+writing the number of the environment in question.
+
+This use of \ label and \ ref is REQUIRED for  papers.
+
+Similarly, always use \cite{biblabelname} to refer to
+bibliographic references, which would then be entered in the
+bibliography via
+          %\bibitem{biblabelname}.
+
+          %
+          % For figures use
+
+          %\begin{figure}
+
+          %The use of .eps files is encouraged, in which case you should
+          %un-comment the \uspackage{graphics} command above, and use the
+          %command
+          %\include{figure.eps}
+          % to insert the figure file.
+
+          %\end{figure}
+
+
+          % BibTeX users please use
+
+          % \bibliographystyle{}
+
+          % \bibliography{}
+
+          %
+
+          % Non-BibTeX users please use
+\medskip
+
+{\bf Acknowledgement.}
+\medskip
+
+\bibliographystyle{siam}
+\bibliography{murphy}
+% \begin{thebibliography}{10}
+
+%           %
+
+%           % and use \bibitem to create references.
+
+%           %
+
+% \bibitem{A}Author, {\em title of paper}, Journal Name
+% Volume,  page numbers, year.
+
+%           % Format for Journal Reference. For example
+
+% \bibitem{T1}C. Taubes, {\em The Seiberg-Witten invariants
+%  and symplectic forms}, Math. Res. Letters, 1, 809--822, 1994.
+% \end{thebibliography}
+
+\end{document}

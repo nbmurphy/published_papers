@@ -1,0 +1,150 @@
+%%%Communications in Mathematical Sciences Template
+\documentclass{cmslatex}
+\usepackage{latexsym, amssymb, enumerate, amsmath}
+%\usepackage{latexsym,amssymb}
+
+ % Remove any % below to load the required packages
+
+    %\usepackage{graphics}
+    % etc
+\sloppy
+
+\thinmuskip = 0.5\thinmuskip \medmuskip = 0.5\medmuskip
+\thickmuskip = 0.5\thickmuskip \arraycolsep = 0.3\arraycolsep
+
+\renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
+
+\def\open#1{\setbox0=\hbox{$#1$}
+\baselineskip = 0pt \vbox{\hbox{\hspace*{0.4 \wd0}\tiny
+$\circ$}\hbox{$#1$}} \baselineskip = 10pt\!}
+
+
+
+    % Put your favorite macros here. We cannot guess what your macros are
+    % -they all need to be included here!
+
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+
+    %\theoremstyle{definition}
+
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{notation}[thm]{Notation}
+\newtheorem{example}[thm]{Example}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{prob}[thm]{Problem}
+
+    %\theoremstyle{remark}
+
+\newtheorem{rem}[thm]{Remark}
+    % Use the standard latex environments for theorems, etc. Here is one
+          % possible method of declaring them: It numbers all results by the
+          % section, and uses a common numbering system for the different
+          % environmentts.
+
+\begin{document}
+
+\title{Full title
+\thanks{%{Received date / Revised version date}
+          % The correct dates will be entered by the CMS editor}}
+}}
+          %For each author, make a block with the following four macros:
+\author{full name
+\thanks {address, (email).}
+\and full name \thanks {address, (email).}}
+          %{Put the URL for your home page here if you have one}
+
+          %Use \thanks statements for acknowledgements of grants and
+          %support. They will appear below all the authors' addresses, so be
+          %specific about which author is thanking whom:
+
+          %\thanks{}
+
+\pagestyle{myheadings} \markboth{short running title}{Author
+name}\maketitle
+
+\begin{abstract}
+Insert your REQUIRED abstract here. If possible, do not use any
+math symbols or references to the bibliography to facilitate
+putting the abstract online in an .html
+          format.
+\end{abstract}
+
+\begin{keywords}
+\smallskip
+
+{\bf subject classifications.}
+\end{keywords}
+
+
+\section{Introduction}\label{intro}
+
+Put a general  introduction to your paper here. Separate text
+sections with other sections.
+
+\section{Put title of the next section here}\label{an apprpriate
+label}
+
+          %If you have subsections use:
+\subsection{Subsection title}\label{another label}
+
+Don't forget to give each section, subsection, equation, theorem,
+corollary, etc. a unique label, and when you refer to the results
+later in the text use \ref{<labelname>} instead of explicitly
+writing the number of the environment in question.
+
+This use of \ label and \ ref is REQUIRED for  papers.
+
+Similarly, always use \cite{biblabelname} to refer to
+bibliographic references, which would then be entered in the
+bibliography via
+          %\bibitem{biblabelname}.
+
+          %
+          % For figures use
+
+          %\begin{figure}
+
+          %The use of .eps files is encouraged, in which case you should
+          %un-comment the \uspackage{graphics} command above, and use the
+          %command
+          %\include{figure.eps}
+          % to insert the figure file.
+
+          %\end{figure}
+
+
+          % BibTeX users please use
+
+          % \bibliographystyle{}
+
+          % \bibliography{}
+
+          %
+
+          % Non-BibTeX users please use
+\medskip
+
+{\bf Acknowledgement.}
+\medskip
+
+\begin{thebibliography}{10}
+
+          %
+
+          % and use \bibitem to create references.
+
+          %
+
+\bibitem{A}Author, {\em title of paper}, Journal Name
+Volume,  page numbers, year.
+
+          % Format for Journal Reference. For example
+
+\bibitem{T1}C. Taubes, {\em The Seiberg-Witten invariants
+ and symplectic forms}, Math. Res. Letters, 1, 809--822, 1994.
+\end{thebibliography}
+\end{document}

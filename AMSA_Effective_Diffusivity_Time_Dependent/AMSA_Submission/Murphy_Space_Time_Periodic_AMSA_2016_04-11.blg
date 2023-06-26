@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Murphy_Space_Time_Periodic_AMSA_2016_04-11.aux
+The style file: plain.bst
+Database file #1: murphy.bib
+Warning--can't use both author and editor fields in Papanicolaou:1995:Diff_Rand_Media
+You've used 108 entries,
+            2118 wiz_defined-function locations,
+            1406 strings with 25703 characters,
+and the built_in function-call counts, 35721 in all, are:
+= -- 3606
+> -- 1548
+< -- 11
++ -- 628
+- -- 503
+* -- 2562
+:= -- 6009
+add.period$ -- 341
+call.type$ -- 108
+change.case$ -- 543
+chr.to.int$ -- 0
+cite$ -- 109
+duplicate$ -- 1295
+empty$ -- 2858
+format.name$ -- 503
+if$ -- 7369
+int.to.chr$ -- 0
+int.to.str$ -- 108
+missing$ -- 134
+newline$ -- 544
+num.names$ -- 224
+pop$ -- 513
+preamble$ -- 1
+purify$ -- 463
+quote$ -- 0
+skip$ -- 836
+stack$ -- 0
+substring$ -- 2656
+swap$ -- 173
+text.length$ -- 11
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 376
+warning$ -- 1
+while$ -- 381
+width$ -- 111
+write$ -- 1196
+(There was 1 warning)

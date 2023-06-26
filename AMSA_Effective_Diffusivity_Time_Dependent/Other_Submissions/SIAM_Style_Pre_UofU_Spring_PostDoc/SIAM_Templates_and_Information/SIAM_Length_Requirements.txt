@@ -1,0 +1,9 @@
+%%%%%% Length Requirements %%%%%%%
+
+Title: 			Brief
+Abreviated Title: 	50 characters including spaces
+Abstract: 		250 words
+Text: 			20 pages 
+
+More information can be found at the following web address
+http://www.siam.org/journals/instruct.php

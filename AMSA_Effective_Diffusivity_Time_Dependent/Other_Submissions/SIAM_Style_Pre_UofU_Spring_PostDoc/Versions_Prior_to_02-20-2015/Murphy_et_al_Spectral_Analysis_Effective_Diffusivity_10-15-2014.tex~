@@ -1,0 +1,418 @@
+%\documentclass[final,leqno,onefignum,onetabnum]{siamltex1213}
+\documentclass[leqno,onefignum,onetabnum]{siamltex1213}
+
+\usepackage{graphicx,amssymb,amsmath,amsfonts,mathrsfs}
+
+\newcommand{\ph}{\hat{\phi}}
+\newcommand{\pt}{\tilde{\phi}} 
+\newcommand{\pc}{\check{\phi}}
+\newcommand{\gh}{\hat{\gamma}}
+\newcommand{\Dh}{\hat{\Delta}}
+\newcommand{\dha}{\hat{\delta}}
+\newcommand{\qh}{\hat{q}}
+\newcommand{\xh}{\hat{x}} 
+\newcommand{\HM}{\mathcal{H}_{\text{max}}}
+\newcommand{\Hm}{\mathcal{H}_{\text{min}}}
+\newcommand{\sech}{\rm \hspace{0.7mm}sech}
+\newcommand{\I}{\mathrm{i}}
+\newcommand{\e}{\mathrm{e}}
+\renewcommand{\d}{\mathrm{d}}
+\newcommand{\hh}{\hat{h}}
+\newcommand{\mh}{m_r}
+\newcommand{\mt}{m_i}
+\newcommand{\Sigc}{\Sigma_{\text{cont}}}
+\newcommand{\Sigp}{\Sigma_{\text{pp}}}
+
+\newcommand{\Mb}{\mathbf{M}}
+\newcommand{\Xb}{\mathbf{X}}
+\newcommand{\Tb}{\mathbf{T}}
+\newcommand{\Hb}{\mathbf{H}}
+\newcommand{\Kb}{\mathbf{K}}
+\newcommand{\Jb}{\mathbf{J}}
+\newcommand{\Ib}{\mathbf{I}}
+\newcommand{\Sb}{\mathbf{S}}
+\newcommand{\Rb}{\mathbf{R}}
+\newcommand{\Ab}{\mathbf{A}}
+\newcommand{\Bb}{\mathbf{B}}
+\newcommand{\Cb}{\mathbf{C}}
+\newcommand{\Db}{\mathbf{D}}
+\newcommand{\Eb}{\mathbf{E}}
+\newcommand{\Qb}{\mathbf{Q}}
+\newcommand{\Nb}{\mathbf{N}}
+\newcommand{\Ob}{\mathbf{0}}
+\newcommand{\Vb}{\mathbf{V}}
+\newcommand{\Wb}{\mathbf{W}}
+\newcommand{\Gb}{\mathbf{G}}
+\newcommand{\Ub}{\mathbf{U}}
+\newcommand{\Zb}{\mathbf{Z}}
+
+
+
+\newcommand{\Kc}{\mathcal{K}}
+\newcommand\Kbc{\mbox{\boldmath${\mathcal{K}}$}}
+
+
+\newcommand{\Tc}{\mathcal{T}}
+\newcommand{\Vc}{\mathcal{V}}
+\newcommand{\Hc}{\mathcal{H}}
+\newcommand{\Fc}{\mathcal{F}}
+\newcommand{\Ec}{\mathcal{E}}
+\newcommand{\Sc}{\mathcal{S}}
+\newcommand{\Mc}{\mathcal{M}}
+\newcommand{\Nc}{\mathcal{N}}
+\newcommand{\Uc}{\mathcal{U}}
+
+
+
+\newcommand{\Hs}{\mathscr{H}}
+\newcommand{\As}{\mathscr{A}}
+\newcommand{\Ds}{\mathscr{D}}
+\newcommand{\Fs}{\mathscr{F}}
+\newcommand{\Ss}{\mathscr{S}}
+
+
+\newcommand\bsig{\mbox{\boldmath${\sigma}$}}
+\newcommand\beps{\mbox{\boldmath${\epsilon}$}}
+\newcommand\bxi{\mbox{\boldmath${\xi}$}}
+\newcommand\bmu{\mbox{\boldmath${\mu}$}}
+\newcommand\balpha{\mbox{\boldmath${\alpha}$}}
+\newcommand\brho{\mbox{\boldmath${\rho}$}}
+\newcommand\bDelta{\mbox{\boldmath${\Delta}$}}
+\newcommand\bkappa{\mbox{\boldmath${\kappa}$}}
+\newcommand\bGamma{\mbox{\boldmath${\Gamma}$}}
+\newcommand\bUpsilon{\mbox{\boldmath${\Upsilon}$}}
+\newcommand\bLambda{\mbox{\boldmath${\Lambda}$}}
+\newcommand\Bnabla{\mbox{\boldmath${\nabla}$}}
+
+
+
+
+% Temporary Notation
+\newcommand{\Et}{\tilde{\mathbf{E}}}
+\newcommand\bphi{\mbox{\boldmath${\phi}$}}
+\newcommand{\Wt}{\tilde{\mathbf{W}}}
+\newcommand{\Dt}{\tilde{\mathbf{D}}}
+
+
+
+
+
+\title{Spectral analysis and computation of effective diffusivities
+  for time-dependent periodic flows  
+  %\thanks{}
+      } 
+
+% \author{TeX Production\thanks{Society for Industrial and
+% Applied Mathematics, Philadelphia, Pennsylvania. 
+% (\email{tex@siam.org}). Questions, comments, or corrections
+% to this document may be directed to that email address.}}
+
+\author{
+N. B. Murphy\footnotemark[1]\ \footnotemark[3]\ \footnotemark[4]
+\and J. Xin\footnotemark[1]\ \footnotemark[3]
+\and E. Cherkaev\footnotemark[2]\ \footnotemark[4]
+\and J. Zhu\footnotemark[2]\ \footnotemark[4]%
+}
+
+
+% !!!!!!!!! NEED TO FIX THIS BEFORE SUBMISSION !!!!!!!!!!!
+%
+% \renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+% \footnotetext[1]{
+%   Department of Mathematics, 340 Rowland Hall, University of
+%   California at Irvine, Irvine, CA 92697-3875, USA}
+% \footnotetext[2]{University of Utah, Department of Mathematics, 155 S 1400 E
+%   RM 233, Salt Lake City, UT 84112-009, USA}
+% \footnotetext[3]{Support in common for N. B. Murphy and J. Xin}
+% \footnotetext[4]{Support in common for N. B. Murphy, E. Cherkaev, and J. Zhu}
+
+% \renewcommand{\thefootnote}{\arabic{footnote}}
+      
+
+       
+
+
+
+
+\begin{document}
+\maketitle
+\slugger{siap}{xxxx}{xx}{x}{x--x}%slugger should be set to mms, siap,
+                                 %sicomp, sicon, sidma, sima, simax,
+                                 %sinum, siopt, sisc, or sirev 
+
+\begin{abstract}
+The enhancement in diffusive transport of particles or tracers by
+incompressible, turbulent flow fields is a challenging problem with
+theoretical and practical importance in many areas of science and
+engineering, ranging from the transport of mass, heat, and pollutants
+in geophysical flows to turbulent combustion and stellar
+convection. The long time, large scale behavior of such systems is
+equivalent to an enhanced diffusive process with an effective
+diffusivity tensor $\Db^*$. Based on an analytic continuation method
+developed for random composite materials, a rigorous integral
+representation for $\Db^*$ was developed for the case of a random,
+\emph{time-independent} fluid velocity field, involving a spectral
+measure of a self-adjoint random operator acting on
+\emph{vector-fields}. An alternate approach yielded an integral
+representation for $\Db^*$ involving a spectral measure of a
+self-adjoint operator acting on \emph{scalar-fields}, for the case of
+a periodic, \emph{time-independent} fluid velocity field. Here, we
+adapt and extend both of these approaches to the case of a periodic,
+\emph{time-dependent} fluid velocity field, with possibly chaotic
+dynamics, providing integral representations for $\Db^*$ involving
+spectral measures of the underlying self-adjoint operators. We prove
+that the two approaches are equivalent and that their correspondence
+follows from a one-to-one isometry between the underlying Hilbert
+spaces. Moreover, we establish a direct correspondence between the
+effective parameter problem for $\Db^*$ and that arising in the
+analytic continuation method for composites. We also develop novel
+Fourier methods that provide the mathematical foundation for rigorous
+computation of $\Db^*$. Our numerical computations are in excellent
+agreement with known theoretical results.           
+\end{abstract}
+
+\begin{keywords}
+advective diffusion, effective diffusivity, eddy diffusivity, spectral
+measure, multiscale homogenization, turbulence, residual diffusion
+\end{keywords}
+
+\begin{AMS}
+% OPERATOR THEORY: Special classes of linear operators: Hermitian and
+% normal operators (spectral measures, functional calculus, etc.)
+47B15,
+% NUMERICAL ANALYSIS: Numerical linear algebra: Eigenvalues, eigenvectors
+65C60,
+% CLASSICAL THERMODYNAMICS, HEAT TRANSFER: Basic methods: Homogenization
+%80M40,
+% PARTIAL DIFFERENTIAL EQUATIONS: Representations of solutions:
+% Integral representations of solutions 
+35C15,
+%FLUID MECHANICS: Incompressible inviscid fluids: None of the above,
+%but in this section 
+76B99
+%FLUID MECHANICS: Basic methods in fluid mechanics: Spectral methods
+76M22
+%FLUID MECHANICS: Basic methods in fluid mechanics: Homogenization
+76M50
+%FLUID MECHANICS: Turbulence: Turbulent transport, mixing
+76F25
+%FLUID MECHANICS: Diffusion and convection: None of the above, but in
+%this section 
+76R99   	
+% GEOPHYSICS: Hydrology, hydrography, oceanography
+%86A05   	
+\end{AMS}
+
+
+\pagestyle{myheadings}
+\thispagestyle{plain}
+\markboth{N. B. Murphy et al.}{Spectral analysis of time-dependent flows}
+
+\section{Introduction}
+The long time, large scale motion of diffusing particles or
+tracers being advected by an incompressible flow field is equivalent
+to an enhanced diffusive process~\cite{Taylor:PRSL:196} with an
+effective diffusivity tensor $\mathbf{D}^*$. Describing the associated
+transport properties is a challenging problem with a broad range of
+scientific and engineering applications, such as stellar
+convection~\cite{Knobloch:1992ApJ,Press:1981:ApJ,canut98,canut98b,canut00},
+turbulent
+combustion~\cite{Aslanyan:BF00790149,Bilger:05:10.1016,Tabaczynski:10.1007},
+and solute transport in porous
+media~\cite{Bhattacharya:AAP:1999:951,Bhattacharya:1989:ASD,Whitaker:AIC690130308,Gupta:WRCR3940,Koch:1988:965,Lester:PRL:111.174101,Koch:JFM:7961001}.
+Time-dependent flows can have fluid velocity fields with chaotic
+dynamics, which gives rise to turbulence that greatly enhances the
+mixing, dispersion, and large scale transport of diffusing scalars.   
+
+
+
+In the climate
+system~\cite{Csanady:1973:9789027702609,Griffies:2003:10.1007},
+turbulence plays a key role in transporting mass, heat, momentum,
+energy, nutrients, pollutants, and salt in geophysical
+flows~\cite{Moffatt:RPP:621}. Turbulence enhances the dispersion of
+atmospheric gases~\cite{Espinosa:MET1292} such as
+ozone~\cite{Holton:JGRC2495,Pitari:JGR:1986,Plumb:JAS:1979,Plumb:JAS:1987}
+and
+pollutants~\cite{Bilger:10.1175,Beychok:1994:9780964458802,Samson:1988:88009978},
+as well as atmosphere-ocean transfers of carbon dioxide and other
+climatically important trace gas
+fluxes~\cite{Zappa:2007:67613,Banerjee:10.1007}.  Longitudinal
+dispersion of passive scalars in oceanic flows can be enhanced by
+horizontal turbulence due to shearing of tidal currents, wind drift,
+or
+waves~\cite{Young:JPO:1982:515,Kullenberg:1972:TUS1529,Bowden:JFM:1965}.   
+Chaotic motion of 
+time-dependent fluid velocity fields cause instabilities in large
+scale ocean currents, generating geostrophic
+eddies~\cite{Ferrari:JPO:1501} which dominate the kinetic energy of
+the ocean~\cite{Ferrari:ARFM:253}. Geostrophic
+eddies~\cite{Ferrari:JPO:1501} greatly enhance the meridional mixing
+of heat, carbon and other climatically important tracers, typically
+more than one order of magnitude greater than the mean flow of the
+ocean~\cite{Souza:OS:317}. Eddies also impact heat and salt budgets
+through lateral fluxes and can extend the area of high biological
+productivity offshore by both eddy chlorophyll advection and eddy
+nutrient pumping~\cite{Chaigneau:JGR:C11025}. In sea ice, which 
+couples the atmosphere to the polar
+oceans~\cite{Washington:1986:9780935702521}, the transport of vast ice
+floes can also be enhanced by eddie
+fluxes~\cite{Watanabe:2009JPO4010}. Thermal transport through sea ice
+can be enhanced by a brine velocity
+field~\cite{Lytle:JGR-8853,Trodahl:2001:TCS}, which itself depends on
+the brine microstructure and its
+connectivity~\cite{Golden:S-2238,Golden:GRL:L16501}, and plays an
+important role in many biogeochemical processes in polar ecosystems
+and the climate~\cite{Golden:NAMS:2009}.
+
+
+
+
+It has been noted in various atmospheric
+contexts~\cite{Plumb:JAS:1979,Plumb:JAS:1987} that eddy-induced,
+skew-diffusive tracer fluxes, directed normal to the tracer
+gradient~\cite{Middleton:JPO:5840223}, are generally equivalent to
+antisymmetric components in the effective 
+diffusivity tensor $\Db^*$, while the symmetric part of $\Db^*$
+represents irreversible diffusive
+effects~\cite{Redi:JPO:1982:1154,Solomon:OGR:1971:233,Griffies:JPO:1998}
+directed down the tracer gradient. The mixing of eddy fluxes is
+typically non-divergent and unable to affect the evolution of the mean
+flow~\cite{Middleton:JPO:5840223}, and do not alter the tracer
+moments~\cite{Griffies:JPO:1998}. In this sense, the 
+mixing is non-dissipative, reversible, and sometimes referred to as
+stirring~\cite{Eckart:JMR:1948,Griffies:JPO:1998}.  
+
+
+
+
+Due to the computational intensity of detailed climate
+models~\cite{Griffies:2003:10.1007,Washington:1986:9780935702521,Neelin:2010:CCCM},
+a coarse resolution is necessary in numerical simulations and
+\emph{parameterization} is used to help resolve sub-grid
+processes, such as turbulent 
+entrainment-mixing processes in clouds~\cite{Lu:JGR:D50094},
+atmospheric boundary layer turbulence~\cite{Bretherton:JOC:5655449},
+atmosphere-surface exchange over the
+sea~\cite{Fairall:1996:JGRC6562} and sea
+ice~\cite{Sorensen:TC:2014,Andreas:2010:QJ618,Andreas:JH:2010}, and
+eddies in the ocean~\cite{McDougall:2001:book,Gent:JPO:1995}. In this
+way, only the effective or averaged behavior of these sub-grid
+processes are included in the model. Here, we study the effective
+behavior of advection enhanced diffusion by time-dependent fluid
+velocity fields, with possibly chaotic dynamics, which gives rise to
+such a parameterization, namely, the effective diffusivity tensor
+$\Db^*$ of the flow. 
+
+
+
+In recent decades, a broad range of mathematical techniques have been
+developed~\cite{McLaughlin:SIAM_JAM:780,Bensoussan:Book:1978,Biferale:PF:2725,Fannjiang:SIAM_JAM:333,Mauri:1991:3:743,Pavliotis:PHD_Thesis,Pavliotis:CMS:2007:507,Clark:1998:364,Holmes:1995:94481954,Hornung:1997:9780387947860,Majda:Kramer:1999:book,Majda:1994:10.1088}
+which reduce the analysis of enhanced diffusive transport by complex
+velocity fields with rapidly varying structures in both space and time, to
+solving averaged or \emph{homogenized} equations that do not have
+rapidly varying data, and involve an effective parameter. Motivated
+by~\cite{Papanicolaou:RF-835}, it was
+shown~\cite{McLaughlin:SIAM_JAM:780} that the homogenized behavior of
+the advection-diffusion equation with a random, time-independent,
+incompressible, mean-zero fluid velocity field, is given by an inhomogeneous
+diffusion equation involving the symmetric part of an effective
+diffusivity tensor $\Db^*$. Moreover, a rigorous representation of
+$\Db^*$ was given in terms of an auxiliary ``cell problem'' involving
+a curl-free random field~\cite{McLaughlin:SIAM_JAM:780}. We stress
+that the effective diffusivity tensor $\Db^*$ is not symmetric in
+general. However, only its symmetric part appears in the homogenized
+equation for this formulation of the effective transport properties of
+advection enhanced diffusion~\cite{McLaughlin:SIAM_JAM:780}.   
+
+
+
+The incompressibility condition of the velocity field was
+used~\cite{Avellaneda:PRL-753,Avellaneda:CMP-339} to transform the
+cell problem~\cite{McLaughlin:SIAM_JAM:780} into the quasi-static
+limit of Maxwell's equations~\cite{Jackson-1999,Golden:CMP-473}, which
+describe the transport properties of an electromagnetic wave in a
+composite medium~\cite{MILTON:2002:TC}. The analytic continuation
+method (ACM) for representing transport in
+composites~\cite{Golden:CMP-473} provides Stieltjes integral
+representations for the bulk transport coefficients of the media, such
+as electrical conductivity and permittivity, magnetic permeability,
+and thermal conductivity~\cite{MILTON:2002:TC}. This 
+method is based on the spectral theorem~\cite{Stone:64,Reed-1980} and
+a resolvent formula for, say, the electric field, involving a random
+self-adjoint operator~\cite{Golden:CMP-473,Murphy:JMP:063506} or
+matrix~\cite{Murphy:CMS:Submitted}. Based on~\cite{Golden:CMP-473},
+the cell problem was transformed into a resolvent formula involving a
+self-adjoint random operator, acting on the Hilbert space of
+curl-free \emph{vector
+  fields}~\cite{Avellaneda:PRL-753,Avellaneda:CMP-339}. This, in turn,  
+led to a Stieltjes integral representation for the symmetric part of
+the effective diffusivity tensor $\Db^*$, involving the P\'{e}clet
+number of the flow and a \emph{spectral measure} of the
+operator~\cite{Avellaneda:PRL-753,Avellaneda:CMP-339}.
+
+
+
+The mathematical framework developed in~\cite{McLaughlin:SIAM_JAM:780}
+was adapted~\cite{Pavliotis:PHD_Thesis} to the case of a periodic,
+time-independent, incompressible fluid velocity field with non-zero
+mean. The velocity field is modeled as a superposition of a
+large-scale mean flow with small-scale periodically oscillating 
+fluctuations. It was shown~\cite{Pavliotis:PHD_Thesis} that, depending
+on the strength of the fluctuations relative to the mean flow, the
+effective diffusivity tensor $\Db^*$ can be constant or a function of
+both space and time. When $\Db^*$ is constant, only its symmetric part
+appears in the homogenized equation as an enhancement in the
+diffusivity. However, when $\Db^*$ is a function of space and time,
+its antisymmetric part also plays a key role in the homogenized
+equation. In particular, the symmetric part of $\Db^*$ appears as an
+enhancement in the diffusivity, while both the symmetric and
+antisymmetric parts of $\Db^*$ contribute to an effective drift in the
+homogenized equation. The effective drift due to the antisymmetric
+part is purely sinusoidal, thus divergence
+free~\cite{Pavliotis:PHD_Thesis}. Based
+on~\cite{Bhattacharya:AAP:1999:951}, the cell problem was
+transformed~\cite{Pavliotis:PHD_Thesis} into a resolvent formula
+involving a self-adjoint operator, acting on the Sobelov
+space~\cite{McOwen:2003:PDE,Folland:95} of spatially periodic scalar
+fields, which is also a Hilbert space. This, in turn, led to a
+discrete Stieltjes integral representation for both the symmetric and
+antisymmetric parts of $\Db^*$, involving the P\'{e}clet number of the
+flow and a \emph{spectral measure} of the operator.   
+
+
+Here, we
+adapt and extend both of these approaches to the case of a periodic,
+\emph{time-dependent} fluid velocity field, with possibly chaotic
+dynamics, providing integral representations for $\Db^*$ involving
+spectral measures of the underlying self-adjoint operators. We prove
+that the two approaches are equivalent and that their correspondence
+follows from a one-to-one isometry between the underlying Hilbert
+spaces. Moreover, we establish a direct correspondence between the
+effective parameter problem for $\Db^*$ and that arising in the
+analytic continuation method for composites. We also develop novel
+Fourier methods that provide the mathematical foundation for rigorous
+computation of $\Db^*$. Our numerical computations are in excellent
+agreement with known theoretical results.           
+FINISH THIS PARAGRAPH WHEN THE REST OF THE PAPER IS FINISHED.
+
+
+
+
+
+
+\appendix
+\section{Title of appendix} 
+
+\bibliographystyle{plain}
+\bibliography{murphy}
+
+
+
+
+\end{document}
+
+
+% LocalWords:  siap xxxx mms sicomp sicon sidma sima simax sinum siopt sisc
+% LocalWords:  sirev inviscid hydrography SIAM'S eddie entrainment clet

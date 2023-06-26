@@ -1,0 +1,258 @@
+\documentclass[amsa]{article}
+\usepackage{mymacros}
+
+% \setlength{\textwidth}{6.5in}
+% \setlength{\textheight}{9.0in}
+% \setlength{\oddsidemargin}{0in}
+% \setlength{\evensidemargin}{0in}
+% %\setlength{\topmargin}{-0.5in}
+
+
+\begin{document}
+
+\title{Responses to Review 1 for\\
+  ``Spectral analysis and computation\\
+  of effective diffusivities in 
+  space-time periodic incompressible flows''}
+\author{N. B. Murphy}
+
+\maketitle
+
+
+
+
+
+In order to make the substantial revision of our submitted manuscript
+more transparent, we now provide a synopsis of the modifications. The 
+results of the manuscript remain the same. However, virtually the
+entire manuscript has been modified. The responses to the referee's
+questions/comments are given below.   
+
+
+Section 1 was split into three subsections. Section 2 was split into
+three subsections and the body of Sections 2.2 and 2.3 were
+significantly modified. Section 3 was streamlined and placed on more
+general footing by adding Appendix E.2. Section 4 has been
+substantially modified. A conclusion section was added in Section
+5.
+
+
+Appendices A and B are virtually the same.
+Appendix C has been
+almost completely rewritten. In particular, the Hilbert spaces and
+their dense subsets have been redefined to have elements that are
+spatially mean-zero. To precisely characterize the fluid velocity
+field, in Appendix C.1 a new Hilbert space $\Hs_{\Vc}^{0,2}$ was
+defined. Moreover, in Appendix C.1 the negative inverse Laplacian
+$(-\Delta)^{-1}$ and the associated Green's function are now discussed in
+detail, as its properties are needed 
+in the proof of a new lemma, Lemma 2, and the proof of Theorem 1
+etc. Appendix C.2 has been substantially modified. In particular, we
+have moved some of the proof of what is now Theorem 6 to a new lemma,
+Lemma 3, in Appendix C.2. Lemmas 2 and 3 are now used heavily in the
+proof of Corollary 4 in Appendix C.2. The proof of what is now Lemma 5 
+has been only slightly modified. In Appendix D a good portion of the
+old proof of Theorem 6 has been moved to Lemma 3, as mentioned
+above. We have added to Appendix E a subsection, Appendix
+E.2. However, the introductory paragraph of Appendix E and Appendix
+E.1, which comprised all of Appendix E in the submitted manuscript,
+are virtually the same. Appendix E.2 was added to streamline our
+results given in Section 3 and to place them on more general footing,
+as mentioned above.   
+
+
+
+We now address the reviewer's questions/comments.
+
+
+
+\begin{itemize}
+\item[1.]
+  Throughout the paper, the sentence “the domain $D(M)$ of an operator
+  $M$ is densely defined in the underlying Hilbert space” is a bit
+  confusing. I think something like “the domain $D(M)$ is dense” or
+  “$M$ is densely defined” is clearer. Or if these are not exactly
+  what you mean, define the first sentence at the beginning.
+%
+\item
+  The phrase "densely defined" has been eliminated and the suggested
+  changes have been utilized.
+%
+\item[2.]
+  p.8, below eq.(8), can you comment a little bit more on the
+  conditions to have uniform $(\sup_{x\in\mathbb{R}^d})$ convergence?
+%
+\item
+  The result in eq. (8) is stated in reference [55], \textit{Majda and
+    Kramer, Physics Reports 213, 237 (1999).} Therein, the proof of
+  this result is referenced to the article \textit{A.J. Majda,
+    Lectures on turbulent diffusion, Lecture Notes at Princeton
+    University, 1990.} We have tried to obtain an copy of this article
+  without success, as it is not readily available to the public. We
+  have not tried to reproduce the result and instead have referenced
+  [55].  
+%
+\item[3.]
+  p.8, below eq.(10), make the definition of $\Tc$ and $\Vc$ explicit,
+  namely $V = [0, 2\pi]^d$ and $\Tc = [0, 2\pi]$ or other
+  choices. Make sure these are consistent with the Fourier series used
+  in p.12 eq.(19).
+%
+\item
+  Below eq.(10), we have given the examples that you have
+  suggested. These are consistent with the Fourier series used in
+  Section 3. 
+%
+\item[4.]
+  p.9, line 3, in the definition of $(-\Delta)^{-1}$, specify which
+  boundary condition is associated to the  problem, namely periodic
+  boundary condition with zero average. This operator is used
+  throughout the paper; it worths to make this clarification.
+%
+\item
+  We have made the suggested clarification after the statement of
+  Theorem 1 in Appendix C1 of the revised paper. 
+%
+\item[5.] p.18, line 5 in paragraph 3, the sentence “whenever $\{f_n\}$
+  and $\{\Phi f_n\}$ exist” sounds strange.
+%
+\item
+  We have fixed this sentence.
+%
+\item[6.] p.19, eq.(33), it is better to refer to a specific theorem
+  with specific definition of $Q(\lambda)$, and assumptions on $\Sigma$ (or the
+  operator $\Phi$).
+%
+\item We have made the reference to the spectral theorem, the operator
+  $\Phi$, and its spectrum $\Sigma$ more specific.
+%
+\item[7.]  p.19, eq.(34)(35) are defined for $\lambda\in\Sigma$ only, right? Are
+  they extended somehow to the whole line/plane, or is $\lambda\in\Sigma$ assumed to
+  be a line/plane?
+%
+\item Yes, these equations are defined for $\lambda\in\Sigma$ only. We have made
+  this more explicit in the paper. Also the spectrum $\Sigma$ of a
+  self-adjoint operator is real-valued, $\Sigma\subseteq\mathbb{R}$. We have made
+  this more explicit in the paper as well.
+%
+\item[8.]  p.23, in C.1., last line,
+  $\langle\nabla\phi\cdot\nabla\varphi\rangle=\int_0^1\int_{[0,1]^d}\nabla\phi\cdot\nabla\varphi dxdt$ does not define an inner
+  product, since if $\varphi$ is a function of the $t$ variable only, then
+  this product is zero but $\varphi$ is not necessary the zero of
+  $\Hs$. Also, for eq.(46), specify with respect to which norms of
+  $\tilde{\As}_{\Tc}$ and $\Hs^{1}_{\Vc}$ are the completion done.
+%  
+\item The Sobolev space $\Hs_{\Vc}^{1}$ is now denoted by
+  $\Hs_{\Vc}^{1,2}$. The problem that you pointed out has been fixed
+  by defining $\Hs_{\Vc}^{1,2}$ to have spatially mean-zero
+  elements. Otherwise, non-zero constant $\psi$ satisfies
+  $\int_{\Vc}|\bnabla\psi|^2\,\d\vecx=0$.  With this change,
+  $\langle\nabla\phi\cdot\nabla\varphi\rangle=\int_{\Tc\times\Vc}\nabla\phi\cdot\nabla\varphi\, \d\vecx\,\d t$ \emph{does} define an inner 
+  product on the function space $\tilde{\As}_{\Tc}\otimes\Hs_{\Vc}^{1,2}$. We have
+  discussed this in detail in the revision. Also, the function space
+  $\tilde{\As}_{\Tc}$ is \emph{not} a complete Hilbert space and is
+  instead an everywhere dense subset of the Hilbert space
+  $\Hs_{\Tc}$. We have clarified this in the paper and also specified
+  on which function space and with what norm the completion of the
+  Sobolev space $\Hs^{1,2}_{\Vc}$ is done. 
+%
+\item[9.]  p.24, line 1, why is $\|\partial_t\psi\|_1<\infty$?
+%
+\item The norm $\|\cdot\|_1$ is now denoted $\|\cdot\|_{1,2}$. Since
+  $\langle|\partial_t\psi|^2\rangle_{\Tc}<\infty$ for all $\psi\in\tilde{\As}_{\Tc}$ and $\langle|\bnabla
+  \psi|^2\rangle_{\Vc}<\infty$ for all $\psi\in\Hs^{1,2}_{\Vc}$, we have
+  $\|\partial_t\psi\|_{1,2}^2=\langle|\bnabla \partial_t\psi|^2\rangle<\infty$ for all
+  $\psi\in\Fs$, where $\Fs=\tilde{\As}_{\Tc}\otimes\Hs^{1,2}_{\Vc}$. To avoid
+  confusion we have removed this sentence, as it is not used in the
+  paper.  
+%
+\item[10.]  p.25, I am not sure about the derivation to the bound in
+  eq.(49). $\Fs$ is defined through a completion, shouldn't it be the
+  Sobolev space $H^1(\Tc\times\Vc)$ of $L^2$ integrable functions on the
+  torus with $L^2$ integrable (weak) derivatives? In that case,
+  Sobolev embedding indicates that a $L^\infty$ bound would fail in $d\geq2$.
+%  
+\item The issue with the derivation to the bound in eq.(49) of the
+  submitted paper has been fixed in the revision and the result has
+  been generalized, now given in Lemma 2 of the revised paper. 
+%
+\item[11.] The above estimate is used also in p.26, eq.(50), p.29,
+  line 6 below eq.(56), etc. Please make sure the above question is
+  clarified.
+\item The question in item 10 has been clarified in Lemma 2.
+%
+\item[12.] p.30, below eq.(62), the relation $\Jb_k =\bsig\Eb_k$ is
+  not “local”. In fact, this relation is a partial differential
+  equation. It worths to mention this though the seemingly “local”
+  formula is a nice analog with the corresponding constitutional
+  equation in the Maxwell’s equations.
+%
+\item This point has been clarified in the paper.
+%
+\item[13.]  p.31, eq.(65), indeed $\Ab=\bGamma\Sb\bGamma=\bGamma\Sb$
+  since on $\Hc$, the vector fields are already curl free. However, it
+  is not clear to me that $\bGamma\Sb\bGamma=\Sb\bGamma$ (and hence
+  $\bGamma\Sb = \Sb\bGamma$), because it is not clear to me that the
+  range of $\Sb$ is contained in $\Hc$. I don't see where $\bGamma\Sb
+  = \Sb\bGamma$ is needed, in any case.
+%  
+\item These equalities were intended in a weak sense that has been
+  clarified in equation (A-52) of the revised paper.
+%
+\item[14.] p.32, Lemma 4 and its proof, double check the indices in
+  $\sigma^*_{jk}$. For instance, on p. 33, last sentence in paragraph 1, is
+  $\langle\vecJ_j\bcdot\vecE_k\rangle=\langle\vecJ_j\bcdot\vece_k\rangle$ equal to $\sigma^*_{jk}$
+  or $\sigma^*_{kj}$? The same question for the fourth line in eq.(71). If
+  the latter (instead the current version), then in eq.(70), there
+  should be no ``transpose.'' 
+%
+\item Since $\langle\vecJ_j\rangle=\bsig^*\langle\vecE_j\rangle=\bsig^*\vece_j$, we have
+  $\langle\vecJ_j\bcdot\vecE_k\rangle=\langle\vecJ_j\bcdot\vece_k\rangle=\bsig^*\vece_j\bcdot\vece_k=\sigma^*_{jk}$.
+  This and the formula $\Dm^*_{jk}=\varepsilon\delta_{jk}+\langle u_j\chi_k\rangle$ imply that
+  $\sigma^*_{jk}=\langle\vecJ_j\bcdot\vece_k\rangle=\langle u_k\chi_j\rangle+\varepsilon\delta_{jk}+\langle\Hm_{jk}\rangle
+  =\Dm^*_{kj}+\langle\Hm_{jk}\rangle$, yielding $\bsig^*=[\Dm^*]^T+\langle\Hm\rangle$.
+%
+\item[15.] p.34, last 3 lines in paragraph 2, for $f\in\Hs^1_{\Vc}$, $\partial
+  f/\partial x_j$ could be defined as stated here, except that the limit of
+  of $\{\partial f_n/\partial x_j\}$ should be sought for in $\|\cdot\|$ topology rather
+  than $\|\cdot\|_1$ (which itself involves a derivative, according to the
+  definition in eq.(45)). Also, it is not clear that $\{\partial^2 f_n/\partial
+  x_j^2\}$  will have a limit, since $\Hs^1_{\Vc}$ is taken as the
+  completion w.r.t. a norm that only concerns first order
+  derivatives.
+%
+\item We have updated these statements according to your suggestions
+  and moved them to a more appropriate place below equation (A-15) of
+  the revised paper, where the Sobolev space is defined.
+%
+\item[16.]  Examine the consequence of item 8 above on the norms
+  appearing in Appendix D.
+%
+\item We have fixed the problem that you pointed out in item 8. Please
+  see the corresponding response for details.
+
+\noindent Here are list of typos I found:
+
+%
+\item[17.] p.7, last line $\phi(0,x)$ should be $\phi^\delta$.
+%
+\item We have fixed this typo.
+%
+\item[18.] p.23, line 4 in section C.1., in $\Vc=\times_{j=1}^d$, $\times$
+  should be $\otimes$? 
+%
+\item We have fixed this typo.
+%  
+\item[19.] p.31, line 1, $\Hc$ should be $\Fs$?
+%
+\item This line was removed in the revision.
+%
+\item[20.] p.32, line 3 from bottom of paragraph 1, ``$\Sb=\ldots$ is
+  self-adjoint'' should be ``$-\imath\Sb=\ldots$ is self-adjoint''?
+%  
+\item This line was removed in the revision.
+%  
+\end{itemize}
+
+
+\end{document}

@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Murphy_SIAM_Effective_Diffusivity_Dynamic_Flows_02-24-2015.aux
+The style file: plain.bst
+Database file #1: murphy.bib
+You've used 93 entries,
+            2118 wiz_defined-function locations,
+            1306 strings with 23181 characters,
+and the built_in function-call counts, 30764 in all, are:
+= -- 3099
+> -- 1359
+< -- 7
++ -- 549
+- -- 443
+* -- 2211
+:= -- 5193
+add.period$ -- 292
+call.type$ -- 93
+change.case$ -- 473
+chr.to.int$ -- 0
+cite$ -- 93
+duplicate$ -- 1105
+empty$ -- 2447
+format.name$ -- 443
+if$ -- 6324
+int.to.chr$ -- 0
+int.to.str$ -- 93
+missing$ -- 114
+newline$ -- 469
+num.names$ -- 194
+pop$ -- 446
+preamble$ -- 1
+purify$ -- 403
+quote$ -- 0
+skip$ -- 713
+stack$ -- 0
+substring$ -- 2277
+swap$ -- 139
+text.length$ -- 7
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 326
+warning$ -- 0
+while$ -- 328
+width$ -- 95
+write$ -- 1028

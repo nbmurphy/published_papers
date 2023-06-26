@@ -1,0 +1,202 @@
+\documentclass[amsa]{article}
+
+\usepackage{mymacros}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+
+
+\setlength{\textwidth}{5.35in}
+\setlength{\textheight}{9in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\topmargin}{-1in}
+
+
+\begin{document}
+
+\title{Second Response to Reviewer 1 for\\
+  ``Spectral analysis and computation\\
+  of effective diffusivities in 
+  space-time periodic incompressible flows''}
+\author{N. B. Murphy}
+
+\maketitle
+
+We have made several changes to the manuscript to address the
+questions of the reviewer. Here, we provide an overview of the changes
+made. Below, we provide more detailed answers to the questions of the
+reviewer. Our first comment regards item 1. Since the paper is already
+63 pages in length, in the interest of brevity, the authors have
+decided  to defer the lengthy treatment of general, \emph{unbounded}
+flows to a future article. Consequently, the results of Lemma 2 and
+Theorem 1 of Appendix C.1 as well as Corollary 4 of Appendix C.2 of
+the current manuscript have been restricted to treat general
+\emph{bounded} flows. Accordingly, Appendix C.1 has been significantly
+rewritten and Appendix C.2 has been only slightly augmented to reflect
+the changes made to Appendix C.1. We have also made various, very minor
+changes throughout the manuscript to improve readability. Our second
+comment regards item 2. We have decided to keep our notation for the
+``effective conductivity.'' Please see our more detailed responses to
+these two items below.
+
+------------
+
+The authors have revised their manuscript very carefully and answered
+all of my questions in the previous report. I believe the current
+manuscript is ready for publication, after the following points are
+clarified. The first one is a bit technical, and the second one is a
+very minor comment.  
+
+
+\begin{itemize}
+\item[1]  p.33, for eq. (A-27), I think if we apply (A-23) directly to
+the function $\vecu\bcdot\bnabla f$, it will require the H{\"o}lder
+components of (A-27) to satisfy $1/p_1+1/q_1=1/2$, because in
+$\|\cdot\|_{1,2}$ the square of the function is integrated. More precisely,
+%
+\begin{align}
+  \|(-\Delta)^{-1}(\vecu\bcdot\bnabla) f\|^2_{1,2}
+  =\int_{\Tc}\int_{\Vc}|\bnabla((-\Delta)^{-1}(\vecu\bcdot\bnabla)f|^2
+  \stackrel{\text{(A-23)}}{=}
+  C\int_{\Tc}\|\vecu\bcdot\bnabla f\|^2_{L^2_x}
+\end{align}
+%
+and if $1/p+1/p^\prime=1/2$
+%
+\begin{align}
+  \|\vecu\bcdot\bnabla f\|_{L^2_x}
+  \leq \|\vecu\bcdot\bnabla f\|_{L^p_x}\|\vecu\bcdot\bnabla f\|_{L^{p^\prime}_x}
+\end{align}
+%
+For this reason, the requirement (A-31) cannot be made since
+$1/p_1+1/q_1=1/2$ already forces $p_1\geq2$ and $q_1\geq2$.
+
+
+
+I still have the feeling that a requirement of $r$ where $r$ is the
+component $\vecu\in L^r_t(L^r_x)$ necessarily depends on the dimension
+$d$. Essentially, (A-25) and (A-26) are $W_x^{1,2}$ estimates (I don’t
+see how the time integral of absolute values of functions would help
+to improve the estimates) for $m$, the solution of the problem
+%
+\begin{align}
+  -\Delta m = h:= \vecu\cdot\nabla f.
+\end{align}
+%
+We essentially require $\nabla f\in L_x^2$. So if $u\in L^r_x$, then $h\in L^p_x$
+with $p=2r/(r+2)$, i.e.
+%
+\begin{align}
+  1/2+1/r=1/p.
+\end{align}
+%
+Then elliptic regularity (Calder{\'o}n-Zygmund) says $m\in W^{2,p}$. In
+view of Sobolev embedding, if we want $m\in W^{1,2}$, a natural
+sufficient condition would be (assume $d\geq2$)
+%
+\begin{align}
+  1/p^*=1/p-1/d\leq1/2 ~\text{ i.e. }~ p^*\geq2,
+\end{align}
+%
+which requires $r\geq d$.
+%
+
+
+\item \textbf{In response to the comments made in the first paragraph of item
+  1, regarding equations (1) and (2).}
+
+  Denote by $\|\cdot\|_p$ the $L^p(\Tc\times\Vc)$--norm. Integration by
+  parts and periodicity, the
+  triangle inequality $|\langle h\rangle|\leq\langle|h|\rangle$, Young's inequality
+  $\|(-\Delta)^{-1}\psi\|_p\leq C\|\psi\|_p$, and H{\"o}lder's   inequality
+  $\|f\,g\|_1\leq\|f\|_{p_1}\,\|g\|_{q_1}$ with conjugate exponents 
+  satisfying $(1/p_1)+(1/q_1)=1$ and $1\leq p_1,\,q_1\leq\infty$, yield equation
+  (A-27):  
+%
+\begin{align}
+  \|(-\Delta)^{-1}(\vecu\bcdot\bnabla) f\|^2_{1,2}
+  &=|\langle \bnabla[(-\Delta)^{-1}(\vecu\bcdot\bnabla)f]\bcdot
+      \bnabla[(-\Delta)^{-1}(\vecu\bcdot\bnabla)f]\rangle|
+  \\\notag
+  &=|\langle [(-\Delta)^{-1}(\vecu\bcdot\bnabla f)]
+      \;(\vecu\bcdot\bnabla f)\rangle|
+   ~\text{ (integration by parts)}
+  \\\notag
+  &\leq\langle |(-\Delta)^{-1}(\vecu\bcdot\bnabla f)|
+      \;|\vecu\bcdot\bnabla f|\rangle
+   ~\text{ (triangle inequality)}
+  \\\notag
+  &=\| |(-\Delta)^{-1}(\vecu\bcdot\bnabla f)|
+      \;|\vecu\bcdot\bnabla f| \|_1
+    ~\text{ (definition of } \|\cdot\|_1)
+  \\\notag
+  &\leq \| (-\Delta)^{-1}(\vecu\bcdot\bnabla f)\|_{p_1}\;
+     \| \vecu\bcdot\bnabla f \|_{q_1}
+     ~\text{ (H{\"o}lder's Inequality) }
+  \\\notag   
+  &\leq C\,\| \vecu\bcdot\bnabla f\|_{p_1}\;
+     \| \vecu\bcdot\bnabla f \|_{q_1}
+     ~\text{ (Young's Inequality) }
+  \notag  
+\end{align}
+%
+
+\textbf{In response to the remaining comments made in the second
+  paragraph of item 1.}
+
+As mentioned above, we have decided to defer our treatment of
+general \emph{unbounded} flows to a future article, restricting our
+results of the current manuscript to general \emph{bounded} flows.
+
+
+  
+%
+\item[2]
+Regarding the formula (A-60), I had a question about whether it should
+be
+%
+\begin{align}
+  \sigma_{jk}^*=\langle \vecJ_j\cdot\vece_k\rangle
+  ~\text{ or }~
+  \sigma_{jk}^*=\langle \vecJ_k\cdot\vece_j\rangle
+\end{align}
+%
+According to (A-49), I would say $\sigma_{jk}^*$ being the element at the
+$j$th row and $k$th element, should be $\vece_j\cdot(\bsig^*\vece_k)$,
+should be given by $\langle\vece_j\cdot\vecJ_k\rangle$ (the latter choice
+above). Then I will get 
+%
+\begin{align}
+  \text{ LHS of (A-61) }
+  =\sigma_{kj}^*
+  =
+  \cdots\stackrel{\text{4th row}}{=} \langle\chi_ju_k\rangle+\varepsilon\delta_{jk}+\langle H_{kj}\rangle
+  =D^*_{kj}+\langle H_{kj}\rangle
+\end{align}
+%
+(both the authors' and my choices of $A=(A_{jk})$ are consistent for
+$\bsig^*$ and for $H$) and finally
+%
+\begin{align}
+  \bsig^*=[D^*]+\langle H\rangle.  
+\end{align}
+%
+
+
+
+\item The calculation in equation (A-54) of the revised manuscript
+  seems correct. If we instead define $\sigma_{jk}^*=\langle \vecJ_k\cdot\vece_j\rangle$
+  then the indices $j$ and $k$ interchange in all equalities on the
+  right hand side of the first one, i.e., $\sigma^*_{jk}=\,$, yielding
+  $\sigma^*_{jk}=\Dm^*_{jk}+\langle\Hm_{kj}\rangle$, so that
+  $\sigma^*=\Dm^*+\langle\Hm^T\rangle=\Dm^*-\langle\Hm\rangle$. We have decided to keep our
+  notation $\sigma_{jk}^*=\langle \vecJ_j\cdot\vece_k\rangle$ to be consistent with
+  the analytic continuation method for representing transport in
+  composite materials. We have 
+  changed the subscript   notation of the manuscript text in between
+  and including equations   (A-39)--(A-42) to reduce confusion.
+\end{itemize}
+
+
+\end{document}

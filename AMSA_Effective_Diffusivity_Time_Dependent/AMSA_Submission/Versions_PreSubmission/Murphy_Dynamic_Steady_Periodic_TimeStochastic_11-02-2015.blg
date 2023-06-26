@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Murphy_Dynamic_Steady_Periodic_TimeStochastic_11-02-2015.aux
+The style file: is-plain.bst
+Database file #1: murphy.bib
+You've used 95 entries,
+            2588 wiz_defined-function locations,
+            1455 strings with 25986 characters,
+and the built_in function-call counts, 39513 in all, are:
+= -- 3830
+> -- 1378
+< -- 7
++ -- 561
+- -- 449
+* -- 2668
+:= -- 6486
+add.period$ -- 359
+call.type$ -- 95
+change.case$ -- 485
+chr.to.int$ -- 0
+cite$ -- 95
+duplicate$ -- 1608
+empty$ -- 3914
+format.name$ -- 449
+if$ -- 8583
+int.to.chr$ -- 0
+int.to.str$ -- 95
+missing$ -- 113
+newline$ -- 553
+num.names$ -- 198
+pop$ -- 818
+preamble$ -- 1
+purify$ -- 410
+quote$ -- 0
+skip$ -- 795
+stack$ -- 0
+substring$ -- 3331
+swap$ -- 181
+text.length$ -- 7
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 340
+warning$ -- 0
+while$ -- 419
+width$ -- 97
+write$ -- 1188

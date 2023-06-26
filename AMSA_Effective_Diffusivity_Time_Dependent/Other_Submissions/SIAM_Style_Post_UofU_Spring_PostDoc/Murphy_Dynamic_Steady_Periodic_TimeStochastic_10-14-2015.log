@@ -1,0 +1,515 @@
+This is TeX, Version 3.1415 (C version 6.1.2.1) (format=latex 6.2.12)  15 OCT 2015 14:51
+**&latex2e Murphy_Dynamic_Steady_Periodic_TimeStochastic_10-14-2015.tex
+(Murphy_Dynamic_Steady_Periodic_TimeStochastic_10-14-2015.tex
+LaTeX2e(BETA TEST RELEASE)  <2005/12/01>
+Babel <v3.7h> and hyphenation patterns for english, loaded.
+(siamltex1213.cls
+Document Class: siamltex1213 2013/10/21 v1.0 LaTeX document e-class
+(/usr/local/lib/tex/latex2e/unpacked/leqno.clo
+File: leqno.clo 1998/08/17 v1.1c Standard LaTeX option (left equation numbers)
+)
+(/usr/local/lib/tex/latex2e/unpacked/leqno.clo
+File: leqno.clo 1998/08/17 v1.1c Standard LaTeX option (left equation numbers)
+) (siam10.clo
+File: siam10.clo 1994/10/01 v1.0 SIAM LaTeX file (size option)
+)
+\c@section=\count79
+\c@subsection=\count80
+\c@subsubsection=\count81
+\c@paragraph=\count82
+\c@subparagraph=\count83
+\c@rmnum=\count84
+\c@muni=\count85
+\c@theorem=\count86
+\c@figure=\count87
+\c@table=\count88
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+
+(/usr/local/lib/tex/latex2e/unpacked/color.sty
+Package: color 1999/02/16 v1.0i Standard LaTeX Color (DPC)
+Package color Info: Driver file: dvips.def on input line 125.
+
+(/usr/local/lib/tex/latex2e/unpacked/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+)
+(/usr/local/lib/tex/latex2e/unpacked/dvipsnam.def
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+(/usr/local/lib/tex/latex2e/unpacked/graphics.sty
+Package: graphics 2001/07/07 v1.0n Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/lib/tex/inputs/trig.sty
+Package: trig 1994/10/16 v1.08 sin cos tan (DPC)
+)
+(/usr/local/lib/tex/latex2e/unpacked/graphics.cfg)
+Package graphics Info: Driver file: dvips.def on input line 80.
+)
+(/usr/local/lib/tex/latex2e/unpacked/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/lib/tex/latex2e/unpacked/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/local/lib/tex/latex2e/unpacked/hyperref.sty
+Package: hyperref 2003/11/30 v6.74m Hypertext links for LaTeX
+\@linkdim=\dimen105
+\Hy@linkcounter=\count89
+\Hy@pagecounter=\count90
+
+(/usr/local/lib/tex/latex2e/unpacked/pd1enc.def
+File: pd1enc.def 2003/11/30 v6.74m Hyperref: PDFDocEncoding definition (HO)
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 1830.
+Package hyperref Info: Hyper figures OFF on input line 1880.
+Package hyperref Info: Link nesting OFF on input line 1885.
+Package hyperref Info: Hyper index ON on input line 1888.
+Package hyperref Info: Plain pages ON on input line 1893.
+Package hyperref Info: Backreferencing OFF on input line 1900.
+
+Implicit mode ON; LaTeX internals redefined
+Package hyperref Info: Bookmarks ON on input line 2004.
+(/usr/local/lib/tex/inputs/url.sty
+\Urlmuskip=\muskip10
+Package: url 2005/06/27  ver 3.2  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 2143.
+\Fld@menulength=\count91
+\Field@Width=\dimen106
+\Fld@charsize=\dimen107
+\Choice@toks=\toks15
+\Field@toks=\toks16
+Package hyperref Info: Hyper figures OFF on input line 2618.
+Package hyperref Info: Link nesting OFF on input line 2623.
+Package hyperref Info: Hyper index ON on input line 2626.
+Package hyperref Info: backreferencing OFF on input line 2633.
+Package hyperref Info: Link coloring ON on input line 2636.
+\c@Item=\count92
+\c@Hfootnote=\count93
+)
+*hyperref using driver hdvips*
+(/usr/local/lib/tex/latex2e/unpacked/hdvips.def
+File: hdvips.def 2003/11/30 v6.74m Hyperref driver for dvips
+
+(/usr/local/lib/tex/latex2e/unpacked/pdfmark.def
+File: pdfmark.def 2003/11/30 v6.74m Hyperref definitions for pdfmark specials
+\pdf@docset=\toks17
+\pdf@box=\box26
+\pdf@toks=\toks18
+\pdf@defaulttoks=\toks19
+\Fld@listcount=\count94
+\@outlinefile=\write3
+)))
+(/usr/local/lib/tex/latex2e/unpacked/amssymb.sty
+Package: amssymb 2002/01/22 v2.2d
+
+(/usr/local/lib/tex/latex2e/unpacked/amsfonts.sty
+Package: amsfonts 2001/10/25 v2.2f
+\@emptytoks=\toks20
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 132.
+))
+(/usr/local/lib/tex/latex2e/unpacked/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/lib/tex/latex2e/unpacked/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/lib/tex/latex2e/unpacked/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks21
+\ex@=\dimen108
+))
+(/usr/local/lib/tex/latex2e/unpacked/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen109
+)
+(/usr/local/lib/tex/latex2e/unpacked/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count95
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count96
+\leftroot@=\count97
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count98
+\DOTSCASE@=\count99
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen110
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count100
+\c@MaxMatrixCols=\count101
+\dotsspace@=\muskip11
+\c@parentequation=\count102
+\dspbrk@lvl=\count103
+\tag@help=\toks22
+\row@=\count104
+\column@=\count105
+\maxfields@=\count106
+\andhelp@=\toks23
+\eqnshift@=\dimen111
+\alignsep@=\dimen112
+\tagshift@=\dimen113
+\tagwidth@=\dimen114
+\totwidth@=\dimen115
+\lineht@=\dimen116
+\@envbody=\toks24
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks25
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/local/lib/tex/latex2e/unpacked/mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup6
+)
+(Murphy_Dynamic_Steady_Periodic_TimeStochastic_10-14-2015.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
+Package hyperref Info: Link coloring ON on input line 197.
+
+(/usr/local/lib/tex/latex2e/unpacked/nameref.sty
+Package: nameref 2003/12/03 v2.21 Cross-referencing by name of section
+\c@section@level=\count107
+)
+LaTeX Info: Redefining \ref on input line 197.
+LaTeX Info: Redefining \pageref on input line 197.
+
+(Murphy_Dynamic_Steady_Periodic_TimeStochastic_10-14-2015.out)
+(Murphy_Dynamic_Steady_Periodic_TimeStochastic_10-14-2015.out)
+LaTeX Font Info:    Try loading font information for U+msa on input line 199.
+
+(/usr/local/lib/tex/latex2e/unpacked/umsa.fd
+File: umsa.fd 2002/01/19 v2.2g AMS font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 199.
+
+(/usr/local/lib/tex/latex2e/unpacked/umsb.fd
+File: umsb.fd 2002/01/19 v2.2g AMS font definitions
+)
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 199.
+
+(/usr/local/lib/tex/latex2e/unpacked/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+) [1
+
+]
+Underfull \vbox (badness 1668) has occurred while \output is active []
+
+ [2]
+Underfull \vbox (badness 3954) has occurred while \output is active []
+
+ [3]
+[4] [5] [6]
+
+LaTeX Warning: Reference `sec:Integral_Rep_General_Sobolev' on page 7 undefined
+ on input line 858.
+
+
+Overfull \hbox (49.074pt too wide) in paragraph at lines 893--893
+[] |
+ []
+
+[7]
+Overfull \hbox (2.44135pt too wide) in paragraph at lines 958--958
+[] |
+ []
+
+[8]
+Overfull \hbox (9.13968pt too wide) in paragraph at lines 1054--1065
+[]$\OT1/cmr/m/n/10 , $\OML/cmm/m/it/10 ^^U[] \OMS/cmsy/m/n/10 2 \U/msb/m/n/10 R
+$\OT1/cmr/m/n/10 , $\OML/cmm/m/it/10 l \OT1/cmr/m/n/10 = 1\OML/cmm/m/it/10 ; \O
+T1/cmr/m/n/10 2\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 3\OML/cmm/m/it/10 ; []$\OT1/c
+mr/m/n/10 , in-volv-ing the integro-differential op-er-a-tor $\OML/cmm/m/it/10 
+A \OT1/cmr/m/n/10 = (\OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 ^^A)[](\OML/cmm/m/it/1
+0 @[] \OT1/cmr/m/n/10 +|
+ []
+
+[9] [10]
+Overfull \hbox (24.21657pt too wide) in paragraph at lines 1292--1298
+ \OT1/cmr/bx/n/10 4.1. Ma-trix rep-re-sen-ta-tions of the eigen-value prob-lem.
+[] \OT1/cmr/m/n/10 In the \OT1/cmr/m/it/10 time-independent|
+ []
+
+[11]
+
+LaTeX Warning: Reference `eq:Integral_Rep_Discrete' on page 12 undefined on inp
+ut line 1373.
+
+
+LaTeX Warning: Reference `eq:Signed_mu_Dis' on page 12 undefined on input line 
+1375.
+
+
+LaTeX Warning: Reference `cor:Integral_Reps' on page 12 undefined on input line
+ 1381.
+
+
+LaTeX Warning: Reference `cor:Integral_Reps' on page 12 undefined on input line
+ 1384.
+
+File: Figure1_Spectral_Measures_Effective_Diffusivities.eps Graphic file (type 
+eps)
+<Figure1_Spectral_Measures_Effective_Diffusivities.eps> [12] [13] [14] [15]
+[16] [17] [18] [19] [20] [21]
+Overfull \hbox (47.34457pt too wide) in paragraph at lines 2350--2350
+[] |
+ []
+
+[22] [23]
+Overfull \hbox (16.54065pt too wide) in paragraph at lines 2547--2547
+[] |
+ []
+
+[24] [25]
+Overfull \hbox (38.3199pt too wide) in paragraph at lines 2786--2786
+[] |
+ []
+
+
+Overfull \hbox (14.63101pt too wide) in paragraph at lines 2815--2815
+[] |
+ []
+
+[26]
+Overfull \hbox (51.43208pt too wide) in paragraph at lines 2957--2957
+[] |
+ []
+
+[27]
+
+LaTeX Warning: Reference `sec:Integral_Rep_General_Sobolev' on page 28 undefine
+d on input line 3092.
+
+
+LaTeX Warning: Reference `sec:Integral_Rep_Matrix_curl_free' on page 28 undefin
+ed on input line 3102.
+
+
+LaTeX Warning: Reference `sec:Integral_Rep_Matrix_Sobolev' on page 28 undefined
+ on input line 3103.
+
+[28] [29]
+
+LaTeX Warning: Reference `sec:Assymptotics' on page 30 undefined on input line 
+3256.
+
+
+Overfull \hbox (14.01656pt too wide) in paragraph at lines 3279--3279
+[] |
+ []
+
+[30]
+
+LaTeX Warning: Reference `cor:Integral_Reps' on page 31 undefined on input line
+ 3372.
+
+
+LaTeX Warning: Reference `cor:Integral_Reps' on page 31 undefined on input line
+ 3391.
+
+
+Overfull \hbox (2.62054pt too wide) in paragraph at lines 3376--3400
+[]\OT1/cmr/m/sc/10 Theorem F.2. []\OT1/cmr/m/it/10 The func-tion spaces $\OMS/c
+msy/m/n/10 F$ \OT1/cmr/m/it/10 and $\U/rsfs/m/n/10 F$ \OT1/cmr/m/it/10 de-fined
+ in equa-tions [] and []|
+ []
+
+[31]
+
+LaTeX Warning: Reference `eq:Int_alpha*_jk' on page 32 undefined on input line 
+3482.
+
+
+LaTeX Warning: Reference `eq:Int_kappa*_jk_Im' on page 32 undefined on input li
+ne 3483.
+
+[32]
+Overfull \hbox (0.67723pt too wide) in paragraph at lines 3551--3551
+[] |
+ []
+
+
+LaTeX Warning: Reference `cor:Integral_Reps' on page 33 undefined on input line
+ 3572.
+
+
+Overfull \hbox (5.99689pt too wide) in paragraph at lines 3551--3576
+\OT1/cmr/m/n/10 Equation [] im-plies that for all $\OML/cmm/m/it/10 f \OMS/cmsy
+/m/n/10 2 \OML/cmm/m/it/10 D\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A\OT1/cmr/m/n/10 
+)  \OMS/cmsy/m/n/10 ([])  []\OML/cmm/m/it/10 f \OMS/cmsy/m/n/10 2 \OML/cmm/m/it
+/10 D\OT1/cmr/m/n/10 (\OT1/cmr/bx/n/10 A\OT1/cmr/m/n/10 )$ we have $d\OMS/cmsy/
+m/n/10 k\OML/cmm/m/it/10 Q[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^U\OT1/cmr/m/n/1
+0 )\OML/cmm/m/it/10 f\OMS/cmsy/m/n/10 k[] \OT1/cmr/m/n/10 =|
+ []
+
+
+Overfull \hbox (3.9731pt too wide) in paragraph at lines 3608--3621
+ \OT1/cmr/bx/n/10 F.4. An-ti-sym-me-try.[] \OT1/cmr/m/n/10 In this sec-tion we 
+show that the op-er-a-tor $\OML/cmm/m/it/10 A \OT1/cmr/m/n/10 = (\OMS/cmsy/m/n/
+10 ^^@\OT1/cmr/m/n/10 ^^A)[](\OML/cmm/m/it/10 @[] \OMS/cmsy/m/n/10 ^^@|
+ []
+
+[33] [34]
+
+LaTeX Warning: Reference `eq:incompressible' on page 35 undefined on input line
+ 3677.
+
+
+Overfull \hbox (78.02965pt too wide) in paragraph at lines 3701--3701
+[] |
+ []
+
+
+Overfull \hbox (19.38104pt too wide) in paragraph at lines 3720--3720
+[] |
+ []
+
+[35]
+
+LaTeX Warning: Reference `sec:Appendix' on page 36 undefined on input line 3895
+.
+
+[36] [37]
+
+LaTeX Warning: Reference `cor:Integral_Reps' on page 38 undefined on input line
+ 4013.
+
+
+Overfull \hbox (6.96214pt too wide) in paragraph at lines 4029--4035
+[]\OT1/cmr/m/n/10 We now sum-ma-rize some gen-eral spec-tral prop-er-ties of th
+e max-i-mal, anti-symmetric|
+ []
+
+[38]
+Overfull \hbox (21.55145pt too wide) in paragraph at lines 4155--4155
+[] |
+ []
+
+[39]
+
+LaTeX Warning: Reference `cor:Integral_Reps' on page 40 undefined on input line
+ 4256.
+
+[40]
+Overfull \hbox (6.63495pt too wide) in paragraph at lines 4311--4311
+[] |
+ []
+
+
+Overfull \hbox (18.19252pt too wide) in paragraph at lines 4325--4333
+\OT1/cmr/m/n/10 and [] with use of Dirac's bra-ket no-ta-tion as fol-lows. Writ
+-ing $\OML/cmm/m/it/10 ^^V[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^U\OT1/cmr/m/n/1
+0 ) = \OMS/cmsy/m/n/10 h\OML/cmm/m/it/10 Q\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^U
+\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 g[]; g[]\OMS/cmsy/m/n/10 i[] \OT1/cmr/m/n/10 
+=|
+ []
+
+
+Overfull \hbox (15.69795pt too wide) in paragraph at lines 4351--4351
+[] |
+ []
+
+
+LaTeX Warning: Reference `eq:Int_kappa*_jk_Re' on page 41 undefined on input li
+ne 4354.
+
+
+LaTeX Warning: Reference `eq:Int_kappa*_jk_Im' on page 41 undefined on input li
+ne 4355.
+
+
+Overfull \hbox (23.76329pt too wide) in paragraph at lines 4371--4371
+[] |
+ []
+
+[41] (Murphy_Dynamic_Steady_Periodic_TimeStochastic_10-14-2015.bbl
+Missing character: There is no ^^e2 in font cmr8!
+Missing character: There is no ^^80 in font cmr8!
+Missing character: There is no ^^93 in font cmr8!
+
+Underfull \hbox (badness 1248) in paragraph at lines 57--60
+[]\OT1/cmr/m/n/8 H. Bha-tia, G. Nor-gard, V. Pas-cucci, and Peer-Timo Bre-mer. 
+ The helmholtz-hodge
+ []
+
+[42]
+Missing character: There is no ^^e2 in font cmr8!
+Missing character: There is no ^^80 in font cmr8!
+Missing character: There is no ^^93 in font cmr8!
+Missing character: There is no ^^e2 in font cmr8!
+Missing character: There is no ^^80 in font cmr8!
+Missing character: There is no ^^93 in font cmr8!
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [43]
+Missing character: There is no ^^e2 in font cmr8!
+Missing character: There is no ^^80 in font cmr8!
+Missing character: There is no ^^93 in font cmr8!
+Missing character: There is no ^^e2 in font cmr8!
+Missing character: There is no ^^80 in font cmr8!
+Missing character: There is no ^^93 in font cmr8!
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [44]
+Missing character: There is no ^^e2 in font cmr8!
+Missing character: There is no ^^80 in font cmr8!
+Missing character: There is no ^^93 in font cmr8!
+Missing character: There is no ^^e2 in font cmr8!
+Missing character: There is no ^^80 in font cmr8!
+Missing character: There is no ^^93 in font cmr8!
+Missing character: There is no ^^e2 in font cmr8!
+Missing character: There is no ^^80 in font cmr8!
+Missing character: There is no ^^93 in font cmr8!
+Missing character: There is no ^^e2 in font cmr8!
+Missing character: There is no ^^80 in font cmr8!
+Missing character: There is no ^^93 in font cmr8!
+Missing character: There is no ^^e2 in font cmr8!
+Missing character: There is no ^^80 in font cmr8!
+Missing character: There is no ^^93 in font cmr8!
+)
+[45] (Murphy_Dynamic_Steady_Periodic_TimeStochastic_10-14-2015.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 3876 strings out of 28583
+ 49367 string characters out of 471185
+ 125594 words of memory out of 524286
+ 6716 multiletter control sequences out of 27000
+ 16153 words of font info for 61 fonts, out of 800000 for 255
+ 14 hyphenation exceptions out of 2003
+ 32i,15n,32p,428b,385s stack positions out of 300i,40n,60p,3000b,4000s
+
+Output written on Murphy_Dynamic_Steady_Periodic_TimeStochastic_10-14-2015.dvi 
+(45 pages, 513808 bytes).

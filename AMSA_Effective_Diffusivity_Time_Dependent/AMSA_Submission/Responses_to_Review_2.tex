@@ -1,0 +1,253 @@
+\documentclass[amsa]{article}
+\usepackage{mymacros}
+
+% \setlength{\textwidth}{6.5in}
+% \setlength{\textheight}{9.0in}
+% \setlength{\oddsidemargin}{0in}
+% \setlength{\evensidemargin}{0in}
+% %\setlength{\topmargin}{-0.5in}
+
+
+\begin{document}
+
+\title{Responses to Review 2 for\\
+  ``Spectral analysis and computation\\
+  of effective diffusivities in 
+  space-time periodic incompressible flows''}
+\author{N. B. Murphy}
+
+\maketitle
+
+In order to make the substantial revision of our submitted manuscript
+more transparent, we now provide a synopsis of the modifications. The 
+results of the manuscript remain the same. However, virtually the
+entire manuscript has been modified. The responses to the referee's
+questions/comments are given below.   
+
+
+Section 1 was split into three subsections. Section 2 was split into
+three subsections and the body of Sections 2.2 and 2.3 were
+significantly modified. Section 3 was streamlined and placed on more
+general footing by adding Appendix E.2. Section 4 has been
+substantially modified. A conclusion section was added in Section
+5.
+
+
+Appendices A and B are virtually the same.
+Appendix C has been
+almost completely rewritten. In particular, the Hilbert spaces and
+their dense subsets have been redefined to have elements that are
+spatially mean-zero. To precisely characterize the fluid velocity
+field, in Appendix C.1 a new Hilbert space $\Hs_{\Vc}^{0,2}$ was
+defined. Moreover, in Appendix C.1 the negative inverse Laplacian
+$(-\Delta)^{-1}$ and the associated Green's function are now discussed in
+detail, as its properties are needed 
+in the proof of a new lemma, Lemma 2, and the proof of Theorem 1
+etc. Appendix C.2 has been substantially modified. In particular, we
+have moved some of the proof of what is now Theorem 6 to a new lemma,
+Lemma 3, in Appendix C.2. Lemmas 2 and 3 are now used heavily in the
+proof of Corollary 4 in Appendix C.2. The proof of what is now Lemma 5 
+has been only slightly modified. In Appendix D a good portion of the
+old proof of Theorem 6 has been moved to Lemma 3, as mentioned
+above. We have added to Appendix E a subsection, Appendix
+E.2. However, the introductory paragraph of Appendix E and Appendix
+E.1, which comprised all of Appendix E in the submitted manuscript,
+are virtually the same. Appendix E.2 was added to streamline our
+results given in Section 3 and to place them on more general footing,
+as mentioned above.   
+
+
+
+We now address the reviewer's questions/comments.
+
+
+\begin{itemize}
+\item[1.] Overall, the manuscript is difficult to follow. The text
+  would need more structure. The reader is sometimes lost in a very
+  long section, and does not know what has been addressed, what
+  remains to be done,...  It would be nice to split Sections 1 and 2
+  into several subsections, and to describe, at the beginning of each
+  of them, what will be done in that subsection. The reader needs a
+  better guideline.   
+%
+\item  In order to give the reader a better guide to the paper, in the
+  revised manuscript we have split various sections into subsections
+  with introductory paragraphs. We have also given more prompts about
+  where the current section is leading.  
+%
+\item[2.] In order to convey their message, I think that the authors
+  should work out a simple example (for instance, a purely diffusive
+  problem in a time-independent setting) very early in their
+  manuscript, in an informal manner. The different quantities at hand
+  in this work (the corrector problem, the eigenvalue problem (A) 
+  below, the spectral measure $\mu$, the operators $Q(\lambda),\ldots$) would
+  appear, and their relation one to each other would be very clear. It
+  would help the reader understand the overall strategy in a simple
+  case.   
+%
+\item We have worked out a specific case in Appendix E.1 and also made
+  its connection between the eigenvalue problem, the spectral measure,
+  and the operator $Q(\lambda)$ clearer in the paragraph containing equations
+  (22) and (23), early on in the revised manuscript. 
+ 
+%
+\item[3.] The velocity field $u$ is assumed to be divergence-free (see
+  page 6). What remains true if this is not the case?  
+%
+\item In the introduction, we have alerted the reader to two papers
+  that treat the problem of homogenizing an advection-diffusion
+  equation with a compressible flow. 1) R. M. McLaughlin and
+  M. G. Forest, Phys. Fluids, 11(4):880--892, 1999. 2)
+  G. C. Papanicolaou, Surveys in Applied Mathematics, chapter
+  Diffusion in Random Media, pages 205-253, 1995. 
+%
+\item[4.] The fact that the authors have to call to spectral theory
+  for \emph{unbounded} operators seems to be related to the fact that
+  the problem is time-dependent (see e.g. page 10, “Due to the
+  time-dependence . . . ”). However, this link is never clearly
+  explained. In Appendix B page 21, it is explained that the operator
+  $\partial_t$ is unbounded. But this also holds for the operator $\Delta$, which
+  appears in the time-independent setting. I hence do not understand
+  the particularity of the time-dependent setting.  
+%
+\item It is true that both of the operators $\partial_t$ and $\Delta$ are
+  unbounded on $L^2(\Tc)$ and $L^2(\Vc)$, respectively. However, it is
+  the operator $(-\Delta)^{-1}$ that appears in the spectral theory of
+  effective diffusivity, which is smoothing and compact. For this
+  reason, only the unboundedness of the operator $\partial_t$ must be
+  addressed in the theory.
+ 
+%
+\item[5.] Top of page 12, the authors introduce an eigenvalue problem,
+  %
+  \begin{align}
+    A\varphi_l=\imath\lambda_l\varphi_l. 
+  \end{align}
+  %
+  The reason for introducing this problem is not explained. At that
+  stage, the reader is concerned with a right-hand side problem,
+  namely the corrector problem (9). Of course, when one knows the
+  eigenelements of an operator, one knows how to solve a right-hand
+  side problem (this seems to be the meaning of the line just above
+  Eq. (80) page 38), but this is not the standard manner to
+  proceed. Please comments on this choice and why the authors focus on
+  eigenvalue problems. Furthermore, the link between this eigenvalue
+  problem and the spectral measure $\mu$ is not clearly explained (or
+  maybe it is in the Appendices, but this is somehow too late for the
+  reader . . . ). 
+%
+\item This information was in the Appendices. We have moved this 
+  information to equations (19)--(23) in the revised manuscript, 
+  which clearly explains the link between this eigenvalue   problem
+  and the spectral measure $\mu$. 
+ 
+\item[6.] In terms of mathematical content, Section 3 seems to be much
+  simpler than the previous sections: the authors consider an
+  eigenvalue problem, they have a basis for the Hilbert space, so they
+  can write the problem as an algebraic eigenvalue problem, in a space
+  of dimension infinite but countable. This infinite matrix problem is
+  next truncated. Maybe it would be worth explaining at the beginning
+  of Section 3 this overall strategy.
+%
+\item We have added an introductory paragraph to Section 3 that
+  explains this overall strategy.
+%
+\item[7.] What is the reason for solving the eigenvalue problem
+  introduced at the beginning of Section 3 on a Fourier basis? I
+  understand that this eigenvalue problem is complemented by periodic
+  boundary conditions, but it is unclear to me that a Fourier method
+  is the method of choice. 
+%
+\item We have made the following comment below equation (30) in the
+  revised manuscript. Using the orthonormal trigonometric basis
+  functions $\phi_{\ell,\,\veck}(t,\vecx)=\exp[\imath(\ell t+\veck\bcdot\vecx)]$
+  leads to an exact representation of the spectral measure weights
+  $m_{jk}(l)=\langle u_j,\varphi_l\rangle\,\overline{\langle u_k,\varphi_l\rangle}$ which involves only a
+  finite number of terms. Of course, we could have used a different
+  orthonormal basis. However, the spectral weights would then be given
+  by an infinite series. In other words, the velocity field is
+  represented by six Fourier terms in equation (28) of the revised
+  manuscript, which would require infinitely many terms in other
+  orthogonal basis.
+%
+\item[8.] In (15), the integral over $\lambda$ seems to imply that the
+  eigenvalues form a continuum. In contrast, the index $l$ in the
+  eigenvalue problem introduced at the beginning of Section 3 seems to
+  imply that the eigenvalues are countable. Please clarify.
+%  
+\item We have clarified this in equations (19)--(23) in the revised
+  manuscript. 
+%
+\item[9.] In Section 4, I understand that the numerical parameter $M$
+  stands for the index at which the infinite matrix problem is
+  truncated. It is however not precised how many eigenvalues are
+  computed. Where do we stop in terms of the index $l$ in Eq. (A)
+  above? This is an important point as the homogenized quantities read
+  (see Eqs. (11), (12) and (15)) as an integral over $\lambda$.
+%
+\item In the revised manuscript we have replaced the numerical
+  parameter $M$ with $N$, as $M$ also represents the self-adjoint
+  operator $M=-\imath A$. We compute \emph{all} of the eigenvalues of the
+  symmetric matrix $\Cm^{-1/2}\Bm\Cm^{-1/2}$. In our computations, we
+  used for the steady case $N=150$, yielding matrices of size
+  $(2N+1)^2-1=90,600$, while in the dynamic case we used $N=20$,
+  yielding matrices of size $(2N+1)[(2N+1)^2-1]=68,880$. This
+  information is given in the two paragraphs below equation (37) of
+  the revised manuscript.   
+%
+\end{itemize}  
+  
+Here are also some additional comments:
+
+\begin{itemize}
+% 
+\item[1.] In the abstract, the authors write that they consider
+  \emph{periodic} velocity fields, in the time-dependent
+  setting. Before that, there is a sentence on the state of the art in 
+  the time-independent setting. In that sentence, make precise that
+  the velocity-field is also \emph{periodic}. 
+%  
+\item The abstract mentions ``Two different formulations for integral
+  representations for $\Dm^*$ were developed of the case of
+  \emph{time-independent} fluid velocity fields$\ldots$'' The abstract also
+  mentions ``Here, we extend both of these approaches to the case of
+  \emph{space-time periodic} velocity fields$\ldots$'' The two different
+  formulations are presented in 1) M. Avellaneda and
+  A. Majda. Comm. Math. Phys., 138:339--391, 1991. and
+  2) G. A. Pavliotis, PhD thesis, Rensselaer 
+  Polytechnic Institute Troy, New York, 2002. The first paper provides 
+  integral representations for $\Dm^*$ involving a \emph{stochastic}
+  time-independent fluid velocity field. The second paper provides
+  integral representations for $\Dm^*$ involving a \emph{periodic} 
+  time-independent fluid velocity field. For the sake of brevity in
+  the abstract, this distinction is not made. Although, this
+  distinction is made in the introduction.
+%
+\item[2.] Bottom of page 6: the authors define $\overline{\varphi}$, the
+  complex conjugate of $\varphi$ and next write that all quantities
+  considered in that section are real-valued. This definition could
+  thus be postponed to a later location in the manuscript.
+%  
+\item We have mentioned this definition throughout the revised
+  manuscript. Although, the authors feel that it is also appropriate
+  to provide the definition used throughout the paper at its first
+  appearance. We have made this clear below equation (2) in the
+  revised manuscript to avoid confusion.
+%  
+\item[3.] Page 8, three lines below Eq. (8): what do the authors mean
+  by ``For fixed $0<\delta\ll1$ $\ldots$''as $\delta$ is meant to go to 0 (to converge
+  to the homogenized problem)?
+%
+\item We have removed this part of the sentence to avoid confusion.
+%
+\item[4.] Bottom of page 8: the authors consider the operator
+  $(-\Delta)^{-1}$ but do not make precise the boundary conditions they
+  consider.
+%  
+\item We made the boundary conditions precise below the statement of
+  Theorem 1 in the revised manuscript.
+%  
+\end{itemize}
+
+
+\end{document}

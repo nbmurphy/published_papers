@@ -1,0 +1,2666 @@
+\documentclass[11pt]{amsart}
+%\usepackage{latexsym, amssymb, enumerate, amsmath}
+\usepackage{graphicx,amssymb,amsmath,amsfonts,mathrsfs}
+
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{9.0in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\topmargin}{-0.5in}
+
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.55}%0.75
+
+
+\newcommand{\ph}{\hat{\phi}}
+\newcommand{\pt}{\tilde{\phi}} 
+\newcommand{\pc}{\check{\phi}}
+\newcommand{\gh}{\hat{\gamma}}
+\newcommand{\Dh}{\hat{\Delta}}
+\newcommand{\dha}{\hat{\delta}}
+\newcommand{\qh}{\hat{q}}
+\newcommand{\xh}{\hat{x}} 
+\newcommand{\HM}{\mathcal{H}_{\text{max}}}
+\newcommand{\Hm}{\mathcal{H}_{\text{min}}}
+\newcommand{\sech}{\rm \hspace{0.7mm}sech}
+\newcommand{\I}{\mathrm{i}}
+\newcommand{\e}{\mathrm{e}}
+\renewcommand{\d}{\mathrm{d}}
+\newcommand{\hh}{\hat{h}}
+\newcommand{\mh}{m_r}
+\newcommand{\mt}{m_i}
+
+\newcommand{\Mb}{\mathbf{M}}
+\newcommand{\Xb}{\mathbf{X}}
+\newcommand{\Tb}{\mathbf{T}}
+\newcommand{\Hb}{\mathbf{H}}
+\newcommand{\Kb}{\mathbf{K}}
+\newcommand{\Jb}{\mathbf{J}}
+\newcommand{\Ib}{\mathbf{I}}
+\newcommand{\Sb}{\mathbf{S}}
+\newcommand{\Rb}{\mathbf{R}}
+\newcommand{\Ab}{\mathbf{A}}
+\newcommand{\Bb}{\mathbf{B}}
+\newcommand{\Eb}{\mathbf{E}}
+\newcommand{\Qb}{\mathbf{Q}}
+\newcommand{\Nb}{\mathbf{N}}
+\newcommand{\Ob}{\mathbf{O}}
+\newcommand{\Vb}{\mathbf{V}}
+\newcommand{\Wb}{\mathbf{W}}
+
+\newcommand{\Kc}{\mathcal{K}}
+\newcommand\Kbc{\mbox{\boldmath${\mathcal{K}}$}}
+
+
+\newcommand{\Tc}{\mathcal{T}}
+\newcommand{\Vc}{\mathcal{V}}
+\newcommand{\Hc}{\mathcal{H}}
+\newcommand{\Fc}{\mathcal{F}}
+\newcommand{\Sc}{\mathcal{S}}
+
+\newcommand{\Hs}{\mathscr{H}}
+\newcommand{\As}{\mathscr{A}}
+\newcommand{\Ds}{\mathscr{D}}
+\newcommand{\Fs}{\mathscr{F}}
+\newcommand{\Ss}{\mathscr{S}}
+
+
+\newcommand\bsig{\mbox{\boldmath${\sigma}$}}
+\newcommand\beps{\mbox{\boldmath${\epsilon}$}}
+\newcommand\bxi{\mbox{\boldmath${\xi}$}}
+\newcommand\bmu{\mbox{\boldmath${\mu}$}}
+\newcommand\balpha{\mbox{\boldmath${\alpha}$}}
+\newcommand\brho{\mbox{\boldmath${\rho}$}}
+\newcommand\bDelta{\mbox{\boldmath${\Delta}$}}
+\newcommand\bkappa{\mbox{\boldmath${\kappa}$}}
+\newcommand\bGamma{\mbox{\boldmath${\Gamma}$}}
+\newcommand\bUpsilon{\mbox{\boldmath${\Upsilon}$}}
+\newcommand\bLambda{\mbox{\boldmath${\Lambda}$}}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+
+% \newtheorem{theorem}{Theorem}[section]
+% \newtheorem{prop}{Proposition}[section]
+% \newtheorem{lemma}{Lemma}[section]
+% \newtheorem{cor}{Corollary}[section]
+
+%     %\theoremstyle{definition}
+
+% \newtheorem{defn}[thm]{Definition}
+% \newtheorem{notation}[thm]{Notation}
+% \newtheorem{example}[thm]{Example}
+% \newtheorem{conj}[thm]{Conjecture}
+% \newtheorem{prob}[thm]{Problem}
+
+%     %\theoremstyle{remark}
+
+%\newtheorem{rem}[thm]{Remark}
+    % Use the standard latex environments for theorems, etc. Here is one
+          % possible method of declaring them: It numbers all results by the
+          % section, and uses a common numbering system for the different
+          % environmentts.
+
+\begin{document}
+
+\title{Spectral theory of advective diffusion \\
+  by dynamic and steady periodic flows}
+
+
+% AUTHORS 
+%\author{N. B. Murphy, A. Gully, E. Cherkaev, and K. M. Golden}
+\author{N. B. Murphy$^\ast$}
+\address{$^*$Department of Mathematics, 340 Rowland Hall, University of
+  California at Irvine, Irvine, CA 92697-3875, USA}
+\email{nbmurphy@math.uci.edu}
+
+\author{J. Xin$^\dag$}
+\address{$^{\dag}$Department of Mathematics, 340 Rowland Hall, University of
+  California at Irvine, Irvine, CA 92697-3875, USA} 
+\email{jxin@math.uci.edu}
+
+\author{J. Zhu$^\star$}
+\address{$^\star$University of Utah, Department of Mathematics, 155 S 1400 E
+  RM 233, Salt Lake City, UT 84112-009, USA}
+\email{zhu@math.utah.edu}
+
+\author{E. Cherkaev$^\ddagger$}
+\address{$^\ddagger$University of Utah, Department of Mathematics, 155 S 1400 E
+  RM 233, Salt Lake City, UT 84112-009, USA} 
+\email{elena@math.utah.edu}
+
+\maketitle
+\vspace{-3ex}
+\begin{center}
+  Department of Mathematics, University of California at Irvine
+\end{center}
+
+%\vspace{3ex}
+
+
+\begin{abstract}
+%
+The analytic continuation method for representing transport in
+composites provides integral representations for the
+effective coefficients of two-phase random media. Here we adapt this 
+method to characterize the effective thermal transport properties of
+advective diffusion by periodic flows. Our novel approach yields
+integral representations for the symmetric and 
+anti-symmetric parts of the effective diffusivity. These
+representations hold for dynamic and steady incompressible flows, and
+involve the spectral measure of a self-adjoint or normal linear
+operator. In the case of a steady fluid velocity field, the spectral
+measure is associated with a Hermitian Hilbert-Schmidt integral
+operator, and in the case of dynamic flows, it is associated with an
+unbounded integro-differential operator. We utilize the integral
+representations to obtain asymptotic behavior of the effective
+diffusivity as the molecular diffusivity tends to zero, for model
+flows. Our analytical results are supported by numerical computations
+of the spectral measures and effective diffusivities.     
+%
+\end{abstract}
+
+\section{Introduction}\label{sec:Introduction}
+%
+The long time, large scale behavior of a diffusing particle   
+or tracer being advected by an incompressible velocity field 
+is equivalent to an enhanced diffusive process \cite{Taylor:PRSL:196} 
+with an effective diffusivity tensor $\Kbc^*$.
+Determining the effective transport properties of advection enhanced
+diffusion is a challenging problem with theoretical and practical 
+importance in many fields of science and engineering,
+ranging from turbulent combustion to mass, heat, and salt transport in
+geophysical flows \cite{Moffatt:RPP:621}. A broad range of
+mathematical techniques have been developed that reduce the analysis
+of complex fluid flows, with rapidly varying structures in space and
+time, to solving averaged or \textit{homogenized} equations that do
+not have rapidly varying data, and involve an effective parameter.
+
+
+
+
+Homogenization of the advection-diffusion equation for thermal
+transport by random, time-independent fluid velocity fields was
+treated in \cite{McLaughlin:SIAM_JAM:780}. This 
+reduced the analysis of turbulent diffusion to solving a
+diffusion equation involving a homogenized temperature and a
+(constant) effective diffusivity tensor $\Kbc^*$. An important
+consequence of this analysis is that $\Kbc^*$ is given in terms  
+of a \emph{curl-free} stationary stochastic process which satisfies a
+steady state diffusion equation, involving a skew-symmetric random
+matrix $\Hb$ \cite{Avellaneda:CMP-339,Avellaneda:PRL-753}. By adapting
+the analytic continuation method (ACM) of homogenization theory for
+composites \cite{Golden:CMP-473}, it was shown that the result in
+\cite{McLaughlin:SIAM_JAM:780} leads to an integral
+representation for the symmetric part $\bkappa^*$ of $\Kbc^*$,
+involving a spectral measure of a self-adjoint random
+operator \cite{Avellaneda:CMP-339,Avellaneda:PRL-753}. This integral
+representation of $\bkappa^*$ was generalized to the time-dependent
+case in \cite{Avellaneda:PRE:3249,Biferale:PF:2725}. Remarkably, this 
+method has also been extended to flows with incompressible
+\emph{nonzero} effective drift \cite{Pavliotis:PHD_Thesis}, flows
+where particles diffuse according to linear collisions
+\cite{Pavliotis:IMAJAM:951}, and solute transport in porous media
+\cite{Bhattacharya:AAP:1999:951}. All these approaches yield integral
+representations of the symmetric and, when appropriate, the
+anti-symmetric part $\balpha^*$ of $\Kbc^*$. 
+
+
+
+
+Homogenization of the advection-diffusion equation for periodic or
+cellular, incompressible flow fields was treated in
+\cite{Fannjiang:SIAM_JAM:333,Fannjiang:1997:1033}. As in the case of
+random flows, the effective diffusivity tensor
+$\Kbc^*$ is given in terms of a \emph{curl-free} vector field, which
+satisfies a diffusion equation involving a skew-symmetric
+matrix $\Hb$. Here, we demonstrate that the ACM can
+be adapted to this periodic setting to provide integral
+representations for both the symmetric $\bkappa^*$ and 
+anti-symmetric $\balpha^*$ parts of $\Kbc^*$, for both cases of
+steady and time-dependent flows. These integral representations
+involve a self-adjoint or normal linear operator and the
+(non-dimensional) molecular diffusivity $\varepsilon$. In the case of steady
+fluid velocity fields, the spectral measure is associated with a
+Hermitian Hilbert-Schmidt integral operator involving the Green's
+function of the Laplacian on a rectangle. While in the case of dynamic 
+flows, the spectral measure is associated with a Hermitian operator
+which is the sum of that for steady flows and an unbounded
+integro-differential operator.      
+ 
+
+We utilize the analytic structure of the  integral
+representation for $\Kbc^*$ to obtain its asymptotic behavior for
+model flows, as the molecular diffusivity $\varepsilon$ tends to zero. This is
+the high P\'{e}clet number regime that is important for the
+understanding of transport processes in real fluid flows, where the
+molecular diffusivity is often quite small in comparison. In
+particular, FINISH THIS PARAGRAPH WHEN WE HAVE CONCRETE RESULTS.
+necessary and sufficient conditions for steady periodic flow
+fields $\kappa^*\sim\epsilon^{1/2}$, generically, for steady flows and $\kappa^*\sim O(1)$ for
+``chaotic'' time-dependent flows. To make this manuscript more self
+contained, we have include an appendix in Section \ref{sec:Appendix}
+which contains many of the technical details underlying this work.
+
+%
+\section{Mathematical Methods}\label{sec:Mathematical_Methods} 
+%
+In this section, we formulate the effective parameter problem for
+enhanced diffusive transport by advective, periodic flows, which leads
+to a functional representation of the effective diffusivity tensor
+$\Kbc^*$. We provide integral representations for the symmetric
+$\bkappa^*$ and anti-symmetric $\balpha^*$ parts of $\Kbc^*$, which
+hold for both steady and dynamic flows. The effective parameter
+problem
+\cite{McLaughlin:SIAM_JAM:780,Fannjiang:SIAM_JAM:333,Biferale:PF:2725} 
+for such transport processes is reviewed in Section
+\ref{sec:Eff_Trans}, and parallels existing between this problem
+of homogenization theory \cite{Bensoussan:Book:1978} and the ACM for
+representing transport in composites \cite{Golden:CMP-473} are put
+into correspondence. In particular, an abstract Hilbert space
+framework is provided in Section \ref{sec:Hilbert_Space} which places
+these different effective parameter problems on common mathematical
+footing. Within this Hilbert space setting, we derive in Section
+\ref{sec:Integral_Rep} integral representations for $\bkappa^*$ and
+$\balpha^*$, involving the molecular diffusivity $\varepsilon$ and a
+\emph{spectral measure} of a self-adjoint (or equivalently a maximal
+normal) linear operator. These integral representations are employed
+in Section \ref{sec:Assymptotics} to obtain the asymptotic behavior of
+the components of $\Kbc^*$ in the scaling regime, where $\varepsilon\ll1$.  
+
+
+
+\subsection{Effective transport by
+  advective-diffusion} \label{sec:Eff_Trans}  
+%
+In this section, we review the effective parameter problem for
+advection enhanced diffusion. For completness and to streamline the
+presentation of this theory, many of the mathematical details are
+given in Section \ref{sec:Multiscal_Method} of the appendix.
+Consider the advection enhanced diffusive transport of a passive
+tracer $\phi(t,\vec{x}\,)$, $t>0$, $\vec{x}\in\mathbb{R}^d$, as described by
+the advection-diffusion equation 
+%
+\begin{align}\label{eq:ADE}
+  \partial_t\phi=\kappa_0\Delta \phi+\vec{\nabla}\cdot(\vec{v}\phi), \quad
+  \phi(0,\vec{x})=\phi_0(\vec{x}),
+  %\qquad
+  %\vec{\nabla}\cdot\vec{v}=0
+\end{align}
+% 
+with initial density $\phi_0(\vec{x})$ given. Here, $\partial_t$ denotes partial
+differentiation with respect to time $t$, $\Delta=\vec{\nabla}\cdot\vec{\nabla}=\nabla^2$ is
+the Laplacian, and $\kappa_0>0$ is the molecular diffusivity. The fluid
+velocity field $\vec{v}=\vec{v}(t,\vec{x})$ in \eqref{eq:ADE} is
+assumed to be periodic, incompressible, and mean-zero, %and bounded 
+%
+\begin{align}\label{eq:incompressible}
+  \vec{\nabla}\cdot\vec{v}=0, \quad
+  \langle\vec{v}\,\rangle=0,
+  %\quad
+  %\langle|\vec{v}|^2\rangle<\infty.
+\end{align}
+%
+where we denote by $0$ the null element of all linear spaces in
+question. Consider the bounded sets $\Tc\subset\mathbb{R}$ and
+$\Vc\subset\mathbb{R}^d$, with $t\in\Tc$ and $\vec{x}\in\Vc$, which define the  
+space-time period cell ($(d+1)$--torus) $\Tc\otimes\Vc$. In equation
+\eqref{eq:incompressible}, we denote by $\langle\cdot\rangle$ spatial averaging over
+$\Vc$ in the case of a time-independent velocity field,
+$\vec{v}=\vec{v}(\vec{x})$, and when the velocity field is
+time-dependent, $\vec{v}=\vec{v}(t,\vec{x})$, $\langle\cdot\rangle$ denotes space-time
+averaging over $\Tc\otimes\Vc$. In the time-dependent case, we stress that
+$\langle\vec{v}\,\rangle=0$ in \eqref{eq:incompressible} means that
+$\langle\vec{v}(t,\cdot)\rangle=0$ \emph{and} $\langle\vec{v}(\cdot,\vec{x})\rangle=0$ for each
+$t\in\Tc$ and $\vec{x}\in\Vc$ fixed, respectively. 
+
+
+
+We non-dimensionalize equation
+\eqref{eq:ADE} as follows. Let $\ell$ and $\tilde{t}$ be typical length
+and time scales associated with the problem of interest. Mapping to
+the non-dimensional variables $t\mapsto t/\tilde{t}$ and $x_j\mapsto x_j/\ell$, one
+finds that $\phi$ satisfies the advection-diffusion equation in
+\eqref{eq:ADE} with a non-dimensional molecular diffusivity
+$\varepsilon=\tilde{t}\kappa_0/\ell^{\,2}$ and velocity field
+$\vec{u}=\tilde{t}\,\vec{v}/\ell$, where $x_j$ is the $j^{\,\text{th}}$
+component of the vector $\vec{x}$. 
+
+
+
+
+For $d$-dimensional, mean-zero, incompressible flows $\vec{u}$, there
+is a real (non-dimensional) skew-symmetric 
+matrix $\Hb(t,\vec{x})$ such that (see Section \ref{eq:flow_matrix}
+for details) 
+%$\Hb^{\,T}=-\Hb$, such that $\vec{u}=\vec{\nabla}\cdot\Hb$. 
+% %
+\begin{align}\label{eq:u_DH}
+ \vec{u}=\vec{\nabla}\cdot\Hb, \qquad  \Hb^{\,T}=-\Hb,
+\end{align}
+% %
+where $\Hb^{\,T}$ denotes transposition of the matrix $\Hb$.
+Using this representation of the velocity field $\vec{u}$, which also
+satisfies \eqref{eq:incompressible}, equation \eqref{eq:ADE} can be
+written as a diffusion equation,  
+%
+\begin{align}\label{eq:ADE_Divergence}
+  \partial_t\phi%&=\varepsilon\Delta \phi+\vec{u}\cdot\vec{\nabla}\phi\\
+    %&=\varepsilon\vec{\nabla}\cdot\vec{\nabla}\phi+(\vec{\nabla}\cdot\Hb)\cdot\vec{\nabla}\phi\\
+    %&=\vec{\nabla}\cdot[\varepsilon I+\Hb]\vec{\nabla}\phi\\
+    %&=\vec{\nabla}\cdot\bkappa\vec{\nabla}\phi
+    =\vec{\nabla}\cdot\bkappa\vec{\nabla}\phi, \quad
+    %\bkappa=\varepsilon I+\Hb,
+    \phi(0,\vec{x})=\phi_0(\vec{x}),
+    \qquad
+    \bkappa=\varepsilon\Ib+\Hb,
+\end{align}
+%
+where $\bkappa(t,\vec{x})=\varepsilon\Ib+\Hb(t,\vec{x})$ can be viewed as a local
+diffusivity tensor with coefficients
+%
+\begin{align}\label{eq:kappa_coeff}
+  \kappa_{jk}=\varepsilon\delta_{jk}+H_{jk},\quad j,k=1,\cdots,d.
+\end{align}
+%
+Here, $\delta_{jk}$ is the Kronecker delta and we denote by $\Ib$ the
+identity operator on all linear spaces in question.    
+
+
+
+
+
+
+We are interested in the dynamics of $\phi$ in \eqref{eq:ADE_Divergence}
+for \emph{large} length and time scales, and when the initial density
+$\phi_0$ is slowly varying relative to the velocity field
+$\vec{u}$. Anticipating that $\phi$ will have diffusive dynamics, we
+re-scale space and time by $\vec{x}\mapsto\vec{x}/\delta$ and $t\mapsto t/\delta^2$,
+respectively.  For periodic diffusivity coefficients in
+\eqref{eq:ADE_Divergence} which are uniformly elliptic but not
+necessarily symmetric, it can be shown \cite{Fannjiang:SIAM_JAM:333}
+that, as $\delta\to0$, the associated solution $\phi^\delta(t,\vec{x})$ of
+\eqref{eq:ADE_Divergence} converges to $\bar{\phi}(t,\vec{x})$,
+which satisfies the following diffusion equation involving a (constant)
+effective diffusivity tensor $\Kbc^*$    
+%
+\begin{align}\label{eq:phi_bar}
+  \partial_t\bar{\phi}=\vec{\nabla}\cdot\Kbc^*\vec{\nabla}\bar{\phi}, \quad
+  \bar{\phi}(0,\vec{x})=\phi_0(\vec{x}).
+\end{align}
+%
+
+
+
+
+
+The components $\Kc^*_{jk}=\Kbc^*\vec{e}_j\cdot\vec{e}_k$ of the effective
+tensor $\Kbc^*$ are given by $\Kc^*_{jk}=\varepsilon\delta_{jk}+\langle u_j\chi_k\rangle$. For each
+standard basis vector $\vec{e}_k$, $k=1,\ldots,d$, the function
+$\chi_k=\chi_k(t,\vec{x}\,;\vec{e}_k)$ satisfies
+\cite{Fannjiang:SIAM_JAM:333} the cell problem    
+% 
+\begin{align}\label{eq:Cell_Problem}
+  \partial_t\chi_k=\vec{\nabla}\cdot\bkappa(\vec{\nabla}\chi_k+\vec{e}_k\,), \quad
+    %=\vec{\nabla}\cdot[(\varepsilon\Ib+\Hb)(\vec{\nabla}\chi_k+\vec{e}_k\,)], \quad
+  \langle\vec{\nabla}\chi_k\rangle=0.
+%  \quad   k=1,\ldots,d,
+\end{align}
+%
+Equation \eqref{eq:Cell_Problem} also holds
+\cite{Fannjiang:SIAM_JAM:333} when the velocity field is
+time-independent $\vec{u}=\vec{u}(\vec{x})$. However in this case, 
+$\chi_k$ is also time-independent and $\partial_t\chi_k=0$. The symmetric $\bkappa^*$ and
+anti-symmetric $\balpha^*$ parts of the effective diffusivity tensor
+$\Kbc^*$ are defined by 
+%
+\begin{align}\label{eq:Symm_Anti-Symm}
+  \Kbc^*=\bkappa^*+\balpha^*,\qquad
+  \bkappa^*=\frac{1}{2}\left(\Kbc^*+[\Kbc^*]^{\,T}\right), \quad
+  \balpha^*=\frac{1}{2}\left(\Kbc^*-[\Kbc^*]^{\,T}\right).
+\end{align}
+%
+The components $\kappa^*_{jk}$ and $\alpha^*_{jk}$, $j,k=1,\ldots,d$, of $\bkappa^*$
+and $\balpha^*$ can be written in terms of the following functionals
+involving the \emph{real-valued} vector field $\vec{\nabla}\chi_k$
+%
+\begin{align}\label{eq:Eff_Diffusivity}
+ \kappa^*_{jk}=\varepsilon(\delta_{jk}+\langle\vec{\nabla}\chi_j\cdot\vec{\nabla}\chi_k\rangle), \qquad
+ \alpha^*_{jk}=\langle\Sb\vec{\nabla}\chi_j\cdot\vec{\nabla}\chi_k\rangle, \qquad
+ \Sb=\Hb-(\bDelta^{-1})\Tb, \quad \Tb=\partial_t\Ib.
+\end{align}
+%
+Here, $\Tb=\text{diag}(\partial_t,\ldots,\partial_t)$ operates component-wise on vector
+fields, $\bDelta^{-1}=\text{diag}(\Delta^{-1},\ldots,\Delta^{-1})$ is the inverse of
+the vector Laplacian, and the inverse operation $\Delta^{-1}$ is based on
+convolution with the Green's function for the Laplacian $\Delta$ on $\Vc$
+\cite{Stakgold:BVP:2000}.
+
+
+
+
+
+
+
+Due to the fact that the vector field
+$\vec{\nabla}\chi_j$ is \emph{real-valued}, we have that
+$\langle\vec{\nabla}\chi_j\cdot\vec{\nabla}\chi_k\rangle=\langle\vec{\nabla}\chi_k\cdot\vec{\nabla}\chi_j\rangle$. From equation
+\eqref{eq:Eff_Diffusivity} this clearly implies that the tensor    
+$\bkappa^*$ is symmetric, $\kappa^*_{jk}=\kappa^*_{kj}\,$. Moreover, equation
+\eqref{eq:Eff_Diffusivity} demonstrates that the effective transport
+of the tracer $\phi$ in the principle directions $\vec{e}_k$, $k=1,\ldots,d$,
+is always \emph{enhanced} by the presence of an incompressible velocity
+field, $\Kc^*_{kk}=\kappa^*_{kk}\geq\varepsilon$. The equality $\Kc^*_{kk}=\kappa^*_{kk}$
+follows from the skew-symmetry of $\balpha^*$, so that
+$\alpha^*_{kj}=-\alpha^*_{jk}$ and $\alpha^*_{kk}=0$. This, in turn, follows from the
+skew-symmetry of the operator $\Sb$ (see Section
+\ref{sec:Symmetries_Commute}),
+$\alpha^*_{jk}=\langle\Sb\vec{\nabla}\chi_j\cdot\vec{\nabla}\chi_k\rangle=-\langle\Sb\vec{\nabla}\chi_k\cdot\vec{\nabla}\chi_j\rangle=-\alpha^*_{kj}\,$ 
+and 
+%
+\begin{align}\label{eq:Sb_Skew}
+  \alpha^*_{kk}=\langle\Sb\vec{\nabla}\chi_k\cdot\vec{\nabla}\chi_k\rangle=-\langle\Sb\vec{\nabla}\chi_k\cdot\vec{\nabla}\chi_k\rangle=0.  
+\end{align}
+%
+In Section \ref{sec:Hilbert_Space} we discuss the properties of the
+linear operator $\Sb$ and the vector field $\vec{\nabla}\chi_j$ in more detail.
+
+
+
+
+
+We now recast equations \eqref{eq:Cell_Problem} and
+\eqref{eq:Eff_Diffusivity} into a form which parallels the effective
+parameter problem for transport in composites. This allows us to
+bring to bear on the effective parameter problem for advective
+diffusion, the well developed mathematical techniques of the
+ACM for characterizing effective transport in composite media
+\cite{Golden:CMP-473,MILTON:2002:TC}. This method gives a Hilbert
+space formulation of the effective parameter problem and provides an
+integral representation for the effective transport coefficients of
+composites, involving a \emph{spectral measure} of a self-adjoint
+operator which depends only on the composite geometry
+\cite{Golden:CMP-473,Murphy:JMP:063506,MILTON:2002:TC}. Here we
+establish a correspondence between this effective parameter problem
+and that for enhanced diffusive transport by advective velocity 
+fields. In Section \ref{sec:Hilbert_Space}, we formulate the Hilbert
+space framework associated with advective diffusion, and employ it to
+obtain a resolvent representation of the vector field $\vec{\nabla}\chi_k$ in
+\eqref{eq:Cell_Problem}. In Section \ref{sec:Integral_Rep} we utilize
+this mathematical framework to obtain integral representations for 
+$\bkappa^*$ and $\balpha^*$, involving a spectral measure which depends
+only on the fluid velocity field $\vec{u}$.    
+
+
+
+
+Toward this goal, we recast the first formula in equation
+\eqref{eq:Cell_Problem} in a more suggestive, divergence form. Using
+the notation from equation \eqref{eq:Eff_Diffusivity} we write 
+%
+\begin{align}\label{eq:Dt_T}
+  \vec{\nabla}(\Delta^{-1})\partial_t=\bDelta^{-1}\Tb\vec{\nabla},
+\end{align}
+%
+so that \cite{Fannjiang:SIAM_JAM:333}
+$\partial_t\chi_k=\Delta\Delta^{-1}\partial_t\chi_k=\vec{\nabla}\cdot(\bDelta^{-1}\Tb)\vec{\nabla}\chi_k$. Define the  
+vector field $\vec{E}_k=\vec{\nabla}\chi_k+\vec{e}_k$ and the operator
+$\bsig=\bkappa-(\bDelta^{-1})\Tb=\varepsilon\Ib+\Sb$, where
+$\bsig=\bkappa=\varepsilon\Ib+\Hb$ in the case of steady fluid velocity
+fields. With these definitions, equation \eqref{eq:Cell_Problem} may
+be written as  $\vec{\nabla}\cdot\bsig\vec{E}_k=0$, $\langle\vec{E}_k\rangle=\vec{e}_k$,
+which is equivalent to    
+%
+\begin{align}\label{eq:Maxwells_Equations}    
+  \vec{\nabla}\cdot\vec{J}_k=0, \quad
+  \vec{\nabla}\times\vec{E}_k=0, \quad
+  \vec{J}_k=\bsig\vec{E}_k,\quad
+  \langle\vec{E}_k\rangle=\vec{e}_k,\qquad
+  \bsig%=\bkappa-(\bDelta^{-1})\Tb.
+       %=\varepsilon\Ib+\Hb-(\bDelta^{-1})\Tb.
+       =\varepsilon\Ib+\Sb.
+\end{align}
+%
+The formulas in \eqref{eq:Maxwells_Equations} are precisely the
+electrostatic version of Maxwell's equations for a conductive medium
+\cite{Golden:CMP-473}, where $\vec{E}_k$ and $\vec{J}_k$ are the local
+electric field and current density, respectively, and $\bsig$ is the
+local conductivity tensor of the medium. In the ACM for composites,
+the effective conductivity tensor $\bsig^*$ is defined as
+% 
+\begin{align}\label{eq:sigma*}
+  \langle\vec{J}_k\rangle=\bsig^*\langle\vec{E}_k\rangle.
+\end{align}
+%
+The linear constitutive relation $\vec{J}_k=\bsig\vec{E}_k$ in
+\eqref{eq:Maxwells_Equations} relates the local intensity and flux,
+while that in \eqref{eq:sigma*} relates the mean intensity and
+flux. Due to the skew-symmetry of $\Sb$, the intensity-flux
+relationship in \eqref{eq:Maxwells_Equations} is similar to that of a
+Hall medium \cite{Isichenko:JNS:1991:375}.
+
+
+
+For the (constant) tensors $\Kbc^*$ and $\bsig^*$ to be
+meaningful, the averages which define these effective quantities in
+\eqref{eq:Eff_Diffusivity} and \eqref{eq:sigma*} must be well defined
+and finite. For example, in order for the diagonal components
+$\Kc^*_{kk}$, $k=1,\ldots,d$, of $\Kbc^*$ to be well defined and finite,
+the vector field $\vec{\nabla}\chi_k$ must be Lebesgue measurable 
+and square integrable on $\Tc\times\Vc$. Moreover, for the components
+$\alpha^*_{jk}$, $j\neq k=1,\ldots,d$, of $\balpha^*$ to be well defined and
+finite, we must also have that the operator $\Sb$ is bounded in some
+sense so that $\Sb\vec{\nabla}\chi_j\cdot\vec{\nabla}\chi_k$ is Lebesgue integrable on
+$\Tc\times\Vc$. In other words, we must define the vector field
+$\vec{\nabla}\chi_j$ as a member of a suitable space of functions so that the
+components of the tensors $\Kbc^*$ and $\bsig^*$ are well defined and
+have finite values. In Section \ref{sec:Hilbert_Space} we discuss
+these important details at length and prove the following theorem. 
+%
+\begin{theorem}\label{thm:kappa_sigma}
+%
+Let the components $\Kc^*_{jk}$ and $\sigma^*_{jk}$, $j,k=1,\ldots,d$, of the
+effective tensors $\Kbc^*$ and $\bsig^*$ be defined as in equations
+\eqref{eq:Cell_Problem}--\eqref{eq:Eff_Diffusivity} and
+\eqref{eq:Maxwells_Equations}--\eqref{eq:sigma*}, respectively. Then
+there exists a function space $\Fs$ on which $\bsig=\varepsilon\Ib+\Sb$ is a
+bounded linear operator for all $0<\varepsilon<\infty$ and, for $\vec{\nabla}\chi_j\in\Fs$,
+$\Kc^*_{jk}$ and $\sigma^*_{jk}$ are well defined and finite.
+%$|\Kc^*_{jk}|,|\sigma^*_{jk}|<\infty$.
+Moreover, these effective tensors are
+equivalent up to transposition,  
+% 
+\begin{align}\label{eq:Eff_Equiv}
+  \bsig^*=[\Kbc^*]^T.
+\end{align}
+%
+In particular, the symmetric part $\bkappa^*$ of $\Kbc^*$ is equal to
+that of $\bsig^*$ and the anti-symmetric part $\balpha^*$ of $\Kbc^*$
+is equal to the negative of that of $\bsig^*$.
+%
+\end{theorem}
+%
+
+
+
+Theorem \ref{thm:kappa_sigma} places the effective parameter problems
+for transport in composites and that for transport by advective
+diffusion on common mathematical footing, for both cases of  
+time-independent and time-dependent velocity fields $\vec{u}$. The
+validity of Theorem \ref{thm:kappa_sigma} follows by adapting the
+Hilbert space formulation of the ACM to treat the effective transport
+properties of advective diffusion, which is the topic of Section
+\ref{sec:Hilbert_Space}. This Hilbert space formulation of the
+effective parameter problem also leads to integral representations for
+$\bkappa^*$ and $\balpha^*$, which is the topic of Section
+\ref{sec:Integral_Rep}.              
+
+
+
+
+
+\subsection{Hilbert space and resolvent
+  representation} \label{sec:Hilbert_Space}   
+%
+In this section we explore the mathematical properties of the
+skew-symmetric operator $\Sb$ introduced in equation
+\eqref{eq:Eff_Diffusivity} and construct a function space $\Fs$ such
+that for $\vec{\nabla}\chi_k\in\Fs$ equation \eqref{eq:Eff_Equiv} holds and is
+well defined. We do so by providing an abstract Hilbert space
+formulation of the effective parameter problem for advective
+diffusion. We utilize this mathematical framework and equation
+\eqref{eq:Cell_Problem}  to obtain a resolvent representation of the
+vector field $\vec{\nabla}\chi_k$, involving an anti-symmetric operator $\Ab$
+which is closely related to $\Sb$, where we use the terms
+skew-symmetric and anti-symmetric interchangeably. Using the results
+of this section, we derive in Section \ref{sec:Integral_Rep} integral
+representations for the symmetric $\bkappa^*$ and anti-symmetric
+$\balpha^*$ parts of the effective diffusivity tensor $\Kbc^*$,
+involving a \emph{spectral measure} associated with $\Ab$.       
+
+
+
+Consider the Hilbert spaces $L^2_d(\Tc)=\otimes_{n=1}^dL^2(\Tc)$ and
+$L^2_d(\Vc)=\otimes_{n=1}^dL^2(\Vc)$ (over the complex field $\mathbb{C}$)
+of Lebesgue measurable, square integrable, vector-valued functions
+\cite{Folland:99}, where $\Tc\subset\mathbb{R}$ and $\Vc\subset\mathbb{R}^d$. Now 
+consider the associated Hilbert spaces $\Hs_{\,\Tc}\subset L^2_d(\Tc)$ and
+$\Hs_{\,\Vc}\subset L^2_d(\Vc)$ of periodic vector-valued functions with
+temporal periodicity $T$ on the interval $\Tc=(0,T)$ and spatial
+periodicities $V_j$, $j=1,\ldots,d$, on the $d$-dimensional region
+$\Vc=(0,V_1)\times\cdots\times(0,V_d)$, respectively, as well as their direct product 
+$\Hs_{\Tc\Vc}$,
+%
+\begin{align}\label{eq:Hilbert_Spaces}
+  \Hs_{\Tc\Vc}=\Hs_{\,\Tc}\otimes\Hs_{\,\Vc}, \quad
+  \Hs_{\,\Tc}=\{ 
+     \vec{\xi}\in L^2_d(\Tc)\;|\;
+     \vec{\xi}(0)=\vec{\xi}(T) 
+                        \}, \quad
+  \Hs_{\,\Vc}=\{ 
+     \vec{\xi}\in L^2_d(\Vc)\;|\;
+     \vec{\xi}(0)=\vec{\xi}(\vec{V}) 
+                        \}, 
+\end{align}
+%
+where we have defined $\vec{V}=(V_1,\ldots,V_d)$. Denote by $\langle\cdot,\cdot\rangle$ the
+sesquilinear inner-product associated with the Hilbert space
+$\Hs_{\Tc\Vc}$, which is defined by
+$\langle\vec{\xi},\vec{\zeta}\,\rangle=\langle\overline{\vec{\xi}\,}\cdot\vec{\zeta}\,\rangle$  with 
+$\langle\vec{\xi},\vec{\zeta}\,\rangle=\overline{\langle\vec{\zeta},\vec{\xi}\,\rangle}$, where $\bar{a}$ 
+denotes complex conjugation for $a\in\mathbb{C}$ and
+$(\overline{\vec{\xi}})_j=\overline{\xi_j}$, $j=1,\ldots,d$. By the Helmholtz
+theorem \cite{Denaro:2003:0271,Bhatia:IEE:1077}, the Hilbert space
+$\Hs_{\,\Vc}$ in \eqref{eq:Hilbert_Spaces} can be decomposed into
+mutually orthogonal subspaces of curl-free $\Hs_\times$, divergence-free
+$\Hs_\bullet$, and constant $\Hs_{\,0}$ vector fields, with associated
+orthogonal projectors $\bGamma_\times$, $\bGamma_\bullet$, and $\bGamma_0$,
+respectively, 
+%$\bGamma_\times=\vec{\nabla}(\bDelta^{-1})\vec{\nabla}\cdot$,
+%$\bGamma_\bullet=-\vec{\nabla}\times(\bDelta^{-1})\vec{\nabla}\times$, and  $\bGamma_0=\langle\cdot\rangle$  
+%, respectively,
+\cite{Fannjiang:SIAM_JAM:333,MILTON:2002:TC}    
+%
+\begin{align}\label{eq:Helmholtz}
+  &\Hs_{\,\Vc}=\Hs_\times\oplus\Hs_\bullet\oplus\Hs_{\,0},\qquad
+  \Ib=\bGamma_\times+\bGamma_\bullet+\bGamma_0, \\
+  \bGamma_\times&=\vec{\nabla}(\Delta^{-1})\vec{\nabla}\cdot, \quad
+  \bGamma_\bullet=-\vec{\nabla}\times(\bDelta^{-1})\vec{\nabla}\times, \quad
+  \bGamma_0=\langle\cdot\rangle, \quad
+  \notag \\
+  \Hs_\times=\{\vec{\xi}\;|\;\vec{\nabla}\times\vec{\xi}=&0 \text{ weakly}\}, \quad
+  \Hs_\bullet
+      =\{\vec{\xi}\;|\;\vec{\nabla}\cdot\vec{\xi}=0 \text{ weakly}\},   \quad
+  \Hs_{\,0}
+      =\{\vec{\xi}\;|\;\vec{\xi}=\langle\vec{\xi}\,\rangle\}.
+     \notag  
+\end{align}
+%
+
+
+
+
+
+
+
+
+We are primarily concerned with fluid velocity fields $\vec{u}$ such
+that $0<\Kc^*_{kk}<\infty$ for all $0<\varepsilon<\infty$. Consequently, in view of
+equation \eqref{eq:Eff_Diffusivity}, we require that the (weakly)
+curl-free vector field $\vec{\nabla}\chi_k$ satisfies
+$\vec{\nabla}\chi_k\in\Hs_{\,\Tc}\otimes\Hs_\times\subset\Hs_{\Tc\Vc}$, so that it is
+bounded in the norm $\|\cdot\|$ induced by the $\Hs_{\Tc\Vc}$-inner-product
+\cite{Folland:99}, $\|\vec{\nabla}\chi_k\|<\infty$. Defining the (weakly)
+divergence-free vector field $\vec{J}_k=\bsig\vec{E}_k$ in
+\eqref{eq:Maxwells_Equations} as a member of a subset of
+$\Hs_{\Tc\Vc}$ is technically difficult, due to the
+\emph{unboundedness} of the linear operator
+$\bsig=\bkappa-(\bDelta^{-1})\Tb$ on this space. We now explore the
+properties of this operator in more detail.  
+
+
+
+
+
+Since $\Vc$ is a bounded domain, $(\Delta^{-1})$ is a compact operator
+\cite{Stakgold:BVP:2000} on the Hilbert space $L^2(\Vc)$. Hence
+$(\bDelta^{-1})$ is a compact operator on the Hilbert space
+$\Hs_{\,\Vc}$, and is consequently bounded in the operator norm $\|\cdot\|$
+induced by the $\Hs_{\Tc\Vc}$-inner-product
+\cite{Reed-1980,Stone:64,Stakgold:BVP:2000}, when considered as an 
+operator on $\Hs_{\Tc\Vc}$.  We have already assumed 
+for the convergence $\phi^\delta\to\bar{\phi}$, as $\delta\to0$, that the flow matrix
+$\Hb(t,\vec{x})$ is periodic on $\Tc\times\Vc$. We will also assume that it
+is (component-wise) mean-zero and bounded in operator norm, and that
+its component-wise time derivative $\Tb\Hb$ is also bounded on
+$\Hs_{\Tc\Vc}$ 
+%
+\begin{align}\label{eq:Bounded_H}
+  \langle\Hb\rangle=0, \quad \|\Hb\|<\infty, \quad \|\Tb\Hb\|<\infty.
+  %\quad \text{ on } \Hs_{\Tc\Vc}. 
+\end{align}
+%
+This implies that $\bkappa=\varepsilon\Ib+\Hb$ is also bounded for all
+$0<\varepsilon<\infty$. Consequently, in the case of a time-independent velocity 
+field $\vec{u}$, where $\bsig=\bkappa$, the linear operator $\bsig$ is
+bounded. This and $\|\vec{\nabla}\chi_k\|<\infty$ implies that 
+$\vec{J}_k\in\Hs_\bullet$. Therefore, in the case of a time-dependent velocity
+field, under the assumptions of \eqref{eq:Bounded_H}, the
+unboundedness of $\bsig=\bkappa-(\bDelta^{-1})\Tb$ on $\Hs_{\Tc\Vc}$
+is due to the unboundedness of $\Tb$ on $\Hs_{\,\Tc}$.   
+
+
+
+The unboundedness of $\Tb$ on $\Hs_{\,\Tc}$ can be understood by
+considering the orthonormal set of functions
+$\{\vec{\psi}_n\}\subset\Hs_{\,\Tc}$ with components $(\vec{\psi}_n)_j$, $j=1,\ldots,d$,
+defined by  
+%
+\begin{align}\label{eq:Orthonormal}
+  (\vec{\psi}_n)_j(t)=\beta\sin((n+j)\pi t/T), \quad
+  \beta=\sqrt{2/(Td)},
+  \qquad
+  \langle\vec{\psi}_n\cdot\vec{\psi}_m\rangle=\delta_{nm}, \quad
+  n,m\in\mathbb{N}.
+\end{align}
+%
+The components $(\Tb\vec{\psi}_n)_j$, $j=1,\ldots,d$, of the vector
+$\Tb\vec{\psi}_n$ and its norm $\|\Tb\vec{\psi}_n\|$ are given by
+%$(\partial_t\vec{\psi}_n)_j(t,\vec{x})=b_{nj}\cos((n+j)\pi t/T)$, $b_{nj}=(n+j)a\pi/T$.
+%
+\begin{align}\label{eq:Orthonormal_Diff}
+  (\partial_t\vec{\psi}_n)_j(t)=[\beta(n+j)\pi/T]\cos((n+j)\pi t/T),\quad
+  \|\Tb\vec{\psi}_n\|^2%=(T/2)\sum_jb_{nj}^2
+               =\frac{1}{d}\sum_j[(n+j)\pi/T]^2.
+\end{align}
+%
+%The $\Hs$-norm of $\partial_t\vec{\psi}_n$ is given by
+%$\|\partial_t\vec{\psi}_n\|^2=(T/2)\sum_jb_{nj}^2=\sum_j[(n+j)\pi/T]^2$. 
+Therefore, the norm of the members of the set $\{\Tb\vec{\psi}_n\}$
+grows arbitrarily large as $n\to\infty$. This clearly demonstrates the
+unboundedness of the operator $\Tb$ on $\Hs_{\,\Tc}$.
+
+
+
+
+
+The above analysis demonstrates that the domain $D(\Tb)$ of the
+unbounded operator $\Tb$ is defined only on a proper subset of $\Hs_{\,\Tc}$,
+i.e. $D(\Tb)\subset\Hs_{\,\Tc}$. However, $D(\Tb)$ can be defined as a \emph{dense}
+subset of $\Hs_{\,\Tc}$ such that $\Tb$ is bounded
+\cite{Reed-1980,Stone:64}. Toward this goal, consider the class
+$\As_{\Tc}$ of all functions $\xi\in L^2(\Tc)$ such that $\xi(t)$ is
+\emph{absolutely continuous} \cite{Royden:1988:RA} on the interval
+$\Tc$ and has a derivative $\xi^{\,\prime}(t)$ belonging to $L^2(\Tc)$,
+i.e. \cite{Stone:64,Royden:1988:RA}   
+%
+\begin{align}\label{eq:AC_L2}
+  \As_{\Tc}=
+     \left\{
+       \xi\in L^2(\Tc) \ \Big| \ \xi(t)=c+\int_0^tg(\tau)d\tau,
+       \quad  g\in L^2(\Tc)
+     \right\},
+\end{align}
+%
+where the constant $c$ and function $g(t)$ are
+arbitrary. Now, consider the set $\tilde{\As}_{\Tc}$ of all
+functions $\xi\in\As_{\Tc}$ that satisfy the periodic initial condition
+$\xi(0)=\xi(T)$, i.e. functions $\xi$ satisfying the properties of 
+equation \eqref{eq:AC_L2} with $\int_0^Tg(\tau)d\tau=0$. To illustrate some
+important ideas later in this work, we also consider the
+set $\hat{\As}_{\Tc}$ of all functions $\xi\in\As_{\Tc}$ that satisfy the
+Dirichlet initial condition $\xi(0)=\xi(T)=0$, i.e. functions $\xi$
+satisfying the properties of equation \eqref{eq:AC_L2} with $c=0$ and
+$\int_0^Tg(\tau)d\tau=0$. More concisely, 
+%
+\begin{align}\label{eq:AC_BC}
+  \tilde{\As}_{\Tc}=\{\xi\in\As_{\Tc} \,|\, \xi(0)=\xi(T)\}, \quad
+  \hat{\As}_{\Tc}=\{\xi\in\As_{\Tc} \,|\, \xi(0)=\xi(T)=0\}.
+\end{align}
+%
+These function spaces satisfy
+$\hat{\As}_{\Tc}\subset\tilde{\As}_{\Tc}\subset\As_{\Tc}$ and are each everywhere
+dense in $L^2(\Tc)$ \cite{Stone:64}. It follows that the function space
+$\Fs_{\Tc}=\otimes_{n=1}^d\tilde{\As}_{\Tc}$ is everywhere dense in
+$\Hs_{\,\Tc}$ and $\Fs_{\Tc}\otimes\Hs_{\,\Vc}$ is a dense subset of the
+Hilbert space $\Hs_{\Tc\Vc}$. Moreover, as a linear operator acting on
+the function space $\Fs_{\Tc}$, by construction, $\Tb$ is bounded in
+operator norm. We are now in a position to prove Theorem
+\ref{thm:kappa_sigma}. 
+
+
+
+
+
+
+\textbf{Proof of Theorem \ref{thm:kappa_sigma}.}\hspace{1ex}
+%
+As a linear operator acting on the function space
+$\Fs_{\Tc}\otimes\Hs_{\,\Vc}$, by construction,
+$\bsig=\bkappa-(\bDelta^{-1})\Tb$ is bounded in operator norm. Recall
+from \eqref{eq:Maxwells_Equations} that $\vec{J}_k=\bsig\vec{E}_k$
+with $\vec{E}_k=\vec{\nabla}\chi_k+\vec{e}_k$. It is clear that
+$\bsig\vec{e}_k=\bkappa\vec{e}_k$, and is bounded by equation
+\eqref{eq:Bounded_H}. Consequently, if
+$\vec{\nabla}\chi_k\in\Fs_{\Tc}\otimes\Hs_{\,\Vc}$ then  
+$\vec{J}_k$ is Lebesgue measurable and also bounded in norm on 
+$\Hs_{\Tc\Vc}$. We have already established that 
+$\vec{\nabla}\chi_k\in\Hs_{\,\Tc}\otimes\Hs_\times$. Therefore, this and equation
+\eqref{eq:Cell_Problem} suggest that we consider the curl-free,
+mean-zero vector field $\vec{\nabla}\chi_k$ as a member of the function space
+$\Fs\subset\Fs_{\Tc}\otimes\Hs_{\,\Vc}$,         
+%
+\begin{align}\label{eq:Function_Space}
+  \Fs=\{\vec{\xi}\in\Fs_{\Tc}\otimes\Hs_\times \;|\; \langle\vec{\xi}\,\rangle=0\},  
+\end{align}
+%
+which will be used extensively. We
+stress that $\Fs$ is \emph{not} a Hilbert space, and is instead a
+dense subset of the Hilbert space $\Hs_{\,\Tc}\otimes\Hs_\times$. We will
+henceforth assume that $\vec{\nabla}\chi_k\in\Fs$. In the case of a
+time-independent velocity field $\vec{u}$ we set $\Fs_{\Tc}=\emptyset$ in 
+\eqref{eq:Function_Space}, so that $\vec{\xi}\in\Fs$ implies 
+$\vec{\xi}\in\Hs_\times$ with $\langle\vec{\xi}\,\rangle=0$. To summarize, since $\bsig$ is
+bounded on $\Fs$ and $\vec{\nabla}\chi_k\in\Fs$, we have that the
+divergence-free vector field $\vec{J}_k=\bsig\vec{E}_k$ is also
+bounded $\|\vec{J}_k\|<\infty$, thus $\vec{J}_k\in\Hs_{\Tc}\otimes\Hs_\bullet$.  
+
+
+
+
+
+
+By the mutual orthogonality of the Hilbert spaces $\Hs_\times$ and $\Hs_\bullet$
+in equation \eqref{eq:Helmholtz}, 
+$\vec{\nabla}\chi_k\in\Fs$, $\vec{J}_k\in\Hs_{\Tc}\otimes\Hs_\bullet$, and Fubini's theorem
+\cite{Folland:99} imply that $\langle\vec{J}_j\cdot\vec{\nabla}\chi_k\rangle=0$ for every
+$j,k=1,\ldots,d$. This is trivially 
+satisfied in the case of a time-independent velocity field $\vec{u}$,
+since in this case $\bsig=\bkappa$ is bounded so that
+$\vec{J}_j\in\Hs_\bullet$ for $\vec{\nabla}\chi_k\in\Fs$. In either case, as
+$\vec{E}_k=\vec{\nabla}\chi_k+\vec{e}_k$, we have
+$\langle\vec{J}_j\cdot\vec{e}_k\rangle=\langle\vec{J}_j\cdot\vec{E}_k\rangle$. Equations
+\eqref{eq:Maxwells_Equations} and \eqref{eq:sigma*} then imply that
+the components
+$\sigma^*_{jk}=\bsig^*\vec{e}_j\cdot\vec{e}_k=\langle\bsig\vec{E}_j\cdot\vec{e}_k\rangle$ of 
+the effective tensor $\bsig^*$ can be expressed as
+$\sigma^*_{jk}=\langle\bsig\vec{E}_j\cdot\vec{E}_k\rangle$, with $\bsig=\varepsilon\Ib+\Sb$ and
+$\Sb=\Hb-(\bDelta^{-1})\Tb$. Consequently,      
+%
+\begin{align}\label{eq:Reduction}
+  \sigma^*_{jk} %=\langle(\varepsilon\Ib+\Sb)\vec{E}_j\cdot\vec{E}_k\rangle
+       =\varepsilon\langle\vec{E}_j\cdot\vec{E}_k\rangle+\langle\Sb\vec{E}_j\cdot\vec{E}_k\rangle.      
+\end{align}
+%
+
+
+
+
+The property  $\langle\vec{\nabla}\chi_k\rangle=0$ in \eqref{eq:Cell_Problem}, and equation
+\eqref{eq:Eff_Diffusivity} together imply that 
+%
+\begin{align}\label{eq:Reduction_kappa}
+  \varepsilon\langle\vec{E}_j\cdot\vec{E}_k\rangle=\varepsilon[\langle\vec{\nabla}\chi_j\cdot\vec{\nabla}\chi_k\rangle
+                   +\langle\vec{\nabla}\chi_j\cdot\vec{e}_k\rangle+\langle\vec{e}_j\cdot\vec{\nabla}\chi_k\rangle
+                   +\langle\vec{e}_j\cdot\vec{e}_k\rangle]
+                   =\varepsilon(\langle\vec{\nabla}\chi_j\cdot\vec{\nabla}\chi_k\rangle+\delta_{jk})
+                   =\kappa^*_{jk}. 
+\end{align}
+%
+From the definition of $\Sb=\Hb-(\bDelta^{-1})\Tb$ in equation
+\eqref{eq:Eff_Diffusivity} we have that
+$\Sb\vec{e}_j=\Hb\vec{e}_j$. Consequently,
+$\langle\Sb\vec{e}_j\cdot\vec{e}_k\rangle=\langle\Hb\vec{e}_j\cdot\vec{e}_k\rangle=0$, since by 
+equation \eqref{eq:Bounded_H} the matrix $\Hb$ is (component-wise)
+mean-zero. Also, by the definition $\vec{u}=\vec{\nabla}\cdot\Hb$ in
+\eqref{eq:u_DH} and the periodicity of $\Hb$ and $\chi_k$, we also have
+$\langle\Hb\vec{e}_j\cdot\vec{\nabla}\chi_k\rangle=-\langle u_j\chi_k\rangle$ via integration by
+parts. Therefore, by the skew-symmetry of $\Sb$ on $\Fs$, the
+symmetries $\kappa^*_{kj}=\kappa^*_{jk}$ and $\alpha^*_{kj}=-\alpha^*_{jk}$, and equations
+\eqref{eq:Eff_Diffusivity}, \eqref{eq:Eff_Diffusivity_Appendix}, and
+\eqref{eq:Functional_Rep}, we have 
+
+
+%
+\begin{align}\label{eq:Reduction_alpha}    
+   \langle\Sb\vec{E}_j\cdot\vec{E}_k\rangle&=\langle\Sb\vec{\nabla}\chi_j\cdot\vec{\nabla}\chi_k\rangle
+                       +\langle\Sb\vec{\nabla}\chi_j\cdot\vec{e}_k\rangle+\langle\Sb\vec{e}_j\cdot\vec{\nabla}\chi_k\rangle
+                       +\langle\Sb\vec{e}_j\cdot\vec{e}_k\rangle
+                       \\
+                       &=\alpha^*_{jk}-\langle\vec{\nabla}\chi_j\cdot\Hb\vec{e}_k\rangle+\langle\Hb\vec{e}_j\cdot\vec{\nabla}\chi_k\rangle
+                       \notag\\
+                       &=\alpha^*_{jk}+\langle\chi_ju_k\rangle-\langle u_j\chi_k\rangle
+                       \notag\\
+                       &=\alpha^*_{jk}+[\alpha^*_{kj}+\kappa^*_{kj}-\varepsilon\delta_{kj}]-[\alpha^*_{jk}+\kappa^*_{jk}-\varepsilon\delta_{jk}]
+                       \notag\\
+                       &=-\alpha^*_{jk}.
+                       \notag
+\end{align}
+%
+In summary, from equations
+\eqref{eq:Reduction}--\eqref{eq:Reduction_alpha} and the
+symmetries $\kappa^*_{jk}=\kappa^*_{kj}$ and $\alpha^*_{jk}=-\alpha^*_{kj}$ we have that 
+%
+\begin{align}\label{eq:Reduction_final}
+  \sigma^*_{jk}=\kappa^*_{jk}-\alpha^*_{jk}=\kappa^*_{kj}+\alpha^*_{kj}=\Kc_{kj}^*\,,       
+\end{align}
+%
+which is equivalent to equation \eqref{eq:Eff_Equiv}. This concludes
+our proof of Theorem \ref{thm:kappa_sigma} $\Box$.     
+
+
+
+
+We conclude this section with a derivation of the following resolvent
+formula for $\vec{\nabla}\chi_k$, involving the orthogonal projection
+operator $\bGamma_\times=\vec{\nabla}(\Delta^{-1})\vec{\nabla}\cdot$ onto curl-free fields in
+\eqref{eq:Helmholtz},  
+% % 
+\begin{align}\label{eq:Resolvent_Rep}
+  \vec{\nabla}\chi_j=(\varepsilon\Ib+\Ab)^{-1}\vec{g}_j
+           =(\varepsilon\Ib+\I\Mb)^{-1}\vec{g}_j, \quad
+  \Ab=\bGamma\Sb\bGamma, \quad
+  \Mb=-\I\Ab, \quad
+  \vec{g}_j=-\bGamma\Hb\vec{e}_j,
+\end{align}
+%
+where $\I=\sqrt{-1}\,$ and we have defined $\bGamma=\bGamma_\times$ for
+notational simplicity. Equation \eqref{eq:Resolvent_Rep} follows from
+applying the integro-differential operator $\vec{\nabla}(\Delta^{-1})$ to
+$\vec{\nabla}\cdot\bsig\vec{E}_j=0$ in equation \eqref{eq:Maxwells_Equations},
+with $\vec{E}_j=\vec{\nabla}\chi_j+\vec{e}_j$ and $\bsig=\varepsilon\Ib+\Sb$, yielding  
+%
+\begin{align}\label{eq:Pre_Resolvent}
+  \bGamma(\varepsilon\Ib+\Sb)\vec{\nabla}\chi_j=-\bGamma\Hb\vec{e}_j,
+\end{align}
+%
+since $\bGamma\vec{e}_j=0$ and $\Sb\vec{e}_j=\Hb\vec{e}_j$.
+The equivalence of equations \eqref{eq:Resolvent_Rep} and
+\eqref{eq:Pre_Resolvent} can be seen by noting that
+$\vec{\nabla}\chi_j\in\Fs$ implies $\bGamma\vec{\nabla}\chi_j=\vec{\nabla}\chi_j$. We stress
+that the property $\bGamma\vec{\xi}=\vec{\xi}$ for $\vec{\xi}\in\Fs$ implies
+that $\Ab=\bGamma\Sb\bGamma=\bGamma\Sb$ on $\Fs$.
+
+
+
+It is worth mentioning that taking the dot-product of both sides of
+equation \eqref{eq:Pre_Resolvent} with $\vec{\nabla}\chi_k$, averaging, using
+the properties $\bGamma\vec{\nabla}\chi_j=\vec{\nabla}\chi_j$ and
+$\langle\bGamma\vec{\xi}\cdot\vec{\zeta}\,\rangle=\langle\vec{\xi}\cdot\bGamma\vec{\zeta}\,\rangle$ for
+$\vec{\xi},\vec{\zeta}\in\Hs_{\,\Vc}$, and integrating by parts, yields
+equation  \eqref{eq:Functional_Rep}. Moreover, the condition
+$\langle\vec{J}_j\cdot\vec{\nabla}\chi_k\rangle=0$ is also equivalent to equation
+\eqref{eq:Functional_Rep}.   
+
+
+
+In Section \ref{sec:Symmetries_Commute} we show that $\Ab$ in
+\eqref{eq:Resolvent_Rep} acts as an anti-symmetric linear operator on
+the Hilbert space $\Hs_{\Tc\Vc}$,
+$\langle\Ab\vec{\xi}\cdot\vec{\zeta}\rangle=\langle\vec{\xi}\cdot\Ab^*\vec{\zeta}\rangle=-\langle\vec{\xi}\cdot\Ab\vec{\zeta}\rangle$. Therefore,
+$\Ab$ commutes with its (Hilbert space) adjoint $\Ab^*=-\Ab$ (not to
+be confused with an effective tensor) and is therefore an example of a
+\emph{normal} operator \cite{Stone:64}. Consequently, due to the
+sesquilinearity of the $\Hs_{\Tc\Vc}$-inner-product, $\Mb=-\I\Ab$ acts
+as a \emph{symmetric} operator, $\Mb^*=\Mb$
+\cite{Reed-1980,Stone:64}. Moreover, on the function space $\Fs$,
+$\Ab$ is a \emph{maximal} normal operator and $\Mb$ is
+\emph{self-adjoint} \cite{Stone:64}. In Section \ref{sec:Integral_Rep}
+we examine these properties of $\Ab$ and $\Mb$ in more detail and
+demonstrate how equation \eqref{eq:Resolvent_Rep} and the spectral
+theory of such operators lead to integral representations for the
+symmetric $\bkappa^*$ and anti-symmetric $\balpha^*$ parts of $\Kbc^*$.      
+
+
+
+
+
+
+
+
+\subsection{Integral representation of the effective diffusivity
+  for steady and dynamic flows}\label{sec:Integral_Rep}
+%
+In this section, we employ the Hilbert space formulation of the
+effective parameter problem discussed in Section
+\ref{sec:Hilbert_Space} above, to provide integral representations for the
+symmetric $\bkappa^*$ and anti-symmetric $\balpha^*$ parts of the
+effective diffusivity tensor $\Kbc^*$. In the general (infinite
+dimensional) setting, these integral representations involve a
+\emph{spectral measure} $\d\bmu$ associated with the (maximal) normal
+operator $\Ab=\bGamma\Sb\bGamma$ on $\Fs$, or equivalently the
+self-adjoint operator $\Mb=-\I\Ab$, and follow from the spectral
+theorem for such linear operators \cite{Reed-1980,Stone:64} and the resolvent
+formula for $\vec{\nabla}\chi_k$ given in equation
+\eqref{eq:Resolvent_Rep}. The derivation of these integral
+representations for $\bkappa^*$ and $\balpha^*$ is the topic of
+Section \ref{sec:Integral_Rep_General}.
+
+
+
+
+In Section \ref{sec:Integral_Rep_Matrix} we discuss this mathematical
+framework in the finite dimensional setting, where $\Ab$ is given by
+an anti-symmetric matrix. The spectral analysis of $\Ab$ illuminates a
+great deal of structure regarding the spectral measure $\d\bmu$ in
+this matrix setting. This structure is utalized in Section
+\ref{sec:Num_Results} to formulate an efficient and stable numerical
+algorithm for the explicit computation of $\bkappa^*$ and $\balpha^*$
+for model velocity fields $\vec{u}$, by the direct computation of
+$\d\bmu$ in terms of the eigenvalues and eigenvectors of $\Ab$.   
+
+
+
+\subsubsection{General infinite dimensional setting}\label{sec:Integral_Rep_General}
+%
+In the general Hilbert space setting, there are significant
+differences in the theory between the case of steady flows, where
+$\Sb=\Hb$ is \emph{bounded} on the Hilbert space $\Hs_{\,\Vc}$, and
+the case of dynamic flows, where $\Sb=\Hb-(\bDelta^{-1})\Tb$ is
+\emph{unbounded} on the Hilbert space $\Hs_{\Tc\Vc}$, as discussed in
+Section \ref{sec:Hilbert_Space}. It is therefore natural to start our
+discussion with a more detailed look into this distinction, in the
+present context. Since $\bGamma$ is an orthogonal projector from
+$\Hs_{\,\Vc}$ to $\Hs_\times$, it is bounded by unity in operator norm
+$\|\bGamma\|\leq1$ on $\Hs_{\,\Vc}$ and $\|\bGamma\|=1$ on $\Hs_\times$
+\cite{Reed-1980,Stone:64}. Therefore by \eqref{eq:Bounded_H}, in the
+case of  steady flows, the operator $\Ab=\bGamma\Hb\bGamma$ is bounded
+on the Hilbert space $\Hs_{\,\Vc}$, with $\|\Ab\|\leq\|\Hb\|<\infty$. Let's first
+focus on this time-independent case. Since $\Mb=-\I\Ab$ we have 
+$\|\Mb\|=\|\Ab\|$, so the domains of these two operators are identical,
+$D(\Mb)=D(\Ab)$. For simplicity we focus on the operator $\Mb$ now,
+re-introducing the operator $\Ab$ later. The (Hilbert space)
+adjoint $\Mb^*$ of $\Mb$ is defined by
+$\langle\Mb\vec{\xi},\vec{\zeta}\,\rangle=\langle\vec{\xi},\Mb^*\vec{\zeta}\,\rangle$, and is also a
+bounded operator on $\Hs_{\,\Vc}$ with $\|\Mb^*\|=\|\Mb\|$
+\cite{Reed-1980}. Consequently, they have identical domains,       
+%
+\begin{align}\label{eq:Domain_M}
+  D(\Mb)=D(\Mb^*),
+\end{align}
+%
+which are the entire space, $D(\Mb)=D(\Mb^*)=\Hs_{\,\Vc}$. In
+Section \ref{sec:Symmetries_Commute} we show that $\Mb$ is symmetric,
+%
+\begin{align}\label{eq:Symmetric_M}
+  \langle\Mb\vec{\xi}\cdot\vec{\zeta}\,\rangle=\langle\vec{\xi}\cdot\Mb\vec{\zeta}\,\rangle,
+  \, \text{ for all } \; \vec{\xi},\vec{\zeta}\in D(\Mb).
+\end{align}
+%
+By definition \cite{Reed-1980,Stone:64}, the two properties
+\eqref{eq:Domain_M} and \eqref{eq:Symmetric_M} together imply that the
+operator $\Mb$ is \emph{self-adjoint}, i.e. $\Mb\equiv\Mb^*$ on $D(\Mb)$.
+
+
+
+
+
+Conversely, the Hellinger--Toeplitz theorem \cite{Reed-1980} states,
+if the operator $\Mb$ satisfies equation \eqref{eq:Symmetric_M} for
+\emph{every} $\vec{\xi},\vec{\zeta}\in\Hs_{\,\Vc}$, then $\Mb$ is
+bounded on $\Hs_{\,\Vc}$. This suggests that, in the time-dependent
+case when $\Mb$ is unbounded on the Hilbert space $\Hs_{\Tc\Vc}$, it
+is defined as a self-adjoint operator only on a proper subset of
+$\Hs_{\Tc\Vc}$. However, as discussed in 
+Section \ref{sec:Hilbert_Space}, the domain $D(\Mb)$ can be defined as
+a \emph{dense} subset of $\Hs_{\Tc\Vc}$ such that $\Mb$ is
+bounded. Moreover, on this domain, $\Mb$ can be extended to a 
+\emph{closed} symmetric operator \cite{Reed-1980,Stone:64}. Although
+even in this case, in general \cite{Reed-1980}, the domain $D(\Mb^*)$
+of the associated adjoint $\Mb^*$ does not coincide with $D(\Mb)$, and
+in such circumstances $\Mb$ is \emph{not} self-adjoint on $D(\Mb)$. Only for
+self-adjoint (or maximal normal) operators does the spectral theorem hold
+\cite{Reed-1980}, which provides the existence of the promised
+integral representation for $\Kbc^*$, involving a spectral measure
+associated with $\Mb$. It is therefore necessary that we find a
+domain $D(\Mb)$ on which $\Mb$ is self-adjoint.
+
+
+
+
+As $\bGamma$ is bounded on $\Hs_{\,\Vc}$ and
+$\Mb=-\I\bGamma\Sb\bGamma$, our discussion in Section
+\ref{sec:Hilbert_Space} indicates that the unboundedness of $\Mb$ on
+$\Hs_{\Tc\Vc}$ is due to the unboundedness of the underlying operator
+$\Tb$ on the Hilbert space $\Hs_{\,\Tc}$. It is therefore necessary
+that we find a domain $D(\Tb)$ for which $\I\Tb$ is a self-adjoint
+operator. Toward this goal, and to illustrate these ideas, we consider
+the operator $\I\partial_t$ with the three different domains $\As_{\Tc}$,
+$\tilde{\As}_{\Tc}$, and $\hat{\As}_{\Tc}$ defined in equations
+\eqref{eq:AC_L2} and \eqref{eq:AC_BC}, which are everywhere dense in
+$L^2(\Tc)$ \cite{Stone:64}. Let the operators $B$, $\tilde{B}$, and
+$\hat{B}$ be identified as $\I\partial_t$ with domains $\As_{\Tc}$,
+$\tilde{\As}_{\Tc}$, and $\hat{\As}_{\Tc}$, respectively. Then,
+$\hat{B}$ is a closed linear symmetric operator with adjoint
+$\hat{B}^*\equiv B$, and the operator $\tilde{B}$ is a \emph{self-adjoint}
+extension of $\hat{B}$ \cite{Stone:64}. In symbols, this means that 
+$\tilde{B}=\tilde{B}^*$ on $\tilde{\As}_{\Tc}$ and
+$D(\tilde{B})=D(\tilde{B}^*)=\tilde{\As}_{\Tc}$,
+i.e. $\tilde{B}\equiv\tilde{B}^*$ on $\tilde{\As}_{\Tc}$.     
+
+
+
+Since the operator $\tilde{B}=\I\partial_t$ with domain $\tilde{\As}_{\Tc}$ is
+self-adjoint, it follows that the operator $\I\Tb=\I\partial_t\Ib$ with domain
+$D(\Tb)=\Fs_{\Tc}=\otimes_{n=1}^d\tilde{\As}_{\Tc}$ is self-adjoint. This is
+seen as follows. By noting that
+$\I\Tb\vec{\xi}=(\tilde{B}\xi_1,\ldots,\tilde{B}\xi_d)$ and, for all 
+$\vec{\xi},\vec{\zeta}\in\Fs_{\Tc}$ with components
+$\xi_j,\zeta_j\in\tilde{\As}_{\Tc}$, $j=1,\ldots,d$, the self-adjointness of 
+$\tilde{B}$ implies that $\Tb$ is symmetric, $\Tb=\Tb^*$, on $\Fs_{\Tc}$, 
+%
+\begin{align}\label{eq:T_symmetric}
+  \langle\Tb\vec{\xi}\cdot\vec{\zeta}\rangle=\sum_j\langle\tilde{B}\xi_j,\zeta_j\rangle_2
+                    =\sum_j\langle\xi_j,\tilde{B}\zeta_j\rangle_2
+                    =\langle\vec{\xi}\cdot\Tb\vec{\zeta}\rangle,
+\end{align}
+%
+where $\langle\cdot,\cdot\rangle_2$ denotes the $L^2(\Tc)$-inner-product.  Moreover, since we have
+$D(\tilde{B})=D(\tilde{B}^*)=\tilde{\As}_{\Tc}$, we also have
+$D(\Tb)=D(\Tb^*)=\Fs_{\Tc}$, i.e. $\Tb\equiv\Tb^*$ on
+$\Fs_{\Tc}$. Consequently, $\Tb$ is a bounded self-adjoint linear
+operator on the function space $\Fs_{\Tc}$.
+
+
+
+We now summarize what we have discussed so far, and
+discuss the implications thereof. We have discussed that the 
+operators $(\bDelta^{-1})$ and $\bGamma$ are bounded on the Hilbert
+space $\Hs_{\,\Vc}$. In Section \ref{sec:Symmetries_Commute} we show
+that they are also symmetric, hence self-adjoint on $\Hs_{\,\Vc}$. Due
+to the sesquilinearity of the $\Hs_{\Tc\Vc}$-inner-product, and
+equations \eqref{eq:Bounded_H} and \eqref{eq:u_DH} with $\Hb^*=\Hb^T$,
+the  operator $\I\Hb$ is bounded and symmetric, hence self-adjoint on
+the Hilbert space $\Hs_{\Tc\Vc}$.  Consequently, the operator
+$\I\bGamma\Hb\bGamma$ is also self-adjoint on $\Hs_{\Tc\Vc}$. The
+differential and integral operators $\I\Tb$ and $(\bDelta^{-1})$ are 
+bounded on the function space $\Fs_{\Tc}$ and Hilbert space $\Hs_{\,\Vc}$,
+respectively, and they are consequently commutable operations on the
+function space $\Fs_{\Tc}\times\Hs_{\,\Vc}$ \cite{Folland:99}. Moreover, as
+$\I\Tb$ and $(\bDelta^{-1})$ are self-adjoint on
+$\Fs_{\Tc}$ and $\Hs_{\,\Vc}$, respectively, the operator 
+$\I(\bDelta^{-1})\Tb$, hence $\I\bGamma[(\bDelta^{-1})\Tb]\bGamma$ is
+self-adjoint on $\Fs_{\Tc}\times\Hs_{\,\Vc}$. It is now clear that the operator
+$\Mb=\I\bGamma\Sb\bGamma$, with $\Sb=\Hb-(\bDelta^{-1})\Tb$, is
+self-adjoint on $\Fs_{\Tc}\times\Hs_{\,\Vc}$. Finally, since $\Mb=-\I\Ab$ is
+self-adjoint on $\Fs_{\Tc}\times\Hs_{\,\Vc}$ and an operator is
+self-adjoint if and only if it is a maximal normal operator
+\cite{Stone:64}, we have that $\Ab$ is a maximal normal
+operator on $\Fs_{\Tc}\times\Hs_{\,\Vc}$. In view of the resolvent
+formulas for $\vec{\nabla}\chi_j\in\Fs$ in \eqref{eq:Resolvent_Rep}
+involving $\Mb$ and $\Ab$, we will henceforth take the domain of
+these operators to be $D(\Ab)=D(\Mb)=\Fs$ in
+\eqref{eq:Function_Space}, which is a \emph{closed} subset of
+$\Fs_{\Tc}\times\Hs_{\,\Vc}$.   
+
+
+
+
+
+In terms of a general, maximal normal operator $\Nb$ on $\Fs$
+satisfying $\Nb\Nb^*=\Nb^*\Nb$, the spectral theorem states that $\Nb$ can
+be decomposed as $\Nb=\Hb_1+\I\Hb_2$, where $\Hb_1$ and $\Hb_2$ are
+self-adjoint and commute on $\Fs$ \cite{Stone:64}. Moreover, there is
+a one-to-one correspondence between $\Hb_n$, $n=1,2$, and a family
+$\{\Qb_n(\lambda)\}$, $-\infty<\lambda<\infty$, of self-adjoint projection operators - the
+resolution of the identity - with domain $\Fs$ which satisfies
+$\lim_{\lambda\to-\infty}\Qb_n(\lambda)=0$, $\lim_{\lambda\to+\infty}\Qb_n(\lambda)=\Ib$, and the
+$\Qb_n(\lambda)$, $n=1,2$, commute \cite{Reed-1980,Stone:64}. Consequently,
+there is a one-to-one correspondence between $\Nb$ and a family
+$\{\Qb(z)\}$, 
+$\Qb(z)=\Qb_1(\text{Re}(z))\Qb_2(\text{Im}(z))$, $z=\lambda_1+\I\lambda_2$,
+$-\infty<\lambda_1,\lambda_2<\infty$, of self-adjoint projection operators - the
+\emph{complex} resolution of the identity - which satisfies $\Qb(z)\to0$
+when $\text{Re}(z)\to-\infty$  and when $\text{Im}(z)\to-\infty$, and $\Qb(z)\to\Ib$
+when $\text{Re}(z)\to+\infty$ and when $\text{Im}(z)\to+\infty$ \cite{Stone:64}.
+
+
+
+The spectral theorem also provides an operational calculus in Hilbert
+space which yields integral representations associated with
+$\Qb(z)$-measurable functions of $\Nb$ \cite{Stone:64}. The details
+are as follows. Let $\vec{\xi},\vec{\zeta}\in\Fs$ and consider the
+\emph{complex-valued} function $\mu_{\xi\zeta}(z)=\langle\Qb(z)\vec{\xi}\cdot\vec{\zeta}\,\rangle$,
+$\vec{\xi}\neq\vec{\zeta}$. By the sesquilinearity of the inner-product and the
+self-adjointness of the projection operator $\Qb(z)$ we have
+$\mu_{\zeta\xi}(z)=\overline{\mu}_{\xi\zeta}(z)$, where $\overline{\mu}_{\xi\zeta}$ denotes
+the complex conjugate of $\mu_{\xi\zeta}$. Moreover, the function $\mu_{\xi\xi}$ is
+real-valued and positive
+$\mu_{\xi\xi}(z)=\langle\Qb(z)\vec{\xi}\cdot\vec{\xi}\,\rangle=\langle\Qb(z)\vec{\xi}\cdot\Qb(z)\vec{\xi}\,\rangle
+=\|\Qb(z)\vec{\xi}\,\|^2$. We associate with these functions of
+\emph{bounded variation} Radon--Stieltjes measures $\d\mu_{\xi\zeta}(z)$ and
+$\d\mu_{\xi\xi}(z)$ \cite{Stone:64}   
+%
+\begin{align}\label{eq:Bounded_Variation}
+  \d\mu_{\xi\zeta}(z)=\d\langle\Qb(z)\vec{\xi}\cdot\vec{\zeta}\,\rangle, \quad
+  \vec{\xi}\neq\vec{\zeta}, \qquad
+  \d\mu_{\xi\xi}(z)=\d\|\Qb(z)\vec{\xi}\,\|^2.
+\end{align}
+%
+Let $F(z)$ be an arbitrary complex-valued function and denote by
+$\mathscr{D}(F)$ the set of all $\vec{\xi}\in\Fs$ such that
+$F\in L^2(\mu_{\xi\xi})$, i.e. $F(z)$ is square integrable with respect to the
+measure $\d\mu_{\xi\xi}$. 
+Then $\mathscr{D}(F)$ is a linear manifold and there exists a linear
+transformation $F(\Nb)$ with domain $\mathscr{D}(F)$ defined in terms
+of the Radon--Stieltjes integrals \cite{Stone:64} 
+%
+\begin{align}\label{eq:Spectral_Theorem}
+  \langle F(\Nb)\vec{\xi}\cdot\vec{\zeta}\,\rangle=\int_IF(z)\,\d\mu_{\xi\zeta}(z), \qquad
+  &\forall \, \vec{\xi}\in\mathscr{D}(F), \ \vec{\zeta}\in\Fs
+  \\
+  \langle F(\Nb)\vec{\xi}\cdot G(\Nb)\vec{\zeta}\,\rangle=\int_I\overline{F}(z)G(z)\,\d\mu_{\xi\zeta}(z),
+  \quad
+  &\forall \, \vec{\xi}\in\mathscr{D}(F), \ \vec{\zeta}\in\mathscr{D}(G),
+  \notag
+\end{align}
+%
+where the operator $G(\Nb)$ and function space $\mathscr{D}(G)$ are
+defined analogously to that for $F$. An integral representation for
+the functional $\|F(\Nb)\vec{\xi}\,\|^2$ follows from the second formula
+in \eqref{eq:Spectral_Theorem} with $G=F$ and $\vec{\xi}=\vec{\zeta}$, and
+involves the measure $\d\mu_{\xi\xi}$ in \eqref{eq:Bounded_Variation}
+\cite{Stone:64}.  The domain of integration $I$ in
+\eqref{eq:Spectral_Theorem} is the \emph{spectrum} $\Sigma(\Nb)$ of the
+operator $\Nb$, $I\equiv\Sigma(\Nb)$. Since $\Nb$ is a normal operator, its norm 
+$\|\Nb\|$ coincides with the spectral radius
+$\|\Nb\|=\text{sup}\{|z|: z\in\Sigma(\Nb)$, so that in general
+$I\subseteq(-\infty,\infty)\times(-\I\infty,\I\infty)$  \cite{Reed-1980,Stone:64}.  We will discuss the
+properties of $\Sigma(\Nb)$ in detail in Section \ref{sec:Assymptotics}.  
+
+
+
+ 
+
+The spectral theorem of equation \eqref{eq:Spectral_Theorem} for the
+maximal normal operator $\Nb$ on $\Fs$ generalizes that for
+self-adjoint and maximal anti-symmetric operators, with purely real
+and imaginary spectrum, respectively. More specifically, the case
+$F(z)=z=\lambda_1+\I\lambda_2$ corresponds to $F(\Nb)=\Hb_1+\I\Hb_2$ with
+$I\subseteq(-\infty,\infty)\times(-\I\infty,\I\infty)$ and
+$\Qb(z)=\Qb_1(\text{Re}(z))\Qb_2(\text{Im}(z))$, the case
+$F(z)=\text{Re}(z)$ corresponds to the self-adjoint operator   
+$F(\Nb)=\Hb_1$ with $I\subseteq(-\infty,\infty)$ and $\Qb(z)=\Qb_1(\text{Re}(z))$,
+and the case $F(z)=\I\,\text{Im}(z)$ corresponds to the maximal
+anti-symmetric operator $F(\Nb)=\I\Hb_2$ with $I\subseteq(-\I\infty,\I\infty)$ and
+$\Qb(z)=\Qb_2(\text{Im}(z))$ \cite{Stone:64}. We now apply the
+spectral theorem to equations \eqref{eq:Eff_Diffusivity} and
+\eqref{eq:Resolvent_Rep} to provide Radon--Stieltjes integral
+representations for the symmetric $\bkappa^*$ and anti-symmetric
+$\balpha^*$ parts of the effective diffusivity tensor $\Kbc^*$, for
+both cases of time-independent and time-dependent velocity fields
+$\vec{u}$. These representations are summarized by the following
+theorem.  
+%
+\begin{theorem}\label{thm:Integral_Reps}
+%
+Let $z=\I\lambda$, $\vec{g}_j=-\bGamma\Hb\vec{e}_j$ be defined as in
+\eqref{eq:Resolvent_Rep}, and $\Qb(z)=\Qb_2({\rm Im}(z))=\Qb_2(\lambda)$ be 
+the complex resolution of the identity associated with the maximal
+anti-symmetric operator $\Ab$ defined in \eqref{eq:Resolvent_Rep}, with
+domain $\Fs$ defined in \eqref{eq:Function_Space}. Define the
+matrix-valued function $\bmu(\lambda)$ with complex-valued off-diagonal
+components $\mu_{jk}(\lambda)=\langle\Qb_2(\lambda)\vec{g}_j\cdot\vec{g}_k\rangle$ for $j\neq k=1,\ldots,d$,
+with $\mu_{kj}=\overline{\mu}_{jk}$, and positive diagonal components
+$\mu_{kk}(\lambda)=\|\Qb_2(\lambda)\vec{g}_k\|^2$.  Moreover, consider the real-valued
+functions   
+%
+\begin{align}\label{eq:Fns_Bounded_Var}
+  {\rm Re}\,\mu_{jk}(\lambda)
+         =\frac{1}{2}\left(\mu_{jk}(\lambda)+\overline{\mu}_{jk}(\lambda)\right), \quad
+  {\rm Im}\,\mu_{jk}(\lambda)
+         =\frac{1}{2\,\I}\left(\mu_{jk}(\lambda)-\overline{\mu}_{jk}(\lambda)\right).
+\end{align}
+%
+Corresponding to each of these functions of bounded variation, 
+consider the associated 
+Radon--Stieltjes measures $\d\mu_{jk}(\lambda)$, $\d\mu_{kk}(\lambda)$, $\d{\rm
+  Re}\,\mu_{jk}(\lambda)$, and $\d{\rm Im}\,\mu_{jk}(\lambda)$. Then, for all $0<\varepsilon<\infty$,
+there exist Radon--Stieltjes integral representations for the
+components $\kappa^*_{jk}$ and $\alpha^*_{jk}$, $j,k=1,\ldots,d$, of the effective
+tensors $\bkappa^*$ and $\balpha^*$ defined in equation
+\eqref{eq:Eff_Diffusivity}, given by          
+%
+\begin{align}\label{eq:Integral_Rep_kappa*}
+  \kappa^*_{jk}=\varepsilon\left(\delta_{jk}+\int_{-\infty}^\infty\frac{\d{\rm Re}\,\mu_{jk}(\lambda)}{\varepsilon^2+\lambda^2}\right),
+  %\kappa^*_{kk}=\varepsilon\left(1+\int_{-\infty}^\infty\frac{\d\mu_{kk}(\lambda)}{\varepsilon^2+\lambda^2}\right),
+  %\quad
+  %\kappa^*_{jk}=\varepsilon\int_{-\infty}^\infty\frac{\d{\rm Re}\,\mu_{jk}(\lambda)}{\varepsilon^2+\lambda^2}\,,
+  \qquad
+  \alpha^*_{jk}=\int_{-\infty}^\infty\frac{\lambda\,\d{\rm Im}\,\mu_{jk}(\lambda)}{\varepsilon^2+\lambda^2}\,.       
+  %\quad  j\neq k=1,\ldots,d,
+\end{align}
+%
+Here, the domain of integration $I$ is determined by the spectrum
+$\Sigma(\Ab)$ of the operator $\Ab$, where $I\subseteq[-\|\Ab\|,\|\Ab\|]$ and
+$\|\Ab\|\leq\|\Hb\|<\infty$ in the case of a time-independent velocity field
+$\vec{u}$ \cite{Reed-1980}.     
+%
+\end{theorem}
+
+\textbf{Proof of Theorem \ref{thm:Integral_Reps}.}\hspace{1ex}
+%
+We first note that from $\vec{\nabla}\chi_k\in\Fs$ we have 
+$\vec{\nabla}\chi_k=\bGamma\vec{\nabla}\chi_k$, so that $\alpha^*_{jk}$ in equation
+\eqref{eq:Eff_Diffusivity} can re-expressed as
+$\alpha^*_{jk}=\langle\Sb\vec{\nabla}\chi_j\cdot\vec{\nabla}\chi_k\rangle=\langle\bGamma\Sb\bGamma\vec{\nabla}\chi_j\cdot\vec{\nabla}\chi_k\rangle  
+=\langle\Ab\vec{\nabla}\chi_j\cdot\vec{\nabla}\chi_k\rangle$, where we have used that $\bGamma$ is
+self-adjoint on $\Fs$. From this and \eqref{eq:Resolvent_Rep},
+equation \eqref{eq:Eff_Diffusivity} can be rewritten as
+%
+\begin{align}\label{eq:Eff_Diff_Resolvent}
+ \kappa^*_{jk}=\varepsilon\left(\delta_{jk}+\langle(\varepsilon\Ib+\Ab)^{-1}\vec{g}_j\cdot(\varepsilon\Ib+\Ab)^{-1}\vec{g}_k\rangle\right), \quad
+ \alpha^*_{jk}=\langle\Ab(\varepsilon\Ib+\Ab)^{-1}\vec{g}_j\cdot(\varepsilon\Ib+\Ab)^{-1}\vec{g}_k\rangle,
+% \quad
+% \vec{g}_j=-\bGamma\Hb\vec{e}_j
+\end{align}
+%
+where $\vec{g}_k=-\bGamma\Hb\vec{e}_k$. The integral representations
+for $\kappa^*_{jk}$ and $\alpha^*_{jk}$ in \eqref{eq:Integral_Rep_kappa*} follow
+from equations \eqref{eq:Spectral_Theorem} and
+\eqref{eq:Eff_Diff_Resolvent}, and the symmetries
+$\langle\vec{\nabla}\chi_j\cdot\vec{\nabla}\chi_k\rangle=\langle\vec{\nabla}\chi_k\cdot\vec{\nabla}\chi_j\rangle$ and 
+$\langle\Ab\vec{\nabla}\chi_j\cdot\vec{\nabla}\chi_k\rangle=\langle\vec{\nabla}\chi_k\cdot\Ab\vec{\nabla}\chi_j\rangle$, since
+$\vec{\nabla}\chi_k$ and $\Ab\vec{\nabla}\chi_k$ are real-valued. We prove the
+validity of \eqref{eq:Integral_Rep_kappa*} by showing that the
+conditions of the spectral theorem of equation
+\eqref{eq:Spectral_Theorem} are satisfied for the functionals in
+\eqref{eq:Eff_Diff_Resolvent} and then employing these symmetries.    
+
+
+
+
+
+We first show that $\vec{g}_k\in\Fs$ for
+all $k=1,\ldots,d$. Indeed, the orthogonality of the
+projection operators $\bGamma_\times=\bGamma$ and $\bGamma_0$ defined in
+equation \eqref{eq:Helmholtz} implies that the vector field
+$\vec{g}_k(t,\cdot)=\bGamma\Hb(t,\cdot)\vec{e}_k$ is curl-free and mean-zero
+for each $t\in\Tc$ fixed, and by equation \eqref{eq:Bounded_H} 
+we have $\|\vec{g}_k\|\leq\|\Hb\|<\infty$. This and the periodicity of $\Hb$ implies
+that $\vec{g}_k(t,\cdot)\in\Hs_\times$, and by Fubini's theorem \cite{Folland:99}
+we have $\langle\vec{g}_k\rangle=0$.  By the uniform boundedness of $\bGamma$ on
+$\Hs_{\,\Vc}$ and equation \eqref{eq:Bounded_H}, we also have
+\cite{Folland:99} that
+$\|\Tb\vec{g}_k\|=\|\Tb\bGamma\Hb\vec{e}_k\|=\|\bGamma\Tb\Hb\vec{e}_k\|\leq\|\Tb\Hb\|<\infty$.   
+Therefore $\vec{g}_k(\cdot,\vec{x}),\Tb\vec{g}_k(\cdot,\vec{x})\in\Hs_{\,\Tc}$ for each
+$\vec{x}\in\Vc$ fixed, which implies that
+$\vec{g}_k(\cdot,\vec{x})\in\Fs_{\Tc}$. Consequently,  $\vec{g}_k\in\Fs$ for
+all $k=1,\ldots,d$.
+
+
+
+Consider the representation for $\kappa^*_{jk}$ in
+\eqref{eq:Eff_Diff_Resolvent} and define the function
+$F(z)=(\varepsilon+z)^{-1}$ so that, formally,
+$\kappa^*_{jk}=\varepsilon(\delta_{jk}+\langle F(\Ab)\vec{g}_j\cdot F(\Ab)\vec{g}_k\rangle)$. Since
+$\vec{g}_k\in\Fs$ for all $k=1,\ldots,d$, once we establish that
+$\vec{g}_k\in\Ds(F)$, i.e. $F\in L^2(\mu_{kk})$, the integral representations
+for $\kappa^*_{jk}$, $j,k=1,\ldots,d$, in \eqref{eq:Integral_Rep_kappa*} follow
+from the second formula in \eqref{eq:Spectral_Theorem} with
+$F(z)=G(z)=(\varepsilon+z)^{-1}$, $\vec{\xi}=\vec{g}_j$, and
+$\vec{\zeta}=\vec{g}_k$. Since $0<\varepsilon<\infty$ and 
+$z\in(-\I\infty,\I\infty)$ for the anti-symmetric operator $\Ab$, the function
+$|F(z)|^2=|\varepsilon+z|^{-2}$ is bounded, and the validity of $F\in L^2(\mu_{kk})$ is
+an immediate consequence of the boundedness of the (positive) measure
+mass $\mu^0_{kk}=\int\d\mu_{kk}(z)<\infty$. The validity of $\mu^0_{kk}<\infty$, in turn,
+is a consequence of the fact that the function
+$\mu_{jk}(z)=\langle\Qb(z)\vec{g}_j\cdot\vec{g}_k\rangle$ is of \emph{bounded
+  variation} when $\vec{g}_j,\vec{g}_k\in\Fs$, hence
+$|\mu^0_{jk}|<\infty$ for all $j,k=1,\ldots,d$ \cite{Stone:64}. We have therefore
+established that $\vec{g}_k\in\Ds(F)$ for all $k=1,\ldots,d$.     
+
+
+
+
+Before we employ the symmetry
+$\langle\vec{\nabla}\chi_j\cdot\vec{\nabla}\chi_k\rangle=\langle\vec{\nabla}\chi_k\cdot\vec{\nabla}\chi_j\rangle$ to derive the 
+integral representations for $\kappa^*_{kk}$ and $\kappa^*_{jk}$ in
+\eqref{eq:Integral_Rep_kappa*},  we note that the condition
+$\mu^0_{kk}<\infty$ implies that $\vec{g}_k\in\Ds(F)$ for the function 
+$F(z)=1$. This leads to an explicit representation of the mass
+$\mu^0_{jk}$ in terms of $\bGamma$ and $\Hb$, and provides a bound for
+$|\mu^0_{jk}|$. Indeed, taking $F(z)=1$ $(F(\Ab)=\Ib)$, 
+$\vec{\xi}=\vec{g}_j$, and $\vec{\zeta}=\vec{g}_k$ in the first formula of
+equation \eqref{eq:Spectral_Theorem}, the self-adjointness of $\bGamma$
+and $\bGamma^{\,2}=\bGamma$ on $\Fs$ implies that   
+%
+\begin{align}\label{eq:Mass}
+  \mu^0_{jk}=\int_I\d\mu_{jk}(z)
+        =\int_I\d\langle\Qb(z)\vec{g}_j,\vec{g}_k\rangle
+        =\langle\vec{g}_j,\vec{g}_k\rangle
+        =\langle\bGamma\Hb\vec{e}_j\cdot\bGamma\Hb\vec{e}_k\rangle 
+        =\langle\Hb^T\bGamma\Hb\vec{e}_j\cdot\vec{e}_k\rangle.     
+\end{align}
+%
+This and equation \eqref{eq:Bounded_H} imply that
+$|\mu^0_{jk}|\leq\|\Hb\|^2<\infty$ for all $j,k=1,\ldots,d$.  
+
+
+
+
+
+We now derive the integral representations for $\kappa^*_{kk}$ and
+$\kappa^*_{jk}$, $j\neq k=1,\ldots,d$, displayed in
+\eqref{eq:Integral_Rep_kappa*}. For the function $F(z)=(\varepsilon+z)^{-1}$, we
+have established above that $\vec{g}_k\in\Ds(F)$ for all
+$k=1,\ldots,d$, so that
+$\kappa^*_{jk}=\varepsilon(\delta_{jk}+\langle F(\Ab)\vec{g}_j\cdot F(\Ab)\vec{g}_k\rangle)$ is well defined
+in terms of a Radon--Stieltjes integral. Specifically, the second
+formula in equation \eqref{eq:Spectral_Theorem} with
+$F(z)=G(z)=(\varepsilon+z)^{-1}$, $\vec{\xi}=\vec{g}_j$, $\vec{\zeta}=\vec{g}_k$,
+$\d\mu_{\xi\zeta}(z):=\d\mu_{jk}(z)=\d\langle\Qb(z)\vec{g}_j\cdot\vec{g}_k\rangle
+=\d\langle\Qb_2(\text{Im}(z))\vec{g}_j\cdot\vec{g}_k\rangle$, and $z=\I\lambda$
+yields         
+%
+\begin{align}\label{eq:Int_kappa*_jk}
+  \kappa^*_{jk}/\varepsilon-\delta_{jk}
+%  \langle F(\Ab)\vec{g}_j\cdot F(\Ab)\vec{g}_k\rangle
+               =\int_I\frac{\d\mu_{jk}(z)}{\overline{(\varepsilon+z)}(\varepsilon+z)}
+               =\int_I\frac{\d\mu_{jk}(z)}{\varepsilon^2+|z|^2}
+               =\int_{-\I\infty}^{\I\infty}\frac{\d\mu_{jk}(\text{Im}(z))}{\varepsilon^2+|\text{Im}(z)|^2}
+               =\int_{-\infty}^\infty\frac{\d\mu_{jk}(\lambda)}{\varepsilon^2+\lambda^2}.
+\end{align}
+%
+Equation \eqref{eq:Int_kappa*_jk} establishes the integral
+representation for $\kappa^*_{kk}$ in \eqref{eq:Integral_Rep_kappa*}, since
+$\mu_{kk}(z)=\|\Qb(z)\vec{g}_k\|^2$ is a positive function so that
+$\text{Re}\,\mu_{kk}(z)=\mu_{kk}(z)$ and
+$\d\mu_{kk}(z)=\d\|\Qb(z)\vec{g}_k\|^2$ is a \emph{positive 
+  measure}. However for $j\neq k$, the function
+$\mu_{jk}(z)=\langle\Qb(z)\vec{g}_j\cdot\vec{g}_k\rangle$ is complex-valued, with    
+$\mu_{kj}(z)=\overline{\mu}_{jk}(z)$, so that $\d\mu_{jk}(z)$ is a
+\emph{complex measure}. Since the vector field $\vec{\nabla}\chi_k$ is
+real-valued, the 
+functional $\langle\vec{\nabla}\chi_j\cdot\vec{\nabla}\chi_k\rangle=\langle F(\Ab)\vec{g}_j\cdot F(\Ab)\vec{g}_k\rangle$
+is also real-valued, which implies that the final integral in
+\eqref{eq:Int_kappa*_jk} must be representable in terms of a
+\emph{signed measure} for $j\neq k$. The validity of this follows from the
+symmetry $\langle\vec{\nabla}\chi_j\cdot\vec{\nabla}\chi_k\rangle=\langle\vec{\nabla}\chi_k\cdot\vec{\nabla}\chi_j\rangle$, so that
+$2\langle\vec{\nabla}\chi_j\cdot\vec{\nabla}\chi_k\rangle=\langle\vec{\nabla}\chi_j\cdot\vec{\nabla}\chi_k\rangle+\langle\vec{\nabla}\chi_k\cdot\vec{\nabla}\chi_j\rangle$. Therefore, since
+$\mu_{kj}(\lambda)=\overline{\mu}_{jk}(\lambda)$, by the linearity properties of
+Radon--Stieltjes integrals \cite{Stone:64}, for $j\neq k=1,\ldots,d$, equation
+\eqref{eq:Int_kappa*_jk} becomes 
+% 
+\begin{align}\label{eq:Int_kappa*_jk_Re}
+  \kappa^*_{jk}/\varepsilon-\delta_{jk}
+  %2\langle F(\Ab)\vec{g}_j\cdot F(\Ab)\vec{g}_k\rangle
+      %=\int_{-\infty}^\infty\frac{\d\mu_{jk}(\lambda)}{\varepsilon^2+\lambda^2}+\int_{-\infty}^\infty\frac{\d\overline{\mu}_{jk}(\lambda)}{\varepsilon^2+\lambda^2}           
+       =\frac{1}{2}\int_{-\infty}^\infty\frac{\d(\mu_{jk}(\lambda)+\overline{\mu}_{jk}(\lambda))}{\varepsilon^2+\lambda^2}
+       =\int_{-\infty}^\infty\frac{\d\text{Re}\,\mu_{jk}(\lambda)}{\varepsilon^2+\lambda^2}\,,            
+\end{align}
+%
+which establishes the integral representation for $\kappa^*_{jk}$ in
+\eqref{eq:Integral_Rep_kappa*} for $j\neq k$. As anticipated, the
+integral representation for $\kappa^*_{jk}$ in equation
+\eqref{eq:Integral_Rep_kappa*} satisfies $\kappa^*_{kj}=\kappa^*_{jk}$, since
+$\mu_{kj}(\lambda)=\overline{\mu}_{jk}(\lambda)$ implies that
+$\text{Re}\,\mu_{kj}(\lambda)=\text{Re}\,\mu_{jk}(\lambda)$.
+
+
+
+
+
+We now derive the integral representation for $\alpha^*_{jk}$, $j\neq k=1,\ldots,d$,
+displayed in equation \eqref{eq:Integral_Rep_kappa*}. Consider the
+representation for $\alpha^*_{jk}$ in \eqref{eq:Eff_Diff_Resolvent} and
+define the functions $F(z)=z(\varepsilon+z)^{-1}$ and $G(z)=(\varepsilon+z)^{-1}$ so that,
+formally, $\alpha^*_{jk}=\langle F(\Ab)\vec{g}_j\cdot G(\Ab)\vec{g}_k\rangle$. We have
+already established that $\vec{g}_k\in\Ds(G)$ for all
+$k=1,\ldots,d$. Since $z=\I\lambda$ and $\lambda,\varepsilon\in\mathbb{R}$, we have that the
+function $|F(z)|^2=\lambda^2(\varepsilon^2+\lambda^2)^{-1}<1$ for all $0<\varepsilon<\infty$.  By equations
+\eqref{eq:Bounded_H} and \eqref{eq:Mass}, the positive measure
+$\d\mu_{kk}$ has bounded mass $\mu^0_{kk}\leq\|\Hb\|^2<\infty$, which implies that
+$F\in L^2(\mu_{kk})$ hence $\vec{g}_k\in\Ds(F)$ for all
+$k=1,\ldots,d$. Consequently, the functional $\alpha^*_{jk}=\langle F(\Ab)\vec{g}_j\cdot
+G(\Ab)\vec{g}_k\rangle$ has a well defined 
+meaning in terms of a Radon-Stieltjes integral. Specifically, the
+second formula in equation \eqref{eq:Spectral_Theorem} with
+$F(z)=z(\varepsilon+z)^{-1}$, $G(z)=(\varepsilon+z)^{-1}$, $\vec{\xi}=\vec{g}_j$,
+$\vec{\zeta}=\vec{g}_k$, $\d\mu_{\xi\zeta}(z):=\d\mu_{jk}(z)$ defined as in equation
+\eqref{eq:Int_kappa*_jk}, 
+%$$:=\d\mu_{jk}(z)=\d\langle\Qb(z)\vec{g}_j\cdot\vec{g}_k\rangle
+%=\d\langle\Qb_1(0)\Qb_2(\text{Im}(z))\vec{g}_j\cdot\vec{g}_k\rangle$,
+and $z=\I\lambda$ yields          
+%
+\begin{align}\label{eq:Int_alpha*_jk}
+  \alpha^*_{jk}
+  %=\langle F(\Ab)\vec{g}_j\cdot G(\Ab)\vec{g}_k\rangle
+     %=\int_I\frac{\overline{z}\,\d\mu_{jk}(z)}{(\varepsilon+z)\overline{(\varepsilon+z)}}
+     =\int_I\frac{\overline{z}\,\d\mu_{jk}(z)}{\varepsilon^2+|z|^2}
+     =\int_{-\I\infty}^{\I\infty}\frac{-\I\,\text{Im}(z)\d\mu_{jk}(\text{Im}(z))}{\varepsilon^2+|\text{Im}(z)|^2}
+     =\int_{-\infty}^\infty\frac{-\I\lambda\,\d\mu_{jk}(\lambda)}{\varepsilon^2+\lambda^2}\,.
+\end{align}
+%
+
+
+
+
+Similar to the derivation of the integral representation for
+$\kappa^*_{jk}$ in \eqref{eq:Int_kappa*_jk_Re} when $j\neq k$, we use that
+$\alpha^*_{jk}=\langle\Ab\vec{\nabla}\chi_j\cdot\vec{\nabla}\chi_k\rangle=\langle
+F(\Ab)\vec{g}_j\cdot G(\Ab)\vec{g}_k\rangle$ is real-valued. This implies that we
+have the symmetry
+$\langle\Ab\vec{\nabla}\chi_j\cdot\vec{\nabla}\chi_k\rangle=\langle\vec{\nabla}\chi_k\cdot\Ab\vec{\nabla}\chi_j\rangle$, so that
+$2\langle\Ab\vec{\nabla}\chi_j\cdot\vec{\nabla}\chi_k\rangle=\langle\Ab\vec{\nabla}\chi_j\cdot\vec{\nabla}\chi_k\rangle+\langle\vec{\nabla}\chi_k\cdot\Ab\vec{\nabla}\chi_j\rangle$.
+This, equation \eqref{eq:Int_alpha*_jk},
+$\mu_{kj}(z)=\overline{\mu}_{jk}(z)$, $z=\I\lambda$, and the
+linearity properties of Radon--Stieltjes integrals \cite{Stone:64}
+imply that 
+% 
+\begin{align}\label{eq:Int_kappa*_jk_Im}
+  \alpha^*_{jk}
+  %=2\langle F(\Ab)\vec{g}_j\cdot G(\Ab)\vec{g}_k\rangle
+      %=\int_{-\infty}^\infty\frac{\d\mu_{jk}(\lambda)}{\varepsilon^2+\lambda^2}+\int_{-\infty}^\infty\frac{\d\overline{\mu}_{jk}(\lambda)}{\varepsilon^2+\lambda^2}           
+       =\frac{1}{2}\int_{-\infty}^\infty\frac{\lambda\,\d(\I\,[\overline{\mu}_{jk}(\lambda)-\mu_{jk}(\lambda)])}{\varepsilon^2+\lambda^2}
+       =\int_{-\infty}^\infty\frac{\lambda\,\d\text{Im}\,\mu_{jk}(\lambda)}{\varepsilon^2+\lambda^2}\,,            
+\end{align}
+%
+which establishes the integral representation for $\alpha^*_{jk}$ in
+\eqref{eq:Integral_Rep_kappa*}. As anticipated, the integral
+representation for $\alpha^*_{jk}$ in equation
+\eqref{eq:Integral_Rep_kappa*} satisfies $\alpha^*_{kj}=-\alpha^*_{jk}$, since
+$\mu_{kj}(\lambda)=\overline{\mu}_{jk}(\lambda)$ implies that
+$\text{Im}\,\mu_{kj}(\lambda)=-\text{Im}\,\mu_{jk}(\lambda)$. Moreover, since
+$\mu_{kk}(\lambda)$ is real-valued so that $\text{Im}\,\mu_{kk}(\lambda)\equiv0$, we also
+have $\alpha^*_{kk}=0$.   
+
+
+
+We have already discussed that the domain of integration $I$ of the
+integral representations in \eqref{eq:Spectral_Theorem} are determined
+by the spectrum $\Sigma(\Nb)$ of the maximal normal operator $\Nb$. Hence,
+the domain of integration in equation \eqref{eq:Integral_Rep_kappa*}
+is determined by the spectrum $\Sigma(\Ab)$ of the operator
+$\Ab$. Although, we were able to take $I\subseteq(-\infty,\infty)$ in
+\eqref{eq:Integral_Rep_kappa*} because of the properties of the
+functions $F(z)$, $G(z)$, and $\mu_{jk}(z)$ underlying these integral
+representations (see equations \eqref{eq:Int_kappa*_jk} and
+\eqref{eq:Int_alpha*_jk}). Since the spectral radius of the normal
+operator $\Ab$ is given by its norm $\|\Ab\|$ \cite{Reed-1980}, $I$ can
+be an unbounded set in the case of a time-dependent velocity field
+$\vec{u}$ and $I\subseteq[-\|\Ab\|,\|\Ab\|]$ with $\|\Ab\|\leq\|\Hb\|<\infty$ in the case of a
+time-independent velocity field. This concludes our proof of Theorem
+\ref{thm:Integral_Reps} $\Box$.    
+
+
+
+
+
+We now discuss an important corollary of Theorem
+\ref{thm:Integral_Reps} that provides integral
+representations for $\bkappa^*$ and $\balpha^*$ in terms of an
+anti-symmetric operator $A$, which acts on \emph{scalar-valued}
+functions. This formulation
+\cite{Pavliotis:PHD_Thesis,Bhattacharya:AAP:1999:951} of the effective
+parameter problem for $\Kbc^*$ has a more practical numerical
+implementation than that involving the operator $\Ab$, which acts on
+\emph{vector-valued} functions, and will be used in Section
+\ref{sec:Num_Results} to compute the effective diffusivity tensor
+$\Kbc^*$ for model flows. For the case of a time-independent,
+continuously differentiable velocity field
+$\vec{u}$, the operator $A$ is compact on a Sobolev space $\Hc^1_{\Vc}$
+\cite{Bhattacharya:AAP:1999:951}, and a resolvent formula for $\chi_j$
+involving $A$ has led to \cite{Pavliotis:PHD_Thesis} a discrete 
+version of the integral representation for $\balpha^*$ displayed in 
+\eqref{eq:Integral_Rep_kappa*}. We now show that the conditions of
+Theorem \ref{thm:Integral_Reps} can be modified slightly to generalize
+this result for $\balpha^*$ to the case of a time-dependent velocity
+field $\vec{u}\in\otimes_{n=1}^d(\tilde{\As}_{\Tc}\otimes L^2(\Vc))$, as well as
+extending the result to $\bkappa^*$. The details are as follows.     
+
+
+
+
+Consider the Hilbert
+%space
+spaces $\Hc_{\Tc}$ and $\Hc_{\Vc}$
+%$\Hc_{\Vc}=\{f\in L^2(\Vc) \ | \ f(0)=f(\vec{V})\}$
+(over the complex field $\mathbb{C}$) of Lebesgue measurable, square
+integrable,
+%$\Vc$--periodic,
+scalar-valued functions,
+which are $\Tc$--periodic and $\Vc$--periodic, respectively, as well
+as their direct product $\Hc_{\Tc\Vc}$,  
+%
+\begin{align}\label{eq:Hilbert_Spaces_scalar}
+  \Hc_{\Tc\Vc}=\Hc_{\,\Tc}\otimes\Hc_{\,\Vc}, \quad
+  \Hc_{\Tc}=\{f\in L^2(\Vc) \ | \ f(0)=f(T)\}, \quad
+  \Hc_{\Vc}=\{f\in L^2(\Vc) \ | \ f(0)=f(\vec{V})\},
+\end{align}
+%
+which are analogous to the Hilbert spaces $\Hs_{\Tc}$, $\Hs_{\Vc}$,
+and $\Hs_{\Tc\Vc}$ of vector-valued functions defined in equation
+\eqref{eq:Hilbert_Spaces}. Denote by $\langle\cdot,\cdot\rangle$ the sesquilinear
+inner-product associated with the Hilbert space $\Hc_{\Tc\Vc}$, which
+is defined by $\langle f,h\rangle=\langle\overline{f}\, h\rangle$ with
+$\langle f,h\rangle=\overline{\langle h,f\rangle}$. Here, $\langle\cdot\rangle$ still denotes space-time
+averaging over $\Tc\times\Vc$ and we denote by $\|\cdot\|$ the norm induced by
+the $\Hc_{\Tc\Vc}$-inner-product. Analogous to the Hilbert space
+$\Hs_\times\subset\Hs_{\Vc}$ defined in equation \eqref{eq:Helmholtz}, we
+consider the Sobolev space $\Hc^1_{\Vc}\subset\Hc_{\Vc}$     
+% 
+\begin{align}\label{eq:Sobolev}
+  \Hc^1_{\Vc}=\{f\in \Hc_{\Vc} \; | \; \langle|\vec{\nabla}f|^2\rangle_{\Vc}<\infty\}, 
+\end{align}
+%
+which is also a Hilbert space \cite{Folland:95}. Here, $\langle\cdot\rangle_{\Vc}$
+denotes spatial averaging over $\Vc$. Finally, consider the 
+function space $\Fc$ with inner-product $\langle\cdot,\cdot\rangle_1$
+%
+\begin{align}\label{eq:Function_Space_Scalar}
+  \Fc=\{f\in\tilde{\As}_{\Tc}\otimes\Hc^1_{\Vc} \; | \; \langle f\rangle=0\},  \qquad
+  \langle f,g\rangle_1=\left\langle\overline{\vec{\nabla}f}\cdot\vec{\nabla}g\right\rangle,
+\end{align}
+%
+which is analogous to $\Fs$ in \eqref{eq:Function_Space} and involves
+the space $\tilde{\As}_{\Tc}$ of absolutely continuous,
+$\Tc$--periodic, scalar-valued functions defined in equation \eqref{eq:AC_BC}.    
+%which is a dense subset of the Hilbert space $\Hc_{\Tc}\otimes\Hc^1_{\Vc}$,
+We denote by $\|\cdot\|_1$ the norm induced by the $\Fc$-inner-product,
+where $h\in\Fc$ implies that $\|\partial_th\|_1<\infty$ and $\|h\|_1<\infty$. In the
+case of a time-independent velocity field $\vec{u}$ we set
+$\tilde{\As}_{\Tc}=\emptyset$ in \eqref{eq:Function_Space_Scalar}, so that
+$h\in\Fc$ implies $h\in\Hc^1_{\Vc}$ with $\langle h\rangle_{\Vc}=0$.
+
+
+
+
+
+In terms of the $\Fc$-inner-product $\langle\cdot,\cdot\rangle_1$, the components
+$\kappa^*_{jk}$ and $\alpha^*_{jk}$, $j,k=1,\ldots,d$, of the symmetric $\bkappa^*$
+and anti-symmetric $\balpha^*$ parts of the effective diffusivity
+tensor $\Kbc^*$ are given by the following functionals 
+\cite{Pavliotis:PHD_Thesis},   
+%
+\begin{align}\label{eq:Eff_Diffusivity_Sobolev}
+  \kappa^*_{jk}=\varepsilon(\delta_{jk}+\langle\chi_j,\chi_k\rangle_1), \qquad
+  \alpha^*_{jk}=\langle A\chi_j,\chi_k\rangle_1, \quad
+  A=\Delta^{-1}(\vec{u}\cdot\vec{\nabla}-\partial_t),
+\end{align}
+%
+which are analogous to that in \eqref{eq:Eff_Diffusivity}.
+The formulas for $\kappa^*_{jk}$ and $\alpha^*_{jk}$ in equation
+\eqref{eq:Eff_Diffusivity_Sobolev} follow \cite{Pavliotis:PHD_Thesis}
+from $\Kc^*_{jk}=\varepsilon\delta_{jk}+\langle u_j\chi_k\rangle$ in
+\eqref{eq:Eff_Diffusivity_Appendix} and the cell problem
+$-\varepsilon\Delta\chi_j-(\vec{u}\cdot\vec{\nabla}-\partial_t)\chi_j=u_j$ in equation
+\eqref{eq:Cell_Prob_Appendix}: 
+%
+\begin{align}
+  \langle u_j\chi_k\rangle=\langle\Delta\Delta^{-1}u_j\chi_k\rangle
+       =-\langle\vec{\nabla}\Delta^{-1}u_j\cdot\vec{\nabla}\chi_k\rangle
+       =-\langle\Delta^{-1}u_j,\chi_k\rangle_1
+       =\varepsilon\langle\chi_j,\chi_k\rangle_1+\langle A\chi_j,\chi_k\rangle_1,
+\end{align}
+%
+where the periodicity of $u_j$ and $\chi_k$ was used in the second equality.
+Applying the operator $-(\Delta^{-1})$ to both sides of equation
+\eqref{eq:Cell_Prob_Appendix}, we obtain the following resolvent
+formula for $\chi_j$ involving $A$ in \eqref{eq:Eff_Diffusivity_Sobolev},
+which is analogous to equation \eqref{eq:Resolvent_Rep},   
+%
+\begin{align}\label{eq:Resolvent_Rep_Scalar}
+  \chi_j=(\varepsilon+A)^{-1}g_j, \qquad 
+  %A=\Delta^{-1}(\vec{u}\cdot\vec{\nabla}-\partial_t), \quad
+  g_j=-\Delta^{-1}u_j.
+\end{align}
+%
+
+
+
+In equation \eqref{eq:Anti-sym_Sobolev} of Section
+\ref{sec:Symmetries_Commute} we show that the incompressibility of
+$\vec{u}$ in \eqref{eq:incompressible} implies that the operator
+$(\Delta^{-1})(\vec{u}\cdot\vec{\nabla})$ is anti-symmetric on
+$\tilde{\As}_{\Tc}\otimes\Hc^1_{\Vc}$ \cite{Bhattacharya:AAP:1999:951}.
+Moreover, for $\vec{u}\in\otimes_{n=1}^d\tilde{\As}_{\Tc}\otimes\Hc_{\Vc}$, we also have that 
+it is a bounded operator on $\tilde{\As}_{\Tc}\otimes\Hc^1_{\Vc}$. Indeed,
+since $\Delta=\vec{\nabla}\cdot\vec{\nabla}$, we have 
+%$\|(\Delta^{-1})h\|_1^2=|\langle\vec{\nabla}(\Delta^{-1})h\cdot\vec{\nabla}(\Delta^{-1})h\rangle|=|\langle[(\Delta^{-1})h]\,h\rangle|$,
+%
+\begin{align}\label{eq:H1_L2}
+  \|(\Delta^{-1})h\|_1^2=\langle\vec{\nabla}(\Delta^{-1})h\cdot\vec{\nabla}(\Delta^{-1})h\rangle=\langle[(-\Delta^{-1})h]\,h\rangle,
+  \ \ \forall \,h\in\Fc,
+\end{align}
+%
+which implies that
+%
+\begin{align}\label{eq:Bounded_A_Sobolov}
+  \|(\Delta^{-1})(\vec{u}\cdot\vec{\nabla})h\|_1^2
+    %=|\langle\vec{\nabla}(\Delta^{-1})(\vec{u}\cdot\vec{\nabla})h
+    %   \cdot\vec{\nabla}(\Delta^{-1})(\vec{u}\cdot\vec{\nabla})h \rangle|^2
+    =|\langle[(\Delta^{-1})(\vec{u}\cdot\vec{\nabla})h]\, (\vec{u}\cdot\vec{\nabla})h \rangle|
+   \leq\|(\Delta^{-1})\|\,\|\vec{u}\|^2\|h\|_1^2
+   <\infty,
+\end{align}
+%
+where we have used the simplified notation $\|\vec{u}\|^2=\sum_j\|u_j\|^2$
+and the fact \cite{Stakgold:BVP:2000} that $(\Delta^{-1})$ is compact,
+hence bounded on $\tilde{\As}_{\Tc}\otimes\Hc^1_{\Vc}$. Since
+$(\Delta^{-1})(\vec{u}\cdot\vec{\nabla})$ is bounded anti-symmetric operator on
+$\tilde{\As}_{\Tc}\otimes\Hc^1_{\Vc}$, the operator
+$\I(\Delta^{-1})(\vec{u}\cdot\vec{\nabla})$ is self-adjoint on
+$\tilde{\As}_{\Tc}\otimes\Hc^1_{\Vc}$. We have already
+established that $\I\partial_t$ is a self-adjoint operator on the function
+space $\tilde{\As}_{\Tc}$ and that $\I\partial_t$ and $(\Delta^{-1})$ commute on
+$\tilde{\As}_{\Tc}\otimes\Hc^1_{\Vc}$, which implies that $\I(\Delta^{-1})\partial_t$ is
+self-adjoint on $\tilde{\As}_{\Tc}\otimes\Hc^1_{\Vc}$. It is now clear that
+$M=-\I A$, with $A=(\Delta^{-1})(\vec{u}\cdot\vec{\nabla}-\partial_t)$ is self-adjoint on
+$\tilde{\As}_{\Tc}\otimes\Hc^1_{\Vc}$. Finally, since an operator is
+self-adjoint if and only if it is a maximal normal operator
+\cite{Stone:64}, we have that $A$ is a maximal normal operator on
+the function space $\Fc$. Using this alternative Hilbert space
+formulation of the effective parameter problem for $\Kbc^*$, we have
+the following corollary of Theorem \ref{thm:Integral_Reps}.
+%
+\begin{corollary}\label{cor:Integral_Reps}
+%
+Let $z=\I\lambda$, $g_j=-(\Delta^{-1})u_j$ be defined as in
+\eqref{eq:Resolvent_Rep_Scalar}, and $Q(z)=Q_2({\rm Im}(z))=Q_2(\lambda)$ be
+the complex resolution of the identity associated with the maximal
+anti-symmetric operator $A$ defined in
+\eqref{eq:Eff_Diffusivity_Sobolev}, with domain $\Fc$ defined in 
+\eqref{eq:Function_Space_Scalar}.  Define the matrix-valued function
+$\bmu(\lambda)$ with complex-valued off-diagonal components
+$\mu_{jk}(\lambda)=\langle Q_2(\lambda)g_j,g_k\rangle_1$ for $j\neq k=1,\ldots,d$, with
+$\mu_{kj}=\overline{\mu}_{jk}$, and positive diagonal components
+$\mu_{kk}(\lambda)=\|Q_2(\lambda)g_k\|_1^2$.  Moreover, consider the real-valued
+functions ${\rm Re}\,\mu_{jk}(\lambda)$ and ${\rm Im}\,\mu_{jk}(\lambda)$ defined in
+\eqref{eq:Fns_Bounded_Var}. Corresponding to each of these functions
+of bounded variation, consider the associated Radon--Stieltjes
+measures $\d\mu_{jk}(\lambda)$, $\d\mu_{kk}(\lambda)$, $\d{\rm Re}\,\mu_{jk}(\lambda)$, and
+$\d{\rm Im}\,\mu_{jk}(\lambda)$. Then, for all $0<\varepsilon<\infty$, the Radon--Stieltjes
+integral representations in \eqref{eq:Integral_Rep_kappa*} hold for
+the functionals $\kappa^*_{jk}$ and $\alpha^*_{jk}$ defined in equation
+\eqref{eq:Eff_Diffusivity_Sobolev}. The domain of integration $I$ is
+determined by the spectrum $\Sigma(A)$ of the operator $A$, where
+$I\subseteq[-\|A\|,\|A\|]$ and $\|A\|\leq\|(\Delta^{-1})\|\|\vec{u}\|\|\vec{\nabla}\|_1<\infty$ in the case
+of a time-independent velocity field $\vec{u}$.
+% 
+\end{corollary}
+%
+
+
+
+\textbf{Proof of Corollary \ref{cor:Integral_Reps}.}\hspace{1ex}
+%
+From equations \eqref{eq:Eff_Diffusivity_Sobolev} and
+\eqref{eq:Resolvent_Rep_Scalar} we have the following analogue of
+\eqref{eq:Eff_Diff_Resolvent}
+%
+\begin{align}\label{eq:Eff_Diff_Resolvent_Sobelov}
+ \kappa^*_{jk}=\varepsilon\left(\delta_{jk}+\langle(\varepsilon+A)^{-1}g_j,(\varepsilon+A)^{-1}g_k\rangle_1\right), \quad
+ \alpha^*_{jk}=\langle A(\varepsilon+A)^{-1}g_j,(\varepsilon+A)^{-1}g_k\rangle_1,
+\end{align}
+%
+where $g_j=-(\Delta^{-1})u_j$. By the proof of Theorem
+\ref{thm:Integral_Reps} and the properties
+$\chi_j,A\chi_j:\mathbb{R}\times\mathbb{R}^d\to\mathbb{R}$, we need only to prove
+that $g_j\in\Fc$ for all $j=1,\ldots,d$. By equation \eqref{eq:H1_L2} and
+$\vec{u}\in\otimes_{n=1}^d\tilde{\As}_{\Tc}\otimes\Hc_{\Vc}$, for each $t\in\Tc$
+fixed, we have 
+%
+\begin{align}
+  \|g_j(t,\cdot)\|_1^2%= \|(\Delta^{-1})u_j(t,\cdot)\|_1^2
+             %=|\langle\vec{\nabla}(\Delta^{-1})u_j(t,\cdot)\cdot\vec{\nabla}(\Delta^{-1})u_j(t,\cdot)\rangle|^2
+             %=|\langle(\Delta^{-1})u_j(t,\cdot)\cdot\Delta(\Delta^{-1})u_j(t,\cdot)\rangle|^2
+             =|\langle[(\Delta^{-1})u_j(t,\cdot)]\,u_j(t,\cdot)\rangle|
+             \leq\|(\Delta^{-1})\|\,\|u_j(t,\cdot)\|^2<\infty,
+\end{align}
+%
+Similarly, since the operators $\partial_t$ and $\Delta^{-1}$ commute on
+$\tilde{\As}_{\Tc}\otimes\Hc_{\Vc}$ and $u_j(\cdot,\vec{x})\in\tilde{\As}_{\Tc}$
+for each $\vec{x}\in\Vc$ fixed, we have 
+%
+\begin{align}
+  \|\partial_tg_j(\cdot,\vec{x})\|_1=\|\partial_t(\Delta^{-1})u_j(\cdot,\vec{x})\|_1
+                    =\|(\Delta^{-1})\partial_tu_j(\cdot,\vec{x})\|_1
+                    \leq\|\Delta^{-1}\|\,\|\partial_tu_j(\cdot,\vec{x})\|^2<\infty.
+\end{align}
+%
+Finally, from equation \eqref{eq:incompressible} we have that
+$\langle u_j(\cdot,\vec{x})\rangle=0$ for each $\vec{x}\in\Vc$ fixed. Therefore, by 
+Fubini's theorem \cite{Folland:99} we have that
+$\langle g_j\rangle=0$. Consequently, $g_j\in\Fc$ for all $j=1,\ldots,d$, which 
+establishes that the integral representations in equation
+\eqref{eq:Integral_Rep_kappa*} hold for the functionals $\kappa^*_{jk}$ and
+$\alpha^*_{jk}$ defined in \eqref{eq:Eff_Diffusivity_Sobolev}. Analogous to
+\eqref{eq:Mass}, by equation \eqref{eq:H1_L2} the mass
+$\mu^0_{jk}$ of the associated measure $\d\mu_{jk}$ is given by  
+% 
+\begin{align}\label{eq:Mass_Scalar}
+  \mu^0_{jk}
+        % =\int_I\d\mu_{jk}(z)
+%         =\int_I\d\langle\Qb(z)\vec{g}_j,\vec{g}_k\rangle
+        =\langle g_j,g_k\rangle_1
+        %=\langle\vec{\nabla}(\Delta^{-1})u_j\cdot\vec{\nabla}(\Delta^{-1})u_k\rangle 
+        =\langle[(-\Delta^{-1})u_j]\,u_k\rangle,   
+\end{align}
+%
+which implies that
+$|\mu^0_{jk}|\leq\|\Delta^{-1}\|\,\|u_j\|\,\|u_k\|<\infty$.  The
+domain of integration $I$ in \eqref{eq:Integral_Rep_kappa*} is
+determined by the spectrum $\Sigma(A)$ of the operator $A$, where
+$I\subseteq[-\|A\|,\|A\|]$ and $\|A\|\leq\|(\Delta^{-1})\|\|\vec{u}\|\|\vec{\nabla}\|_1<\infty$ in the case of a
+time-independent velocity field $\vec{u}$. This concludes our proof of
+Corollary \ref{cor:Integral_Reps} $\Box$.  
+
+
+
+
+A natural question to ask is the following. Is the formulation of the
+effective parameter problem described in Theorem \ref{thm:kappa_sigma}
+equivalent to that described in Corollary \ref{cor:Integral_Reps}?
+The relationship between the two formulations is one of isometry, and is
+summarized by the following theorem.
+%
+\begin{theorem}\label{thm:Formulation_Equivalence}
+%
+The function spaces $\Fs$ and $\Fc$ defined in equations
+\eqref{eq:Function_Space} and \eqref{eq:Function_Space_Scalar} are in
+one-to-one isometric correspondence. This induces a one-to-one
+isometric correspondence between the domains $D(\Ab)$ and $D(A)$ of
+the operators $\Ab$ and $A$ defined in equations
+\eqref{eq:Resolvent_Rep} and \eqref{eq:Eff_Diffusivity_Sobolev},
+respectively. Specifically, for every $f\in D(A)$ we have
+$\vec{\nabla}f\in D(\Ab)$ and $\|Af\|_1=\|\Ab\vec{\nabla}f\|$, and conversely, for each
+$\vec{\xi}\in D(\Ab)$ there exists unique $f\in D(A)$ such that
+$\vec{\xi}=\vec{\nabla}f$  and $\|\Ab\vec{\xi}\,\|=\|Af\|_1$. Moreover, these
+operators are related by $\vec{\nabla}A=\Ab\vec{\nabla}$. The Radon--Stieltjes
+measures underlying the integral representations of Theorem
+\ref{thm:kappa_sigma} and Corollary \ref{cor:Integral_Reps} are
+equal, $\d\langle Q_2(\lambda)g_j,g_k\rangle_1=\d\langle\Qb_2(\lambda)\vec{g}_j,\vec{g}_k\rangle$,
+$j,k=1,\ldots,d$, up to null sets of measure zero, with
+$\vec{\nabla}Q_2(\lambda)=\Qb_2(\lambda)\vec{\nabla}$ (weakly) and $\vec{g}_j=\vec{\nabla}g_j$.         
+%
+\end{theorem}
+%
+
+\textbf{Proof of Theorem \ref{thm:Formulation_Equivalence}.}\hspace{1ex}
+%
+We use the formula $\vec{u}=\vec{\nabla}\cdot\Hb$ displayed in equation
+\eqref{eq:u_DH} to write the operator $A=\Delta^{-1}(\vec{u}\cdot\vec{\nabla}-\partial_t)$
+and function $g_j=-\Delta^{-1}u_j$ defined in equations
+\eqref{eq:Eff_Diffusivity_Sobolev} and \eqref{eq:Resolvent_Rep_Scalar}
+as $A=\Delta^{-1}(\vec{\nabla}\cdot\Hb\vec{\nabla}-\partial_t)$ and
+$g_j=-\Delta^{-1}\vec{\nabla}\cdot\Hb\vec{e}_j$, respectively. Using the definition
+$\bGamma=\vec{\nabla}(\Delta^{-1})\vec{\nabla}\cdot$ and the formulas
+$\vec{\nabla}\Delta^{-1}\partial_t=\bDelta^{-1}\Tb\vec{\nabla}$,
+$\vec{g}_j=-\bGamma\Hb\vec{e}_j$, and $\Ab=\bGamma\Hb-\bDelta^{-1}\Tb$
+displayed in equations \eqref{eq:Dt_T}, \eqref{eq:Resolvent_Rep}, and
+\eqref{eq:Pre_Resolvent}, respectively, we have that   
+%
+\begin{align}\label{eq:A_Ab_Relation}
+  \vec{\nabla}A=[\bGamma\Hb-\bDelta^{-1}\Tb]\vec{\nabla}=\Ab\vec{\nabla}, \qquad
+  \vec{\nabla}g_j=\vec{g}_j,
+\end{align}
+%
+and in particular $\vec{\nabla}A^n=\Ab^n\vec{\nabla}$ for all $n\in\mathbb{N}$. 
+Consequently, applying the differential opperator $\vec{\nabla}$ to both
+sides of the formula $(\varepsilon+A)\chi_j=g_j$ of
+\eqref{eq:Resolvent_Rep_Scalar}, we obtain the formula
+$(\varepsilon\Ib+\Ab)\vec{\nabla}\chi_j=\vec{g}_j$ of equation
+\eqref{eq:Pre_Resolvent}.
+
+
+
+Since the function spaces $\Fc$ and $\Fs$ differ
+only in the characterization of the spatial variable $\vec{x}$, we now
+discuss the relationship between the Hilbert spaces $\Hs_\times$ and
+$\Hc^1_{\Vc}$ defined in equations \eqref{eq:Helmholtz} and
+\eqref{eq:Sobolev}, respectively, with inner-product induced norms
+$\|\cdot\|$ and $\|\cdot\|_1$. For $f\in\Hc^1_{\Vc}\subset L^2(\Vc)$ we have 
+$\Delta^{-1}\Delta f=f$ \cite{Stakgold:BVP:2000}, which implies that
+$\bGamma\vec{\nabla}f=\vec{\nabla}f$ and
+$\|\vec{\nabla}f\|^2=\langle\vec{\nabla}f\cdot\vec{\nabla}f\rangle=\|f\|_1^2<\infty$. Consequently, for every  
+$f\in\Hc^1_{\Vc}$ we have $\vec{\nabla}f\in\Hs_\times$. Conversely,
+$\vec{\xi}\in\Hs_\times$ implies that $\vec{\xi}=\bGamma\vec{\xi}=\vec{\nabla}f$, where
+we have defined the scalar-valued function
+$f=\Delta^{-1}\vec{\nabla}\cdot\vec{\xi}\,$. Since $\vec{\xi}=\vec{\nabla}f$, the
+$\Hc^1_{\Vc}$ norm of $f$ satisfies
+$\|f\|_1^2=\langle\vec{\xi}\cdot\vec{\xi}\,\rangle=\|\vec{\xi}\,\|^2<\infty$ so that
+$f\in\Hc^1_{\Vc}$. Moreover, $f$ is uniquely determined by $\vec{\xi}$ up
+to equivalence class, since if $f_1=\Delta^{-1}\vec{\nabla}\cdot\vec{\xi}$ and
+$f_2=\Delta^{-1}\vec{\nabla}\cdot\vec{\xi}\,$ then $\bGamma\vec{\xi}=\vec{\xi}$ implies
+that $\|f_1-f_2\|_1=\|\vec{\xi}-\vec{\xi}\,\|=0$. Consequently, for every  
+$\vec{\xi}\in\Hs_\times$ there exists unique $f\in\Hc^1_{\Vc}$ such that
+$\vec{\xi}=\vec{\nabla}f$.  In summary, the Hilbert spaces $\Hc^1_{\Vc}$ and
+$\Hs_\times$ are in one-to-one isometric correspondence, which we denote by
+$\Hc^1_{\Vc}\sim\Hs_\times$. This, in turn, implies that $\Fc\sim\Fs$.  
+
+
+
+We now return to our previous notation, where $\|\cdot\|_1$ and $\|\cdot\|$
+denotes the norm induced by the $\Fc$- and $\Fs$-inner-product, 
+respectively. We demonstrate that the one-to-one isometry between
+$\Fc$ and $\Fs$ induces a one-to-one isometry between the domains
+$D(A)$ and $D(\Ab)$ of the operators $A$ and $\Ab$,
+i.e. $D(A)\sim D(\Ab)$. This, in turn, follows from another on-to-one
+isometry between the class of self-adjoint operators on $\Fc$, for
+example, and the class of resolutions of the identity. This 
+correspondence is determined directly as follows \cite{Stone:64}. Let
+$X$ be a self-adjoint operator on $\Fc$ and $Q(\lambda)$ be the associated
+resolution of the idenity, which is a one-to-one correspondence
+\cite{Stone:64}. The domain $D(X)$ of $X$ comprises those and only
+those elements $f\in\Fc$ such that the Stieltjes integral
+$\int_{-\infty}^\infty\lambda^2\,\d\|Q(\lambda)f\|_1^2$ is convergent; when $f\in D(X)$ the element
+$Xf$ is determined by the relations \cite{Stone:64}    
+%
+\begin{align}\label{eq:X_Q_Correspondence}
+  \langle Xf,h\rangle_1=\int_{-\infty}^\infty\lambda\,\d\langle Q(\lambda)f,h\rangle_1, \qquad
+  \|Xf\|_1^2=\int_{-\infty}^\infty\lambda^2\,\d\|Q(\lambda)f\|_1^2,
+\end{align}
+%
+where $h$ is an arbitrary element in $\Fc$. Since $M=-\I A$ is
+self-adjoint on $\Fc$ and $D(A)=D(M)$, this one-to-one isometric
+correspondence also holds for the maximal normal operator $A$, and a
+calculation similar to that in equations \eqref{eq:Int_kappa*_jk} and
+\eqref{eq:Int_kappa*_jk_Re} shows that equation
+\eqref{eq:X_Q_Correspondence} also holds under the mappings $X\mapsto A$,
+$\d\langle Q(\lambda)f,h\rangle_1\mapsto\d\text{Re}\,\langle Q(\lambda)f,h\rangle_1$, and $Q(\lambda)\mapsto Q_2(\lambda)$. An 
+analogous result holds 
+for the self-adjoint operator $\Mb=-\I\Ab$ on $\Fs$ with
+$D(\Ab)=D(\Mb)$.
+
+
+
+We now demonstrate that the one-to-one isometry between the class of
+self-adjoint operators and resolutions of the identity on $\Fc$ and
+that for $\Fs$, along with the property $\Fc\sim\Fs$, induce the
+one-to-one isometry $D(A)\sim D(\Ab)$. From $\Fc\sim\Fs$, we have for every
+$f\in D(A)\subset\Fc$ that $\vec{\nabla}f\in\Fs$, so from equation
+\eqref{eq:A_Ab_Relation} 
+%
+\begin{align}\label{eq:Norm_A_Ab}
+  \|Af\|_1^2=\langle Af,Af\rangle_1
+        =\langle\vec{\nabla} A f\cdot\vec{\nabla} A f\rangle
+        =\langle\Ab\vec{\nabla}f\cdot\Ab\vec{\nabla}f\rangle
+        =\|\Ab\vec{\nabla}f\|^2.
+\end{align}
+%
+Consequently, by the spectral theorem of equation
+\eqref{eq:Spectral_Theorem}, we have 
+%
+\begin{align}\label{eq:A_Ab}
+  \int\lambda^2\,\d\|Q_2(\lambda)f\|_1^2=\int\lambda^2\,\d\|\Qb_2(\lambda)\vec{\nabla}f\|^2,
+\end{align}
+%
+and the convergence of the left-hand-side of \eqref{eq:A_Ab} implies
+the convergence of the right-hand-side which, in turn, implies that
+$\vec{\nabla}f\in D(\Ab)$. Conversely, from $\Fc\sim\Fs$ we have for every
+$\vec{\xi}\in D(\Ab)\subseteq\Fs$ there exists unique $f\in\Fc$ such that
+$\vec{\xi}=\vec{\nabla}f$, and equation \eqref{eq:A_Ab_Relation} then implies
+that  
+%
+\begin{align}
+  \|\Ab\vec{\xi}\,\|^2=\langle\Ab\vec{\nabla}f,\Ab\vec{\nabla}f\rangle
+         =\langle\vec{\nabla} A f,\vec{\nabla} A f\rangle
+         =\langle Af,Af\rangle_1
+         =\|Af\|_1^2.
+\end{align}
+%
+Again, the spectral theorem implies that \eqref{eq:A_Ab} holds, and
+the convergence of the right-hand-side of \eqref{eq:A_Ab} implies the
+convergence of the left-hand-side which, in turn, implies that
+$f\in D(A)$. In summary, for every $f\in D(A)$ we have $\vec{\nabla}f\in D(\Ab)$ and
+$\|Af\|_1=\|\Ab\vec{\nabla}f\|$. Conversely, for each $\vec{\xi}\in D(\Ab)$
+there exists unique $f\in D(A)$ such that $\vec{\xi}=\vec{\nabla}f$  and
+$\|\Ab\vec{\xi}\,\|=\|Af\|_1$. Consequently, the domains $D(\Ab)$ and $D(A)$
+are in one-to-one isometric correspondence, i.e. $D(\Ab)\sim D(A)$.    
+
+
+
+
+From equation \eqref{eq:A_Ab} and the linearity proerties of
+Radon--Stieltjes integrals \cite{Stone:64}, we have that
+%
+\begin{align}
+  0=\int_{-\infty}^\infty\lambda^2\,\d(\|Q_2(\lambda)f\|_1^2-\|\Qb_2(\lambda)\vec{\nabla}f\|^2)
+   =\int_{-\infty}^\infty\lambda^2\,\d(\langle[\vec{\nabla}Q_2(\lambda)-\Qb_2(\lambda)\vec{\nabla}]f\cdot\vec{\nabla}f\rangle)
+\end{align}
+%
+for all $f\in D(A)\iff\vec{\nabla}f\in D(\Ab)$. This implies that
+$\vec{\nabla}Q_2(\lambda)=\Qb_2(\lambda)\vec{\nabla}$ (weakly). This, in turn, implies that
+the Radon--Stieltjes measures underlying the integral representations
+of Theorem \ref{thm:kappa_sigma} and Corollary \ref{cor:Integral_Reps} 
+are equal, $\d\langle Q_2(\lambda)g_j,g_k\rangle_1=\d\langle\Qb_2(\lambda)\vec{g}_j,\vec{g}_k\rangle$,
+$j,k=1,\ldots,d$, up to null sets of measure zero. This concludes our proof
+of Theorem \ref{thm:Formulation_Equivalence} $\Box$.
+
+
+
+
+\subsubsection{Finite dimensional matrix
+  setting}\label{sec:Integral_Rep_Matrix} 
+%
+In this section we demonstrate how the integral formulas in
+\eqref{eq:Integral_Rep_kappa*} arise when $\Ab$ is given by an
+anti-symmetric matrix. This mathematical framework will be utalized in
+Section \ref{sec:Num_Results} to directly compute the effective
+diffusivity tensor $\Kbc^*$ for model velocity fields $\vec{u}$. This
+is accomplished via the direct computation of the spectral measure
+$\d\bmu$ at the heart of these integral representations, which is
+given explicitely in terms of the eigenvalues and eigenvectors of
+$\Ab$ in this matrix setting.  
+
+
+
+
+
+When the operator $\Ab$ is given by a real-valued anti-symmetric
+matrix $\Ab^T=-\Ab$ of size $N$, say, $\Sigma(\Ab)$ consists solely of
+\emph{pure point spectrum} called 
+eigenvalues $\upsilon_n$, $n\in I_n=\{1,\ldots,N\}$, with corresponding eigenvectors
+$\vec{w}_n$, $\Ab\vec{w}_n=\upsilon_n\vec{w}_n$. It is well known
+\cite{Horn_Johnson-1990} that the eigenvalues $\upsilon_n$ are purely
+imaginary, $\upsilon_n=\I\lambda_n$ with $\lambda_n\in\mathbb{R}$, and that the set of
+eigenvectors $\{\vec{w}_n\}_{n\in I_n}$ forms an orthonormal basis
+\cite{Keener-2000} for $\mathbb{R}^N$,
+$\vec{w}_n\cdot\vec{w}_m=\vec{w}_n^{\;\dagger}\vec{w}_m=\delta_{nm}$, where $\dagger$ 
+denotes the operation of complex-conjugate-transpose. Moreover, as 
+$\Ab$ is real-valued, the eigenvalues $\upsilon_n$ and eigenvectors
+$\vec{w}_n$ come in complex-conjugate pairs
+\cite{Horn_Johnson-1990}. Therefore, if the size $N$ of the matrix
+$\Ab$ is even, then we may re-number the index set as
+$I_n=\{-N/2,\ldots,-1,1,\ldots ,N/2\}$ such that $\upsilon_{-n}=\overline{\upsilon_n}=-\upsilon_n$ and
+$\vec{w}_{-n}=\overline{\vec{w}_n}$, and if $N$ is odd then $\upsilon_0=0$ is
+also an eigenvalue with a \emph{real-valued} eigenvector
+$\vec{w}_0$. Consequently, denoting by $\Wb$ the matrix with columns
+consisting of the eigenvectors $\vec{w}_n$,
+$\bUpsilon=\text{diag}(\upsilon_{-N/2},\ldots,\upsilon_{N/2})$ the diagonal matrix with
+eigenvalues $\upsilon_n$ on the main diagonal, and
+$\bLambda=\text{diag}(\lambda_{-N/2},\ldots,\lambda_{N/2})$, we have
+$\Ab=\Wb\bUpsilon\Wb^\dagger=\I\Wb\bLambda\Wb^\dagger$. Here, the matrix $\Wb$ is
+unitary $\Wb^\dagger\Wb=\Wb\Wb^\dagger=\Ib$ so that the matrix
+$\Mb=-\I\Ab=\Wb\bLambda\Wb^\dagger$ is a Hermitian matrix
+\cite{Horn_Johnson-1990,Keener-2000}.  
+
+
+
+
+This spectral characterization of the matrix $\Ab$ leads to integral
+representations for $\kappa_{jk}^*$ and $\alpha_{jk}^*$, as defined by the
+functionals in equation \eqref{eq:Eff_Diff_Resolvent}. Since $\upsilon_n$ is
+purely imaginary and $0<\varepsilon<\infty$, the matrix $(\varepsilon\Ib+\Ab)$ has a well defined
+inverse given by
+$(\varepsilon\Ib+\Ab)^{-1}=\Wb(\varepsilon\Ib+\I\bLambda)^{-1}\Wb^\dagger$
+\cite{Horn_Johnson-1990}. Therefore, since the (Hilbert space) adjoint
+of $\Wb$ is given by $\Wb^\dagger=\Wb^{-1}$
+\cite{Horn_Johnson-1990,Keener-2000}, we have  
+% 
+\begin{align}\label{eq:Functionals_kappa_alpha}
+  %\mathcal{F}(\Ab)
+  &\kappa^*_{jk}/\varepsilon-\delta_{jk}=\langle(\varepsilon\Ib+\Ab)^{-1}\vec{g}_j\cdot(\varepsilon\Ib+\Ab)^{-1}\vec{g}_k\rangle 
+=\langle(\varepsilon\Ib+\I\bLambda)^{-1}\Wb^\dagger\vec{g}_j\cdot(\varepsilon\Ib+\I\bLambda)^{-1}\Wb^\dagger\vec{g}_k\rangle ,
+\\
+%\mathcal{G}(\Ab)
+&\alpha^*_{jk}=\langle\Ab(\varepsilon\Ib+\Ab)^{-1}\vec{g}_j\cdot(\varepsilon\Ib+\Ab)^{-1}\vec{g}_k\rangle
+=\langle\I\bLambda(\varepsilon\Ib+\I\bLambda)^{-1}\Wb^\dagger\vec{g}_j\cdot(\varepsilon\Ib+\I\bLambda)^{-1}\Wb^\dagger\vec{g}_k\rangle. 
+\notag
+\end{align}
+%
+It is easy to see that the functionals in equation
+\eqref{eq:Functionals_kappa_alpha} have the following integral
+representations, which are the discrete versions of equations
+\eqref{eq:Int_kappa*_jk} and \eqref{eq:Int_alpha*_jk}. These integrals
+involve a spectral measure $\d\mu_{jk}(\lambda)$ associated with the matrix
+$\Ab$, that is given in terms of the spectral weights
+$(\overline{\vec{w}_n^{\,\dagger}\vec{g}_j})(\vec{w}_n^{\,\dagger}\vec{g}_k)=\Qb_n\vec{g}_j\cdot\vec{g}_k$ 
+which involve the mutually orthogonal, $\Qb_n\Qb_m=\Qb_n\delta_{nm}$,
+Hermitian projection matrices $\Qb_n=\vec{w}_n\vec{w}_n^{\,\dagger}$,    
+%
+\begin{align}\label{eq:Integral_Rep_Discrete}
+  \kappa^*_{jk}/\varepsilon-\delta_{jk}
+  %\mathcal{F}(\Ab)  
+ % =\sum_{n\in I_n} 
+%  \left\langle\frac{\overline{(\vec{w}_n^{\,\dagger}\vec{g}_j)}(\vec{w}_n^{\,\dagger}\vec{g}_k)} 
+%                     {(\varepsilon-\I\lambda_n)(\varepsilon+\I\lambda_n)}\right\rangle
+ % =\sum_n 
+%  \left\langle\frac{(\overline{\vec{w}_n^{\,\dagger}\vec{g}_j})(\vec{w}_n^{\,\dagger}\vec{g}_k)} 
+%                     {\varepsilon^2+\lambda_n^2}\right\rangle                           
+ =\sum_{n\in I_n} 
+ \left\langle\frac{\Qb_n\vec{g}_j\cdot\vec{g}_k}{\varepsilon^2+\lambda_n^2}\right\rangle
+ =\int_{-\infty}^\infty\frac{\d\mu_{jk}(\lambda)}{\varepsilon^2+\lambda^2}\,,
+ \qquad 
+ \alpha^*_{jk}
+ %\mathcal{G}(\Ab)   
+ =\int_{-\infty}^\infty\frac{-\I\lambda\,\d\mu_{jk}(\lambda)}{\varepsilon^2+\lambda^2}\,.
+ %\d\mu_{jk}(\lambda)=\sum_n\delta_{\lambda_n}(\d\lambda)\Qb_n\vec{g}_j\cdot\vec{g}_k.
+ %\quad
+ %\Qb_n=\vec{w}_n\vec{w}_n^{\,\dagger}
+ %\notag
+\end{align}
+%
+Here, the \emph{complex measure} $\d\mu_{jk}(\lambda)$ for $j\neq k$ and
+\emph{positve measure} $\d\mu_{kk}(\lambda)$ are given by 
+% 
+\begin{align}
+  \d\mu_{jk}(\lambda)=\sum_{n\in I_n}\langle\delta_{\lambda_n}(\d\lambda)[\Qb_n\vec{g}_j\cdot\vec{g}_k]\rangle, \quad  
+  \d\mu_{kk}(\lambda)=\sum_{n\in I_n}\langle\delta_{\lambda_n}(\d\lambda)|\Qb_n\vec{g}_k|^2\rangle, \qquad
+  \Qb_n=\vec{w}_n\vec{w}_n^{\,\dagger}, 
+\end{align}
+%
+where $\delta_{\lambda_n}(\d\lambda)$ is the delta measure concentrated at $\lambda_n$,
+$\Qb_n$ is the projection matrix onto the eigen-space spanned by the
+eigenvector $\vec{w}_n$, and
+$|\vec{\xi}\,|$ denotes the $\ell^{\,2}(\mathbb{R}^N)$ norm of the vector
+$\vec{\xi}\,$.   
+
+
+
+
+Exactly as in equations \eqref{eq:Int_kappa*_jk_Re} and
+\eqref{eq:Int_kappa*_jk_Im}, we may use the fact that the matrix
+$\Ab$, vector $\vec{g}_j$, and molecular diffusivity $\varepsilon$ are
+real-valued, to re-express the integrals in
+\eqref{eq:Integral_Rep_Discrete} in terms of the \emph{signed
+  measures} 
+$\d\text{Re}\,\mu_{jk}(\lambda):=(\d\mu_{jk}(\lambda)+\d\mu_{kj}(\lambda))/2$ and
+$\d\text{Im}\,\mu_{jk}(\lambda):=(\d\mu_{jk}(\lambda)-\d\mu_{kj}(\lambda))/(2\I)$. Since
+$\Qb_n$ is a Hermitian projection matrix, we have
+$[\Qb_n\vec{g}_k\cdot\vec{g}_j]=[\overline{\Qb}_n\vec{g}_j\cdot\vec{g}_k]$,
+which implies that the dependence of the measures
+$\d\text{Re}\,\mu_{jk}(\lambda)$ and $\d\text{Im}\,\mu_{jk}(\lambda)$ on $\lambda_n$ and
+$\Qb_n$ are given by  
+%
+\begin{align}\label{eq:Signed_mu_Dis}
+  &\d\text{Re}\,\mu_{jk}(\lambda)      
+      =\frac{1}{2}\sum_{n\in I_n}\langle\delta_{\lambda_n}(\d\lambda)[(\Qb_n+\overline{\Qb}_n)\vec{g}_j\cdot\vec{g}_k]\rangle
+      =\sum_{n\in I_n}\langle\delta_{\lambda_n}(\d\lambda)\text{Re}[\Qb_n\vec{g}_j\cdot\vec{g}_k]\rangle,
+      \\
+  &\d\text{Im}\,\mu_{jk}(\lambda)
+      %:=\frac{1}{2\I}(\d\mu_{jk}(\lambda)-\d\mu_{kj}(\lambda))
+      =\frac{1}{2\I}\sum_{n\in I_n}\langle\delta_{\lambda_n}(\d\lambda)[(\Qb_n-\overline{\Qb}_n)\vec{g}_j\cdot\vec{g}_k]\rangle
+      =\sum_{n\in I_n}\langle\delta_{\lambda_n}(\d\lambda)\text{Im}[\Qb_n\vec{g}_j\cdot\vec{g}_k]\rangle.
+      \notag
+\end{align}
+%
+Moreover, since the eigenvalues $\upsilon_n=\I\lambda_n$ and eigenvectors
+$\vec{w}_n$ of the matrix $\Ab$ come in complex conjugate pairs, the
+integral representations in \eqref{eq:Integral_Rep_Discrete} may be
+further simplified and shown \cite{Pavliotis:PHD_Thesis} to involve
+the measures in \eqref{eq:Signed_mu_Dis} with a restriced index set
+$\{n\in I_n:n\geq0\}$. This is clear from equations
+\eqref{eq:Integral_Rep_Discrete} and \eqref{eq:Signed_mu_Dis} since
+for $n\geq0$ we have $\lambda_{-n}^2=(-\lambda_n)^2=\lambda_n^2$ and from
+$\vec{w}_{-n}=\overline{\vec{w}_n}$ we also have that
+$\Qb_{-n}=\overline{\Qb}_n$. Together, this implies that
+$\text{Re}[\Qb_n\vec{g}_j\cdot\vec{g}_k]+\text{Re}[\Qb_{-n}\vec{g}_j\cdot\vec{g}_k] 
+=2\text{Re}[\Qb_n\vec{g}_j\cdot\vec{g}_k]$ and
+$\lambda_n\text{Im}[\Qb_n\vec{g}_j\cdot\vec{g}_k]+\lambda_{-n}\text{Im}[\Qb_{-n}\vec{g}_j\cdot\vec{g}_k]
+=2\lambda_n\text{Im}[\Qb_n\vec{g}_j\cdot\vec{g}_k]$ with
+$\lambda_0\text{Im}[\Qb_0\vec{g}_j\cdot\vec{g}_k]\equiv0$.
+
+
+
+A key feature of the integral representations for $\bkappa^*$ and
+$\balpha^*$ in \eqref{eq:Integral_Rep_kappa*} is that parameter
+information in $\varepsilon$ is \emph{separated} from the geometry and dynamics
+of the velocity field $\vec{u}$, which are encapsulated in the
+underlying spectral measure $\d\bmu$. In Section
+\ref{sec:Assymptotics} we discuss in 
+detail the properties of the spectrum $\Sigma(\Ab)$ of the operator $\Ab$,
+which can be more exotic than pure point spectrum in the general
+setting \cite{Reed-1980,Stone:64}. We show how these properties of
+$\Sigma(\Ab)$ lead to useful decompositions of the measure $\d\bmu$. These
+measure decompositions are employed along with the properties of the 
+integrands of the integrals in \eqref{eq:Integral_Rep_kappa*} to
+obtain asymptotic behavior of $\bkappa^*$ and $\balpha^*$ as the
+molecular diffusivity tends to zero, $\varepsilon\to0$.     
+
+
+
+
+
+
+
+
+
+\section{Spectral and asymptotic analysis of effective
+  diffusivity} \label{sec:Assymptotics}
+%
+In Section \ref{sec:Integral_Rep} we derived the Radon--Stieltjes
+integral representations for the symmetric $\bkappa^*$ and
+anti-symmetric $\balpha^*$ parts of the effective diffusivity tensor
+$\Kbc^*$ displayed in equation \eqref{eq:Integral_Rep_kappa*},
+involving a spectral measure $\d\bmu$ associated with the maximal
+normal operator $\Ab$ on the function space $\Fs$. There, we briefly
+discussed that the domain of integration of these representations are
+determined by the spectrum $\Sigma(\Ab)$ of the operator $\Ab$. In this
+section we discuss the properties of $\Sigma(\Ab)$ in more detail and use
+this important information to provide various decompositions of the
+measure $\d\bmu$ which provides assymptotic behavior of the componets
+$\kappa^*_{jk}$ and $\alpha^*_{jk}$, $j,k=1,\ldots,d$, as the molecular diffusivity
+$\varepsilon\to0$.
+
+
+
+
+
+
+\section{Numerical Results}\label{sec:Num_Results}
+%
+In this section we discuss the numerical implementation of the
+integral representations in equation \eqref{eq:Integral_Rep_Discrete},
+involving the signed, discrete measures displayed in
+\eqref{eq:Signed_mu_Dis}. In particular, we directly compute the
+spectral measure $\d\bmu(\lambda)$ associated with discretizations of
+velocity fields $\vec{u}$ for model flows, to compute the symmetric
+$\bkappa^*$ and anti-symmetric $\balpha^*$ parts of the associated
+effective diffusivity tensor $\Kbc^*$. We explore the numerical
+implementation of the different formulations of the effective
+parameter problem, described by Corollary \ref{cor:Integral_Reps} and
+Theorem \ref{thm:Integral_Reps} which involve the anti-symmetric
+operators $A$ and $\Ab$, respectively. This analysis demonstrates that
+formulation described by Corollary \ref{cor:Integral_Reps} provides a
+more practical numerical implimentation than that described in Theorem
+\ref{thm:Integral_Reps}, as $A$ is a \emph{sparse} matrix of size $N$,
+say, and $\Ab$ is a \emph{full} matrix of size $dN$.    
+
+%\newpage
+
+% redefine the command that creates the equation no.
+  \setcounter{equation}{1}  % reset equation counter
+  \setcounter{section}{0}  % reset section counter
+  \renewcommand{\theequation}{A-\arabic{equation}} 
+\renewcommand{\thesection}{A-\arabic{section}}
+%
+\section{Appendix} 
+\label{sec:Appendix}
+%
+\subsection{The flow matrix $\Hb$}\label{eq:flow_matrix}
+%
+THIS SECTION IS UNER CONSTRUCTION
+%
+\subsection{Multiple scale method}\label{sec:Multiscal_Method}
+%
+In this section we provide the details of the multiple scale method
+\cite{McLaughlin:SIAM_JAM:780,Papanicolaou:1981:36:8,Papanicolaou:RF-835,Bensoussan:Book:1978}
+which leads to equations
+\eqref{eq:phi_bar}--\eqref{eq:Eff_Diffusivity}. We assume that
+equation \eqref{eq:ADE} has already been non-dimensionalized so that
+$\kappa_0\mapsto\varepsilon$ and $\vec{v}\mapsto\vec{u}$. The key assumption of the method is
+that the initial density $\phi_0$ in \eqref{eq:ADE} is slowly
+varying relative to the velocity field $\vec{u}$, which introduces a
+small parameter $\delta\ll1$ such that  
+% 
+\begin{align}\label{eq:IC}
+  \phi(0,\vec{x})=\phi_0(\delta\vec{x}).
+\end{align}
+%
+
+
+
+
+
+The variable changes $\vec{x}\mapsto\vec{y}=\vec{x}/\delta$ and
+$t\mapsto\tau=t/\delta^{\,2}$, along with equations \eqref{eq:incompressible} and
+\eqref{eq:IC}, transforms equation \eqref{eq:ADE} into
+\cite{McLaughlin:SIAM_JAM:780}    
+%
+\begin{align}\label{eq:ADE_delta}
+  \partial_t\phi^\delta(t,\vec{x})=\varepsilon\Delta\phi^\delta(t,\vec{x})
+                 +\delta^{\,-1}\,\vec{u}(\tau,\vec{y})\cdot\vec{\nabla}\phi^\delta(t,\vec{x}), \quad
+      \phi^\delta(0,\vec{x})=\phi_0(\vec{x}).
+\end{align}
+%
+We now expand $\phi^\delta$ in powers of $\delta$ \cite{McLaughlin:SIAM_JAM:780} 
+%
+\begin{align}\label{eq:Expand}
+  \phi^\delta(t,\vec{x})=\bar{\phi}(t,\vec{x})
+                 +\delta\phi^{(1)}(t,\vec{x},\tau,\vec{y})
+                 +\delta^{\,2}\phi^{(2)}(t,\vec{x},\tau,\vec{y})+\cdots.
+\end{align}
+%
+Writing
+%
+\begin{align*}
+  \partial_t\phi^{(n)}=[\partial_t+\delta^{-2}\partial_\tau]\phi^{(n)}, \quad
+  \vec{\nabla}\phi^{(n)}=[\vec{\nabla}_x+\delta^{-1}\vec{\nabla}_y]\phi^{(n)}, \quad
+  \Delta\phi^{(n)}=[\Delta_x+2\delta^{-1}\vec{\nabla}_x\cdot\vec{\nabla}_y+\delta^{-2}\Delta_y]\phi^{(n)},
+\end{align*}
+%
+for the functions $\phi^{(i)}$, $n=1,2,\ldots$, of the fast $(\tau,\vec{y})$ and
+slow $(t,\vec{x})$ variables, we find that
+%
+\begin{align}
+  &\partial_t\phi^\delta=\delta^{-2}[\partial_\tau\bar{\phi}]
+      +\delta^{-1}[\partial_\tau\phi^{(1)}]
+      +\delta^0[\partial_t\bar{\phi}+\partial_\tau\phi^{(2)}]+O(\delta),
+      \\
+  &\vec{\nabla}\phi^\delta=\delta^{-2}[0]
+            +\delta^{-1}[\vec{\nabla}_y\bar{\phi}]
+            +\delta^0[\vec{\nabla}_x\bar{\phi}+\vec{\nabla}_y\phi^{(1)}]
+            +\delta^1[\vec{\nabla}_x\phi^{(1)}+\vec{\nabla}_y\phi^{(2)}]+O(\delta^2),
+            \notag\\
+  &\Delta\phi^\delta=\delta^{-2}[\Delta_y\bar{\phi}]
+      +\delta^{-1}[2\vec{\nabla}_x\cdot\vec{\nabla}_y\bar{\phi}+\Delta_y\phi^{(1)}]
+      +\delta^0[\Delta_x\bar{\phi}+2\vec{\nabla}_x\cdot\vec{\nabla}_y\phi^{(1)}+\Delta_y\phi^{(2)}]+O(\delta).
+      \notag
+\end{align}
+%
+Inserting this into equation \eqref{eq:ADE_delta} and setting the
+coefficients associated with the various powers of $\delta$ to zero,
+yields a sequence of problems.
+
+
+
+
+
+
+Due to the dependence of $\bar{\phi}(t,\vec{x})$ on only the
+slow variables, the coefficients of $\delta^{-2}$ vanish. Equating the
+coefficients of $\delta^{-1}$ and $\delta^0$ to zero we, respectively, obtain 
+%
+\begin{align}
+  \label{eq:Mult_Meth_EQs_1}
+  &\partial_\tau\phi^{(1)}-\varepsilon\Delta_y\phi^{(1)}-\vec{u}\cdot\vec{\nabla}_y\phi^{(1)}=\vec{u}\cdot\vec{\nabla}_x\bar{\phi},
+  \\
+  \label{eq:Mult_Meth_EQs_2}
+  &\partial_\tau\phi^{(2)}-\vec{u}\cdot\vec{\nabla}_y\phi^{(2)}-\varepsilon\Delta_y\phi^{(2)}
+  =-\partial_t\bar{\phi}+\vec{u}\cdot\vec{\nabla}_x\phi^{(1)}+\varepsilon[\Delta_x\bar{\phi}+2\vec{\nabla}_x\cdot\vec{\nabla}_y\phi^{(1)}].
+\end{align}
+%
+By the linearity of equation \eqref{eq:Mult_Meth_EQs_1}, we may
+separate the fast and slow variables by writing
+%\cite{McLaughlin:SIAM_JAM:780,Biferale:PF:2725}
+\cite{McLaughlin:SIAM_JAM:780}
+%
+\begin{align}\label{eq:Linearity}
+  \phi^{(1)}(t,\vec{x},\tau,\vec{y})
+    =%\hat{\phi}^{(1)}(t,\vec{x})+
+    \vec{\chi}(\tau,\vec{y})\cdot\vec{\nabla}_x\bar{\phi}(t,\vec{x}).
+\end{align}
+%
+When
+%$\hat{\phi}^{(1)}$ is a homogeneous solution of
+%\eqref{eq:Mult_Meth_EQs_1} and
+the components $\chi_k$, $k=1,\ldots,d$, of $\vec{\chi}$ satisfy   
+%
+\begin{align}\label{eq:Cell_Prob_Appendix}
+  \partial_\tau\chi_k-\varepsilon\Delta_y\chi_k-\vec{u}\cdot\vec{\nabla}_y\chi_k=\vec{u}\cdot\vec{e}_k,
+\end{align}
+%
+equation \eqref{eq:Mult_Meth_EQs_1} is automatically satisfied
+\cite{McLaughlin:SIAM_JAM:780}. Equation \eqref{eq:Cell_Prob_Appendix}
+along with \eqref{eq:u_DH} is equivalent to the cell problem
+\eqref{eq:Cell_Problem}, where the distinction of fast variables was
+dropped for notational simplicity. In order for
+$\phi^{(1)}(t,\vec{x},\tau,\vec{y})$ in \eqref{eq:Linearity} to be periodic  
+in $(\tau,\vec{y})$ for each fixed $(t,\vec{x})$, we must have that the
+functions $\chi_k(\tau,\vec{y})$, $k=1,\ldots,d$, are periodic. This and the
+fundamental theorem of calculus implies that $\langle\vec{\nabla}_y\chi_k\rangle=0$. Here,
+$\langle\cdot\rangle$ denotes space-time averaging with respect to the \emph{fast
+  variables}.    
+
+
+
+Due to the incompressibility of the velocity field
+$\vec{\nabla}_y\cdot\vec{u}(\tau,\vec{y})=0$ and the \emph{a priori} fast variable
+periodicity of the functions $\phi^{(i)}$, $i=1,2$,  the
+fundamental theorem of calculus and the divergence theorem shows that
+the average of the left-hand-sides of equations
+\eqref{eq:Mult_Meth_EQs_1} and \eqref{eq:Mult_Meth_EQs_2} are
+zero. For the equations to have solutions, the average of the
+right-hand-sides must also vanish.
+%\cite{Biferale:PF:2725} (Fredholm Algernative).
+The resulting solvability conditions are $\langle\vec{u}\rangle=0$
+and the following equation which governs the large-scale (slow
+variable) dynamics   
+%
+\begin{align}\label{eq:Avg_EQ_phi}
+  \partial_t\bar{\phi}=\varepsilon\Delta_x\bar{\phi}+\langle\vec{u}\cdot\vec{\nabla}_x\phi^{(1)}\rangle.
+\end{align}
+%
+Here, we have used that $\bar{\phi}$ is a \emph{constant} with respect to
+the fast variables and, by the divergence theorem and the fast
+variable periodicity of $\phi^{(1)}$, we have
+$\langle\vec{\nabla}_y\cdot\vec{\nabla}_x\phi^{(1)}\rangle=0$. The convergence of $\phi^\delta$ to $\bar{\phi}$ as
+$\delta\to0$ is in $L^2$ \cite{Fannjiang:SIAM_JAM:333},  
+%
+\begin{align}
+  \lim_{\delta\to0}\left[\,\sup_{0\leq t\leq t_0}
+    \int\left|\phi^\delta(t,\vec{x})-\bar{\phi}(t,\vec{x})\right|^2\d\vec{x}
+    \;\right]=0,
+\end{align}
+%
+for all $t_0<\infty$, where we have used the notation $\d\vec{x}=\d x_1\cdots \d
+x_d$ for the product Lebesgue measure.
+
+
+
+
+
+Inserting equation \eqref{eq:Linearity} into \eqref{eq:Avg_EQ_phi}
+yields equation \eqref{eq:phi_bar} with the components
+$\Kc^*_{jk}=\Kbc^*\vec{e}_j\cdot\vec{e}_k$ of the effective diffusivity
+tensor $\Kbc^*$ given by 
+%
+\begin{align}\label{eq:Eff_Diffusivity_Appendix}
+  \Kc^*_{jk}=\varepsilon\delta_{jk}+\langle u_j\chi_k\rangle.
+\end{align}
+%
+By inserting the representation for $u_j$ in
+\eqref{eq:Cell_Prob_Appendix} into equation
+\eqref{eq:Eff_Diffusivity_Appendix}, the functional $\langle u_j\chi_k\rangle$ can be
+represented in terms of $\vec{\nabla}_y\chi_j$ and the \emph{skew-symmetric}
+operator $\Sb=\Hb-\Delta_y^{-1}\Tb$, where the inverse operation $\Delta_y^{-1}$
+is based on convolution with the Green's function for the Laplacian
+$\Delta_y$, $\Tb=\partial_\tau\Ib$, and the $\Ib$ in this definition is to remind us
+that the derivative $\partial_\tau$ operates component-wise. Indeed, writing  
+$\partial_\tau\chi_j
+%=\Delta_y\Delta_y^{-1}\partial_\tau\chi_j
+=\vec{\nabla}_y\cdot(\Delta_y^{-1}\Tb)\vec{\nabla}_y\chi_j$,
+$\Delta_y\chi_j=\vec{\nabla}_y\cdot\vec{\nabla}_y\chi_j$, and $\vec{u}=\vec{\nabla}_y\cdot\Hb$ in
+\eqref{eq:u_DH}, we have    
+%
+\begin{align}\label{eq:Functional_Rep}
+  \langle u_j\chi_k\rangle&=\langle[\partial_\tau\chi_j-\varepsilon\Delta_y\chi_j-\vec{u}\cdot\vec{\nabla}_y\chi_j]\chi_k\rangle
+       \\
+       &=\langle\vec{\nabla}_y\cdot[(\Delta_y^{-1}\Tb-\varepsilon\Ib-\Hb)\vec{\nabla}_y\chi_j]\chi_k\rangle
+       \notag\\
+       &=\langle[(\Hb-\Delta_y^{-1}\Tb+\varepsilon\Ib)\vec{\nabla}_y\chi_j]\cdot\vec{\nabla}_y\chi_k\rangle
+       \notag\\
+       &=\langle\Sb\vec{\nabla}_y\chi_j\cdot\vec{\nabla}_y\chi_k\rangle+\varepsilon\langle\vec{\nabla}_y\chi_j\cdot\vec{\nabla}_y\chi_k\rangle,
+       \notag
+\end{align}
+%
+where we have used the periodicity of $\chi_k$ and $\Hb$ to obtain the
+third equality. Equations \eqref{eq:Eff_Diffusivity_Appendix} and
+\eqref{eq:Functional_Rep} are equivalent to equations
+\eqref{eq:Symm_Anti-Symm} and \eqref{eq:Eff_Diffusivity}, where the
+distinction of fast variables was dropped for notational simplicity. 
+
+
+
+
+
+The above analysis shows that the main part of the study of effective, 
+diffusive transport enhanced by periodic, incompressible flows, is the
+study of equation \eqref{eq:Cell_Prob_Appendix}, from which the
+effective diffusivity tensor $\Kbc^*$ emerges. In Section
+\ref{sec:Hilbert_Space}, we use the analytical structure of the cell
+problem \eqref{eq:Cell_Prob_Appendix} to derive a resolvent
+representation for $\vec{\nabla}_y\chi_k$, involving an anti-symmetric
+integro-differential operator $\Ab$ which is related to 
+$\Sb=\Hb-\bDelta^{-1}\partial_t\Ib$. In Section \ref{sec:Integral_Rep}, 
+we employ this representation for $\vec{\nabla}_y\chi_k$ and the spectral
+theorem, to provide integral representations for $\bkappa^*$ and
+$\balpha^*$ involving a \emph{spectral measure} associated with the
+operator $\Ab$ acting on a suitable Hilbert space.     
+   
+
+\subsection{Symmetries and commutivity}\label{sec:Symmetries_Commute}
+%
+THIS SECTION IS UNER CONSTRUCTION
+
+We now show that the incompressibility of $\vec{u}$ in
+\eqref{eq:incompressible} implies that the operator
+$(\Delta^{-1})(\vec{u}\cdot\vec{\nabla})$ is anti-symmetric on $\Fc$
+\cite{Bhattacharya:AAP:1999:951}. Indeed, since $\Delta=\vec{\nabla}\cdot\vec{\nabla}$
+and $(\Delta^{-1})$ is self-adjoint on $\Hc^1_{\Vc}$, for $f,h\in\Fc$ we have 
+%
+\begin{align}\label{eq:Anti-sym_Sobolev}
+  \langle(\Delta^{-1})(\vec{u}\cdot\vec{\nabla})f,h\rangle_1
+                            &=\langle[\vec{\nabla}(\Delta^{-1})(\vec{u}\cdot\vec{\nabla})f]\cdot\vec{\nabla}h\rangle
+                                 \\                              
+                              &=-\langle[(\vec{u}\cdot\vec{\nabla})f]\,h\rangle
+                                 \notag\\
+                               &=-\langle[\vec{\nabla}\cdot(\vec{u}f)]\,h\rangle
+                                 \notag\\     
+                              &=\langle f\,[(\vec{u}\cdot\vec{\nabla})h]\rangle
+                                \notag\\
+                              &=\langle(\Delta^{-1})\Delta f\,[(\vec{u}\cdot\vec{\nabla})h]\rangle
+                                \notag\\
+                              &=-\langle\vec{\nabla}f\,[\vec{\nabla}(\Delta^{-1})(\vec{u}\cdot\vec{\nabla})h]\rangle
+                                \notag\\                              
+                              &=-\langle f,(\Delta^{-1})(\vec{u}\cdot\vec{\nabla})h\rangle_1
+                              \notag
+\end{align}
+%
+%
+\subsection{Existence and Uniqueness}\label{sec:Existance!}
+%
+THIS SECTION IS UNER CONSTRUCTION
+
+Before we discuss how the Hilbert space framework presented above
+leads to an  integral representation for $\Kbc^*$, we first discuss
+some key differences in the theory between the cases of steady 
+and dynamic velocity fields $\vec{u}$. These differences are reflected
+in the measure underlying this integral representation for $\bkappa^*$
+and stem from the \emph{unboundedness} of the operator $\partial_t$ on the
+Hilbert space $\Hs_{\,\Tc}$ \cite{Reed-1980,Stone:64}. For steady
+$\vec{u}$, in general, equation \eqref{eq:sigma*} reduces to
+\eqref{eq:Eff_Diffusivity} for  diagonal components of the effective
+parameter.  However, for dynamic $\vec{u}$, this is not true in
+general. The details are as follows. For dynamic $\vec{u}$, the
+operator $\bsig$ in \eqref{eq:Maxwells_Equations} can be written as
+$\bsig=\varepsilon\Ib+\Sb$, where  $\Sb=\Hb-\bDelta^{-1}\partial_t\Ib$ is skew-symmetric 
+$\langle\Sb\vec{\xi},\vec{\zeta}\,\rangle=-\langle\vec{\xi},\Sb\vec{\zeta}\,\rangle$ for all
+$\vec{\xi},\vec{\zeta}\in\Fs$ such that
+$|\langle\partial_t\vec{\xi},\vec{\zeta}\,\rangle|,|\langle\vec{\xi},\partial_t\vec{\zeta}\,\rangle|<\infty$ (see Section
+\ref{sec:Appendix} for details).  
+This property of the operator $\Sb$ implies that
+%$\langle\Sb\vec{E}_k\cdot\vec{E}_k\rangle=-\langle\Sb\vec{E}_k\cdot\vec{E}_k\rangle=0$.
+%
+\begin{align}\label{eq:Sb_Skew_2}
+  \langle\Sb\vec{\xi}\cdot\vec{\xi}\,\rangle=-\langle\Sb\vec{\xi}\cdot\vec{\xi}\,\rangle=0,
+  \qquad
+  \Sb=\Hb-(\bDelta^{-1})\partial_t\Ib,
+\end{align}
+%
+for all such $\vec{\xi}\in\Fs$. In this dynamic setting, equation
+\eqref{eq:Sb_Skew} does not hold for every $\vec{\xi}\in\Fs$, as the
+unbounded operator $\partial_t$ is defined only on a proper (dense) subset of
+the Hilbert space $\Hs_{\,\Tc}$ \cite{Reed-1980}, and it may be that
+$|\langle\partial_t\vec{\xi},\vec{\xi}\,\rangle|=\infty$. In the case of a steady velocity field
+we have $\Sb\equiv\Hb$ and, by equation \eqref{eq:Bounded_H} and the Cauchy
+Schwartz inequality, $|\langle\Sb\vec{\xi},\vec{\xi}\,\rangle|\leq\|\Hb\|\|\vec{\xi}\,\|^2<\infty$ for
+all $\vec{\xi}\in\Fs$, so equation \eqref{eq:Sb_Skew} holds for all
+$\vec{\xi}\in\Fs$.   
+
+
+
+
+
+
+
+
+
+Another immediate consequence of equation \eqref{eq:Sb_Skew}, for
+steady $\vec{u}$, is the coercivity of the bilinear functional
+$\Phi(\vec{\xi},\vec{\zeta}\,)=\langle\bsig\vec{\xi}\cdot\vec{\zeta}\,\rangle$ for all $\varepsilon>0$. By equation
+\eqref{eq:Bounded_H}, this functional is also bounded in the case of
+steady $\vec{u}$ for all $\varepsilon<\infty$. Therefore, the Lax-Milgram theorem
+\cite{McOwen:2003:PDE} provides the existence and uniqueness of a
+solution $\vec{\nabla}\chi_k\in\Fs$ satisfying the cell problem
+\eqref{eq:Cell_Problem}, or equivalently equation
+\eqref{eq:Maxwells_Equations}, in this time-independent case. The
+details are as follows. 
+
+
+
+
+The distributional form of equation \eqref{eq:Cell_Problem}, written
+as $\vec{\nabla}\cdot\bsig\vec{E}_k=0$, is given by
+$\langle\bsig(\vec{\nabla}\chi_k+\vec{e}_k)\cdot\vec{\nabla}\zeta\rangle=0$, where $\zeta$ is a compactly
+supported, infinitely differentiable function on $\Tc\otimes\Vc$, and we
+stress that $\vec{\nabla}\zeta$ is \emph{curl-free}. Motivated by this, we
+consider the following variational problem: find $\vec{\nabla}\chi_k\in\Fs$ such
+that   
+%
+\begin{align}\label{eq:Variational}
+  \langle\bsig(\vec{\nabla}\chi_k+\vec{e}_k)\cdot\vec{\xi}\,\rangle=0, \text{ for all }
+  \vec{\xi}\in\Fs.
+\end{align}
+%
+In order to directly apply the Lax-Milgram Theorem, we rewrite
+equation \eqref{eq:Variational} as 
+%
+\begin{align}  \label{eq:Bilinear_functional_E} 
+   &\Phi(\vec{\nabla}\chi_k,\vec{\xi}\,)
+     =\langle\bsig\vec{\nabla}\chi_k\cdot\vec{\xi}\,\rangle
+     =-\langle\bsig\vec{e}_k\cdot\vec{\xi}\,\rangle
+     =f(\vec{\xi}\,). 
+\end{align}
+%
+By equation \eqref{eq:Sb_Skew} $\Phi$ is coercive, i.e.
+%$\Phi(\vec{\xi},\vec{\xi})=\langle[(\varepsilon\Ib+\Sb)]\vec{\xi}\cdot\vec{\xi}\rangle=\varepsilon\|\vec{\xi}\|^2>0$ 
+%
+\begin{align}\label{eq:Phi_Coercive}
+  \Phi(\vec{\xi},\vec{\xi}\,)=\langle[(\varepsilon\Ib+\Sb)]\vec{\xi}\cdot\vec{\xi}\,\rangle=\varepsilon\|\vec{\xi}\,\|^2>0,
+   \text{ for all } \vec{\xi}\in\Fs
+\end{align}
+%
+such that $\|\vec{\xi}\,\|\neq0$ and $\varepsilon>0$, where $\|\cdot\|$
+is the norm induced by the inner-product $\langle\cdot,\cdot\rangle$. Recall that
+$\Sb=\Hb$ in this time-independent case. This, equation 
+\eqref{eq:Bounded_H}, the triangle inequality,
+and the Cauchy-Schwartz inequality imply that $\Phi$ is also bounded for
+all $\varepsilon<\infty$
+%for all $\vec{\xi},\vec{\zeta}\in\Fs$
+% $\Phi(\vec{\xi},\vec{\zeta})\leq(\varepsilon+\|H\|)\|\vec{\xi}\|\|\vec{\zeta}\|$
+%
+\begin{align}\label{eq:Phi_Bounded}
+  \Phi(\vec{\xi},\vec{\zeta})\leq(\varepsilon+\|H\|)\|\vec{\xi}\,\|\|\vec{\zeta}\,\|<\infty,
+  \text{ for all } \vec{\xi}\in\Fs.
+\end{align}
+%
+For the same reasons, the linear functional $f(\vec{\xi}\,)$ in
+\eqref{eq:Bilinear_functional_E} is bounded for all
+$\vec{\xi}\in\Fs$. Therefore, the Lax-Milgram theorem
+\cite{McOwen:2003:PDE} provides the existence of a unique
+$\vec{\nabla}\chi_k\in\Fs$ satisfying \eqref{eq:Cell_Problem} in this
+time-independent case. 
+
+
+In the time-dependent case, equation \eqref{eq:Sb_Skew} hence
+\eqref{eq:Phi_Coercive} does not hold for all $\vec{\xi}\in\Fs$. Moreover, 
+the operator $\partial_t$ hence $\bsig$ is not bounded on $\Fs$
+\cite{Reed-1980,Stakgold:BVP:2000}, so \eqref{eq:Phi_Bounded} does not
+hold. Consequently, the Lax-Milgram theorem cannot be directly
+applied, and alternate techniques  
+\cite{Friedman:1969:PDE,Friedman:1969:PDE:Parabolic} must be used to
+prove the existence and uniqueness of a solution $\vec{\nabla}\chi_k\in\Fs$ 
+satisfying the cell problem \eqref{eq:Cell_Problem}. This discussion
+illustrates key differences in the analytic structure of the effective
+parameter problem for $\bkappa^*$, between the cases of steady and
+dynamic velocity fields $\vec{u}$, which stem from the unboundedness
+of the operator $\partial_t$ on $\Hs_{\,\Tc}$, hence $\bsig$ on $\Fs$. In Section
+\ref{sec:Integral_Rep}, we will discuss other consequences of this
+boundedness/unboundedness property of the operator $\bsig$, and
+demonstrate that it leads to significant differences in the spectral
+measure underlying an  integral representation of $\bkappa^*$.     
+
+
+
+
+
+
+\medskip
+
+{\bf Acknowledgements.}
+% We gratefully acknowledge support from the Division of Mathematical
+% Sciences and the Office of Polar Programs at the U.S. 
+% National Science Foundation (NSF) through Grants
+% DMS-1009704, ARC-0934721, and DMS-0940249. We are also grateful for 
+% support from the Office of Naval Research (ONR) through
+% Grants N00014-13-10291 and N00014-12-10861. Finally, we would like to 
+% thank the NSF Math Climate Research Network (MCRN) for their support
+% of this work. 
+
+
+\medskip
+
+\bibliographystyle{plain}
+\bibliography{murphy}
+\end{document}
+
+% LocalWords:  McMaster RM jk sig eps def Maxwells Milgram coercivity diag jX
+% LocalWords:  mh Cond mu kk PtI Fs Es Hashin Shtrikman extremized Decomp chi
+% LocalWords:  Acknowledgements DMS ONR MCRN murphy

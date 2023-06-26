@@ -1,0 +1,186 @@
+\begin{thebibliography}{10}
+
+\bibitem{Avellaneda:PRL-753}
+M.~Avellaneda and A.~Majda.
+\newblock Stieltjes integral representation and effective diffusivity bounds
+  for turbulent transport.
+\newblock {\em Phys. Rev. Lett.}, 62:753--755, 1989.
+
+\bibitem{Avellaneda:CMP-339}
+M.~Avellaneda and A.~Majda.
+\newblock An integral representation and bounds on the effective diffusivity in
+  passive advection by laminar and turbulent flows.
+\newblock {\em Comm. Math. Phys.}, 138:339--391, 1991.
+
+\bibitem{Avellaneda:PRE:3249}
+M.~Avellaneda and M.~Vergassola.
+\newblock Stieltjes integral representation of effective diffusivities in
+  time-dependent flows.
+\newblock {\em Phys. Rev. E}, 52(3):3249--3251, 1995.
+
+\bibitem{Bensoussan:Book:1978}
+A.~Bensoussan, J.-L. Lions, and G.~Papanicolaou.
+\newblock {\em Asymptotic Analysis for Periodic Structures}.
+\newblock North-Holland, Amsterdam, 1978.
+
+\bibitem{Bhatia:IEE:1077}
+H.~Bhatia, G.~Norgard, V.~Pascucci, and Peer-Timo Bremer.
+\newblock The helmholtz-hodge decomposition-a survey.
+\newblock {\em IEEE T. Vis. Comput. Gr.}, 19(8):1386--1404, 2013.
+
+\bibitem{Bhattacharya:AAP:1999:951}
+R.~Bhattacharya.
+\newblock Multiscale diffusion processes with periodic coefficients and an
+  application to solute transport in porous media.
+\newblock {\em Ann. Appl. Probab.}, 9(4):951--1020, 1999.
+
+\bibitem{Biferale:PF:2725}
+L.~Biferale, A.~Crisanti, M.~Vergassola, and A.~Vulpiani.
+\newblock Eddy diffusivities in scalar transport.
+\newblock {\em Phys. Fluids}, 7:2725--2734, 1995.
+
+\bibitem{Demmel:1997}
+James~W. Demmel.
+\newblock {\em Applied Numerical Linear Algebra}.
+\newblock SIAM, 1997.
+
+\bibitem{Fannjiang:SIAM_JAM:333}
+A.~Fannjiang and G.~Papanicolaou.
+\newblock Convection enhanced diffusion for periodic flows.
+\newblock {\em SIAM Journal on Applied Mathematics}, 54(2):333--408, 1994.
+
+\bibitem{Fannjiang:1997:1033}
+A.~Fannjiang and G.~Papanicolaou.
+\newblock Convection-enhanced diffusion for random flows.
+\newblock {\em J. Stat. Phys.}, 88(5-6):1033--1076, 1997.
+
+\bibitem{Folland:95}
+G.~B. Folland.
+\newblock {\em Introduction to Partial Differential Equations}.
+\newblock Princeton University Press, Princeton, NJ, 1995.
+
+\bibitem{Folland:99}
+G.~B. Folland.
+\newblock {\em Real Analysis: Modern Techniques and Their Applications}.
+\newblock Wiley--Interscience, New York, NY, 1999.
+
+\bibitem{Friedman:1969:PDE}
+A.~Friedman.
+\newblock {\em Partial Differential Equations}.
+\newblock Holt, Rinehart and Winston, 1969.
+
+\bibitem{Friedman:1969:PDE:Parabolic}
+A.~Friedman.
+\newblock {\em Partial Differential Equations of Parabolic Type}.
+\newblock Dover Books on Mathematics Series. DOVER PUBN Incorporated, 2008.
+
+\bibitem{Golden:CMP-473}
+K.~M. Golden and G.~Papanicolaou.
+\newblock Bounds for effective parameters of heterogeneous media by analytic
+  continuation.
+\newblock {\em Commun. Math. Phys.}, 90:473--491, 1983.
+
+\bibitem{Halmos-1958}
+P.~R. Halmos.
+\newblock {\em Finite Dimensional Vector Spaces}.
+\newblock Van Nostrand--Reinhold, Princeton, NJ, 1958.
+
+\bibitem{Horn_Johnson-1990}
+R.~A. Horn and C.~R. Johnson.
+\newblock {\em {Matrix Analysis}}.
+\newblock Cambridge University Press, 1990.
+
+\bibitem{Isichenko:JNS:1991:375}
+M.~B. Isichenko and J.~Kalda.
+\newblock Statistical topography ii. 2d transport of passive scalar.
+\newblock {\em J. Nonlinear Sci.}, 4:375--397, 1991.
+
+\bibitem{Keener-2000}
+J.~P. Keener.
+\newblock {\em Principles of applied mathematics: transformation and
+  approximation}.
+\newblock Westview Press, Cambridge, MA, 2000.
+
+\bibitem{Denaro:2003:0271}
+F.~M-Denaro.
+\newblock On the application of the {Helmholtz-Hodge} decomposition in
+  projection methods for incompressible flows with general boundary conditions.
+\newblock {\em Int. J. Numer. Meth. Fl.}, 43(1):43--69, 2003.
+
+\bibitem{McLaughlin:SIAM_JAM:780}
+D.~{McLaughlin}, G.~Papanicolaou, and O.~Pironneau.
+\newblock Convection of microstructure and related problems.
+\newblock {\em SIAM J. Appl. Math.}, 45:780--797, 1985.
+
+\bibitem{McOwen:2003:PDE}
+R.C. McOwen.
+\newblock {\em Partial differential equations: methods and applications}.
+\newblock Prentice Hall PTR, 2003.
+
+\bibitem{MILTON:2002:TC}
+G.~W. Milton.
+\newblock {\em Theory of Composites}.
+\newblock Cambridge University Press, Cambridge, 2002.
+
+\bibitem{Moffatt:RPP:621}
+H.~K. Moffatt.
+\newblock Transport effects associated with turbulence with particular
+  attention to the influence of helicity.
+\newblock {\em Rep. Prog. Phys.}, 46(5):621--664, 1983.
+
+\bibitem{Murphy:JMP:063506}
+N.~B. Murphy and K.~M. Golden.
+\newblock The {Ising} model and critical behavior of transport in binary
+  composite media.
+\newblock {\em J. Math. Phys.}, 53:063506 (25pp.), 2012.
+
+\bibitem{Papanicolaou:1981:36:8}
+G.~Papanicolaou and O.~Pironeau.
+\newblock {\em On the Asymptotic Behavior of Motions in Random Flows, in
+  Stochastic Nonlinear Systems in Physics, Chemistry, and Biology, L. Arnold
+  and R. Lefever, eds.}, volume~8, pages 36--41.
+\newblock Springer, Berlin Heidelberg, 1981.
+
+\bibitem{Papanicolaou:RF-835}
+G.~Papanicolaou and S.~Varadhan.
+\newblock Boundary value problems with rapidly oscillating coefficients.
+\newblock In {\em Colloquia Mathematica Societatis J\'{a}nos Bolyai 27, Random
+  Fields (Esztergom, Hungary 1979)}, pages 835--873. North-Holland, 1982.
+
+\bibitem{Pavliotis:PHD_Thesis}
+G.~A. Pavliotis.
+\newblock {\em Homogenization theory for advection-diffusion equations with
+  mean flow}.
+\newblock PhD thesis, Rensselaer Polytechnic Institute Troy, New York, 2002.
+
+\bibitem{Pavliotis:IMAJAM:951}
+G.~A. Pavliotis.
+\newblock Asymptotic analysis of the {Green}--{Kubo} formula.
+\newblock {\em IMA J. Appl. Math.}, 75:951--967, 2010.
+
+\bibitem{Reed-1980}
+M.~C. Reed and B.~Simon.
+\newblock {\em Functional Analysis}.
+\newblock Academic Press, San Diego CA, 1980.
+
+\bibitem{Royden:1988:RA}
+H.L. Royden.
+\newblock {\em Real Analysis 3Rd Ed.}
+\newblock Prentice-Hall Of India Pvt. Limited, 1988.
+
+\bibitem{Stakgold:BVP:2000}
+I.~Stakgold.
+\newblock {\em Boundary Value Problems of Mathematical Physics: 2-Volume Set}.
+\newblock Classics in Applied Mathematics. SIAM, 2000.
+
+\bibitem{Stone:64}
+M.~H. Stone.
+\newblock {\em Linear Transformations in {Hilbert} Space}.
+\newblock American Mathematical Society, Providence, RI, 1964.
+
+\bibitem{Taylor:PRSL:196}
+G.~I. Taylor.
+\newblock Diffusion by continuous movements.
+\newblock {\em Proc. London Math. Soc.}, 2:196--211, 1921.
+
+\end{thebibliography}

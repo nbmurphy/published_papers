@@ -1,0 +1,607 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.30)  30 OCT 2015 08:14
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Murphy_Dynamic_Steady_Periodic_TimeStochastic_10-29-2015.tex
+(./Murphy_Dynamic_Steady_Periodic_TimeStochastic_10-29-2015.tex
+LaTeX2e <2015/10/01> patch level 2
+Babel <3.9m> and hyphenation patterns for 79 languages loaded.
+(./ipart.cls
+Document Class: ipart 2015/08/12 driver class for package imsart.sty
+
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/base/article.
+cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/base/leqno.cl
+o
+File: leqno.clo 2015/03/31 v1.1i Standard LaTeX option (left equation numbers)
+)
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/base/size11.c
+lo
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (./imsart.sty
+File: imsart.sty 2014/10/16IMS article style (VS)
+ (./etoolbox.sty
+Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count87
+)
+No file imsart.cnf.
+\c@firstpage=\count88
+\c@lastpage=\count89
+\c@thanks=\count90
+\c@addressref=\count91
+
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/graphics/keyv
+al.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+\c@emailref=\count92
+\c@author=\count93
+\c@address=\count94
+\sv@mathsurround=\dimen103
+\sv@parindent=\dimen104
+\fm@box=\box26
+\fm@size=\dimen105
+\t@xtheight=\dimen106
+\abstract@box=\box27
+\keyword@box=\box28
+\pre@kwd@depth=\dimen107
+\authors@list=\toks15
+\keywords@list=\toks16
+
+No file imsart-generic.cnf.
+)
+\tablewidth=\dimen108
+)
+No file ipart-amsa.cnf.
+(./mymacros.sty
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/amsfonts/amsf
+onts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks17
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/amsmath/amsma
+th.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/amsmath/amste
+xt.sty
+Package: amstext 2000/06/29 v2.01
+
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/amsmath/amsge
+n.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks18
+\ex@=\dimen109
+))
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/amsmath/amsbs
+y.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen110
+)
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/amsmath/amsop
+n.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count95
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count96
+\leftroot@=\count97
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count98
+\DOTSCASE@=\count99
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box29
+\strutbox@=\box30
+\big@size=\dimen111
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count100
+\c@MaxMatrixCols=\count101
+\dotsspace@=\muskip10
+\c@parentequation=\count102
+\dspbrk@lvl=\count103
+\tag@help=\toks19
+\row@=\count104
+\column@=\count105
+\maxfields@=\count106
+\andhelp@=\toks20
+\eqnshift@=\dimen112
+\alignsep@=\dimen113
+\tagshift@=\dimen114
+\tagwidth@=\dimen115
+\totwidth@=\dimen116
+\lineht@=\dimen117
+\@envbody=\toks21
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/amsfonts/amss
+ymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/graphics/grap
+hicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/graphics/grap
+hics.sty
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/graphics/trig
+.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/latexconfig/g
+raphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 94.
+
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/pdftex-def/pd
+ftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/generic/oberdiek/in
+fwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/generic/oberdiek/lt
+xcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count107
+))
+\Gin@req@height=\dimen118
+\Gin@req@width=\dimen119
+)
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/jknapltx/math
+rsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup6
+)
+\c@theorem=\count108
+)
+
+LaTeX Warning: Unused global option(s):
+    [letter].
+
+(./Murphy_Dynamic_Steady_Periodic_TimeStochastic_10-29-2015.aux)
+\openout1 = `Murphy_Dynamic_Steady_Periodic_TimeStochastic_10-29-2015.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/context/base/supp-p
+df.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count109
+\scratchdimen=\dimen120
+\scratchbox=\box31
+\nofMPsegments=\count110
+\nofMParguments=\count111
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count112
+\MPscratchDim=\dimen121
+\MPnumerator=\count113
+\makeMPintoPDFobject=\count114
+\everyMPtoPDFconversion=\toks24
+)
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/generic/oberdiek/pd
+ftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/generic/oberdiek/if
+luatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/generic/oberdiek/if
+pdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/oberdiek/epst
+opdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/oberdiek/grfe
+xt.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/generic/oberdiek/kv
+definekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/oberdiek/kvop
+tions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/generic/oberdiek/kv
+setkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/generic/oberdiek/et
+excmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/latexconfig/e
+pstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <16> not available
+(Font)              size <17.28> substituted on input line 40.
+
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 49.
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 49.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <5.5> not available
+(Font)              size <5> substituted on input line 49.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 49.
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 49.
+
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/amsfonts/umsa
+.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 49.
+
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/amsfonts/umsb
+.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 49.
+
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/jknapltx/ursf
+s.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+
+LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 49.
+
+\@address@1=\toks25
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 105.
+
+
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/base/omscmr.f
+d
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <7> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 105.
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 108.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 112.
+
+[1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+]
+Overfull \hbox (1.10706pt too wide) in paragraph at lines 189--206
+\OT1/cmr/m/n/10.95 tur-bu-lence [[]], atmosphere-surface ex-change over the sea
+ [[]] and sea ice [[],
+ []
+
+[2]
+
+LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <5.5> not available
+(Font)              size <5> substituted on input line 267.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 267.
+
+[3] [4] [5] [6] [7] [8]
+Overfull \hbox (36.40872pt too wide) in paragraph at lines 656--656
+[] 
+ []
+
+[9] [10] [11]
+Overfull \hbox (7.94963pt too wide) in paragraph at lines 884--891
+\OT1/cmr/m/n/10.95 For spa-tial di-men-sion $\OML/cmm/m/it/10.95 d \OT1/cmr/m/n
+/10.95 = 2$, the set of func-tions $\OMS/cmsy/m/n/10.95 f[]\OT1/cmr/m/n/10.95 [
+\OML/cmm/m/it/10.95 {\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 `t \OT1/cmr/m/n/10
+.95 + \OML/cmm/m/it/10.95 mx \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 ny\OT1/cm
+r/m/n/10.95 )] \OMS/cmsy/m/n/10.95 j \OML/cmm/m/it/10.95 `; m; n \OMS/cmsy/m/n/
+10.95 2
+ []
+
+
+Overfull \hbox (12.16745pt too wide) in paragraph at lines 897--897
+[] 
+ []
+
+
+Overfull \hbox (19.58478pt too wide) in paragraph at lines 909--909
+[] 
+ []
+
+
+Overfull \hbox (117.65852pt too wide) in paragraph at lines 927--927
+[] 
+ []
+
+
+Overfull \hbox (19.08252pt too wide) in paragraph at lines 927--936
+\OT1/cmr/m/n/10.95 Since the or-thonor-mal set $\OMS/cmsy/m/n/10.95 f\OT1/cmr/m
+/n/10.95 e[]\OMS/cmsy/m/n/10.95 g$ \OT1/cmr/m/n/10.95 is com-plete, $[][] e[]\O
+ML/cmm/m/it/10.95 c[] \OT1/cmr/m/n/10.95 =
+ []
+
+[12] [13]
+Overfull \hbox (0.57616pt too wide) in paragraph at lines 1004--1004
+[] 
+ []
+
+[14]
+<Figure1_Spectral_Measures_Effective_Diffusivities.pdf, id=70, 452.69125pt x 50
+2.87875pt>
+File: Figure1_Spectral_Measures_Effective_Diffusivities.pdf Graphic file (type 
+pdf)
+ <use Figure1_Spectral_Measures_Effective_Diffusivities.pdf>
+Package pdftex.def Info: Figure1_Spectral_Measures_Effective_Diffusivities.pdf 
+used on input line 1142.
+(pdftex.def)             Requested size: 339.5176pt x 377.15813pt.
+ [15]
+[16] [17]
+Overfull \hbox (20.86249pt too wide) in paragraph at lines 1371--1379
+\OT1/cmr/m/n/10.95 More-over, the func-tion $\OML/cmm/m/it/10.95 ^^V[]\OT1/cmr/
+m/n/10.95 (\OML/cmm/m/it/10.95 ^^U\OT1/cmr/m/n/10.95 )$ is real-valued and pos-
+i-tive $\OML/cmm/m/it/10.95 ^^V[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 ^^U\OT
+1/cmr/m/n/10.95 ) = \OMS/cmsy/m/n/10.95 h\OML/cmm/m/it/10.95 Q\OT1/cmr/m/n/10.9
+5 (\OML/cmm/m/it/10.95 ^^U\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95  ;  \OMS/cmsy
+/m/n/10.95 i \OT1/cmr/m/n/10.95 =
+ []
+
+[18]
+Overfull \hbox (9.00877pt too wide) in paragraph at lines 1455--1471
+[]\OT1/cmr/m/n/10.95 Equation [] can be gen-er-al-ized, hold-ing with suit-able
+ no-ta-tional changes,
+ []
+
+[19] [20] [21]
+Overfull \hbox (27.04541pt too wide) in paragraph at lines 1657--1657
+[] 
+ []
+
+[22] [23]
+Overfull \hbox (0.24673pt too wide) in paragraph at lines 1768--1787
+[]\OT1/cmr/m/it/10.95 The op-er-a-tor $\OML/cmm/m/it/10.95 A \OT1/cmr/m/n/10.95
+ = (\OMS/cmsy/m/n/10.95 ^^@\OT1/cmr/m/n/10.95 ^^A)[](\OML/cmm/m/it/10.95 @[] \O
+MS/cmsy/m/n/10.95 ^^@ [][][]\OT1/cmr/m/n/10.95 )$ \OT1/cmr/m/it/10.95 dis-playe
+d in equa-tion []
+ []
+
+[24]
+Overfull \hbox (14.26688pt too wide) in paragraph at lines 1863--1872
+\U/rsfs/m/n/10.95 F$\OT1/cmr/m/n/10.95 , it is a max-i-mal (skew-adjoint) nor-m
+al op-er-a-tor on $\U/rsfs/m/n/10.95 F$\OT1/cmr/m/n/10.95 , hence $\OMS/cmsy/m/
+n/10.95 ^^@\OML/cmm/m/it/10.95 {\OT1/cmr/m/n/10.95 (\OMS/cmsy/m/n/10.95 ^^@\OT1
+/cmr/m/n/10.95 ^^A)[][[][][]]$
+ []
+
+[25]
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/it' in size <5.5> not available
+(Font)              size <5> substituted on input line 1942.
+
+[26] [27] [28] [29]
+Overfull \hbox (25.30241pt too wide) in paragraph at lines 2220--2220
+[] 
+ []
+
+
+Overfull \hbox (1.36623pt too wide) in paragraph at lines 2252--2259
+\OT1/cmr/m/n/10.95 Equation [] fol-lows from ap-ply-ing the integro-differentia
+l op-er-a-tor $[](^^A[])$
+ []
+
+
+Overfull \hbox (50.21242pt too wide) in paragraph at lines 2275--2275
+[] 
+ []
+
+[30] [31]
+Overfull \hbox (5.43869pt too wide) in paragraph at lines 2435--2455
+[]\OT1/cmr/m/it/10.95 The func-tion spaces $\U/rsfs/m/n/10.95 F$ \OT1/cmr/m/it/
+10.95 and $\OMS/cmsy/m/n/10.95 F$ \OT1/cmr/m/it/10.95 de-fined in equa-tions []
+ and []
+ []
+
+[32] [33] [34]
+Overfull \hbox (20.1833pt too wide) in paragraph at lines 2621--2621
+[] 
+ []
+
+[35] [36]
+Overfull \hbox (13.96307pt too wide) in paragraph at lines 2773--2773
+[] 
+ []
+
+
+Overfull \hbox (13.62291pt too wide) in paragraph at lines 2773--2779
+\OT1/cmr/m/it/10.95 is valid and pro-vides the stan-dard res-o-lu-tion of the m
+ono-tone func-tion $\OMS/cmsy/m/n/10.95 k\OML/cmm/m/it/10.95 Q\OT1/cmr/m/n/10.9
+5 (\OML/cmm/m/it/10.95 ^^U\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 f\OMS/cmsy/m/
+n/10.95 k[]$
+ []
+
+[37]
+Overfull \hbox (20.78871pt too wide) in paragraph at lines 2821--2827
+\OT1/cmr/m/n/10.95 where we have used that $\OMS/cmsy/m/n/10.95 h\OML/cmm/m/it/
+10.95 A[]; '[]\OMS/cmsy/m/n/10.95 i[] \OT1/cmr/m/n/10.95 = \OMS/cmsy/m/n/10.95 
+^^@h[]\OML/cmm/m/it/10.95 ; A'[]\OMS/cmsy/m/n/10.95 i[] \OT1/cmr/m/n/10.95 = \O
+MS/cmsy/m/n/10.95 ^^@h[]\OML/cmm/m/it/10.95 ; {^^U[]'[]\OMS/cmsy/m/n/10.95 i[] 
+\OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 {^^U[]\OMS/cmsy/m/n/10.95 h[]\OML/cmm/
+m/it/10.95 ; '[]\OMS/cmsy/m/n/10.95 i[]$\OT1/cmr/m/n/10.95 .
+ []
+
+
+Overfull \hbox (15.82236pt too wide) in paragraph at lines 2869--2869
+[] 
+ []
+
+[38]
+Overfull \hbox (14.12349pt too wide) in paragraph at lines 2879--2892
+\OT1/cmr/m/n/10.95 te-grals as-so-ci-ated with a \OT1/cmr/m/it/10.95 dis-crete 
+\OT1/cmr/m/n/10.95 mea-sure. The terms $\OMS/cmsy/m/n/10.95 h\OML/cmm/m/it/10.9
+5 ^^_[]; ^^_[]\OMS/cmsy/m/n/10.95 i[]$ \OT1/cmr/m/n/10.95 and $\OMS/cmsy/m/n/10
+.95 h\OML/cmm/m/it/10.95 A^^_[]; ^^_[]\OMS/cmsy/m/n/10.95 i[]$
+ []
+
+(./Murphy_Dynamic_Steady_Periodic_TimeStochastic_10-29-2015.bbl
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/generic/path/path.s
+ty
+This is path.sty, Version 3.05 <7-Apr-2011>
+\c@tcode=\count115
+\c@unter=\count116
+) [39] [40] [41] [42]
+Underfull \hbox (badness 1668) in paragraph at lines 286--293
+\OT1/cmr/m/n/10.95 LCCN gb97051509.  URL []\OT1/cmtt/m/n/10.95 http://books.goo
+gle.com/books?id=
+ []
+
+
+Underfull \hbox (badness 2478) in paragraph at lines 311--316
+[]\OT1/cmr/m/n/10.95 D. L. Koch and J. F. Brady.  Anoma-lous dif-fu-sion in het
+-
+ []
+
+
+Underfull \hbox (badness 3635) in paragraph at lines 311--316
+\OT1/cmr/m/n/10.95 URL []\OT1/cmtt/m/n/10.95 http://scitation.aip.org/content/a
+ip/journal/pof1/31/
+ []
+
+[43]
+Underfull \hbox (badness 1087) in paragraph at lines 372--378
+[]\OT1/cmr/m/n/10.95 Roberto Mauri.  Dis-per-sion, con-vec-tion, and re-ac-tion
+ in porous
+ []
+
+
+Underfull \hbox (badness 2671) in paragraph at lines 372--378
+\OT1/cmr/m/n/10.95 me-dia.  \OT1/cmr/m/it/10.95 Phys. Flu-ids A: Fluid Dy-nam-i
+cs\OT1/cmr/m/n/10.95 , 3(5):743--756, 1991.
+ []
+
+[44] [45] [46] [47]) [48] [49 <./Figure1_Spectral_Measures_Effective_Diffusivit
+ies.pdf>] (./Murphy_Dynamic_Steady_Periodic_TimeStochastic_10-29-2015.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 1.28pt have occurred.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 3900 strings out of 493054
+ 52783 string characters out of 6125839
+ 120612 words of memory out of 5000000
+ 7345 multiletter control sequences out of 15000+600000
+ 18936 words of font info for 72 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 37i,13n,26p,1054b,656s stack positions out of 5000i,500n,10000p,200000b,80000s
+</home/archive/share/lib/tex/texlive-2015-07/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmbsy10.pfb></home/archive/share/lib/tex/texlive-2015-07/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmbx10.pfb></home/archive/share/lib/tex/texlive-2
+015-07/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/archive/shar
+e/lib/tex/texlive-2015-07/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
+></home/archive/share/lib/tex/texlive-2015-07/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmex10.pfb></home/archive/share/lib/tex/texlive-2015-07/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmmi10.pfb></home/archive/share/lib/tex/texlive-201
+5-07/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></home/archive/share/l
+ib/tex/texlive-2015-07/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></ho
+me/archive/share/lib/tex/texlive-2015-07/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmmib10.pfb></home/archive/share/lib/tex/texlive-2015-07/texmf-dist/fonts/t
+ype1/public/amsfonts/cmextra/cmmib8.pfb></home/archive/share/lib/tex/texlive-20
+15-07/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/archive/share/
+lib/tex/texlive-2015-07/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></h
+ome/archive/share/lib/tex/texlive-2015-07/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr5.pfb></home/archive/share/lib/tex/texlive-2015-07/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr8.pfb></home/archive/share/lib/tex/texlive-2015-07/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></home/archive/share/lib/tex/te
+xlive-2015-07/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></home/archi
+ve/share/lib/tex/texlive-2015-07/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+10.pfb></home/archive/share/lib/tex/texlive-2015-07/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmsy7.pfb></home/archive/share/lib/tex/texlive-2015-07/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy8.pfb></home/archive/share/lib/tex/texlive
+-2015-07/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></home/archive/sh
+are/lib/tex/texlive-2015-07/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pf
+b></home/archive/share/lib/tex/texlive-2015-07/texmf-dist/fonts/type1/public/am
+sfonts/symbols/msam10.pfb></home/archive/share/lib/tex/texlive-2015-07/texmf-di
+st/fonts/type1/public/amsfonts/symbols/msbm10.pfb></home/archive/share/lib/tex/
+texlive-2015-07/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></home
+/archive/share/lib/tex/texlive-2015-07/texmf-dist/fonts/type1/public/rsfs/rsfs1
+0.pfb>
+Output written on Murphy_Dynamic_Steady_Periodic_TimeStochastic_10-29-2015.pdf 
+(49 pages, 573203 bytes).
+PDF statistics:
+ 269 PDF objects out of 1000 (max. 8388607)
+ 189 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+

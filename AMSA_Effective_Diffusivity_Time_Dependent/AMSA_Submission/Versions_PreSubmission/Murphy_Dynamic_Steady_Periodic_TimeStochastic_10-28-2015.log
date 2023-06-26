@@ -1,0 +1,559 @@
+This is TeX, Version 3.1415 (C version 6.1.2.1) (format=latex 6.2.12)  28 OCT 2015 13:59
+**&latex2e Murphy_Dynamic_Steady_Periodic_TimeStochastic_10-28-2015.tex
+(Murphy_Dynamic_Steady_Periodic_TimeStochastic_10-28-2015.tex
+LaTeX2e(BETA TEST RELEASE)  <2005/12/01>
+Babel <v3.7h> and hyphenation patterns for english, loaded.
+(ipart.cls
+Document Class: ipart 2015/08/12 driver class for package imsart.sty
+(/usr/local/lib/tex/latex2e/unpacked/article.cls
+Document Class: article 2005/09/16 v1.4f Standard LaTeX document class
+(/usr/local/lib/tex/latex2e/unpacked/leqno.clo
+File: leqno.clo 1998/08/17 v1.1c Standard LaTeX option (left equation numbers)
+)
+(/usr/local/lib/tex/latex2e/unpacked/size10.clo
+File: size10.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (imsart.sty
+File: imsart.sty 2014/10/16IMS article style (VS)
+ (etoolbox.sty
+Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
+
+
+! Package etoolbox Error: Not running under e-TeX.
+
+See the etoolbox package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26   {}
+         
+? 
+)
+! Undefined control sequence.
+l.84 \ifdefined
+               \loadhyperrefoptions\else
+? q
+OK, entering \batchmode...
+! Undefined control sequence.
+l.84 \ifdefined\loadhyperrefoptions
+                                   \else
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Extra \else.
+l.84 \ifdefined\loadhyperrefoptions\else
+                                        
+I'm ignoring this; it doesn't match any \if.
+
+! Extra \fi.
+l.86 \fi
+        
+I'm ignoring this; it doesn't match any \if.
+
+No file imsart.cnf.
+\c@firstpage=\count87
+\c@lastpage=\count88
+! Undefined control sequence.
+<recently read> \newbool 
+                         
+l.580 \newbool
+              {checklpage}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.580 \newbool{c
+                hecklpage}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+\c@thanks=\count89
+\c@addressref=\count90
+ (/usr/local/lib/tex/latex2e/unpacked/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+\c@emailref=\count91
+! Undefined control sequence.
+l.873 \protected
+                \def\relateddoi{\@ifnextchar[{\@tempswatrue\@relateddoi}{\@t...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.876 \protected
+                \def\relateddois{\@ifnextchar[{\@tempswatrue\@relateddois}{\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\c@author=\count92
+\c@address=\count93
+\sv@mathsurround=\dimen103
+\sv@parindent=\dimen104
+\fm@box=\box26
+\fm@size=\dimen105
+\t@xtheight=\dimen106
+\abstract@box=\box27
+\keyword@box=\box28
+\pre@kwd@depth=\dimen107
+\authors@list=\toks15
+\keywords@list=\toks16
+No file imsart-generic.cnf.
+)
+
+! LaTeX Error: File `flushend.sty' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: sty)
+
+ Enter file name: 
+! Emergency stop.
+<read *> 
+         
+l.188   \RequirePackage
+                       {stfloats}%^^M
+*** (cannot \read from terminal in nonstop modes)
+
+ 
+Here is how much of TeX's memory you used:
+ 948 strings out of 28583
+ 10752 string characters out of 471185
+ 56065 words of memory out of 524286
+ 3963 multiletter control sequences out of 27000
+ 3938 words of font info for 15 fonts, out of 800000 for 255
+ 14 hyphenation exceptions out of 2003
+ 34i,0n,26p,350b,40s stack positions out of 300i,40n,60p,3000b,4000s
+No pages of output.
+9/05/25 v2.5h Standard LaTeX font definitions
+) (/usr/local/lib/tex/latex2e/unpacked/amstext.sty
+Package: amstext 2000/06/29 v2.01
+ (/usr/local/lib/tex/latex2e/unpacked/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks18
+\ex@=\dimen109
+)) (/usr/local/lib/tex/latex2e/unpacked/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen110
+) (/usr/local/lib/tex/latex2e/unpacked/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count94
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count95
+\leftroot@=\count96
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count97
+\DOTSCASE@=\count98
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box29
+\strutbox@=\box30
+\big@size=\dimen111
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count99
+\c@MaxMatrixCols=\count100
+\dotsspace@=\muskip10
+\c@parentequation=\count101
+\dspbrk@lvl=\count102
+\tag@help=\toks19
+\row@=\count103
+\column@=\count104
+\maxfields@=\count105
+\andhelp@=\toks20
+\eqnshift@=\dimen112
+\alignsep@=\dimen113
+\tagshift@=\dimen114
+\tagwidth@=\dimen115
+\totwidth@=\dimen116
+\lineht@=\dimen117
+\@envbody=\toks21
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+) (/usr/local/lib/tex/latex2e/unpacked/amssymb.sty
+Package: amssymb 2002/01/22 v2.2d
+) (/usr/local/lib/tex/latex2e/unpacked/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/local/lib/tex/latex2e/unpacked/graphics.sty
+Package: graphics 2001/07/07 v1.0n Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/local/lib/tex/inputs/trig.sty
+Package: trig 1994/10/16 v1.08 sin cos tan (DPC)
+) (/usr/local/lib/tex/latex2e/unpacked/graphics.cfg)
+Package graphics Info: Driver file: dvips.def on input line 80.
+ (/usr/local/lib/tex/latex2e/unpacked/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen118
+\Gin@req@width=\dimen119
+) (/usr/local/lib/tex/latex2e/unpacked/mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup6
+)
+\c@theorem=\count106
+)
+
+LaTeX Warning: Unused global option(s):
+    [letter].
+
+
+(Murphy_Dynamic_Steady_Periodic_TimeStochastic_10-28-2015.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <16> not available
+(Font)              size <17.28> substituted on input line 40.
+
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 49.
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 49.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <5.5> not available
+(Font)              size <5> substituted on input line 49.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 49.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <11> on input line 49.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7.69997> on input line 49.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5.5> on input line 49.
+LaTeX Font Info:    Try loading font information for U+msa on input line 49.
+ (/usr/local/lib/tex/latex2e/unpacked/umsa.fd
+File: umsa.fd 2002/01/19 v2.2g AMS font definitions
+)
+
+LaTeX Font Warning: Font shape `U/msa/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 49.
+
+LaTeX Font Info:    Try loading font information for U+msb on input line 49.
+ (/usr/local/lib/tex/latex2e/unpacked/umsb.fd
+File: umsb.fd 2002/01/19 v2.2g AMS font definitions
+)
+
+LaTeX Font Warning: Font shape `U/msb/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 49.
+
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 49.
+ (/usr/local/lib/tex/latex2e/unpacked/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+
+LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 49.
+
+\@address@1=\toks23
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10> on input line 65.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 65.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 65.
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 113.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 117.
+
+
+Overfull \vbox (417.71805pt too high) has occurred while \output is active []
+
+ [1
+
+]
+Overfull \hbox (1.10706pt too wide) in paragraph at lines 194--211
+\OT1/cmr/m/n/10.95 tur-bu-lence [[]], atmosphere-surface ex-change over the sea
+ [[]] and sea ice [[],
+ []
+
+
+LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <5.5> not available
+(Font)              size <5> substituted on input line 272.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 272.
+
+ [2] [3] [4] [5] [6] [7]
+Overfull \hbox (38.2698pt too wide) in paragraph at lines 661--661
+[] 
+ []
+
+ [8] [9] [10]
+Overfull \hbox (7.94963pt too wide) in paragraph at lines 889--896
+\OT1/cmr/m/n/10.95 For spa-tial di-men-sion $\OML/cmm/m/it/10.95 d \OT1/cmr/m/n
+/10.95 = 2$, the set of func-tions $\OMS/cmsy/m/n/10.95 f[]\OT1/cmr/m/n/10.95 [
+\OML/cmm/m/it/10.95 {\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 `t \OT1/cmr/m/n/10
+.95 + \OML/cmm/m/it/10.95 mx \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 ny\OT1/cm
+r/m/n/10.95 )] \OMS/cmsy/m/n/10.95 j \OML/cmm/m/it/10.95 `; m; n \OMS/cmsy/m/n/
+10.95 2
+ []
+
+
+Overfull \hbox (10.9119pt too wide) in paragraph at lines 902--902
+[] 
+ []
+
+
+Overfull \hbox (19.58478pt too wide) in paragraph at lines 914--914
+[] 
+ []
+
+ [11]
+Overfull \hbox (116.26964pt too wide) in paragraph at lines 932--932
+[] 
+ []
+
+
+Overfull \hbox (18.02696pt too wide) in paragraph at lines 932--941
+\OT1/cmr/m/n/10.95 Since the or-thonor-mal set $\OMS/cmsy/m/n/10.95 f\OT1/cmr/m
+/n/10.95 e[]\OMS/cmsy/m/n/10.95 g$ \OT1/cmr/m/n/10.95 is com-plete, $[][] e[]\O
+ML/cmm/m/it/10.95 c[] \OT1/cmr/m/n/10.95 =
+ []
+
+ [12]
+Overfull \hbox (0.54283pt too wide) in paragraph at lines 1009--1009
+[] 
+ []
+
+ [13] [14]
+File: Figure1_Spectral_Measures_Effective_Diffusivities.eps Graphic file (type 
+eps)
+
+<Figure1_Spectral_Measures_Effective_Diffusivities.eps> [15] [16] [17]
+Overfull \hbox (20.86249pt too wide) in paragraph at lines 1377--1385
+\OT1/cmr/m/n/10.95 More-over, the func-tion $\OML/cmm/m/it/10.95 ^^V[]\OT1/cmr/
+m/n/10.95 (\OML/cmm/m/it/10.95 ^^U\OT1/cmr/m/n/10.95 )$ is real-valued and pos-
+i-tive $\OML/cmm/m/it/10.95 ^^V[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 ^^U\OT
+1/cmr/m/n/10.95 ) = \OMS/cmsy/m/n/10.95 h\OML/cmm/m/it/10.95 Q\OT1/cmr/m/n/10.9
+5 (\OML/cmm/m/it/10.95 ^^U\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95  ;  \OMS/cmsy
+/m/n/10.95 i \OT1/cmr/m/n/10.95 =
+ []
+
+ [18]
+Overfull \hbox (9.00877pt too wide) in paragraph at lines 1461--1477
+[]\OT1/cmr/m/n/10.95 Equation [] can be gen-er-al-ized, hold-ing with suit-able
+ no-ta-tional changes,
+ []
+
+ [19] [20] [21]
+Overfull \hbox (24.7121pt too wide) in paragraph at lines 1663--1663
+[] 
+ []
+
+ [22]
+Overfull \hbox (0.24673pt too wide) in paragraph at lines 1774--1793
+[]\OT1/cmr/m/it/10.95 The op-er-a-tor $\OML/cmm/m/it/10.95 A \OT1/cmr/m/n/10.95
+ = (\OMS/cmsy/m/n/10.95 ^^@\OT1/cmr/m/n/10.95 ^^A)[](\OML/cmm/m/it/10.95 @[] \O
+MS/cmsy/m/n/10.95 ^^@ [][][]\OT1/cmr/m/n/10.95 )$ \OT1/cmr/m/it/10.95 dis-playe
+d in equa-tion []
+ []
+
+ [23]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24]
+Overfull \hbox (14.26688pt too wide) in paragraph at lines 1869--1878
+\U/rsfs/m/n/10.95 F$\OT1/cmr/m/n/10.95 , it is a max-i-mal (skew-adjoint) nor-m
+al op-er-a-tor on $\U/rsfs/m/n/10.95 F$\OT1/cmr/m/n/10.95 , hence $\OMS/cmsy/m/
+n/10.95 ^^@\OML/cmm/m/it/10.95 {\OT1/cmr/m/n/10.95 (\OMS/cmsy/m/n/10.95 ^^@\OT1
+/cmr/m/n/10.95 ^^A)[][[][][]]$
+ []
+
+ [25]
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/it' in size <5.5> not available
+(Font)              size <5> substituted on input line 1948.
+
+ [26] [27] [28]
+Overfull \hbox (25.30241pt too wide) in paragraph at lines 2226--2226
+[] 
+ []
+
+ [29]
+Overfull \hbox (1.36623pt too wide) in paragraph at lines 2258--2265
+\OT1/cmr/m/n/10.95 Equation [] fol-lows from ap-ply-ing the integro-differentia
+l op-er-a-tor $[](^^A[])$
+ []
+
+
+Overfull \hbox (52.0735pt too wide) in paragraph at lines 2281--2281
+[] 
+ []
+
+ [30] [31]
+Overfull \hbox (5.43869pt too wide) in paragraph at lines 2441--2461
+[]\OT1/cmr/m/it/10.95 The func-tion spaces $\U/rsfs/m/n/10.95 F$ \OT1/cmr/m/it/
+10.95 and $\OMS/cmsy/m/n/10.95 F$ \OT1/cmr/m/it/10.95 de-fined in equa-tions []
+ and []
+ []
+
+ [32] [33]
+Overfull \hbox (19.07219pt too wide) in paragraph at lines 2627--2627
+[] 
+ []
+
+ [34] [35] [36]
+Overfull \hbox (13.96307pt too wide) in paragraph at lines 2779--2779
+[] 
+ []
+
+
+Overfull \hbox (13.62291pt too wide) in paragraph at lines 2779--2785
+\OT1/cmr/m/it/10.95 is valid and pro-vides the stan-dard res-o-lu-tion of the m
+ono-tone func-tion $\OMS/cmsy/m/n/10.95 k\OML/cmm/m/it/10.95 Q\OT1/cmr/m/n/10.9
+5 (\OML/cmm/m/it/10.95 ^^U\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 f\OMS/cmsy/m/
+n/10.95 k[]$
+ []
+
+
+Overfull \hbox (20.78871pt too wide) in paragraph at lines 2827--2833
+\OT1/cmr/m/n/10.95 where we have used that $\OMS/cmsy/m/n/10.95 h\OML/cmm/m/it/
+10.95 A[]; '[]\OMS/cmsy/m/n/10.95 i[] \OT1/cmr/m/n/10.95 = \OMS/cmsy/m/n/10.95 
+^^@h[]\OML/cmm/m/it/10.95 ; A'[]\OMS/cmsy/m/n/10.95 i[] \OT1/cmr/m/n/10.95 = \O
+MS/cmsy/m/n/10.95 ^^@h[]\OML/cmm/m/it/10.95 ; {^^U[]'[]\OMS/cmsy/m/n/10.95 i[] 
+\OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 {^^U[]\OMS/cmsy/m/n/10.95 h[]\OML/cmm/
+m/it/10.95 ; '[]\OMS/cmsy/m/n/10.95 i[]$\OT1/cmr/m/n/10.95 .
+ []
+
+ [37]
+Overfull \hbox (12.93344pt too wide) in paragraph at lines 2875--2875
+[] 
+ []
+
+
+Overfull \hbox (14.12349pt too wide) in paragraph at lines 2885--2898
+\OT1/cmr/m/n/10.95 te-grals as-so-ci-ated with a \OT1/cmr/m/it/10.95 dis-crete 
+\OT1/cmr/m/n/10.95 mea-sure. The terms $\OMS/cmsy/m/n/10.95 h\OML/cmm/m/it/10.9
+5 ^^_[]; ^^_[]\OMS/cmsy/m/n/10.95 i[]$ \OT1/cmr/m/n/10.95 and $\OMS/cmsy/m/n/10
+.95 h\OML/cmm/m/it/10.95 A^^_[]; ^^_[]\OMS/cmsy/m/n/10.95 i[]$
+ []
+
+ [38]
+(Murphy_Dynamic_Steady_Periodic_TimeStochastic_10-28-2015.bbl (/usr/local/lib/t
+ex/latex2e/unpacked/path.sty
+This is path.sty, Version 3.03 <03-Dec-1991>
+\ATcode=\count107
+\c@tcode=\count108
+\c@unter=\count109
+) [39] [40] [41]
+Underfull \hbox (badness 1668) in paragraph at lines 286--293
+\OT1/cmr/m/n/10.95 LCCN gb97051509.  URL []\OT1/cmtt/m/n/10.95 http://books.goo
+gle.com/books?id=
+ []
+
+ [42]
+Underfull \hbox (badness 2478) in paragraph at lines 311--316
+[]\OT1/cmr/m/n/10.95 D. L. Koch and J. F. Brady.  Anoma-lous dif-fu-sion in het
+-
+ []
+
+
+Underfull \hbox (badness 3635) in paragraph at lines 311--316
+\OT1/cmr/m/n/10.95 URL []\OT1/cmtt/m/n/10.95 http://scitation.aip.org/content/a
+ip/journal/pof1/31/
+ []
+
+
+Underfull \hbox (badness 1087) in paragraph at lines 372--378
+[]\OT1/cmr/m/n/10.95 Roberto Mauri.  Dis-per-sion, con-vec-tion, and re-ac-tion
+ in porous
+ []
+
+
+Underfull \hbox (badness 2671) in paragraph at lines 372--378
+\OT1/cmr/m/n/10.95 me-dia.  \OT1/cmr/m/it/10.95 Phys. Flu-ids A: Fluid Dy-nam-i
+cs\OT1/cmr/m/n/10.95 , 3(5):743--756, 1991.
+ []
+
+ [43] [44] [45] [46])
+! Undefined control sequence.
+\check@last@page ->\ifbool 
+                           {checklpage} {\ifnum 0\number \c@lastpage >0\rela...
+l.2939 \end{document}
+                     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Wrong lastpage: set to 1, should be 47!.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2939 \end{document}
+                     
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+ [47] [48]
+(Murphy_Dynamic_Steady_Periodic_TimeStochastic_10-28-2015.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 1.28pt have occurred.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 2696 strings out of 28583
+ 31061 string characters out of 471185
+ 81089 words of memory out of 524286
+ 5564 multiletter control sequences out of 27000
+ 17388 words of font info for 65 fonts, out of 800000 for 255
+ 14 hyphenation exceptions out of 2003
+ 34i,13n,26p,1063b,684s stack positions out of 300i,40n,60p,3000b,4000s
+
+Output written on Murphy_Dynamic_Steady_Periodic_TimeStochastic_10-28-2015.dvi 
+(48 pages, 192384 bytes).

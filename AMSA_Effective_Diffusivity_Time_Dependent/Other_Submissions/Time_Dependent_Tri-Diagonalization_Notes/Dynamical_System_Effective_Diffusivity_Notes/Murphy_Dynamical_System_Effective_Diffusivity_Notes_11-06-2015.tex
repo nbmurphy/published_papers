@@ -1,0 +1,286 @@
+\documentclass{article}
+\usepackage[dvips]{epsfig,graphics,color,graphicx,lscape}
+\usepackage{amsfonts}
+\usepackage{amssymb,amsmath}
+\usepackage{graphicx}
+
+
+ 
+
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{9.0in}
+
+%\setlength{\oddsidemargin}{-0.25in}
+\setlength{\oddsidemargin}{0in}
+%\setlength{\evensidemargin}{0.25in}
+\setlength{\topmargin}{-.50in} 
+
+
+% Murphy's short cut commands
+\newcommand{\Real}{\mbox{Re}\,}
+\newcommand{\Imag}{\mbox{Im}\,}
+
+\newcommand{\e}{\mathrm{e}}
+\newcommand{\Hb}{\mathbf{H}}
+\newcommand\bnabla{\mbox{\boldmath${\nabla}$}}
+\newcommand{\vecxi}{\mbox{\boldmath${\xi}$}}
+\newcommand\Kbc{\mbox{\boldmath${\mathcal{K}}$}}
+\newcommand{\Hc}{\mathcal{H}}
+\newcommand{\Ac}{\mathcal{A}}
+\newcommand{\Tc}{\mathcal{T}}
+\newcommand{\Vc}{\mathcal{V}}
+\newcommand{\Fc}{\mathcal{F}}
+\newcommand{\Ec}{\mathcal{E}}
+\newcommand{\Sm}{\mathsf{S}}
+\newcommand{\Am}{\mathsf{A}}
+\newcommand{\Dm}{\mathsf{D}}
+\newcommand{\vecx}{\mathbf{x}}
+\newcommand{\vecu}{\mathbf{u}}
+\newcommand{\veca}{\mathbf{a}}
+
+
+\begin{document}
+
+\title{Effective diffusivity: a dynamical systems approach}
+\author{N. B. Murphy and J. Xin}
+\date{}
+\maketitle
+\begin{abstract}
+A dynamical systems approach to the effective parameter problem for
+advection-diffusion is presented.
+
+\end{abstract}
+\bigskip
+ 
+\section{The cell problem as a dynamical system }
+%
+Consider the cell problem associated with the advection-diffusion
+equation
+%
+\begin{align}\label{eq:Periodic_Cell_Prob}
+  (\partial_t+\vecu\cdot\bnabla-\varepsilon\Delta)\chi_j(t,\vecx)=u_j(t,\vecx)
+\end{align}
+%
+with velocity field
+%
+\begin{align}\label{eq:velocity_field_delta}
+\vecu(t,\vecx)%=(\cos y + \cos t \, \sin y, \cos x + \cos t \sin x)
+       =(\cos y,\cos x)+\theta\cos t \,(\sin y,\sin x).       
+\end{align}
+%
+The components $\Dm^*_{jk}$, $j,k=1,\ldots,d$, of the effective diffusivity
+tensor $\Dm^*$ are given 
+by         
+%
+\begin{align}\label{eq:Djk}
+  \Dm^*_{jk}=\varepsilon\delta_{jk}+\langle u_j,\chi_k\rangle_2,
+\end{align}
+%
+where $\langle f,h\rangle=\langle f\; \overline{h}\rangle$ denotes the $L^2(\Tc\times\Vc)$
+inner-product over the period cell $\Tc\times\Vc$, $\langle\cdot\rangle$ denotes space-time
+average over $\Tc\times\Vc$, and $\overline{h}$ denotes complex conjugation
+of the function $h$. We stress that $u_j$ and $\chi_k$ are
+\emph{real-valued}. Inserting the formula for $u_j$
+in~\eqref{eq:Periodic_Cell_Prob} into equation~\eqref{eq:Djk} yields 
+%
+\begin{align}\label{eq:Eff_Diffusivity_Sobolev}
+  \Sm^*_{jk}=\varepsilon(\delta_{jk}+\langle\chi_j,\chi_k\rangle_1),
+  \qquad
+  \Am^*_{jk}=\langle A\chi_j,\chi_k\rangle_1,
+  \quad
+  A=(-\Delta)^{-1}(\partial_t+\vecu\cdot\bnabla).
+\end{align}
+%
+Here $\Sm^*_{jk}$ and $\Am^*_{jk}$ are the components of the symmetric
+$\Sm^*$ and antisymmetric $\Am^*$ parts of $\Dm^*$ and
+$\langle f,h\rangle_1=\langle\bnabla f\cdot\bnabla h\rangle$.
+
+
+
+Since $\chi(t,\cdot)\in\Hc^1_{\Vc}$ for each $t\in\Tc$ and the orthogonal set
+$\{\e^{\imath (mx+ny)}\}_{m,n\in\mathbb{Z}}$, is complete in $L^2(\Vc)\supset\Hc^1_{\Vc}$, we can
+represent $\chi_j(t,\vecx)$ by  
+%
+\begin{align}\label{eq:x_Expansion}
+  \chi_j(t,\vecx)=\sum_{m,n}a^{\,j}_{m,n}(t)\,\e^{\imath (mx+ny)},
+  \quad
+  a^{\,j}_{m,n}(t)=\langle\chi_j(t,\vecx),\e^{\imath (mx+ny)}\rangle_{\Vc},
+  \quad
+  a^{\,j}_{m,n}(0)=a^{\,j}_{m,n}(2\pi),
+\end{align}
+%
+where $\langle\cdot\rangle_{\Vc}$ denotes spatial averaging over the spatial period $\Vc$.
+Inserting the formula for $\chi_j$ in~\eqref{eq:x_Expansion} into
+equation~\eqref{eq:Periodic_Cell_Prob} yields  
+%
+\begin{align}\label{eq:Cell_Problem_Fourier}
+  \sum_{m,n}\e^{\imath (mx+ny)}[\partial_t+\imath mu_1+\imath nu_2+\varepsilon(m^2+n^2)]a^{\,j}_{m,n}=u_j,
+\end{align}
+%
+where we have written $\vecu=(u_1,u_2)$. Writing
+$\cos{x}=(\e^{\imath x}+\e^{-\imath x})/2$ and $\sin{x}=(\e^{\imath x}-\e^{-\imath
+  x})/(2\imath)$, for example, equation \eqref{eq:Cell_Problem_Fourier} can
+be written, for $j=1$, as 
+%
+\begin{align}\label{eq:Cell_Problem_Fourier_exp}
+  \sum_{m,n}\e^{\imath (mx+ny)}[
+    \partial_ta^{\,1}_{m,n}
+    +\frac{\imath}{2}(&m(a^{\,1}_{m,n-1}+a^{\,1}_{m,n+1})+n(a^{\,1}_{m-1,n}+a^{\,1}_{m+1,n}))
+    \\
+    +\frac{\theta\cos{t}}{2}(&m(a^{\,1}_{m,n-1}-a^{\,1}_{m,n+1})+n(a^{\,1}_{m-1,n}-a^{\,1}_{m+1,n}))
+    +\varepsilon(m^2+n^2)a^{\,1}_{m,n}
+    \notag\\
+    -\frac{1}{2}&\delta_{0,m}(\delta_{1,n}+\delta_{-1,n})
+          -\frac{\theta\cos{t}}{2\imath}\delta_{0,m}(\delta_{1,n}-\delta_{-1,n})]=0,
+    \notag
+\end{align}
+%
+where $\delta_{l,m}$ is the Kronecker delta.
+Since $u_2(t,x,y)=u_1(t,y,x)$, the formula for
+$a^{\,2}_{m,n}$ follows from interchanging $\delta_{l,m}$ with $\delta_{l,n}$ in
+\eqref{eq:Cell_Problem_Fourier_exp}, $l=-1,0,1$. By the completeness of the orthogonal set
+$\{\e^{\imath(mx+ny)}\}$, equation \eqref{eq:Cell_Problem_Fourier_exp} and
+its analogue for $a^{\,2}_{m,n}$ can be written as the following two
+(infinite) linear, coupled dynamical systems 
+%
+\begin{align}\label{eq:Cell_Problem_ODE}
+  \partial_ta^{\,1}_{m,n}
+    &+\frac{\imath}{2}(m(a^{\,1}_{m,n-1}+a^{\,1}_{m,n+1})+n(a^{\,1}_{m-1,n}+a^{\,1}_{m+1,n}))
+    \\
+    &+\frac{\theta\cos{t}}{2}(m(a^{\,1}_{m,n-1}-a^{\,1}_{m,n+1})+n(a^{\,1}_{m-1,n}-a^{\,1}_{m+1,n}))
+    +\varepsilon(m^2+n^2)a^{\,1}_{m,n}, 
+    \notag\\
+    &=\frac{1}{2}\delta_{0,m}(\delta_{1,n}+\delta_{-1,n})
+          +\frac{\theta\cos{t}}{2\imath}\delta_{0,m}(\delta_{1,n}-\delta_{-1,n}),
+    \notag\\
+ \partial_ta^{\,2}_{m,n}
+    &+\frac{\imath}{2}(m(a^{\,2}_{m,n-1}+a^{\,2}_{m,n+1})+n(a^{\,2}_{m-1,n}+a^{\,2}_{m+1,n}))
+    \notag\\
+    &+\frac{\theta\cos{t}}{2}(m(a^{\,2}_{m,n-1}-a^{\,2}_{m,n+1})+n(a^{\,2}_{m-1,n}-a^{\,2}_{m+1,n}))
+    +\varepsilon(m^2+n^2)a^{\,2}_{m,n}
+    \notag\\
+    &=\frac{1}{2}\delta_{0,n}(\delta_{1,m}+\delta_{-1,m})
+          +\frac{\theta\cos{t}}{2\imath}\delta_{0,n}(\delta_{1,m}-\delta_{-1,m}),
+    \notag          
+\end{align}
+%
+with  boundary condition $a^{\,j}_{m,n}(0)=a^{\,j}_{m,n}(2\pi)$, $j=1,2$,
+$m,n\in\mathbb{Z}$. When $\theta=0$, the velocity field in
+\eqref{eq:velocity_field_delta} is time-independent. In this case the
+function $\chi_j$, hence the Fourier coefficients $a^{\,j}_{m,n}$ are
+also time-independent, and equation \eqref{eq:Cell_Problem_ODE}
+reduces to the following algebraic system of equations
+%
+\begin{align}\label{eq:Cell_Problem_LinAlg}
+    \frac{\imath}{2}(m(a^{\,1}_{m,n-1}+a^{\,1}_{m,n+1})+n(a^{\,1}_{m-1,n}+a^{\,1}_{m+1,n}))      
+    +\varepsilon(m^2+n^2)a^{\,1}_{m,n}
+    &=\frac{1}{2}\delta_{0,m}(\delta_{1,n}+\delta_{-1,n})          
+    \\
+    \frac{\imath}{2}(m(a^{\,2}_{m,n-1}+a^{\,2}_{m,n+1})+n(a^{\,2}_{m-1,n}+a^{\,2}_{m+1,n}))    
+    +\varepsilon(m^2+n^2)a^{\,2}_{m,n}    
+    &=\frac{1}{2}\delta_{0,n}(\delta_{1,m}+\delta_{-1,m}).       
+    \notag          
+\end{align}
+%
+
+
+
+
+
+By restricting the indices, $-M\leq \ell,m,n\leq M$, and imposing the boundary
+conditions
+%
+\begin{align}
+  a^{\,l}_{m,n}=0 \quad \text{ if } \ \ \max(|m|,|n|)>M,
+\end{align}
+%
+the infinite systems of equations in~\eqref{eq:Cell_Problem_ODE}
+and~\eqref{eq:Cell_Problem_LinAlg} become finite sets of
+equations. The bijective mapping
+% 
+\begin{align}\label{eq:Bijections} 
+  \Theta_s(m,n)&=(M+m+1)+(M+n)(2M+1), 
+\end{align}
+%
+maps the finite sets of equations to matrix equations
+%
+\begin{align}
+  \label{eq:Dynamic_system}
+  &\partial_t\veca^{\,j}(t)=(A+\theta\cos{t}\,B+\varepsilon C)\veca^{\,j}(t)
+             +\vecxi_1^{\,j}+\theta\cos{t}\,\vecxi_2^{\,j},
+   \quad
+   \veca^{\,j}(0)=\veca^{\,j}(2\pi)
+   \\
+   \label{eq:Algebraic_system}
+  &(A+\varepsilon C)\veca^{\,j}=\vecxi_1^{\,j}
+\end{align}
+%
+Equation~\eqref{eq:Dynamic_system} is a linear, inhomogeneous
+dynamical system of equations, while
+equation~\eqref{eq:Algebraic_system} is a linear system of algebraic
+equations. In equation~\eqref{eq:Algebraic_system}, the rows and
+columns of the matrices $A$ and $C$ corresponding to the
+$a^{\,j}_{0,0}$ component of the unknown vector $\veca^{\,j}$,
+consist entirely of zero elements, and can be removed without loss of 
+generality. Consequently, for each $0<\varepsilon<\infty$, this algebraic system
+in~\eqref{eq:Algebraic_system} can be directly solved using techniques
+of linear algebra, to determine the Fourier coefficients of $\chi_j$ in
+$\veca^{\,j}$. Moreover, the matrix $(A+\varepsilon C)$ is \emph{sparse}, so
+that iterative methods are applicable.   
+
+
+ 
+
+We now discuss how the symmetric $\Sm^*$ and antisymmetric $\Am^*$ parts
+of the effective diffusivity tensor $\Dm^*$ are determined from the
+Fourier coefficients $a^{\,j}_{m,n}$ of $\chi_j$. Inserting the formula
+for $\chi_j$ in~\eqref{eq:x_Expansion} into the formula for $\Sm^*_{jk}$ in
+equation~\eqref{eq:Eff_Diffusivity_Sobolev} and using the
+orthogonality of  the set $\{\e^{\imath(mx+ny)}\}$ yields 
+%
+\begin{align}
+ \Sm^*_{jk}/\varepsilon-\delta_{jk}= \langle\chi_j,\chi_k\rangle_1=\Real\sum_{m,n}(m^2+n^2)\,\langle a^{\,j}_{m,n}\,\overline{a^{\,k}_{m,n}}\rangle_{\Tc}.
+  %\langle\chi_j,\chi_k\rangle_1=\sum_{m,n}(m^2+n^2)\,\text{Re}\langle\overline{a^{\,j}_{m,n}}\,a^{\,k}_{m,n}\rangle_t,
+\end{align} 
+%
+Here, $\langle\cdot\rangle_{\Tc}$ denotes time averaging over the temporal period
+$\Tc$ and, since $\chi_j$ 
+is real-valued, we have $\langle\chi_j,\chi_k\rangle_1=\Real\langle\chi_j,\chi_k\rangle_1$.
+As discussed above, when $\theta=0$, the Fourier coefficients
+$a^{\,j}_{m,n}$ are time-independent, so that
+$\langle a^{\,j}_{m,n}\,\overline{a^{\,k}_{m,n}}\rangle_{\Tc}=a^{\,j}_{m,n}\,\overline{a^{\,k}_{m,n}}$. Note
+that
+$\langle
+A\chi_j,\chi_k\rangle_1=\langle\nabla(-\Delta)^{-1}(\partial_t+\bnabla\cdot\vecu)\chi_j\cdot\nabla\chi_k\rangle=\langle(\partial_t+\bnabla\cdot\vecu)\chi_j,\chi_k\rangle_2$. Consequently,
+inserting the formula
+for $\chi_j$ in~\eqref{eq:x_Expansion} into the formula for $\Am^*_{jk}$ in
+equation~\eqref{eq:Eff_Diffusivity_Sobolev} and using the
+orthogonality of  the set $\{\e^{\imath(mx+ny)}\}$ yields 
+%
+\begin{align}
+  \langle A\chi_j,\chi_k\rangle_1=\sum_{m,n}\,\langle\overline{\gamma_{m,n}^{\theta,j}}\,a^{\,k}_{m,n}\rangle_{\Tc},\quad
+  %\langle A\chi_j,\chi_k\rangle_1=\sum_{m,n}\,\text{Re}\langle\overline{\gamma_{m,n}^{\theta,j}}\,a^{\,k}_{m,n}\rangle_t,\quad
+  \gamma_{m,n}^{\theta,j}=\partial_ta^{\,j}_{m,n}
+    &+\frac{\imath}{2}(m(a^{\,j}_{m,n-1}+a^{\,j}_{m,n+1})+n(a^{\,j}_{m-1,n}+a^{\,j}_{m+1,n}))
+    \\
+    &+\frac{\theta\cos{t}}{2}(m(a^{\,j}_{m,n-1}-a^{\,j}_{m,n+1})+n(a^{\,j}_{m-1,n}-a^{\,j}_{m+1,n})).
+  \notag
+\end{align}
+%
+When $\theta=0$, the Fourier coefficients $a^{\,j}_{m,n}$ are 
+time-independent, so that
+$\langle\overline{\gamma^{\theta,j}_{m,n}}\,a^{\,k}_{m,n}\rangle_t=\overline{\gamma^{\theta,j}_{m,n}}\,a^{\,k}_{m,n}$ and
+$\gamma_{m,n}^{\theta,j}=(m(a^{\,j}_{m,n-1}+a^{\,j}_{m,n+1})+n(a^{\,j}_{m-1,n}+a^{\,j}_{m+1,n}))/(-2\imath)$.
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

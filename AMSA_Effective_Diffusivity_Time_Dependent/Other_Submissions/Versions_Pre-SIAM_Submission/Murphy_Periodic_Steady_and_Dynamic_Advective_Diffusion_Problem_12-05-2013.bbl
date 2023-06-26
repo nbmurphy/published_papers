@@ -1,0 +1,226 @@
+\begin{thebibliography}{10}
+
+\bibitem{Akhiezer:Book:1965}
+N.I. Akhiezer.
+\newblock {\em The Classical Moment Problem}.
+\newblock Oliver \& Boyd, 1965.
+
+\bibitem{Avellaneda:PRL-753}
+M.~Avellaneda and A.~Majda.
+\newblock Stieltjes integral representation and effective diffusivity bounds
+  for turbulent transport.
+\newblock {\em Phys. Rev. Lett.}, 62:753--755, 1989.
+
+\bibitem{Avellaneda:CMP-339}
+M.~Avellaneda and A.~Majda.
+\newblock An integral representation and bounds on the effective diffusivity in
+  passive advection by laminar and turbulent flows.
+\newblock {\em Comm. Math. Phys.}, 138:339--391, 1991.
+
+\bibitem{Avellaneda:PRE:3249}
+M.~Avellaneda and M.~Vergassola.
+\newblock Stieltjes integral representation of effective diffusivities in
+  time-dependent flows.
+\newblock {\em Phys. Rev. E}, 52(3):3249--3251, 1995.
+
+\bibitem{Bergman:PRC-377}
+D.~J. Bergman.
+\newblock The dielectric constant of a composite material -- {A} problem in
+  classical physics.
+\newblock {\em Phys. Rep. C}, 43(9):377--407, 1978.
+
+\bibitem{Bergman:PRL-1285}
+D.~J. Bergman.
+\newblock Exactly solvable microscopic geometries and rigorous bounds for the
+  complex dielectric constant of a two-component composite material.
+\newblock {\em Phys. Rev. Lett.}, 44:1285--1287, 1980.
+
+\bibitem{Bergman:AP-78}
+D.~J. Bergman.
+\newblock Rigorous bounds for the complex dielectric constant of a
+  two--component composite.
+\newblock {\em Ann. Phys.}, 138:78--114, 1982.
+
+\bibitem{Bhatia:IEE:1077}
+H.~Bhatia, G.~Norgard, V.~Pascucci, and Peer-Timo Bremer.
+\newblock The helmholtz-hodge decomposition-a survey.
+\newblock {\em IEEE T. Vis. Comput. Gr.}, 19(8):1386--1404, 2013.
+
+\bibitem{Bhattacharya:AAP:1999:951}
+R.~Bhattacharya.
+\newblock Multiscale diffusion processes with periodic coefficients and an
+  application to solute transport in porous media.
+\newblock {\em Ann. Appl. Probab.}, 9(4):951--1020, 1999.
+
+\bibitem{Biferale:PF:2725}
+L.~Biferale, A.~Crisanti, M.~Vergassola, and A.~Vulpiani.
+\newblock Eddy diffusivities in scalar transport.
+\newblock {\em Phys. Fluids}, 7:2725--2734, 1995.
+
+\bibitem{Bruno:JSP-365}
+O.~Bruno and K.~Golden.
+\newblock Interchangeability and bounds on the effective conductivity of the
+  square lattice.
+\newblock {\em J. Stat. Phys.}, 61:365--386, 1990.
+
+\bibitem{Deift:2000:RMT}
+P.~Deift.
+\newblock {\em Orthogonal Polynomials and Random Matrices: a {Riemann--Hilbert}
+  Approach}.
+\newblock Courant Institute of Mathematical Sciences, New York, NY, 2000.
+
+\bibitem{Dunford_Schwartz:LinOp_PtI}
+N.~Dunford and J.~T. Schwartz.
+\newblock {\em Linear Operators, Part I}.
+\newblock John Wiley \& Sons, Inc., Hoboken, NJ, 1988.
+
+\bibitem{Fannjiang:SIAM_JAM:333}
+A.~Fannjiang and G.~Papanicolaou.
+\newblock Convection enhanced diffusion for periodic flows.
+\newblock {\em SIAM Journal on Applied Mathematics}, 54(2):333--408, 1994.
+
+\bibitem{Fannjiang:1997:1033}
+A.~Fannjiang and G.~Papanicolaou.
+\newblock Convection-enhanced diffusion for random flows.
+\newblock {\em J. Stat. Phys.}, 88(5-6):1033--1076, 1997.
+
+\bibitem{Folland:95}
+G.~B. Folland.
+\newblock {\em Introduction to Partial Differential Equations}.
+\newblock Princeton University Press, Princeton, NJ, 1995.
+
+\bibitem{Folland:99}
+G.~B. Folland.
+\newblock {\em Real Analysis: Modern Techniques and Their Applications}.
+\newblock Wiley--Interscience, New York, NY, 1999.
+
+\bibitem{Golden:CMP-473}
+K.~M. Golden and G.~Papanicolaou.
+\newblock Bounds for effective parameters of heterogeneous media by analytic
+  continuation.
+\newblock {\em Commun. Math. Phys.}, 90:473--491, 1983.
+
+\bibitem{Henrici:1974:v2}
+P.~Henrici.
+\newblock {\em Applied and Computational Complex Analysis. Volume 2.}
+\newblock John Wiley \& Sons Inc., New York, 1974.
+
+\bibitem{Isichenko:JNS:1991:375}
+M.~B. Isichenko and J.~Kalda.
+\newblock Statistical topography ii. 2d transport of passive scalar.
+\newblock {\em J. Nonlinear Sci.}, 4:375--397, 1991.
+
+\bibitem{Jackson-1999}
+J.~D. Jackson.
+\newblock {\em Classical Electrodynamics}.
+\newblock John Wiley and Sons, Inc., New York, 1999.
+
+\bibitem{Karlin_Studden:Book:1966}
+S.~Karlin and W.J. Studden.
+\newblock {\em Tchebycheff systems: with applications in analysis and
+  statistics}.
+\newblock John Wiley \& Sons, Inc., Hoboken, NJ, 1966.
+
+\bibitem{Keller:1964:TCC}
+J.~B. Keller.
+\newblock A theorem on the conductivity of a composite medium.
+\newblock {\em J. Math. Phys.}, 5:548--549, 1964.
+
+\bibitem{Denaro:2003:0271}
+F.~M-Denaro.
+\newblock On the application of the {Helmholtz-Hodge} decomposition in
+  projection methods for incompressible flows with general boundary conditions.
+\newblock {\em Int. J. Numer. Meth. Fl.}, 43(1):43--69, 2003.
+
+\bibitem{McLaughlin:SIAM_JAM:780}
+D.~Mc{Laughlin}, G.~Papanicolaou, and O.~Pironneau.
+\newblock Convection of microstructure and related problems.
+\newblock {\em SIAM J. Appl. Math.}, 45:780--797, 1985.
+
+\bibitem{Milton:APL-300}
+G.~W. Milton.
+\newblock Bounds on the complex dielectric constant of a composite material.
+\newblock {\em Appl. Phys. Lett.}, 37:300--302, 1980.
+
+\bibitem{Milton:JAP-5286}
+G.~W. Milton.
+\newblock Bounds on the complex permittivity of a two‐ component composite
+  material.
+\newblock {\em J. Appl. Phys.}, 52(8):5286--5293, 1981.
+
+\bibitem{Milton:JAP-5294}
+G.~W. Milton.
+\newblock Bounds on the transport and optical properties of a two-component
+  composite material.
+\newblock {\em J. Appl. Phys.}, 52(8):5294--5304, 1981.
+
+\bibitem{MILTON:2002:TC}
+G.~W. Milton.
+\newblock {\em Theory of Composites}.
+\newblock Cambridge University Press, Cambridge, 2002.
+
+\bibitem{Moffatt:RPP:621}
+H.~K. Moffatt.
+\newblock Transport effects associated with turbulence with particular
+  attention to the influence of helicity.
+\newblock {\em Rep. Prog. Phys.}, 46(5):621--664, 1983.
+
+\bibitem{Murphy:CMS:Submitted}
+N.~B. Murphy, E.~Cherkaev, C.~Hohenegger, and K.~M. Golden.
+\newblock Spectral measure computations for composite materials.
+\newblock Submitted, 2013.
+
+\bibitem{Murphy:JMP:063506}
+N.~B. Murphy and K.~M. Golden.
+\newblock The {Ising} model and critical behavior of transport in binary
+  composite media.
+\newblock {\em J. Math. Phys.}, 53:063506 (25pp.), 2012.
+
+\bibitem{Papanicolaou:RF-835}
+G.~Papanicolaou and S.~Varadhan.
+\newblock Boundary value problems with rapidly oscillating coefficients.
+\newblock In {\em Colloquia Mathematica Societatis J\'{a}nos Bolyai 27, Random
+  Fields (Esztergom, Hungary 1979)}, pages 835--873. North-Holland, 1982.
+
+\bibitem{Pavliotis:PHD_Thesis}
+G.~A. Pavliotis.
+\newblock {\em Homogenization theory for advection-diffusion equations with
+  mean flow}.
+\newblock PhD thesis, Rensselaer Polytechnic Institute Troy, New York, 2002.
+
+\bibitem{Pavliotis:IMAJAM:951}
+G.~A. Pavliotis.
+\newblock Asymptotic analysis of the {Green}--{Kubo} formula.
+\newblock {\em IMA J. Appl. Math.}, 75:951--967, 2010.
+
+\bibitem{Reed-1980}
+M.~C. Reed and B.~Simon.
+\newblock {\em Functional Analysis}.
+\newblock Academic Press, San Diego CA, 1980.
+
+\bibitem{Rudin:87}
+W.~Rudin.
+\newblock {\em Real and Complex Analysis}.
+\newblock McGraw-Hill, Inc., New York, NY, 1987.
+
+\bibitem{Scaife-1989}
+B.~K.~P. Scaife.
+\newblock {\em Principles of Dielectrics}.
+\newblock Clarendon Press, Oxford, 1989.
+
+\bibitem{Schulgasser:1976:CFR}
+K.~Schulgasser.
+\newblock On the conductivity of fiber reinforced materials.
+\newblock {\em J. Math. Phys.}, 17(3):382--387, March 1976.
+
+\bibitem{Stone:64}
+M.~H. Stone.
+\newblock {\em Linear Transformations in {Hilbert} Space}.
+\newblock American Mathematical Society, Providence, RI, 1964.
+
+\bibitem{Taylor:PRSL:196}
+G.~I. Taylor.
+\newblock Diffusion by continuous movements.
+\newblock {\em Proc. London Math. Soc.}, 2:196--211, 1921.
+
+\end{thebibliography}

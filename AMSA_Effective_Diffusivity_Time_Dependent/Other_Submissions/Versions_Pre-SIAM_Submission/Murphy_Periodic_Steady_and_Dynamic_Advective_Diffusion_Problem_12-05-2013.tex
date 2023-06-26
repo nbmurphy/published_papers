@@ -1,0 +1,1807 @@
+\documentclass[11pt]{amsart}
+%\usepackage{latexsym, amssymb, enumerate, amsmath}
+\usepackage{graphicx,amssymb,amsmath,amsfonts,mathrsfs}
+
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{9.0in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\topmargin}{-0.5in}
+
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.55}%0.75
+
+
+\newcommand{\ph}{\hat{\phi}}
+\newcommand{\pt}{\tilde{\phi}} 
+\newcommand{\pc}{\check{\phi}}
+\newcommand{\gh}{\hat{\gamma}}
+\newcommand{\Dh}{\hat{\Delta}}
+\newcommand{\dha}{\hat{\delta}}
+\newcommand{\qh}{\hat{q}}
+\newcommand{\xh}{\hat{x}}
+\newcommand{\HM}{\mathcal{H}_{\text{max}}}
+\newcommand{\Hm}{\mathcal{H}_{\text{min}}}
+\newcommand{\sech}{\rm \hspace{0.7mm}sech}
+\newcommand{\I}{\mathrm{i}}
+\newcommand{\e}{\mathrm{e}}
+\newcommand{\hh}{\hat{h}}
+\newcommand{\mh}{m_r}
+\newcommand{\mt}{m_i}
+\newcommand{\Mb}{\mathbf{M}}
+\newcommand{\Xb}{\mathbf{X}}
+\newcommand{\Tb}{\mathbf{T}}
+\newcommand{\Hb}{\mathbf{H}}
+\newcommand{\Kb}{\mathbf{K}}
+\newcommand{\Jb}{\mathbf{J}}
+\newcommand{\Ib}{\mathbf{I}}
+
+\newcommand\bsig{\mbox{\boldmath${\sigma}$}}
+\newcommand\beps{\mbox{\boldmath${\epsilon}$}}
+\newcommand\bxi{\mbox{\boldmath${\xi}$}}
+\newcommand\bmu{\mbox{\boldmath${\mu}$}}
+\newcommand\balpha{\mbox{\boldmath${\alpha}$}}
+\newcommand\brho{\mbox{\boldmath${\rho}$}}
+\newcommand\bDelta{\mbox{\boldmath${\Delta}$}}
+\newcommand\bkappa{\mbox{\boldmath${\kappa}$}}
+
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+
+    %\theoremstyle{definition}
+
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{notation}[thm]{Notation}
+\newtheorem{example}[thm]{Example}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{prob}[thm]{Problem}
+
+    %\theoremstyle{remark}
+
+\newtheorem{rem}[thm]{Remark}
+    % Use the standard latex environments for theorems, etc. Here is one
+          % possible method of declaring them: It numbers all results by the
+          % section, and uses a common numbering system for the different
+          % environmentts.
+
+\begin{document}
+
+\title{Spectral theory of advective diffusion \\
+  by dynamic and steady periodic flows}
+
+
+% AUTHORS 
+%\author{N. B. Murphy, A. Gully, E. Cherkaev, and K. M. Golden}
+\author{N. B. Murphy$^*$}
+\address{$^*$Department of Mathematics, 340 Rowland Hall, University of
+  California at Irvine, Irvine, CA 92697-3875, USA}
+\email{nbmurphy@math.uci.edu}
+
+\author{J. Xin$^{\dag}$}
+\address{$^{\dag}$Department of Mathematics, 340 Rowland Hall, University of
+  California at Irvine, Irvine, CA 92697-3875, USA} 
+\email{jxin@math.uci.edu}
+
+
+
+\maketitle
+\vspace{-3ex}
+\begin{center}
+  Department of Mathematics, University of California at Irvine
+\end{center}
+
+%\vspace{3ex}
+
+
+\begin{abstract}
+%
+The analytic continuation method for representing transport in
+composites provides Stieltjes integral representations for the
+effective coefficients of two-phase random media. Here we adapt this 
+method to characterize the effective thermal transport properties of
+advective diffusion, by steady and time-dependent, periodic flows. Our
+novel approach yields a Stieltjes integral representation for the
+effective diffusivity, which holds for dynamic and steady,
+incompressible flows, involving the spectral measure of a self-adjoint
+operator.
+In the case of steady fluid velocity fields, the spectral
+measure is associated with a Hermitian Hilbert-Schmidt integral
+operator, and in the case of dynamic flows, it is associated with an
+unbounded integro-differential operator.
+We utalize the integral
+representation to obtain asymptotic behavior of the effective
+diffusivity, as the molecular diffusivity tends to zero, for model,
+steady and dynamic flows. Our analytical results are supported by
+numerical computations of the spectral measures and effective
+diffusivities.    
+%
+\end{abstract}
+
+\section{Introduction}\label{sec:Introduction}
+%
+The long time, large scale behavior of a diffusing particle   
+or tracer being advected by an incompressible velocity field 
+is equivalent to an enhanced diffusive process \cite{Taylor:PRSL:196} 
+with an effective diffusivity tensor $\bkappa^*$.
+Determining the effective transport properties of advection enhanced
+diffusion is a challenging problem with theoretical and practical 
+importance in many fields of science and engineering,
+ranging from turbulent combustion to mass, heat, and salt transport in
+geophysical flows \cite{Moffatt:RPP:621}. A broad range of
+mathematical techniques have been developed that reduce the analysis
+of complex fluid flows, with rapidly varying structures in space and
+time, to solving averaged or \textit{homogenized} equations that do
+not have rapidly varying data, and involve an effective parameter.
+
+
+
+
+Homogenization of the advection-diffusion equation for thermal
+transport by time-independent, random fluid velocity fields was
+treated in \cite{McLaughlin:SIAM_JAM:780}. This 
+reduced the analysis of turbulent diffusion to solving an anisotripic
+diffusion equation involving a homogenized temperature and an
+effective diffusivity tensor $\bkappa^*$. An important consequence of
+this analysis is that $\bkappa^*$ is given in terms  
+of a \emph{curl-free} stationary stochastic process which satisfies a
+steady state diffusion equation involving a skew-symmetric random
+matrix $\Hb$ \cite{Avellaneda:CMP-339,Avellaneda:PRL-753}. By adapting
+the analytic continuation method (ACM) of homogenization theory for
+composites \cite{Golden:CMP-473}, it was shown that the result in
+\cite{McLaughlin:SIAM_JAM:780} leads to a Stieltjes integral
+representation of $\bkappa^*$, involving a spectral measure of a
+self-adjoint random operator
+\cite{Avellaneda:CMP-339,Avellaneda:PRL-753}. This integral
+representation of $\bkappa^*$ was generalized to the time-dependent
+case in \cite{Avellaneda:PRE:3249,Biferale:PF:2725}. Remarkably, this 
+method has also been extended to flows with incompressible
+\emph{nonzero} effective drift 
+\cite{Pavliotis:PHD_Thesis}, flows where particles diffuse according
+to linear collisions \cite{Pavliotis:IMAJAM:951}, and solute transport
+in porous media \cite{Bhattacharya:AAP:1999:951}. All these approaches
+yield Stieltjes integral representations of the symmetric and, when
+appropriate, the antisymmetric part of $\bkappa^*$.
+
+
+
+
+Homogenization of the advection-diffusion equation for periodic or
+cellular, incompressible flow fields was treated in
+\cite{Fannjiang:SIAM_JAM:333,Fannjiang:1997:1033}. As in the case of
+random flows, the effective diffusivity tensor
+$\bkappa^*$ is given in terms of a \emph{curl-free} vector field which
+satisfies a diffusion equation involving a skew-symmetric
+matrix $\Hb$. Here, we demonstrate that the ACM can
+be adapted to this periodic setting to provide a Stieltjes
+integral representation for $\bkappa^*$, both for steady and
+time-dependent flows, involving a self-adjoint operator and the
+(non-dimensional) molecular diffusivity $\varepsilon$. In the case of steady
+fluid velocity fields, the spectral measure is associated with a
+Hermitian Hilbert-Schmidt integral operator involving the Green's
+function of the Laplacian on a square. While in the case of dynamic
+flows, the spectral measure is associated with a Hermitian operator
+which is the sum of that for steady flows and an unbounded
+integro-differential operator which is a composition of the time
+derivative and the inverse Laplacian on a square.     
+ 
+
+We utalize the analytic structure of the Stieltjes integral
+representation for $\bkappa^*$ to obtain its asymptotic behavior for
+model flows, as the molecular diffusivity $\varepsilon$ tends to zero. This is
+the high P\'{e}clet number regime that is important for the
+understanding of transport processes in real fluid flows, where the
+molecular diffusivity is often quite small in comparison. In
+particular, FINISH THIS PARAGRAPH WHEN WE HAVE CONCRETE RESULTS.
+necessary and sufficient conditions for steady periodic flow
+fields $\kappa^*\sim\epsilon^{1/2}$, generically, for steady flows and $\kappa^*\sim O(1)$ for
+``chaotic'' time-dependent flows. 
+
+%
+\section{Mathematical Methods}\label{sec:Mathematical_Methods} 
+%
+
+Consider the advection enhanced difusion of a passive tracer
+$\phi(t,\vec{x})$, $\vec{x}\in\mathbb{R}^d$, $t>0$, as described by the
+advection-diffusion equation 
+%
+\begin{align}\label{eq:ADE}
+  \partial_t\phi=\kappa_0\Delta \phi+\vec{v}\cdot\vec{\nabla}\phi, \quad
+  \phi(0,\vec{x})=\phi_0(\vec{x}),
+\end{align}
+%
+with $\phi_0(\vec{x})$ given. Here, $\partial_t$ denotes partial differentiation
+with respect to time $t$, $\Delta=\vec{\nabla}\cdot\vec{\nabla}=\nabla^2$ is the Laplacian,
+$\kappa_0>0$ is the molecular diffusivity, and $\vec{v}=\vec{v}(t,\vec{x})$
+is the fluid velocity field, which is assumed to be incompressible,
+i.e. $\vec{\nabla}\cdot\vec{v}=0$. We non-dimensionalize equation
+\eqref{eq:ADE} as follows. Let $\ell$ and $\tau$ be typical length and time 
+scales associated with the problem of interest. Mapping to
+non-dimensional coordinates $t\mapsto t/\tau$ and $x_i\mapsto x_i/\ell$ in
+\eqref{eq:ADE}, one sees that $\phi$ satisfies the advection-diffusion
+equation in \eqref{eq:ADE} with a non-dimensional molecular
+diffusivity $\varepsilon=\tau\kappa_0/\ell^2$ and velocity field $\vec{u}=\tau\vec{v}/\ell$,
+where $x_i$ is the $i^{\text{th}}$ component of the vector
+$\vec{x}$. Since $\vec{u}$ is incompressible, there is a
+(non-dimensional) skew-symmetric matrix $\Hb(t,\vec{x})$,
+$\Hb^{\,T}=-\Hb$, such that $\vec{u}=\vec{\nabla}\cdot\Hb$. 
+% %
+% \begin{align}
+%  \vec{u}=\vec{\nabla}\cdot\Hb, \qquad  \Hb^{\,T}=-\Hb.
+% \end{align}
+% %
+Using this representation of the velocity field $\vec{u}$, equation
+\eqref{eq:ADE} can be written as a diffusion equation, 
+%
+\begin{align}\label{eq:ADE_Divergence}
+  \partial_t\phi%&=\varepsilon\Delta \phi+\vec{u}\cdot\vec{\nabla}\phi\\
+    %&=\varepsilon\vec{\nabla}\cdot\vec{\nabla}\phi+(\vec{\nabla}\cdot\Hb)\cdot\vec{\nabla}\phi\\
+    %&=\vec{\nabla}\cdot[\varepsilon I+\Hb]\vec{\nabla}\phi\\
+    %&=\vec{\nabla}\cdot\bkappa\vec{\nabla}\phi
+    =\vec{\nabla}\cdot\bkappa\vec{\nabla}\phi, \quad
+    %\bkappa=\varepsilon I+\Hb,
+    \phi(0,\vec{x})=\phi_0(\vec{x}),
+    \qquad
+    \bkappa=\varepsilon\Ib+\Hb,
+\end{align}
+%
+where $\bkappa(t,\vec{x})=\varepsilon\Ib+\Hb(t,\vec{x})$ can be viewed as a local
+diffusivity tensor with coefficients
+%
+\begin{align}\label{eq:kappa_coeff}
+  \kappa_{jk}=\varepsilon\delta_{jk}+H_{jk},\quad j,k=1,\cdots,d,
+\end{align}
+%
+$\Ib$ is the identity matrix on $\mathbb{R}^d$, and $\delta_{jk}$ is 
+the Kronecker delta. 
+
+
+
+
+We are interested in the dynamics of $\phi$ for \emph{large} length and
+time scales. Anticipating that $\phi$ will have diffusive dynamics, we
+rescale space and time by $\vec{x}\mapsto\vec{x}/\delta$ and $t\mapsto t/\delta^2$,
+respectively, with $\delta\ll1$ while keeping the intital condition
+$\phi(0,\vec{x})=\phi_0(\vec{x})$ independent 
+of $\delta$. This is equivalent to assuming that the initial data is slowly
+varying relative to the velocity field $\vec{u}$ in the unscaled
+variables
+\cite{McLaughlin:SIAM_JAM:780,Fannjiang:SIAM_JAM:333,Fannjiang:1997:1033}. 
+For periodic diffusivity coefficients in \eqref{eq:kappa_coeff} which
+are uniformly elliptic but not necessarily symmetric, it can be shown 
+\cite{Fannjiang:SIAM_JAM:333} that the associated solution
+$\phi^\delta(t,\vec{x})=\phi(t/\delta^2,\vec{x}/\delta)$  of \eqref{eq:ADE_Divergence},
+involving the rescaled local diffusivity tensor
+$\bkappa(t/\delta^2,\vec{x}/\delta)$, converges to $\bar{\phi}(t,\vec{x})$, which
+satisfies a diffusion equation involving the (constant)
+diffusivity tensor $\bkappa^*$
+%
+\begin{align}
+  \partial_t\bar{\phi}=\vec{\nabla}\cdot\bkappa^*\vec{\nabla}\bar{\phi}, \quad
+  \bar{\phi}(0,\vec{x})=\phi_0(\vec{x}).
+\end{align}
+%
+The convergence is in $L^2$ \cite{Fannjiang:SIAM_JAM:333},
+%
+\begin{align}
+  \lim_{\delta\to0}\left[\,\sup_{0\leq t\leq t_0}
+    \int\left|\phi^\delta(t,\vec{x})-\bar{\phi}(t,\vec{x})\right|^2d\vec{x}
+    \;\right]=0,
+\end{align}
+%
+for all $t_0<\infty$, where we used the notation $d\vec{x}=dx_1\cdots dx_d$ for
+the product Lebesgue measure.
+
+
+
+
+
+The effective diffusivity tensor $\bkappa^*$ is
+obtained by solving the cell problem \cite{Fannjiang:SIAM_JAM:333}
+%
+\begin{align}\label{eq:Cell_Problem}
+  \partial_t\chi=\vec{\nabla}\cdot\bkappa(\vec{\nabla}\chi+\vec{e}_j\,), \quad
+    %=\vec{\nabla}\cdot[(\varepsilon\Ib+\Hb)(\vec{\nabla}\chi+\vec{e}_j\,)], \quad
+  \langle\vec{\nabla}\chi\rangle=0,
+\end{align}
+%
+for each standard basis vector $\vec{e}_j$, $j=1,\ldots,d$, where
+$\chi=\chi(t,\vec{x}\,;\vec{e}_j)$. Equation \eqref{eq:Cell_Problem} also holds
+\cite{Fannjiang:SIAM_JAM:333} when the velocity field is
+time-independent, $\vec{u}=\vec{u}(\vec{x})$, however, in this case $\chi$ 
+is time-independent and $\partial_t\chi=0$.  The 
+components $\kappa^*_{jk}=\bkappa^*\vec{e}_j\cdot\vec{e}_k$ of the effective
+diffusivity tensor are given in terms of the \emph{curl-free} vector
+field $\vec{\nabla}\chi$ \cite{Fannjiang:SIAM_JAM:333} 
+% 
+\begin{align}\label{eq:Eff_Diffusivity}  
+   \kappa^*_{jk}=\varepsilon\langle(\vec{\nabla}\chi+\vec{e}_i\,)\cdot(\vec{\nabla}\chi+\vec{e}_j\,)\rangle
+       =\varepsilon(\delta_{jk}+\langle\vec{\nabla}\chi\cdot\vec{\nabla}\chi\rangle).
+\end{align}
+%.
+Here, $\langle\cdot\rangle$ denotes spatial averaging over a period cell when the
+velocity field is time-independent, $\vec{u}=\vec{u}(\vec{x})$, and
+when the velocity field is time-dependent, $\vec{u}=\vec{u}(t,\vec{x})$,
+$\langle\cdot\rangle$ denotes time averaging over a temporal period in addition to
+spacial averaging. Equation \eqref{eq:Eff_Diffusivity} demonstrates
+that the effective transport of the tracer $\phi$ is always inhanced by the
+presence of a incompressible velocity field. 
+
+
+
+
+We now recast \eqref{eq:Cell_Problem} 
+in a more suggestive form by writing 
+$\partial_t\chi=\Delta\Delta^{-1}\partial_t\chi=\vec{\nabla}\cdot(\Delta^{-1}\partial_t\Ib)\vec{\nabla}\chi$ and defining
+$\vec{E}_k=\vec{\nabla}\chi+\vec{e}_k$ and 
+$\bsig=\bkappa-\Delta^{-1}\partial_t\Ib=((\varepsilon-\Delta^{-1}\partial_t)\Ib+\Hb)$. With these
+definitions, the first formulat in equation \eqref{eq:Cell_Problem}
+may be written as $\vec{\nabla}\cdot\bsig\vec{E}_k=0$. Consequently
+\eqref{eq:Cell_Problem} is equivalent to \cite{Fannjiang:SIAM_JAM:333}    
+%
+\begin{align}\label{eq:Maxwells_Equations}    
+  \vec{\nabla}\cdot\vec{J}_k=0, \quad
+  \vec{\nabla}\times\vec{E}_k=0, \quad
+  \vec{J}_k=\bsig\vec{E}_k,\quad
+  \langle\vec{E}_k\rangle=\vec{e}_k,
+\end{align}
+%
+where $\Delta^{-1}$ is based on convolution with the Green's function for
+the Laplacian $\Delta$ and $\bsig=\bkappa$ in the steady flow
+case when $\vec{u}=\vec{u}(\vec{x})$. The formulas in
+\eqref{eq:Maxwells_Equations} are  
+precisely the electrostatic version of Maxwell's equations for a
+conductive medium \cite{Golden:CMP-473}, where $\vec{E}_k$ and
+$\vec{J}_k$ are the local electric field and current density,
+respectively, and $\bsig$ is the local conductivity tensor of the
+medium. In the ACM for treating the effective transport properties of
+composites, the effective conductivity tensor $\bsig^*$ is defined by 
+%
+\begin{align}\label{eq:sigma*}
+  \langle\vec{J}_k\rangle=\bsig^*\langle\vec{E}_k\rangle.
+\end{align}
+%
+The linear constituative relation $\vec{J}_k=\bsig\vec{E}_k$ in
+\eqref{eq:Maxwells_Equations} relates the local intensity and flux,
+while the linear relation in \eqref{eq:sigma*} relates the mean
+intensity and mean flux. By the skew-symmetry of the operator
+$\mathbf{S}=-\Delta^{-1}\partial_t\Ib+\Hb$, with respect to the inner-product
+defined by $\langle\vec{\xi},\vec{\zeta}\rangle=\langle\vec{\xi}\cdot\vec{\zeta}\rangle$, the intensity-flux
+relationship in \eqref{eq:Maxwells_Equations} is similar to
+that of a Hall medium \cite{Isichenko:JNS:1991:375}. Moreover, the
+skew-symmetry of this operator implies that
+$\langle\mathbf{S}\vec{E}_k\cdot\vec{E}_k\rangle=-\langle\mathbf{S}\vec{E}_k\cdot\vec{E}_k\rangle=0$. Consequently,
+by equation \eqref{eq:Maxwells_Equations} and the Helmholtz theorem
+\cite{Golden:CMP-473,Denaro:2003:0271,Bhatia:IEE:1077}, equation
+\eqref{eq:sigma*} reduces to \eqref{eq:Eff_Diffusivity}:    
+%
+\begin{align}
+  \sigma^*_{kk}=\bsig^*\vec{e}_k\cdot\vec{e}_k 
+       =\langle\bsig\vec{E}_k\cdot\vec{e}_k\rangle
+       =\langle\bsig\vec{E}_k\cdot\vec{E}_k\rangle
+       =\langle[(\varepsilon\Ib+\mathbf{S})]\vec{E}_k\cdot\vec{E}_k\rangle
+       =\varepsilon\langle\vec{E}_k\cdot\vec{E}_k\rangle.
+\end{align}
+%
+% In general, $\bkappa^*$ is nonsymmetric. However, when the matrix
+% $\Hb$ satisfies $\Hb(t,\$
+% We are primarilly concerned with the diagonal components $\kappa^*_{kk}$ of
+% $\bkappa^*$, and for simplicity we set $\kappa^*=\kappa^*_{kk}$ for some $k=1,\ldots,d$.
+We will discuss this connection to the ACM in more detail in Section
+\ref{sec:Integral_Rep}, where we provide a Stieltjes integral
+representation for $\bkappa^*$, which holds for both for steady and
+time-dependent flows. 
+
+
+
+
+\subsection{Integral representation of the effective diffusivity for
+  steady and dynamic flows}\label{sec:Integral_Rep}
+%
+In this section, we adapt the ACM for representing transport
+incomposites \cite{Golden:CMP-473} to equations
+\eqref{eq:Maxwells_Equations} and \eqref{eq:sigma*} for periodic
+flows. This method gives an abstract Hilbert space formulation of the
+effective parameter problem for $\bkappa$ and provides a Stieltjes
+integral representation for the effective diffusivity $\bkappa^*$,
+which holds for both steady and time dependent velocity fields
+$\vec{u}$.
+
+
+Let $\mathscr{H}$ be the Hilbert space of square integrable,
+mean-zero, periodic, vector valued functions, with temporal 
+period $T$ and spatial periodicity on the $d$-dimensional cubic
+region $\mathcal{R}=[-\pi,\pi]^d$ with boundary $\partial\mathcal{R}$   
+%
+\begin{align}
+  \mathscr{H}=\{\vec{Y}(t,\vec{x}):\langle|\vec{Y}|^2\rangle<\infty, \ \langle\vec{Y}\rangle=0
+  %\  \vec{Y}(t+T,\vec{x}+\vec{X})=\vec{Y}(t,\vec{x}), \
+  %\vec{X}\in\mathcal{R} 
+  \}.  
+\end{align}
+%
+Also, consider the associated Hilbert spaces of curl-free
+$\mathscr{H}_\times$, divergence-free $\mathscr{H}_\bullet$, and (spatially)
+constant $\mathscr{H}_0$ vector valued functions  
+%
+\begin{align}
+  \mathscr{H}_\times=\{\vec{Y}\in\mathscr{H}:\vec{\nabla}\times\vec{Y}=0\}, \quad
+  \mathscr{H}_\bullet=\{\vec{Y}\in\mathscr{H}:\vec{\nabla}\cdot\vec{Y}=0\}, \quad
+  \mathscr{H}_0=\{\vec{Y}\in\mathscr{H}:\vec{Y} \text{ constant}\}.
+\end{align}
+%
+By the Helmholtz theorem
+\cite{Golden:CMP-473,Denaro:2003:0271,Bhatia:IEE:1077}, these 
+subspaces provide an orthogonal decomposition of 
+$\mathscr{H}$ \cite{Fannjiang:SIAM_JAM:333}, with
+associated orthogonal projectors $\Gamma_\times=\vec{\nabla}(\Delta^{-1})\vec{\nabla}\cdot$,
+$\Gamma_\bullet=-\vec{\nabla}\times(\Delta^{-1})\vec{\nabla}\times$, and $\Gamma_0$,
+\cite{Fannjiang:SIAM_JAM:333,Murphy:CMS:Submitted} 
+%
+\begin{align}
+  \mathscr{H}=\mathscr{H}_\times\oplus\mathscr{H}_\bullet\oplus\mathscr{H}_0,\quad
+  I=\Gamma_\times+\Gamma_\bullet+\Gamma_0,
+\end{align}
+%
+where $I$ is the identity operator on $\mathbb{R}^d$.
+Since we are focusing on flows which are periodic on the spatial
+region $\mathcal{R}$, it is convenient to consider the Fourier
+representation of a vector field $\vec{Y}(t,\vec{x})$, 
+%
+\begin{align}
+  \vec{Y}(t,\vec{x})
+    =\sum_{\vec{k}\in\mathbb{Z}^d}
+       \hat{Y}(t,\vec{k})\e^{\I\vec{k}\cdot\vec{x}},
+  \qquad
+  \hat{Y}(t,\vec{k})
+    =\frac{1}{(2\pi)^d}\int_{\mathcal{R}}
+       \hat{Y}(t,\vec{x})\e^{-\I\vec{k}\cdot\vec{x}}.
+\end{align}
+%
+%where $|\mathcal{R}|=(2\pi)^d$ is the Lebesgue measure of the region
+%$\mathcal{R}$.
+The action of the above projection opperators on
+$\vec{Y}$ is given by \cite{Fannjiang:SIAM_JAM:333} 
+%
+\begin{align}\label{eq:Projections}
+  \Gamma_0\vec{Y}(t,\vec{x})
+    =\langle\vec{Y}(t,\vec{x})\rangle_x
+    =\hat{Y}(t,0),
+    \qquad
+  \Gamma_\times\vec{Y}(t,\vec{x})
+    =\sum_{\vec{k}\neq0}
+       \frac{\vec{k}(\vec{k}\cdot\hat{Y}(t,\vec{k}))}{|\vec{k}|^2}
+       \e^{\I\vec{k}\cdot\vec{x}},
+    \\
+  \Gamma_\bullet\vec{Y}(t,\vec{x})
+    =\sum_{\vec{k}\neq0}
+       \frac{\vec{k}\times(\vec{k}\times\hat{Y}(t,\vec{k}))}{|\vec{k}|^2}
+       \e^{\I\vec{k}\cdot\vec{x}}
+    =\sum_{\vec{k}\neq0}\left(I-
+       \frac{\vec{k}\vec{k}\cdot}{|\vec{k}|^2}\right) 
+       \hat{Y}(t,\vec{k})\e^{\I\vec{k}\cdot\vec{x}},
+       \notag
+\end{align}
+%
+where $\langle\cdot\rangle_x$ denotes spatial averaging over $\mathcal{R}$. From
+equation \eqref{eq:Projections} it is clear that $\Gamma_\times+\Gamma_\bullet+\Gamma_0=I$.
+
+
+
+We now provide a Stieltjes integral representation for $\bkappa^*$
+involving the spectral measure of a self-adjoint operator. This
+representation follows from a resolvent formula for $\vec{\nabla}\chi$
+involving a self-adjoint linear operator acting on a Hilbert
+space. Since from equation \eqref{eq:Cell_Problem} we have
+$\vec{\nabla}\chi\in\mathscr{H}_\times$, the Hilbert space $\mathscr{H}_\times$ is the
+natural place for our analysis.
+
+
+
+
+
+
+
+In two dimensions, $d=2$, the matrix $\Hb$ is determined by a stream
+function $H(t,\vec{x})$ 
+%
+\begin{align}\label{eq:u_H}  
+  \Hb=\left[
+  \begin{array}{cc}
+    0  & H\\
+    -H & 0
+  \end{array}
+  \right],
+  \qquad
+  \vec{u}=[\partial_{x_1}H, \ \partial_{x_2}H].
+\end{align}
+%
+
+\newpage
+
+Consider the following problems in electrostatics: find stationary
+random vector fields $\vec{E}(\vec{x},\omega)$ and $\vec{J}(\vec{x},\omega)$
+such that
+%
+\begin{align}   \label{eq:Maxwells_Equations_E}  
+ &\vec{\nabla}\times\vec{E}=0, \quad
+  \vec{\nabla}\cdot\vec{J}=0,\quad
+  \vec{J}=\bsig\vec{E},\quad
+  %\vec{E}=\vec{E}_0+\vec{E}_f, \quad
+  \langle\vec{E}\,\rangle=\vec{E}_0, \\
+%
+  \label{eq:Maxwells_Equations_J}
+   &\vec{\nabla}\times\vec{E}=0, \quad
+   \vec{\nabla}\cdot\vec{J}=0, \quad
+   \vec{E}=\brho\vec{J},\quad
+   %\vec{J}=\vec{J}_0+\vec{J}_f,\quad
+   \langle\vec{J}\,\rangle=\vec{J}_0,
+   %\notag  
+\end{align}
+%
+where $\langle\cdot\rangle$ denotes ensemble average over $\Omega$ with respect to the
+measure $P$,
+%e.g. $\langle\vec{E}(\vec{x},\omega)\,\rangle=\int_\Omega P(d\omega)\vec{E}(\vec{x},\omega)$,
+we use the
+simplified vector notation $\langle\vec{\xi}\,\rangle=(\langle\xi_1\rangle,\ldots,\langle\xi_d\rangle)^T$, and $\xi_i$ is
+the $i^{\,\text{th}}$ component of the vector $\vec{\xi}$. Here,
+$\vec{E}$ and $\vec{J}$ are the electric field and current density within
+the polycrystalline medium, respectively. Their averages $\vec{E}_0$
+and $\vec{J}_0$ are assumed to be \emph{given}, and by stationarity they are
+independent of $\vec{x}\in\mathbb{R}^d$.  More specifically, we seek
+stationary solutions $\vec{E}$ and $\vec{J}$ to each of equations
+\eqref{eq:Maxwells_Equations_E} and \eqref{eq:Maxwells_Equations_J} of
+the form    
+%
+\begin{align}\label{eq:Stationary_E_J}
+  \vec{E}(\vec{x},\omega)=\vec{E}^{\,\prime}(\tau_{-x}\,\omega), \quad
+  \vec{J}(\vec{x},\omega)=\vec{J}^{\,\prime}(\tau_{-x}\,\omega), \quad
+  \forall \ \vec{x}\in\mathbb{R}^d, \ \omega\in\Omega,
+\end{align}
+%
+where $\vec{E}^{\,\prime}(\omega)=\vec{E}(0,\omega)$, $\vec{J}^{\,\prime}(\omega)=\vec{J}(0,\omega)$,
+$\vec{E}_0=\langle\vec{E}^{\,\prime}(\omega)\rangle$, and
+$\vec{J}_0=\langle\vec{J}^{\,\prime}(\omega)\rangle$. Once suitable solutions are 
+found, the effective conductivity and resistivity tensors $\bsig^*$
+and $\brho^*$ are defined by \cite{Golden:CMP-473}    
+%
+\begin{align}\label{eq:eff_eps_def}
+    \langle \vec{J} \,\rangle=  \bsig^* \vec{E}_0
+    \quad \text{and} \quad    
+    \langle \vec{E} \,\rangle=  \brho^*\vec{J}_0.
+\end{align}
+%
+We will prove the existence and uniqueness of such solutions to equations
+\eqref{eq:Maxwells_Equations_E} and \eqref{eq:Maxwells_Equations_J},
+as the setup of the proof illustrates the mathematical properties of
+$\bsig^*$ and $\brho^*$ which lead to the desired integral
+representations of these effective parameters. From equations
+\eqref{eq:Stationary_sig_rho}, \eqref{eq:Stationary_E_J} and
+\eqref{eq:eff_eps_def}, we see that the effective parameters are
+independent of $\vec{x}\in\mathbb{R}^d$.  
+
+
+
+
+
+\subsubsection{Existence and uniqueness for the electrostatic problem}
+\label{sec:Existence_and_Uniqueness}
+%
+If the components of the vector fields $\vec{E}$ and $\vec{J}$ were
+continuously differentiable on all of $\mathbb{R}^d$, for every $\omega\in\Omega$,
+then, since $\vec{\nabla}\times\vec{E}=0$ and $\vec{\nabla}\cdot\vec{J}=0$,
+there would exist \cite{Jackson-1999} scalar and
+vector potentials $\varphi$ and $\vec{A}$ such that
+$\vec{E}=\vec{\nabla}\varphi$ and $\vec{J}=\vec{\nabla}\times\vec{A}$. In this case, equations
+\eqref{eq:Maxwells_Equations_E} and \eqref{eq:Maxwells_Equations_J}
+are equivalent to
+%
+\begin{align}\label{eq:Alternate_Maxwells}  
+  \vec{\nabla}\cdot\bsig\vec{\nabla}\varphi=0
+  \quad \text{ and } \quad
+  \vec{\nabla}\times(\brho\,\vec{\nabla}\times\vec{A}\,)=0,
+\end{align}
+%
+respectively, with $\langle\vec{\nabla}\varphi\rangle=\vec{E}_0$ and
+$\langle\vec{\nabla}\times\vec{A}\,\rangle=\vec{J}_0$. However, $\sigma_{jk}$ and $\rho_{jk}$ may
+be discontinuous, hence non-differentiable, across the crystallite
+boundaries of the polycrystalline medium, so the formulas in equation
+\eqref{eq:Alternate_Maxwells} may not exist in a classical sense. The
+weak forms \cite{Folland:95} of these formulas are given by
+%$\langle\bsig\vec{\nabla}\varphi\cdot\vec{\nabla}\psi\rangle_V=0$ and
+%$\langle\brho\vec{\nabla}\times\vec{A}\cdot\vec{\nabla}\times\vec{\xi}\rangle_V=0$,
+%
+\begin{align}\label{eq:Weak_Alternate_Maxwells}
+  \langle\bsig\vec{\nabla}\varphi\cdot\vec{\nabla}\psi\rangle_V=0
+  \quad \text{ and } \quad
+  \langle\brho\vec{\nabla}\times\vec{A}\cdot\vec{\nabla}\times\vec{\xi}\,\rangle_V=0,
+\end{align}
+%
+where $\langle\cdot\rangle_V$ denotes
+integration over all of $\mathbb{R}^d$, $\psi$ and $\xi_i$, $i=1,\ldots,d$,
+are infinitely differentiable functions with compact support, and we
+stress that $\vec{\nabla}\psi$ is a curl-free vector field and
+$\vec{\nabla}\times\vec{\xi}$ is a divergence-free vector field. This 
+would directly bypass the non-differentiability of $\sigma_{jk}$ and
+$\rho_{jk}$. Although, indirectly, the discontinuous nature of these 
+functions might still render $\vec{E}$ and $\vec{J}$
+non-differentiable, so that the differential equations in
+\eqref{eq:Maxwells_Equations_E} and \eqref{eq:Maxwells_Equations_J}
+involving these vector fields again, may not exist in a classical
+sense.  We address such issues by providing abstract Hilbert space
+%variational
+formulations \cite{Golden:CMP-473} of the equations 
+in \eqref{eq:Weak_Alternate_Maxwells}.  
+
+
+
+
+The group of transformations $\tau_x$ acting on $\Omega$ induces a group of
+operators $T_x$ on the Hilbert space $L^2(\Omega,P)$ defined by
+$(T_xf)(\omega)=f(\tau_{-x}\,\omega)$ for all $f\in L^2(\Omega,P)$. Since the group
+generated by $\tau_x$ (through composition) is measure preserving, the
+operators $T_x$ form a unitary group and therefore have closed densely
+defined infinitesimal generators $L_i$ in each direction $i=1,\ldots,d$
+with domain $\mathscr{D}_i\subset L^2(\Omega,P)$ 
+\cite{Golden:CMP-473,Papanicolaou:RF-835}. Thus,  
+%
+\begin{align}\label{eq:Li}
+  L_i=\left.\frac{\partial}{\partial x_i}T_x \right|_{x=0}, \quad i=1,\ldots,d,
+\end{align}
+%
+where differentiation in \eqref{eq:Li} is defined in the sense of 
+convergence in $L^2(\Omega,P)$ for elements of $\mathscr{D}_i$
+\cite{Golden:CMP-473,Papanicolaou:RF-835}. The closed subset
+$\mathscr{D}=\cap_{i=1}^d\mathscr{D}_i$ of $L^2(\Omega,P)$ is a Hilbert space
+with inner product $\langle\cdot,\cdot\rangle_D$ given by $\langle f,g\rangle_D=\langle f,g\rangle_{L^2}+\sum_{i=1}^d\langle
+L_if,L_ig\rangle_{L^2}$, where $\langle\cdot,\cdot\rangle_{L^2}$ is the $L^2(\Omega,P)$ inner product
+\cite{Golden:CMP-473,Papanicolaou:RF-835}.
+
+
+
+
+Now consider the Hilbert space $\mathscr{H}=\bigotimes_{i=1}^dL^2(\Omega,P)$ with
+inner product $\langle\cdot,\cdot\rangle$ defined by
+$\langle\vec{\xi},\vec{\zeta}\rangle=\langle\vec{\xi}\cdot\vec{\zeta}\rangle$, and define the Hilbert spaces
+of ``curl free'' $\mathscr{H}_\times$ and ``divergence free''
+$\mathscr{H}_{\bullet}$ random fields \cite{Golden:CMP-473}   
+%
+\begin{align}\label{eq:curlfreeHilbert}
+  &\mathscr{H}_\times=
+  \left\{\vec{\xi}^{\,\prime}(\omega)\in \mathscr{H} \ | \ L_i\xi_j^{\,\prime}-L_j\xi_i^{\,\prime}=0 \ \text{ weakly and }
+    \langle\vec{\xi}^{\,\prime}\,\rangle=0
+  \right\}, \\
+&\mathscr{H}_{\bullet}=
+\left\{\vec{\zeta}^{\,\prime}(\omega)\in \mathscr{H} \ \Big| \ \sum_{i=1}^dL_i\zeta_i^{\,\prime}=0 \ \text{ weakly and }
+    \langle\vec{\zeta}^{\,\prime}\,\rangle=0\right\}.\notag 
+\end{align}  
+%
+We write $\vec{E}(\vec{x},\omega)=\vec{E}_0+\vec{E}_f(\vec{x},\omega)$, where
+$\vec{E}_f$ is the fluctuating field of mean zero about the (constant)
+average $\vec{E}_0$, and similarly for
+$\vec{J}(\vec{x},\omega)=\vec{J}_0+\vec{J}_f(\vec{x},\omega)$. 
+In view of equations \eqref{eq:Stationary_sig_rho},
+\eqref{eq:Stationary_E_J}, and \eqref{eq:Weak_Alternate_Maxwells}, we
+consider the following variational problems
+\cite{Golden:CMP-473}: given $\bsig^{\,\prime}$ and $\vec{E}_0$, and
+$\brho^{\,\prime}$ and $\vec{J}_0$, find $\vec{E}_f^{\,\prime}(\omega)\in\mathscr{H}_\times$
+and $\vec{J}_f^{\,\prime}(\omega)\in\mathscr{H}_\bullet$ such that         
+%
+\begin{align} 
+  \label{eq:Weak_Curl_Free_Variational_Form_E}
+  %&\Phi(\bsig^{\,\prime}\vec{E}^{\,\prime},\vec{\xi}^{\,\prime}):=
+     \langle\bsig^{\,\prime}(\omega)(\vec{E}_0+\vec{E}_f^{\,\prime}(\omega))\cdot\vec{\xi}^{\;\prime}(\omega)\rangle=0
+      \quad  \forall \ \vec{\xi}^{\,\prime}(\omega)\in\mathscr{H}_\times
+  \\
+  \label{eq:Weak_Curl_Free_Variational_Form_J}
+  %&\Psi(\brho^{\,\prime}\vec{J}^{\,\prime},\vec{\zeta}^{\,\prime}):=
+     \langle\brho^{\,\prime}(\omega)(\vec{J}_0+\vec{J}_f^{\,\prime}(\omega))\cdot\vec{\zeta}^{\,\prime}(\omega)\rangle=0
+      \quad  \forall \ \vec{\zeta}^{\,\prime}(\omega)\in\mathscr{H}_{\bullet}\,,
+  %\notag
+\end{align}
+%
+respectively. In order to apply the Lax-Milgram Theorem, we
+rewrite equations \eqref{eq:Weak_Curl_Free_Variational_Form_E} and
+\eqref{eq:Weak_Curl_Free_Variational_Form_J} as
+%
+\begin{align}
+  \label{eq:Bilinear_functional_E}
+   &\Phi(\vec{E}_f^{\,\prime},\vec{\xi}^{\,\prime})
+     =\langle\bsig^{\,\prime}(\omega)\vec{E}_f^{\,\prime}(\omega)\cdot\vec{\xi}^{\,\prime}(\omega)\rangle
+     =-\langle\bsig^{\,\prime}(\omega)\vec{E}_0\cdot\vec{\xi}^{\,\prime}(\omega)\rangle
+     =f_\sigma(\vec{\xi}^{\,\prime}),
+  \\
+  \label{eq:Bilinear_functional_J}
+  &\Psi(\vec{J}_f^{\,\prime},\vec{\zeta}^{\,\prime})
+     =\langle\brho^{\,\prime}(\omega)\vec{J}_f^{\,\prime}(\omega)\cdot\vec{\zeta}^{\,\prime}(\omega)\rangle
+     =-\langle\brho^{\,\prime}(\omega)\vec{J}_0\cdot\vec{\zeta}^{\,\prime}(\omega)\rangle
+     =f_\rho(\vec{\zeta}^{\,\prime}),
+\end{align}
+%
+respectively.
+
+
+
+
+By the Cauchy--Schwartz inequality and equation
+\eqref{eq:Bounded_parameters}, each of the bilinear functionals $\Phi$
+and $\Psi$ are bounded, and $f_\sigma$ and $f_\rho$ are both bounded linear
+functionals on the Hilbert spaces $\mathscr{H}_\times$ and 
+$\mathscr{H}_\bullet$, respectively. For now, we will assume that $\Phi$ and
+$\Psi$ are coercive, e.g. that there exists a positive constant 
+$\kappa>0$ such that $\Phi(\vec{\xi},\vec{\xi}\,)\geq\kappa\|\vec{\xi}\,\|^2$ for all 
+$\vec{\xi}\in\mathscr{H}_\times$, where $\|\cdot\|$ denotes the norm induced by the
+$\mathscr{H}$-inner-product. Later, we will demonstrate that the
+coercivity condition determines analytic properties of the
+effective parameters. By the Lax-Milgram theorem, there exist unique
+$\vec{E}_f^{\,\prime}\in\mathscr{H}_\times$ and $\vec{J}_f^{\,\prime}\in\mathscr{H}_\bullet$
+that satisfy equations \eqref{eq:Bilinear_functional_E} and
+\eqref{eq:Bilinear_functional_J} for all $\vec{\xi}^{\,\prime}\in\mathscr{H}_\times$
+and $\vec{\zeta}^{\,\prime}\in\mathscr{H}_\bullet$, respectively. By construction,
+%
+\begin{align}\label{eq:Unique_Solutions}
+  \vec{E}^{\,\prime}(\omega)&=\vec{E}_0+\vec{E}_f^{\,\prime}(\omega), \qquad
+  \vec{J}^{\,\prime}(\omega)=\bsig^{\,\prime}(\omega)\vec{E}^{\,\prime}(\omega),
+  \\
+  \vec{J}^{\,\prime}(\omega)&=\vec{J}_0+\vec{J}_f^{\,\prime}(\omega), \qquad
+  \vec{E}^{\,\prime}(\omega)=\brho^{\,\prime}(\omega)\vec{J}^{\,\prime}(\omega),
+\end{align}
+%
+are the unique solutions of equations \eqref{eq:Maxwells_Equations_E}
+and \eqref{eq:Maxwells_Equations_J}, respectively, via equations
+\eqref{eq:Stationary_sig_rho} and \eqref{eq:Stationary_E_J}. 
+To simplify notation, we will henceforth drop
+the distinction between the primed variables $\vec{E}_f^{\,\prime}(\omega)$ and 
+$\vec{E}_f(\vec{x},\omega)$, for example, as the context of each notation
+is now clear.
+
+
+
+
+
+We conclude this section by noting that since
+$\vec{E}_f\in\mathscr{H}_\times$ and $\vec{J}_f\in\mathscr{H}_\bullet$, equations
+\eqref{eq:Weak_Curl_Free_Variational_Form_E} and
+\eqref{eq:Weak_Curl_Free_Variational_Form_J} yield the energy (power)
+\cite{Jackson-1999} constraints $\langle\vec{J}\cdot\vec{E}_f\rangle=0$ and
+$\langle\vec{E}\cdot\vec{J}_f\rangle=0$, respectively, which lead to the following
+reduced energy representations $\langle\vec{J}\cdot\vec{E}\,\rangle=\langle\vec{J\,}\rangle\cdot\vec{E}_0$
+and $\langle\vec{E}\cdot\vec{J}\,\rangle=\langle\vec{E}\,\rangle\cdot\vec{J}_0$. By equation
+\eqref{eq:eff_eps_def}, we have the following energy representations
+involving the effective parameters  
+%$\langle\vec{J}\cdot\vec{E}\rangle=\bsig^*\vec{E}_0\cdot\vec{E}_0=\brho^*\vec{J}_0\cdot\vec{J}_0$.
+%
+\begin{align}\label{eq:Energy_Reps}
+  \langle\vec{J}\cdot\vec{E}\rangle=\bsig^*\vec{E}_0\cdot\vec{E}_0=\brho^*\vec{J}_0\cdot\vec{J}_0.
+\end{align}
+%
+
+
+
+\subsubsection{Representation formulas for uniaxial polycrystalline
+  media}\label{sec:Representation_formulas}
+%
+In Section \ref{sec:Existence_and_Uniqueness} we proved that equations
+\eqref{eq:Maxwells_Equations_E} and \eqref{eq:Maxwells_Equations_J}
+have unique solutions when the tensors $\bsig(\vec{x},\omega)$ and
+$\brho(\vec{x},\omega)$ satisfy the boundedness conditions in
+\eqref{eq:Bounded_parameters}, and when the bilinear functionals $\Phi$
+and $\Psi$ of equations \eqref{eq:Bilinear_functional_E} and
+\eqref{eq:Bilinear_functional_J} are coercive. In this section, we
+derive Stieltjes integral representations for the effective
+conductivity and resistivity tensors $\bsig^*$ and $\brho^*$, 
+involving spectral measures of self-adjoint random operators, which
+depend only on the geometry of the polycrystallin medium. We will also
+show that the coercivity conditions on $\Phi$ and $\Psi$ determine analytic
+properties these representations. 
+
+ 
+
+
+
+In this section, we restrict our attention to polycrystalline media
+with uniaxial microscopic asymmetry. We also interpret the
+electrostatic version of Maxwell's equations in
+\eqref{eq:Maxwells_Equations_E} and \eqref{eq:Maxwells_Equations_J} as
+the quasi-static limit of the full set of Maxwell's equations. In this
+case, these equations describe the transport properties of an
+electromagnetic wave through a polycrystalline medium, when the
+wavelength is very large compared to the typical size of the crystallites
+within the random medium. Under these assumptions, the local
+conductivity along one of the crystallite axes has the \emph{complex}
+value $\sigma_1$, while the conductivity along all the other axes have the
+complex value $\sigma_2$. The conductivity and resistivity tensors of such
+polycrystalline media are given by   
+%
+\begin{align}\label{eq:polycrystal_parameters}
+  &\bsig(\vec{x},\omega)=R^{\,T}(\vec{x},\omega)\text{diag}(\sigma_1,\sigma_2,\ldots,\sigma_2)R(\vec{x},\omega),
+  \\
+  &\brho(\vec{x},\omega)=R^{\,T}(\vec{x},\omega)\text{diag}(1/\sigma_1,1/\sigma_2,\ldots,1/\sigma_2)R(\vec{x},\omega),
+  \notag
+\end{align}
+%
+where $R(\vec{x},\omega)$ is a rotation matrix satisfying
+$R^{\,T}=R^{\,-1}$. For example, when $d=2$ we have 
+%
+\begin{align}\label{eq:polycrystal_parameters_2D}
+  \bsig=R^{\,T}
+  \left[
+  \begin{array}{cc}
+    \sigma_1& 0\\
+    0 & \sigma_2\\
+    \end{array}
+    \right]
+    R,
+    \quad
+    \brho=R^{\,T}
+  \left[
+  \begin{array}{cc}
+    1/\sigma_1& 0\\
+    0 & 1/\sigma_2\\
+    \end{array}
+    \right]
+    R,
+    \qquad
+    R=
+  \left[
+  \begin{array}{rr}
+    \cos\theta& -\sin\theta\\
+    \sin\theta & \cos\theta\\
+    \end{array}
+    \right],
+\end{align}
+%
+where $\theta=\theta(\vec{x},\omega)$ is the orientation angle, measured from the
+direction $\vec{e}_1$, of the polycrystallite which has an interior 
+containing $\vec{x}\in\mathbb{R}^d$ for $\omega\in\Omega$. Here, $\vec{e}_j$,
+$j=1,\ldots,d$, are standard basis vectors with components
+$(\vec{e}_j)_k=\delta_{jk}$ and $\delta_{jk}$ is the Kronecker delta. In higher
+dimensions, $d\geq3$, the rotation matrix $R$ is a composition of
+``basic'' rotation matrices 
+$R_i$, e.g. $R=\prod_{j=1}^dR_j$, where the matrix $R_j(\vec{x},\omega)$
+rotates vectors in $\mathbb{R}^d$ by an angle
+$\theta_j=\theta_j(\vec{x},\omega)$ about the $\vec{e}_j$ axis. For example, in three
+dimensions 
+%
+\begin{align}\label{eq:polycrystal_parameters_3D}
+  R_1=
+  \left[
+  \begin{array}{ccc}
+    1     &0     &    0\\
+    0     &\cos\theta_1 & -\sin\theta_1\\
+    0     &\sin\theta_1 & \cos\theta_1\\
+    \end{array}
+    \right],
+    \quad
+   R_2=
+  \left[
+  \begin{array}{ccc}
+    \cos\theta_2  & 0     &\sin\theta_2 \\
+    0      & 1     & 0\\
+    -\sin\theta_2 & 0     &\cos\theta_2\\
+    \end{array}
+    \right],
+    \quad
+    R_3=
+  \left[
+  \begin{array}{ccc}
+    \cos\theta_3 & -\sin\theta_3 & 0\\
+    \sin\theta_3 & \cos\theta_3  & 0\\
+    0     & 0      & 1\\
+    \end{array}
+    \right].
+\end{align}
+%
+
+
+
+
+
+
+
+Equation \eqref{eq:polycrystal_parameters} can be written in a more
+suggestive form in terms of the matrix $C=\text{diag}(1,0,\ldots,0)$  
+%
+\begin{align}\label{eq:two-phase_eps}
+  \bsig(\vec{x},\omega)=\sigma_1X_1(\vec{x},\omega)+\sigma_2X_2(\vec{x},\omega), \qquad
+  \brho(\vec{x},\omega)=X_1(\vec{x},\omega)/\sigma_1+X_2(\vec{x},\omega)/\sigma_2.
+\end{align}
+%
+Here $X_1=R^{\,T}CR$ and $X_2=R^{\,T}(I-C)R$, where $I$ is the
+identity matrix on $\mathbb{R}^d$. Since $R^{\,T}=R^{\,-1}$ and $C$
+is a diagonal projection matrix satisfying $C^{\,2}=C$, it is
+clear that the $X_i$, $i=1,2$, are mutually orthogonal projection
+matrices satisfying
+%$X_jX_k=X_j\delta_{jk}$ and $X_1+X_2=I$.
+%
+\begin{align}\label{eq:Projection_Matrices}
+  X_j^{\,T}=X_j, \quad X_jX_k=X_j\delta_{jk}, \quad X_1+X_2=I.
+\end{align}
+%
+By equation
+\eqref{eq:Stationary_sig_rho}, we have the existence of measurable
+functions $[X_i^{\,\prime}(\omega)]_{jk}$, $j,k=1,\ldots,d$, such that
+$[X_i(\vec{x},\omega)]_{jk}=[X_i^{\,\prime}(\tau_{-x}\,\omega)]_{jk}$ for all
+$\vec{x}\in\mathbb{R}^d$ and $\omega\in\Omega$. From equations
+\eqref{eq:eff_eps_def} and \eqref{eq:two-phase_eps}, we see that
+$\sigma_{jk}^*(a\sigma_1,a\sigma_2)=a\sigma_{jk}^*(\sigma_1,\sigma_2)$, for any complex
+number $a$, and similarly for the $\rho_{jk}^*$. Due to this homogeneity
+of these functions, they depend only on the ratio $h=\sigma_1/\sigma_2$, and we
+define the tensor-valued functions $\mathbf{m}(h)=\bsig^*/\sigma_2$,
+$\mathbf{w}(z)=\bsig^*/\sigma_1$, $\tilde{\mathbf{m}}(h)=\sigma_1\brho^*$, and
+$\tilde{\mathbf{w}}(z)=\sigma_2\brho^*$ with components  
+%
+\begin{align}\label{eq:m_h}
+  m_{jk}(h)=\sigma_{jk}^*/\sigma_2, \quad
+  w_{jk}(z)=\sigma_{jk}^*/\sigma_1, \quad
+   \tilde{m}_{jk}(h)=\sigma_1\rho_{jk}^*, \quad
+   \tilde{w}_{jk}(z)=\sigma_2\rho_{jk}^*.
+\end{align}
+%
+where $z=1/h$. For example, from equations \eqref{eq:eff_eps_def} and
+\eqref{eq:two-phase_eps} we have
+%
+\begin{align}\label{eq:eps*_rho*_h}
+  \bsig^*(h)\vec{E}_0=\sigma_2\left\langle(hX_1+X_2)\vec{E}\right\rangle,
+  \quad
+  \brho^*(h)\vec{J}_0=(1/\sigma_1)\left\langle(X_1+hX_2)\vec{J}\,\right\rangle
+\end{align}
+%
+
+
+
+
+We now show that the coercivity conditions on the bilinear functionals
+$\Phi$ and $\Psi$ of equations \eqref{eq:Bilinear_functional_E} and
+\eqref{eq:Bilinear_functional_J} imply that
+%$\epsilon^*_{jk}(h)$ and $\rho^*_{jk}(h)$ are analytic functions of the complex
+%variable $h$ everywhere except on the negative real axis.
+%
+\begin{align}\label{eq:Analytic_mh}
+  &\sigma^*_{jk}(h) \text{ and } \rho^*_{jk}(h) \text{ are analytic functions
+    of the complex variable $h$}
+    \\
+    &\text{ everywhere except on the negative real
+    axis.} \notag
+\end{align}
+% 
+We only prove the statement in \eqref{eq:Analytic_mh} for $\sigma^*_{jk}(h)$, as
+the proof involving $\rho^*_{jk}(h)$ is analogous. The bounded bilinear
+functional $\Phi$ is coercive if there exists a $\kappa>0$ such that
+$|\Phi(\vec{\xi},\vec{\xi})|\geq\kappa\|\vec{\xi}\,\|^2$ for all
+$\vec{\xi}\in\mathscr{H}_\times$ such that $\|\vec{\xi}\,\|\neq0$. From equations
+\eqref{eq:Bilinear_functional_E} and \eqref{eq:two-phase_eps} this is
+true only if  
+%
+\begin{align}\label{eq:Coercive_Phi_h}
+  \left|
+    \left\langle(hX_1+X_2)\vec{\xi}\cdot\overline{\vec{\xi}}\;\right\rangle
+  \right|\geq (\kappa/|\sigma_2|)\|\vec{\xi}\,\|^2,
+\end{align}
+%
+where $\vec{\xi}$ is complex-valued when $h$ is complex and
+$\overline{\vec{\xi}}$ is the complex conjugate of the 
+vector $\vec{\xi}$. Define $\nu$ by the ratio 
+%
+\begin{align} 
+  \nu=\frac{\left\langle X_1\vec{\xi}\cdot\overline{\vec{\xi}}\;\right\rangle}          
+         {\|\vec{\xi}\,\|^2}\,.
+\end{align}
+%
+Since $X_1$ is a projection matrix, it is bounded by 1 in
+operator norm. Moreover, we have that $\nu\geq0$ as
+$\langle X_1\vec{\xi}\cdot\overline{\vec{\xi}}\;\rangle
+=\langle X_1\vec{\xi}\cdot X_1\overline{\vec{\xi}}\;\rangle=\|X_1\vec{\xi}\,\|^2\geq0$.
+Therefore, the Cauchy--Schwartz inequality and the definition of the
+operator norm \cite{Folland:99} implies that $0\leq\nu\leq1$. Since
+$X_2=I-X_1$, equation \eqref{eq:Coercive_Phi_h} can now be
+written as
+% 
+\begin{align}\label{eq:Coercive_Phi_h_beta}
+  |h\nu+1-\nu|\geq\kappa/|\sigma_2|>0.
+\end{align}
+%
+
+
+
+Let $h=h_r+\I h_i$, where $h_r$ and $h_i$ are the real and imaginary
+parts of the complex number $h$, respectively. Since 
+$|h\nu+1-\nu|^2=|1+\nu(h_r-1)|^2+\nu^2|h_i|^2$, the formula in
+\eqref{eq:Coercive_Phi_h_beta} always holds when $h_i\neq0$. If $h$ is
+real, then $1+\nu(h-1)=0$ if and only if $h=1-1/\nu$  
+for $0<\nu\leq1$, i.e. for $h$ on the negative real axis. In conclusion,
+equation \eqref{eq:Coercive_Phi_h_beta} holds if and only if $h$ is
+\emph{off} of the negative real axis including zero
+\cite{Golden:CMP-473}. For any such complex value of $h$, $\Phi$ is
+coercive and there exists a unique solution $\vec{E}_f$ to equation
+\eqref{eq:Bilinear_functional_E}, hence to equation
+\eqref{eq:Maxwells_Equations_E}. By differentiation with respect to
+$h$, one deduces easily (WHY?) that $\vec{E}_f$ is analytic
+in $h$ off the negative real axis with values in
+$\mathscr{H}_\times$. Therefore by equation \eqref{eq:eps*_rho*_h},
+$\sigma^*_{jk}(h)$ is analytic off the negative real axis in the complex
+$h$-plane. This concludes our proof of the statement in equation
+\eqref{eq:Analytic_mh}. 
+
+
+
+
+The above analysis \cite{Golden:CMP-473} demonstrates that the
+dimensionless functions $m_{jk}(h)$ and $\tilde{m}_{jk}(h)$ in
+\eqref{eq:m_h} are analytic off the negative real axis in the
+$h$-plane, while $w_{jk}(z)$ and $\tilde{w}_{jk}(z)$ are analytic off
+the negative real axis in the $z$-plane. By equation
+\eqref{eq:eps*_rho*_h} and its counterpart involving $z=1/h$, each
+take the corresponding upper half plane to the upper half plane and
+are therefore examples of Herglotz functions
+\cite{Deift:2000:RMT,Golden:CMP-473}. 
+
+
+
+A key step in the ACM is
+obtaining Stieltjes integral representations for $\bsig^*$ and
+$\brho^*$. These follow from resolvent representations for the
+electric field $\vec{E}$ \cite{Golden:CMP-473} and current density
+$\vec{J}$ \cite{Murphy:JMP:063506}         
+%
+\begin{align}\label{eq:Resolvent_representations_E_D}
+  &\vec{E}=s(sI-\Gamma X_1)^{-1}\vec{E}_0=t(tI-\Gamma X_2)^{-1}\vec{E}_0 ,
+  \quad
+   s\in\mathbb{C}\backslash[0,1],\\
+  &\vec{J}=t(tI-\Upsilon X_1)^{-1}\vec{J}_0=s(sI-\Upsilon X_2)^{-1}\vec{J}_0 ,
+  \quad
+   t\in\mathbb{C}\backslash[0,1],\notag 
+\end{align}
+%
+where we have defined the complex variables $s=1/(1-h)$ and
+$t=1/(1-z)=1-s$.  
+The (non-random) operator $\Gamma=\vec{\nabla}(\Delta^{-1})\vec{\nabla}\cdot$ is based on
+convolution with the free-space Green's function for the Laplacian
+$\Delta=\vec{\nabla}\cdot\vec{\nabla}=\nabla^{\,2}$, and the (non-random) operator
+$\Upsilon=-\vec{\nabla}\times(\vec{\nabla}\times\vec{\nabla}\times)^{-1}\vec{\nabla}\times$ involves the vector
+Laplacian $\bDelta=- \vec{\nabla}\times\vec{\nabla}\times + \vec{\nabla}\vec{\nabla}\cdot $ for $d=2,3$
+\cite{Golden:CMP-473,Murphy:JMP:063506}. These (projection) operators
+are discussed in more detail below.      
+
+
+
+If the current density $\vec{J}(\vec{x},\omega)$ and the electric
+field $\vec{E}(\vec{x},\omega)$ are sufficiently smooth for all
+$\vec{x}\in\mathbb{R}^d$ when $\omega\in\Omega$, equation 
+\eqref{eq:Resolvent_representations_E_D} is obtained as
+follows. The operator $\Delta^{-1}$ is
+well defined in terms of convolution with respect to the free-space
+Green's function of the Laplacian $\Delta$
+\cite{Golden:CMP-473,Folland:95}. Similarly, on the Hilbert space 
+$\mathscr{H}=\bigotimes_{i=1}^dL^2(\Omega,P)$, the inverse $\bDelta^{-1}$ of the
+vector Laplacian $\bDelta$ is defined in terms of component-wise
+convolution with respect to the free-space Green's function of the
+Laplacian.
+
+ 
+
+Applying the integro-differential operator $\vec{\nabla}(\Delta^{-1})$ to the
+formula $\vec{\nabla}\cdot\vec{J}=0$ in equation
+\eqref{eq:Maxwells_Equations_E} yields $\Gamma\vec{J}=0$, where
+$\Gamma=\vec{\nabla}(\Delta^{-1})\vec{\nabla}\cdot$ is an orthogonal projection
+\cite{Golden:CMP-473} from $\mathscr{H}$ onto the Hilbert space
+$\mathscr{H}_\times$ of curl-free random fields,
+$\Gamma:\mathscr{H}\mapsto\mathscr{H}_\times$. More specifically, for every
+sufficiently smooth $\vec{\xi}\in\mathscr{H}_\times$ there exists
+\cite{Jackson-1999} a scalar potential $\varphi$ which is unique up to a 
+constant such that $\vec{\xi}=\vec{\nabla}\varphi$. Consequently, it is clear
+that $\Gamma\vec{\xi}=\vec{\xi}$ for all such $\vec{\xi}\in\mathscr{H}_\times$. 
+
+
+
+In order to discuss analogous properties of divergence free vector
+fields, we restrict our attention to $d=2,3$, and avoid a more involved
+discussion regarding differential forms. Applying the operator 
+$\vec{\nabla}\times(\vec{\nabla}\times\vec{\nabla}\times)^{\,-1}$ to the formula
+$\vec{\nabla}\times\vec{E}=0$, we have $\Upsilon\vec{E}=0$, where  
+$\Upsilon=-\vec{\nabla}\times(\bDelta^{-1})\vec{\nabla}\times$ is an orthogonal projection from
+$\mathscr{H}$ onto the Hilbert space $\mathscr{H}_{\bullet}$ of
+divergence-free random fields (of transverse gauge)
+\cite{Murphy:JMP:063506}. This can be seen as follows. For every
+sufficiently smooth $\vec{\zeta}\in\mathscr{H}_\bullet$ we have
+$\vec{\zeta}=\vec{\nabla}\times(\vec{A}+\vec{C})$, where $\vec{A}$ is the vector
+potential associated with $\vec{\zeta}$ and the arbitrary vector field
+$\vec{C}$ satisfies $\vec{\nabla}\times\vec{C}=0$ \cite{Jackson-1999}. Without
+loss of generality, $\vec{C}$ can be chosen so that $\vec{A}$
+satisfies $\vec{\nabla}\cdot\vec{A}=0$ \cite{Jackson-1999}. Hence,
+$\vec{\nabla}\times\vec{\zeta}=\vec{\nabla}\times\vec{\nabla}\times\vec{A}
+=\vec{\nabla}(\vec{\nabla}\cdot\vec{A})-\bDelta\vec{A}=-\bDelta\vec{A}$. The vector
+$\vec{C}$ chosen in this manner gives the transverse \emph{gauge} of
+$\vec{\zeta}$ \cite{Jackson-1999}. Choosing the members of
+$\mathscr{H}_\bullet$ to have transverse gauge, the action of
+$\vec{\nabla}\times\vec{\nabla}\times$ on $\mathscr{H}_\bullet$ is given by that of 
+$-\bDelta$. Therefore, the action of $\Upsilon$ on $\mathscr{H}_\bullet$ is given
+by that of 
+%$\Upsilon=\vec{\nabla}\times(\vec{\nabla}\times\vec{\nabla}\times)^{-1}\vec{\nabla}\times=\vec{\nabla}\times(\bDelta^{-1})\vec{\nabla}\times$, 
+%
+\begin{align}\label{eq:GammaCurl}
+  \Upsilon=\vec{\nabla}\times(\vec{\nabla}\times\vec{\nabla}\times)^{-1}\vec{\nabla}\times
+  =-\vec{\nabla}\times(\bDelta^{-1})\vec{\nabla}\times, 
+\end{align}
+%
+and it is clear from the above discussion that $\Upsilon\vec{\zeta}=\vec{\zeta}$ for
+all such $\vec{\zeta}\in\mathscr{H}_\bullet$.
+
+
+
+
+
+
+
+We now derive the formulas in equation
+\eqref{eq:Resolvent_representations_E_D}.
+Using $h=1-1/s$, $z=1-1/t$ and $X_1+X_2=I$, we write $\sigma$ and $\rho$ in  
+equation \eqref{eq:two-phase_eps} as $\bsig=\sigma_2(I-X_1/s)=\sigma_1(I-X_2/t)$ and
+$\brho=(I-X_2/s)/\sigma_1=(I-X_1/t)/\sigma_2$. Recall that
+$\vec{E}=\vec{E}_0+\vec{E}_f$, where $\vec{E}_0$ is a \emph{constant}
+field and $\vec{E}_f\in\mathscr{H}_\times$ so that
+$\Gamma\vec{E}=\vec{E}_f$, and similarly
+$\Upsilon\vec{J}=\vec{J}_f$. Consequently, from $\Gamma\vec{J}=0$ and $\Upsilon\vec{E}=0$
+we have the following formulas which are equivalent to that in 
+\eqref{eq:Resolvent_representations_E_D}  
+% 
+\begin{align}\label{eq:Proj_rep_Ef_Jf}
+  \vec{E}_f=\frac{1}{s}\Gamma X_1\vec{E}=\frac{1}{t}\Gamma X_2\vec{E}, \qquad
+  \vec{J}_f=\frac{1}{t}\Upsilon X_1\vec{J}=\frac{1}{s}\Upsilon X_2\vec{J}.
+\end{align}
+%
+In general, the differential opperators $\vec{\nabla}$, $\vec{\nabla}\cdot$, and
+$\vec{\nabla}\times$ are interpreted
+in a weak sense in terms of the operators $L_i$ in \eqref{eq:Li}.
+
+
+
+
+We now derive integral representations for the effective parameters
+of uniaxial polycrystalline media, involving the resolvent formulas in
+\eqref{eq:Resolvent_representations_E_D}. 
+For the formulation of the effective parameter
+problem involving $\mathscr{H}_\times$ and $\bsig^*$, define the
+coordinate system so that in \eqref{eq:eff_eps_def} the constant
+vector $\vec{E}_0=\langle\vec{E}\rangle$ is given by
+$\vec{E}_0=E_0\,\vec{e}_j$. In the other formulation involving
+$\mathscr{H}_\bullet$ and $\brho^*$, define
+%the constant vector $\vec{J}_0=\langle\vec{J}\rangle$ by
+$\vec{J}_0=J_0\,\vec{e}_j$. Recalling that $X_1+X_2=I$ yields
+$\bsig=\sigma_2(I-X_1/s)$ and $\brho=(I-X_2/s)/\sigma_1$ in
+\eqref{eq:two-phase_eps}, equations \eqref{eq:eps*_rho*_h} and
+\eqref{eq:Resolvent_representations_E_D} 
+imply that $\sigma^*_{jk}=\bsig^*\vec{e}_j\cdot\vec{e}_k$ and 
+$\rho^*_{jk}=\brho^*\vec{e}_j\cdot\vec{e}_k$  satisfy
+%
+\begin{align}\label{eq:Eff_Cond_Tens_Def}
+  \sigma^*_{jk}=\sigma_2(\delta_{jk}-\langle X_1(sI-\Gamma X_1)^{-1}\vec{e}_j\cdot\vec{e}_k\rangle) ,
+                \quad
+  \rho^*_{jk}=(1/\sigma_1)(\delta_{jk}-\langle X_2(sI-\Upsilon X_2)^{-1}\vec{e}_j\cdot\vec{e}_k\rangle), 
+\end{align}
+%
+and similar formulas involving the contrast parameter $t$.
+Therefore, it is more convenient to consider the functions 
+$F_{jk}(s)=\delta_{jk}-m_{jk}(h)$ and $E_{jk}(s)=\delta_{jk}-\tilde{m}_{jk}(h)$
+which are analytic off $[0,1]$ in the $s$-plane, and
+$G_{jk}(t)=\delta_{jk}-w_{jk}(z)$ and $H_{jk}(t)=\delta_{jk}-\tilde{w}_{jk}(z)$
+which are analytic off $[0,1]$ in the $t$-plane
+\cite{Golden:CMP-473}.
+
+
+
+
+
+
+On the Hilbert space $\mathscr{H}_\times$, the operators $\Gamma$ and $X_i$,
+$i=1,2$, act as projectors. Therefore, $M_i=X_i\Gamma X_i$, $i=1,2$, are
+compositions of projection operators on 
+$\mathscr{H}_\times$, and are consequently positive definite and bounded by
+1 in the underlying operator norm \cite{Rudin:87}. They are
+self-adjoint with respect to the $\mathscr{H}$-inner-product
+$\langle\cdot,\cdot\rangle$. Therefore, on the Hilbert space $\mathscr{H}_\times$ 
+with weight $X_1$ in the inner-product, $\langle\cdot,\cdot\rangle_1=\langle X_1\,\cdot,\cdot\rangle$ for
+example, $\Gamma X_1$ is a bounded linear self-adjoint operator with
+spectrum contained in the interval $[0,1]$
+\cite{Golden:CMP-473,Folland:95,Rudin:87}. Hence the resolvent
+operator $(sI-\Gamma X_1)^{-1}$ in \eqref{eq:Resolvent_representations_E_D}
+is also a linear self-adjoint operator with respect to the same
+inner-product, and is bounded for  $s\in\mathbb{C}\backslash[0,1]$
+\cite{Stone:64}. Similarly, $(tI-\Upsilon X_1)^{-1}$ in
+\eqref{eq:Resolvent_representations_E_D} is a linear self-adjoint
+operator on $\mathscr{H}_\bullet$ with respect to the inner-product
+$\langle\cdot,\cdot\rangle_1$, and is bounded for $t\in\mathbb{C}\backslash[0,1]$.
+
+
+
+
+
+By the spectral theorem for such
+operators \cite{Reed-1980,Stone:64}, there exists an increasing family
+of self-adjoint projection operators $\{Q(\lambda)\}$ - the resolution of the
+identity - that satisfy $Q(0)=0$ and $Q(1)=I$ such that 
+% 
+\begin{align}\label{eq:Spectral_Theorem}
+  f(M_1)=\int_0^1 f(\lambda)Q(d\lambda), \quad
+  \langle f(M_1)\,\vec{e}_j\cdot\vec{e}_k\rangle_1= \int_0^1f(\lambda)\mu_{jk}(d\lambda), 
+  %\mu_{jk}(\lambda)=\langle Q(\lambda)\vec{e}_j,\vec{e}_k\rangle_1
+\end{align}
+%
+for example, for all bounded continuous functions
+$f:\mathbb{C}\mapsto\mathbb{C}$. Here 
+$0$ and $I$ are the null and identity operators on $\mathbb{R}^d$,
+respectively, $Q(d\lambda)$ is the projection valued measure associated with 
+the operator $Q(\lambda)$ \cite{Reed-1980}, and
+$\mu_{jk}(d\lambda)=\langle Q(d\lambda)\,\vec{e}_j\cdot\vec{e}_k\rangle_1$, $j,k=1,\ldots,d$, are the
+components of the matrix valued \emph{spectral measure} $\bmu(d\lambda)$ in
+the $(\vec{e}_j,\vec{e}_k)$ state
+\cite{Golden:CMP-473,Reed-1980,Stone:64}. As the spectrum of the
+operator $M_1$ is contained in the interval $[0,1]$, the support
+$\Sigma_{jk}$ of the measure $\mu_{jk}$ satisfies $\Sigma_{jk}\subseteq[0,1]$
+\cite{Reed-1980}. Analogous results hold for the operators
+$M_2$ and $K_i=X_i\Upsilon X_i$, $i=1,2$. In view of the formulas in equation
+\eqref{eq:Eff_Cond_Tens_Def} and their counterparts involving the
+contrast parameter $t$, setting $f(\lambda)=(s-\lambda)^{-1}$ in
+\eqref{eq:Spectral_Theorem}, for example, yields the following
+integral representations  
+%\cite{Golden:CMP-473,Bergman:PRC-377,Bergman:AP-78,Murphy:JMP:063506} 
+for the effective parameters $\sigma^*_{jk}$ and $\rho^*_{jk}$ 
+%
+\begin{align}\label{eq:Stieltjes_F}
+  &m_{jk}(h)=\delta_{jk}-F_{jk}(s), \qquad
+  F_{jk}(s)=\langle X_1(sI-\Gamma X_1)^{-1}\vec{e}_j\cdot\vec{e}_k\rangle=\int_0^1\frac{\mu_{jk}(d\lambda)}{s-\lambda}\,,
+  \\
+  &w_{jk}(z)=\delta_{jk}-G_{jk}(t), \qquad
+  G_{jk}(t)=\langle X_2(tI-\Gamma X_2)^{-1}\vec{e}_j\cdot\vec{e}_k\rangle=\int_0^1\frac{\alpha_{jk}(d\lambda)}{t-\lambda}\,,
+  \notag \\
+  &\tilde{m}_{jk}(h)=\delta_{jk}-E_{jk}(s), \qquad
+  E_{jk}(s)=\langle X_2(sI-\Upsilon X_2)^{-1}\vec{e}_j\cdot\vec{e}_k\rangle=\int_0^1\frac{\eta_{jk}(d\lambda)}{s-\lambda}\,,
+  \notag \\
+  &\tilde{w}_{jk}(z)=\delta_{jk}-H_{jk}(t), \qquad
+  H_{jk}(t)=\langle X_1(tI-\Upsilon X_1)^{-1}\vec{e}_j\cdot\vec{e}_k\rangle=\int_0^1\frac{\kappa_{jk}(d\lambda)}{t-\lambda}\,.
+  \notag
+\end{align}
+%
+Here, $\mu_{jk}$ and $\alpha_{jk}$ are \emph{spectral measures} associated
+with the random operators $X_1\Gamma X_1$ and $X_2\Gamma X_2$, respectively, while
+$\eta_{jk}$ and $\kappa_{jk}$ are spectral measures associated
+with the random operators $X_2\Upsilon X_2$ and $X_1\Upsilon X_1$, respectively. 
+
+
+By the Stieltjes--Perron inversion theorem 
+\cite{Henrici:1974:v2,MILTON:2002:TC}, the spectral measure $\bmu$, 
+for example, is given by the weak limit 
+$\bmu(d\lambda)=-\lim_{\epsilon\downarrow0}\text{Im}(\mathbf{F}(\lambda+\I\epsilon))(d\lambda/\pi)$, i.e.
+%
+\begin{align}\label{eq:weak_limit_mu}
+  \int_0^1\xi(\lambda)\;\bmu(d\lambda)
+  =-\frac{1}{\pi}\lim_{\epsilon\downarrow0}
+        \int_0^1\xi(\lambda)\;\text{Im}(\mathbf{F}(\lambda+\I\epsilon))\, d\lambda,
+\end{align}
+%
+for all smooth scalar test functions $\xi(\lambda)$, where
+$(\mathbf{F}(s))_{jk}=F_{jk}(s)$. From equation
+\eqref{eq:weak_limit_mu} and the identities 
+$m_{jk}(h)=h\,w_{jk}(z)$ and $\tilde{m}_{jk}(h)=h\,\tilde{w}_{jk}(z)$,
+which follow from equation \eqref{eq:m_h}, it can be
+shown \cite{Murphy:JMP:063506} that the measures $\mu_{jk}$ and
+$\alpha_{jk}$, and the measures $\eta_{jk}$ and $\kappa_{jk}$ are related by  
+%
+\begin{align}\label{eq:Measure_Relations}
+  &\lambda\alpha_{jk}(\lambda)=(1-\lambda)\mu_{jk}(1-\lambda) +
+       \lambda\,(\,m_{jk}(0)\delta_0(d\lambda)+w_{jk}(0)(\lambda-1)\delta_1(d\lambda)\,),
+  \\
+  &\lambda\kappa_{jk}(\lambda)=(1-\lambda)\eta_{jk}(1-\lambda) +
+       \lambda\,(\,\tilde{m}_{jk}(0)\delta_0(d\lambda)+\tilde{w}_{jk}(0)(\lambda-1)\delta_1(d\lambda)\,).
+  \notag     
+\end{align}
+%
+Here, $m(0)=m(h)|_{h=0}$ and $w(0)=w(z)|_{z=0}$, for example, and
+$\delta_a(d\lambda)$ is the delta measure concentrated at $\lambda=a$. Equations 
+\eqref{eq:Stieltjes_F} and \eqref{eq:Measure_Relations} demonstrate
+the many symmetries between the functions $m_{jk}(h)$, $w_{jk}(z)$,
+$\tilde{m}_{jk}(h)$, and $\tilde{w}_{jk}(z)$, and the respective 
+measures $\mu_{jk}$, $\alpha_{jk}$, $\eta_{ij}$, and $\kappa_{jk}$. Because of these
+symmetries, for simplicity, we will focus on $m_{jk}(h)$ and $\mu_{jk}$,
+and will refer to the other functions and measures where
+appropriate.  
+
+
+
+A key feature of equations \eqref{eq:eff_eps_def}, \eqref{eq:m_h}, and
+\eqref{eq:Stieltjes_F} is that parameter information in $h$ and
+$E_0$ is \emph{separated} from the geometry of the polycrystalline
+medium, which is encoded in the spectral measure $\mu_{jk}$ via its
+moments
+%$\mu_{jk}^n=\int_0^1\lambda^n\mu_{jk}(d\lambda)$, $n=0,1,2,\ldots$.
+%
+\begin{align}\label{eq:Moments_mu}
+  \mu_{jk}^n=\int_0^1\lambda^n\mu_{jk}(d\lambda)
+       %=\int_0^1\lambda^n\langle X_1Q(d\lambda)\,\vec{e}_j\cdot\vec{e}_k\rangle
+       =\langle X_1[\Gamma X_1]^n\,\vec{e}_j\cdot\vec{e}_k\rangle,
+  \quad n=0,1,2,\ldots.,
+\end{align}
+%
+%$n=0,1,2,\ldots.$,
+which clearly contains statistical information regarding
+the random projection matrix $X_1$. The mass $\mu_{jk}^0$ of the measure
+$\mu_{jk}$ is given by  
+% $\mu_{jk}^0=\langle X_1\vec{e}_j\cdot\vec{e}_k\rangle=\langle(X_1)_{jk}\rangle$,
+%
+\begin{align}\label{eq:Mass_mu}
+  \mu_{jk}^0=\langle X_1\vec{e}_j\cdot\vec{e}_k\rangle, \quad
+  \mu_{kk}^0=\langle |X_1\vec{e}_k|^2\rangle,
+\end{align}
+%
+%the ensemble average of the matrix element $(X_1)_{jk}$.
+where we used equation \eqref{eq:Projection_Matrices} in the second
+formula. From this we see that the diagonal components $\mu_{kk}$,
+$k=1\ldots,d$, of $\bmu$ are positive measures.
+%The statistical average $\langle |X_1\vec{e}_k|^2\rangle$ in \eqref{eq:Mass_mu}
+%can be thought of as the ``mean orientation,'' or as the percentage of
+%crystallites oriented in the $k^{\text{th}}$ direction.
+Since the projection 
+matrix $X_1$ is bounded by one in the operator norm, the
+Cauchy--Schwartz inequality and \eqref{eq:Mass_mu} imply that
+$0\leq\mu_{kk}^0\leq1$. For example, in the case of  
+two-dimensional polycrystalline media, $d=2$, equation
+\eqref{eq:polycrystal_parameters_2D} implies that 
+%$\mu_{11}^0=\langle\cos^2\theta\rangle$, $\mu_{22}^0=\langle\sin^2\theta\rangle$, and
+%$\mu_{12}^0=\langle\sin\theta\cos\theta\rangle$.
+%
+\begin{align}
+  \mu_{11}^0=\langle\cos^2\theta\rangle, \quad
+  \mu_{22}^0=\langle\sin^2\theta\rangle, \quad
+  \mu_{12}^0=\langle\sin\theta\cos\theta\rangle.
+\end{align}
+%
+Equation \eqref{eq:Mass_mu} follows by  setting    
+$f(M_1)=I$ ($f(\lambda)=1$) in equation  \eqref{eq:Spectral_Theorem}, which implies
+that the projection valued measure satisfies $\int_0^1Q(d\lambda)=I$
+\cite{Reed-1980,Stone:64}. Moreover, recall that the associated
+operator $Q(\lambda)$ is a \emph{self-adjoint projector} on $\mathscr{H}_\times$
+for $\lambda\in[0,1]$ \cite{Reed-1980,Stone:64}. Consequently,  we have 
+% 
+\begin{align}\label{eq:Mass_Sign_Measures}
+   &\mu_{jk}^0%=\int_0^1\mu_{jk}(d\lambda)
+         =\int_0^1\langle Q(d\lambda)\vec{e}_j\cdot\vec{e}_k\rangle_1
+        %=\langle1\rangle_1\,\vec{e}_j\cdot\vec{e}_k
+        =\langle\vec{e}_j\cdot\vec{e}_k\rangle_1
+        =\langle X_1\vec{e}_j\cdot\vec{e}_k\rangle\\
+        %=\langle X_1\rangle\,\delta_{jk},\\
+   &\mu_{kk}(d\lambda)=\langle Q(d\lambda)\vec{e}_k\cdot\vec{e}_k\rangle_1
+       =\langle Q(d\lambda)\vec{e}_k\cdot Q(d\lambda)\vec{e}_k\rangle_1
+       =\|Q(d\lambda)\vec{e}_k\|_1^2,\notag
+\end{align}
+%
+where we have used a Fubini theorem \cite{Folland:99}
+and $\|\cdot\|_1$ denotes the norm induced by the inner-product
+$\langle\cdot,\cdot\rangle_1$. From equation \eqref{eq:Mass_Sign_Measures} we see,
+generically, that the diagonal components $\mu_{kk}$, $k=1,\ldots,d$, of
+$\bmu$ are positive measures, while the off-diagonal components
+$\mu_{jk}$, $j\neq k=1,\ldots,d$, may be signed measures \cite{Folland:99,Rudin:87}.
+Generalizing equation \eqref{eq:polycrystal_parameters_3D}, with
+$R=\prod_{j=1}^dR_j$, to dimensions $d\geq3$ shows that $\mu_{jk}^0$ is a
+linear combination of averages of the 
+form $\langle\prod_i\cos^{n_i}\theta_i\sin^{m_i}\theta_i\rangle$, where $n_i,m_i=0,1,2,\ldots$.
+
+
+
+% The higher order moments $\mu_{jk}^n$, $n=1,2,3,\ldots$, in principle, may be
+% found using a perturbation expansion of $F_{jk}(s)$ about a
+% homogeneous medium $(\sigma_1=\sigma_2, \ s=\infty)$ \cite{Golden:CMP-473}. In
+% particular $\mu_{jk}^0=p_1\delta_{jk}$, generically, and $\mu_{jk}^1=(p_1p_2/d)\,\delta_{jk}$
+% for a statistically isotropic random medium 
+% \cite{Golden:CMP-473,Golden:IMA-97,Bruno:JSP-365}, where
+% $p_2=1-p_1=\langle X_2\rangle$ is the volume fraction of material component 2. In
+% the case of a square bond lattice, which is an example of an
+% infinitely interchangeable random medium \cite{Bruno:JSP-365},
+% $\mu_{kk}^2=p_1p_2(1+(d-2)p_2)/d^{\,2}$ for any dimension $d$ and
+% $\mu_{kk}^3=p_1p_2(p_2^2-p_2-1)/8$ for $d=2$. In general, the moments
+% $\mu_{jk}^n$ depend on the $(n+1)$-point correlation functions of the
+% random medium \cite{Golden:CMP-473,Bruno:JSP-365}.
+
+
+
+
+A principal application of the ACM is to derive \emph{forward bounds}
+on the diagonal components $\sigma_{kk}^*$ of the tensor $\bsig^*$,
+$k=1,\ldots,d$, given partial information on the microgeometry
+\cite{Bergman:PRL-1285,Milton:APL-300,Golden:CMP-473,Bergman:AP-78}. This
+information may be given in terms of the moments $\mu_{kk}^n$,
+$n=0,1,2,\ldots$, of the measure $\mu_{kk}$
+\cite{Milton:JAP-5294,Golden:CMP-473}. Provided this information, the 
+bounds on $\sigma_{kk}^*$ follow from the special structure of $F_{kk}(s)$
+in \eqref{eq:Stieltjes_F}. More specifically, it is a \emph{linear}
+functional of the \emph{positive} measure $\mu_{kk}$.  The bounds are
+obtained by fixing the contrast parameter $s$, varying over an
+admissible set of measures $\mu_{kk}$ (or geometries) which is
+determined by the known information regarding the polycrystalline
+medium.  Knowledge of the moments $\mu_{kk}^n$  for $n=1,\ldots,J$ confines 
+$\sigma_{kk}^*$ to a region of the complex plane which is bounded by arcs
+of circles, and the region becomes progressively smaller as more
+moments are known \cite{Milton:JAP-5294,Golden:1986:BCP}. When 
+all the moments are known the measure $\mu_{kk}$ is uniquely determined 
+\cite{Akhiezer:Book:1965}, hence  $\sigma_{kk}^*$ is explicitly known. The
+bounding procedure
+\cite{Bergman:PRL-1285,Milton:APL-300,Golden:CMP-473,Bergman:AP-78} is
+reviewed and extended to the polycrystalline setting in Section
+\ref{sec:Bounding_Procedure}. 
+
+
+
+
+
+
+
+\subsection{Lattice Setting}
+\label{sec:Lattice_Setting}
+
+
+\subsubsection{Infinite Lattice Setting}
+\label{sec:Infinite_Lattice_Setting}
+
+
+
+\subsubsection{Finite Lattice Setting}
+\label{sec:Finite_Lattice_Setting}
+%
+
+\section{Bounding Procedure}\label{sec:Bounding_Procedure}
+%
+An important property of the integral representation for $F_{jk}(s)$,
+$j,k=1,\ldots,d$, displayed in equation \eqref{eq:Stieltjes_F},
+%and \eqref{eq:Stieltjes_F_Discrete},
+is that parameter information in $s$
+and $E_0$ is \emph{separated} from the geometry of the composite,
+which is encoded in the spectral measure $\mu_{jk}$ via its moments  
+$\mu^n_{jk}$, $n=0,1,2,\ldots$ \cite{Bruno:JSP-365,Golden:CMP-473}. Another
+important property of the representation for $F_{jk}(s)$ is that it
+is a \emph{linear} functional of the measure $\mu_{jk}$. Moreover, the
+diagonal components $\mu_{kk}$ are \emph{positive} measures. These
+properties are also shared by the function $E_{jk}(s)$ given in
+equation \eqref{eq:Stieltjes_F}.
+%and its discrete counterpart in \eqref{eq:Stieltjes_F_Discrete}.
+These important properties may be
+exploited to obtain rigorous bounds for the diagonal components of the
+effective parameters
+\cite{Bergman:PRC-377,Bergman:PRL-1285,Milton:APL-300,Golden:CMP-473,Bergman:AP-78}. 
+In this section we review a bounding procedure which is presented in 
+\cite{Golden:CMP-473,Golden:1986:BCP}. The bounds incorporate the
+moments $\mu_{kk}^n$ and $\eta_{kk}^n$, $n=0,1,2,\ldots$, of the measures
+$\mu_{kk}$ and $\eta_{kk}$ associated with the functions $F_{kk}(s)$ and
+$E_{kk}(s)$, respectively. 
+
+
+
+ 
+In this section, we will discuss the bounding procedure in terms of
+the diagonal components $\sigma^*_{kk}$, $k=1,\ldots,d$, of the effective
+complex conductivity tensor $\bsig^*$. For
+simplicity, we will focus on one such component and set
+$\sigma^*=\sigma_{kk}^*$, $F(s)=F_{kk}(s)$, $m(h)=m_{kk}(h)$, $\mu=\mu_{kk}$,
+$E(s)=E_{kk}(s)$, $\tilde{m}(h)=\tilde{m}_{kk}(h)$, and
+$\eta=\eta_{kk}$. Here, $\sigma^*=\sigma_2m(h)=\sigma_1/\tilde{m}(h)$,
+$F(s)=1-m(h)$, and $E(s)=1-\tilde{m}(h)$. We will also exploit the
+symmetries between $F(s)$ and $E(s)$ in equation
+\eqref{eq:Stieltjes_F} and initially focus on the function $F(s)$ and
+the measure $\mu$, introducing the function $E(s)$ and the measure $\eta$
+when appropriate. 
+
+
+
+
+Bounds on $\sigma^*$ are obtained as follows. The support of the measure
+$\mu$ is contained in the interval $[0,1]$ and its mass is given by 
+$\mu^0=\langle|X_1\vec{e}_k|^2\rangle$, where $0\leq\mu^0\leq1$. Consider the set $\mathscr{M}$ of
+positive Borel measures on $[0,1]$ with mass $\leq1$. By equation
+\eqref{eq:Stieltjes_F}, for fixed $s\in\mathbb{C}\backslash[0,1]$, $F(s)$ is a
+linear functional of the measure $\mu$, $F:\mathscr{M}\mapsto\mathbb{C}$, and
+we write $F(s)=F(s,\mu)$ and $m(h)=m(h,\mu)$. Suppose that we know the
+moments $\mu^n$ of the measure $\mu$ for $n=0,\ldots,J$. Define the set
+$\mathscr{M}_J^\mu\subset\mathscr{M}$
+by 
+% 
+\begin{align}\label{eq:Measure_Set}
+  \mathscr{M}_J^\mu
+     =\left\{\nu\in\mathscr{M} \ \Big| \   \int_0^1\lambda^n\nu(d\lambda)=\mu^n, \  n=0,\ldots,J\right\}  . 
+\end{align}
+%
+The set $A_J^\mu\subset\mathbb{C}$ that represents the possible
+values of $m(h,\mu)=1-F(s,\mu)$ which is compatible with the
+known information about the random medium is given by
+%
+\begin{align}\label{eq:Bounding_Set}
+  A_J^\mu
+     =\left\{\ m(h,\mu)\in\mathbb{C} \ | \
+       \ h\not\in(-\infty,0], \ \mu\in \mathscr{M}_J^\mu\right\}. 
+\end{align}
+%
+
+
+
+The set of measures $\mathscr{M}_J^\mu$ is a compact, convex
+subset of $\mathscr{M}$ with the topology of weak convergence
+\cite{Golden:CMP-473}. Since the mapping $F(s,\mu)$ in
+\eqref{eq:Stieltjes_F} is linear in $\mu$, it follows that
+$A_J^\mu$ is a compact convex subset of the complex plane
+$\mathbb{C}$. The extreme points of $\mathscr{M}_0^\mu$ are the one 
+point measures $a\delta_b$, $0\leq a,b\leq1$ \cite{Dunford_Schwartz:LinOp_PtI},
+while the extreme points of $\mathscr{M}_J^\mu$ for $J>0$ are weak limits
+of convex combinations of measures of the form
+\cite{Karlin_Studden:Book:1966,Golden:CMP-473}  
+%
+\begin{align}\label{eq:Discrete_Measure}
+  \mu_J(d\lambda)=\sum_{i=1}^{J+1}a_i\delta_{b_i}(d\lambda), \quad
+  a_i\geq0, \quad 0\leq b_1<\cdots<b_{J+1}<1, \quad
+  \sum_{i=1}^{J+1}a_ib_i^n=\mu^n,
+%  \quad   n=0,1,2,\ldots.
+\end{align}
+%
+for $n=0,1,\ldots,J$.
+%Unresolved issue:
+(WHAT CAN WE SAY ABOUT UNIAXIAL POLYCRYSTALLINE MEDIA WHICH IS
+ANALOGOUS TO THE FOLLOWING PROPERTIES OF TWO-COMPONENT COMPOSITE MEDIA?
+For the case of two-component random media in the
+continuous setting, every measure $\mu\in\mathscr{M}_J^\mu$ gives rise
+to a function $m(h,\mu)$ that is the effective (relative) conductivity
+of a multi-rank laminate \cite{MILTON:2002:TC}.
+%The analogous result for $d>2$ is not known.
+However, in general \cite{Golden:CMP-473},  not every measure
+$\mu\in\mathscr{M}_J^\mu$ gives rise to such a function $m(h,\mu)$. Therefore,
+the set $A_J^\mu$ will only \emph{contain} the exact range of values of the
+effective conductivity \cite{Golden:CMP-473}. This is sufficient for
+the bounding procedure discussed in this section. 
+
+
+
+
+
+
+By the symmetries between the formulas in equation
+\eqref{eq:Stieltjes_F} and $X_1+X_2=I$ in
+\eqref{eq:Projection_Matrices}, the support of the measure $\eta$ 
+is contained in the interval $[0,1]$ and its mass is given by
+$\eta^0=\langle|X_2\,\vec{e}_k|^2\rangle=\langle X_2\,\vec{e}_k\cdot\vec{e}_k\rangle=1-\mu^0$, which
+implies that
+$0\leq\eta^0\leq1$. We can therefore define compact, convex sets
+$\mathscr{M}_J^\eta\subset\mathscr{M}$ and $A_J^\eta\subset\mathbb{C}$ which are
+analogous to those defined in equations \eqref{eq:Measure_Set} and
+\eqref{eq:Bounding_Set}, respectively, involving the function
+$\tilde{m}(h,\eta)=1-E(s,\eta)$. Moreover, the extreme points of
+$\mathscr{M}_0^\eta$ are the one point measures $c\delta_d$, $0\leq c,d\leq1$ 
+while the extreme points of $\mathscr{M}_J^\eta$ are weak limits
+of convex combinations of measures of the form given in equation
+\eqref{eq:Discrete_Measure}. 
+
+
+
+Consequently, in order to determine the extreme
+points of the sets $A_J^\mu$ and $A_J^\eta$ it suffices to determine the
+range of values in $\mathbb{C}$ of the functions $m(h,\mu_J)=1-F(s,\mu_J)$
+and $\tilde{m}(h,\eta_J)=1-E(s,\eta_J)$, respectively, where  
+%
+\begin{align}\label{eq:Discrete_mh}
+  F(s,\mu_J)=\sum_{i=1}^{J+1}\frac{a_i}{s-b_i}\,, \qquad
+  E(s,\eta_J)=\sum_{i=1}^{J+1}\frac{c_i}{s-d_i}\,,
+\end{align}
+as the $a_i$, $b_i$, $c_i$, and $d_i$ vary under the
+constraints given in equation  \eqref{eq:Discrete_Measure}. While
+$F(s,\mu_J)$ and $E(s,\eta_J)$ in 
+\eqref{eq:Discrete_mh} may not run over all points in $A_J^\mu$ and
+$A_J^\eta$ as these parameters vary, they run over the
+extreme points of these sets, which is sufficient due to their
+convexity. It is important to note that, as the effective complex
+conductivity $\sigma^*$ is given by $\sigma^*=\sigma_2m(h,\mu)=\sigma_1/\tilde{m}(h,\eta)$, the
+regions $A_J^\mu$ and $A_J^\eta$ have to be mapped to the common
+$\sigma^*$-plane to provide bounds for $\sigma^*$.    
+
+
+
+
+
+In this section we discuss two different bounds for $\sigma^*$. The first
+bound assumes that only the masses $\mu^0$ and $\eta^0$ of the measures $\mu$
+and $\eta$ are known. While the second bound also assumes that the random
+medium is statistically isotropic, so that the first moments of these
+measures are also known, as described by the following lemma.
+%
+\begin{lem}\label{lem:first_moment}
+%
+If the orientations of the crystallites are statistically isotropic
+then
+%
+\begin{align}\label{eq:First_Moments}
+  \mu^1=\frac{d-1}{d^3}\,, \qquad
+  \eta^1=\frac{p_1p_2(d-1)}{d}\,.
+\end{align}
+%
+\end{lem}
+%
+
+
+Consider the first case, where $J=0$  in \eqref{eq:Discrete_mh} and the
+volume fraction $p_1=1-p_2$ is fixed with $\mu^0=p_1$ and
+$\eta^0=p_2=1-p_1$, so that $F(s,\mu_J)=p_1/(s-\lambda)$ and
+$E(s,\eta_J)=p_2/(s-\tilde{\lambda})$. By the above discussion, the values of 
+$F(s,\mu$) and $E(s,\eta)$ lie inside the circles $C_0(\lambda)$ and
+$\tilde{C}_0(\tilde{\lambda})$, respectively, given by  
+%
+\begin{align}\label{eq:0th_order_Bounds}
+    C_0(\lambda)=\frac{\mu^0}{s-\lambda}\,, \quad -\infty\leq\lambda\leq \infty, \qquad
+    \tilde{C}_0(\tilde{\lambda})=\frac{\eta^0}{s-\tilde{\lambda}}\,, \quad
+    -\infty\leq\tilde{\lambda}\leq \infty. 
+\end{align}
+%
+In the $\sigma^*$-plane, the intersection of these two regions is bounded by
+two circular arcs corresponding to $0\leq\lambda\leq p_2$ and $0\leq\tilde{\lambda}\leq p_1$
+in \eqref{eq:0th_order_Bounds}, and the values of $\sigma^*$ lie inside
+this region \cite{Golden:1986:BCP}. These bounds are optimal
+\cite{Milton:JAP-5286,Bergman:AP-78}, and are obtained by a composite
+of uniformly aligned spheroids of material 1 in all sizes coated with
+confocal shells of material 2, and vice versa. The arcs are traced out
+as the aspect ratio varies. When the value of the component
+permittivities $\sigma_1$ and $\sigma_2$ are real and positive, the bounding
+region collapses to the interval
+%$1/(\mu^0/\sigma_1+\eta^0/\sigma_2)\leq\sigma^*\leq \mu^0\sigma_1+\eta^0\sigma_2$,
+%
+\begin{align}\label{eq:Wiener_bounds}
+  \left(\frac{\mu^0}{\sigma_1}+\frac{\eta^0}{\sigma_2}\right)^{-1}\leq\sigma^*\leq \mu^0\sigma_1+\eta^0\sigma_2,
+\end{align}
+%
+ which are the Wiener
+bounds. The lower and upper bounds are obtained by parallel slabs of
+the two materials aligned perpendicular and parallel to the field
+$\vec{E}_0$, respectively \cite{Scaife-1989}.
+
+
+
+Now consider the second case where $J=1$ in \eqref{eq:Discrete_mh},
+the volume fraction $p_1=1-p_2$ is fixed, and the random medium is
+statistically isotropic so that the first moments $\mu^1$ and $\eta^1$ of
+the measures $\mu$ and $\eta$ are given, respectively, by that in equation  
+\eqref{eq:First_Moments}.  A convenient way of including this
+information is to use the transformations \cite{Bergman:AP-78}
+%
+\begin{align}\label{eq:Aux_Fs_Es}
+  F_1(s)=\frac{1}{p_1}-\frac{1}{sF(s)}\,, \qquad
+  E_1(s)=\frac{1}{p_2}-\frac{1}{sE(s)}\,.
+\end{align}
+%
+Due to the symmetries between $F_1(s)$ and $E_1(s)$ in
+\eqref{eq:Aux_Fs_Es} we will first focus on the function $F_1(s)$ and
+introduce the function $E_1(s)$ when appropriate. The function
+$F_1(s)$ is an upper half plane function analytic off $[0,1]$ and
+therefore has an integral representation
+\cite{Bergman:AP-78,Golden:1986:BCP} analogous to that in equation
+\eqref{eq:Stieltjes_F}, involving a
+measure $\mu_1$, say, which is supported in the interval $[0,1]$. Since
+only the mass $\mu^0$ and the first moment $\mu^1=(d-1)/d^3$ of the
+measure $\mu$ are known, the transformation \eqref{eq:Aux_Fs_Es}
+determines only the mass $\mu_1^0=(d-1)/d$ of the measure $\mu_1$
+\cite{Bergman:AP-78,Golden:1986:BCP}. This reveals the utility of the
+transformation $F_1(s)$ in \eqref{eq:Aux_Fs_Es}, it reduces the second
+case $(J=1)$ for $F(s)$ to the first case $(J=0)$ for $F_1(s)$.
+
+
+
+By our previous analysis, the values of $F_1(s)$ lie inside a circle
+$p_2/(p_1d(s-\lambda))$, $-\infty\leq\lambda\leq\infty$. Similarly, the values of $E_1(s)$ lie
+inside a circle $p_1(d-1)/(p_2d(s-\tilde{\lambda}))$,
+$-\infty\leq\tilde{\lambda}\leq\infty$. Since $F$ and $E$ are fractional linear in $F_1$ and
+$E_1$, respectively, these circles are transformed to the circles
+$C_1(\lambda)$ in the $F$-plane and $\tilde{C}_1(\tilde{\lambda})$ in the
+$E$-plane given by \cite{Golden:1986:BCP}
+%
+\begin{align}\label{eq:Isotropic_Bounds}
+  C_1(\lambda)=\frac{s-\lambda}{sd(s-\lambda-(d-1)/d^2)}\,, \quad  %&-\infty\leq\lambda\leq\infty, \quad
+  \tilde{C}_1(\tilde{\lambda})=\frac{(d-1)(s-\tilde{\lambda})}{sd(s-\tilde{\lambda}-(d-1)/d^2)}\,,
+   \qquad -\infty\leq\lambda,\tilde{\lambda}\leq\infty. %\notag
+\end{align}
+%
+In the $\sigma^*$-plane the intersection of these two circular regions is
+bounded by two circular arcs \cite{Golden:1986:BCP} corresponding to
+$0\leq\lambda\leq(d-1)/d$ and $0\leq\tilde{\lambda}\leq1/d$ in \eqref{eq:Isotropic_Bounds}.
+
+
+
+
+The vertices of the region,
+$C_1(0)=p_1/(s-p_2/d)$ and $\tilde{C}(0)=p_2/(s-p_1(d-1)/d)$, are
+attained by the Hashin--Shtrikman geometries (spheres of all
+sizes of material 1 in the volume fraction $p_1$ coated with spherical
+shells of material 2 in the volume fraction $p_2$ filling all of
+$\mathbb{R}^d$, and vice versa), and lie on the arcs of the first
+order bounds \cite{Golden:1986:BCP}. While there are at least five
+points on the arc $C_1(\lambda)$ in \eqref{eq:Isotropic_Bounds} that are
+attainable by composite microstructures \cite{Milton:JAP-5286}, the
+arc $\tilde{C}_1(\tilde{\lambda})$ in \eqref{eq:Isotropic_Bounds} violates
+\cite{Golden:1986:BCP} the interchange inequality $m(h)m(1/h)\geq1$
+\cite{Keller:1964:TCC,Schulgasser:1976:CFR}, which becomes an equality
+in two dimensions \cite{MILTON:2002:TC}.  Consequently the isotropic
+bounds in \eqref{eq:Isotropic_Bounds} are not optimal, but have been
+improved \cite{Milton:APL-300,Bergman:AP-78} by incorporating the
+interchange inequality. When $\sigma_1$ and $\sigma_2$ are real and positive
+with $\sigma_1\leq\sigma_2$, the region collapses to the interval
+%
+\begin{align}
+  \sigma_1-\frac{\sigma_1}{sd-(d-1)/d}.
+  \leq\sigma^*\leq 
+  \frac{\sigma_1}{1-((d-1)/(sd-(d-1)/d))}
+\end{align}
+%
+which are the Hashin--Shtrikman bounds.
+
+
+
+
+The higher moments $\mu^n$, $n\geq2$ depend on $(n+1)$-point correlation
+functions \cite{Golden:CMP-473} and cannot be calculated in general,
+although the interchange inequality forces relations among them
+\cite{Milton:JAP-5294}. If the moments $\mu^0,\ldots,\mu^J$ are known then the
+transformation $F_1$ in \eqref{eq:Aux_Fs_Es} can be iterated to
+produce an upper half plane function $F_J$ with a integral
+representation, involving a positive measure $\mu_J$ which is supported
+on the interval $[0,1]$. As in the case where $J=1$, the first $J$
+moments of the measure $\mu$ determine only the mass $\mu_J^0$ of the
+measure $\mu_J$ \cite{Golden:1986:BCP}, and the function $F_J(s)$ can
+easily be extremized by the above procedure, and similarly for a
+function $E_J(s)$ associated with the moments $\eta^0,\ldots,\eta^J$. The
+resulting bounds form a nested sequence of lens-shaped regions
+\cite{Golden:1986:BCP}.
+
+
+
+
+\section{Numerical Results}\label{sec:Numerical_Results}
+%
+In Section \ref{sec:Finite_Lattice_Setting} we extended the ACM for
+representing transport in composites to the finite lattice
+setting. Here, we demonstrate how this mathematical 
+framework can be utilized to compute spectral measures and the
+associated effective parameters for such two-phase random media. In
+particular, in the finite lattice setting, the operators $\Gamma$, $\Upsilon$, and 
+$\chi_i$, $i=1,2$, are represented as real-symmetric matrices and the
+spectral measures of the associated random matrices $M_i=\chi_i\Gamma\chi_i$ and 
+$K_i=\chi_i\Upsilon\chi_i$ are explicitly determined by their eigenvalues and
+eigenvectors, as displayed in equation
+\eqref{eq:Stieltjes_F_Discrete}. In Section
+\ref{sec:Finite_Lattice_Setting} we also introduced a projection method,
+summarized by equations \eqref{eq:Spec_Decomp_chi_Gamma_chi} and
+\eqref{eq:measure_equivalence}, which provides a numerically efficient
+way to accomplish these computations. Furthermore, in the paragraph
+following the statement of Theorem
+\ref{thm:Discrete_Spectral_Theorem_ACM}, we introduced three 
+classes of locally isotropic, statistically isotropic, and anisotropic
+random media. In this section we employ the projection method to
+directly calculate the spectral measures and effective parameters for
+such composite media.
+
+
+
+
+\medskip
+
+{\bf Acknowledgements.}
+We gratefully acknowledge support from the Division of Mathematical
+Sciences and the Office of Polar Programs at the U.S. 
+National Science Foundation (NSF) through Grants
+DMS-1009704, ARC-0934721, and DMS-0940249. We are also grateful for 
+support from the Office of Naval Research (ONR) through
+Grants N00014-13-10291 and N00014-12-10861. Finally, we would like to 
+thank the NSF Math Climate Research Network (MCRN) for their support
+of this work. 
+
+
+\medskip
+
+\bibliographystyle{plain}
+\bibliography{murphy}
+\end{document}
+
+% LocalWords:  McMaster RM jk sig eps def Maxwells Milgram coercivity diag jX
+% LocalWords:  mh Cond mu kk PtI Fs Es Hashin Shtrikman extremized Decomp chi
+% LocalWords:  Acknowledgements DMS ONR MCRN murphy

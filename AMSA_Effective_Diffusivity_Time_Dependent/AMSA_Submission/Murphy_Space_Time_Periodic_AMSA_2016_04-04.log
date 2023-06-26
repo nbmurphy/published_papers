@@ -1,0 +1,428 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=latex 2016.4.2)  7 APR 2016 07:37
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Murphy_Space_Time_Periodic_AMSA_2016_04-04.tex
+(./Murphy_Space_Time_Periodic_AMSA_2016_04-04.tex
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
+(./ipart.cls
+Document Class: ipart 2015/08/12 driver class for package imsart.sty
+
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/base/article.
+cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/base/leqno.cl
+o
+File: leqno.clo 2015/03/31 v1.1i Standard LaTeX option (left equation numbers)
+)
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/base/size11.c
+lo
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (./imsart.sty
+File: imsart.sty 2014/10/16IMS article style (VS)
+ (./etoolbox.sty
+Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count87
+)
+No file imsart.cnf.
+\c@firstpage=\count88
+\c@lastpage=\count89
+\c@thanks=\count90
+\c@addressref=\count91
+
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/graphics/keyv
+al.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+\c@emailref=\count92
+\c@author=\count93
+\c@address=\count94
+\sv@mathsurround=\dimen103
+\sv@parindent=\dimen104
+\fm@box=\box26
+\fm@size=\dimen105
+\t@xtheight=\dimen106
+\abstract@box=\box27
+\keyword@box=\box28
+\pre@kwd@depth=\dimen107
+\authors@list=\toks15
+\keywords@list=\toks16
+
+No file imsart-generic.cnf.
+)
+\tablewidth=\dimen108
+)
+No file ipart-amsa.cnf.
+(./mymacros.sty
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/amsfonts/amsf
+onts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks17
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/amsmath/amsma
+th.sty
+Package: amsmath 2016/03/03 v2.15a AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/amsmath/amste
+xt.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/amsmath/amsge
+n.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks18
+\ex@=\dimen109
+))
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/amsmath/amsbs
+y.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen110
+)
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/amsmath/amsop
+n.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count95
+LaTeX Info: Redefining \frac on input line 199.
+\uproot@=\count96
+\leftroot@=\count97
+LaTeX Info: Redefining \overline on input line 297.
+\classnum@=\count98
+\DOTSCASE@=\count99
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
+\Mathstrutbox@=\box29
+\strutbox@=\box30
+\big@size=\dimen111
+LaTeX Font Info:    Redeclaring font encoding OML on input line 630.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
+\macc@depth=\count100
+\c@MaxMatrixCols=\count101
+\dotsspace@=\muskip10
+\c@parentequation=\count102
+\dspbrk@lvl=\count103
+\tag@help=\toks19
+\row@=\count104
+\column@=\count105
+\maxfields@=\count106
+\andhelp@=\toks20
+\eqnshift@=\dimen112
+\alignsep@=\dimen113
+\tagshift@=\dimen114
+\tagwidth@=\dimen115
+\totwidth@=\dimen116
+\lineht@=\dimen117
+\@envbody=\toks21
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2735.
+LaTeX Info: Redefining \] on input line 2736.
+)
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/amsfonts/amss
+ymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/graphics/grap
+hicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/graphics/grap
+hics.sty
+Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/graphics/trig
+.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/latexconfig/g
+raphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: dvips.def on input line 95.
+
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/graphics/dvip
+s.def
+File: dvips.def 2015/12/30 v3.0k Driver-dependent file (DPC,SPQR)
+))
+\Gin@req@height=\dimen118
+\Gin@req@width=\dimen119
+)
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/jknapltx/math
+rsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup6
+)
+\c@theorem=\count107
+)
+
+LaTeX Warning: Unused global option(s):
+    [letter].
+
+(./Murphy_Space_Time_Periodic_AMSA_2016_04-04.aux)
+\openout1 = `Murphy_Space_Time_Periodic_AMSA_2016_04-04.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <16> not available
+(Font)              size <17.28> substituted on input line 40.
+
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 52.
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 52.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <5.5> not available
+(Font)              size <5> substituted on input line 52.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 52.
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 52.
+
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/amsfonts/umsa
+.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 52.
+
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/amsfonts/umsb
+.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 52.
+
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/jknapltx/ursf
+s.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+
+LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 52.
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 52.
+
+(/home/archive/share/lib/tex/texlive-2015-07/texmf-dist/tex/latex/base/omscmr.f
+d
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <7.69997> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 52.
+\@address@1=\toks23
+\@address@2=\toks24
+\@address@3=\toks25
+\@address@4=\toks26
+\@address@5=\toks27
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <7> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 145.
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 148.
+
+[1
+
+] [2] [3]
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 327.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <5.5> not available
+(Font)              size <5> substituted on input line 327.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 327.
+
+[4]
+Overfull \hbox (4.72668pt too wide) in paragraph at lines 378--385
+\OT1/cmr/m/n/10.95 reaction-diffusion equa-tion with com-press-ible ve-loc-ity 
+field was treated in [[]]. 
+ []
+
+[5] [6] [7] [8] [9] [10]
+
+LaTeX Warning: Reference `cor:L2_uj' on page 11 undefined on input line 835.
+
+[11] [12] [13]
+Overfull \hbox (7.94963pt too wide) in paragraph at lines 1007--1014
+\OT1/cmr/m/n/10.95 For spa-tial di-men-sion $\OML/cmm/m/it/10.95 d \OT1/cmr/m/n
+/10.95 = 2$, the set of func-tions $\OMS/cmsy/m/n/10.95 f[]\OT1/cmr/m/n/10.95 [
+\OML/cmm/m/it/10.95 {\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 `t \OT1/cmr/m/n/10
+.95 + \OML/cmm/m/it/10.95 mx \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 ny\OT1/cm
+r/m/n/10.95 )] \OMS/cmsy/m/n/10.95 j \OML/cmm/m/it/10.95 `; m; n \OMS/cmsy/m/n/
+10.95 2
+ []
+
+[14]
+Overfull \hbox (0.57616pt too wide) in paragraph at lines 1131--1131
+[] 
+ []
+
+[15] [16]
+File: Figure1_Spectral_Measures_Effective_Diffusivities.eps Graphic file (type 
+eps)
+ <Figure1_Spectral_Measures_Effective_Diffusivities.eps> [17] [18]
+[19] [20] [21]
+Overfull \hbox (5.3466pt too wide) in paragraph at lines 1611--1621
+\OT1/cmr/m/n/10.95 mem-bers $\OML/cmm/m/it/10.95 F\OT1/cmr/m/n/10.95 (\OT1/cmr/
+bx/n/10.95 N\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95  $ \OT1/cmr/m/n/10.95 and $
+\OML/cmm/m/it/10.95 G\OT1/cmr/m/n/10.95 (\OT1/cmr/bx/n/10.95 N\OT1/cmr/m/n/10.9
+5 )\OML/cmm/m/it/10.95 '$\OT1/cmr/m/n/10.95 , so that $\OMS/cmsy/m/n/10.95 h\OM
+L/cmm/m/it/10.95 F\OT1/cmr/m/n/10.95 (\OT1/cmr/bx/n/10.95 N\OT1/cmr/m/n/10.95 )
+\OML/cmm/m/it/10.95  ; G\OT1/cmr/m/n/10.95 (\OT1/cmr/bx/n/10.95 N\OT1/cmr/m/n/1
+0.95 )\OML/cmm/m/it/10.95 '\OMS/cmsy/m/n/10.95 i \OT1/cmr/m/n/10.95 = \OMS/cmsy
+/m/n/10.95 h\OML/cmm/m/it/10.95 G\OT1/cmr/m/n/10.95 (\OT1/cmr/bx/n/10.95 N\OT1/
+cmr/m/n/10.95 )\OML/cmm/m/it/10.95 '; F\OT1/cmr/m/n/10.95 (\OT1/cmr/bx/n/10.95 
+N\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95  \OMS/cmsy/m/n/10.95 i 2
+ []
+
+[22] [23] [24] [25] [26]
+Underfull \vbox (badness 1009) has occurred while \output is active []
+
+ [27]
+Overfull \hbox (3.02747pt too wide) in paragraph at lines 2047--2047
+[] 
+ []
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/it' in size <5.5> not available
+(Font)              size <5> substituted on input line 2083.
+
+[28] [29] [30] [31] [32] [33] [34] [35]
+Overfull \hbox (4.50708pt too wide) in paragraph at lines 2715--2724
+[]\OT1/cmr/m/n/10.95 The for-mu-las in [] are anal-o-gous to the quasi-static l
+imit of Maxwell's
+ []
+
+
+Overfull \hbox (2.06151pt too wide) in paragraph at lines 2726--2742
+\OT1/cmr/m/n/10.95 which re-lates the mean in-ten-sity and flux. In the set-tin
+g of a \OT1/cmr/m/it/10.95 time-independent
+ []
+
+[36] [37] [38] [39] [40] [41] [42] [43]
+Overfull \hbox (20.23412pt too wide) in paragraph at lines 3351--3357
+\OT1/cmr/m/it/10.95 is valid and pro-vides the stan-dard res-o-lu-tion of the m
+ono-tone func-tion $\OMS/cmsy/m/n/10.95 k\OML/cmm/m/it/10.95 Q\OT1/cmr/m/n/10.9
+5 (\OML/cmm/m/it/10.95 ^^U\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 f\OMS/cmsy/m/
+n/10.95 k[]$
+ []
+
+[44]
+Overfull \hbox (24.72516pt too wide) in paragraph at lines 3399--3405
+\OT1/cmr/m/n/10.95 where we have used $\OMS/cmsy/m/n/10.95 h\OML/cmm/m/it/10.95
+ A[]; '[]\OMS/cmsy/m/n/10.95 i[] \OT1/cmr/m/n/10.95 = \OMS/cmsy/m/n/10.95 ^^@h[
+]\OML/cmm/m/it/10.95 ; A'[]\OMS/cmsy/m/n/10.95 i[] \OT1/cmr/m/n/10.95 = \OMS/cm
+sy/m/n/10.95 ^^@h[]\OML/cmm/m/it/10.95 ; {^^U[]'[]\OMS/cmsy/m/n/10.95 i[] \OT1/
+cmr/m/n/10.95 = \OML/cmm/m/it/10.95 {^^U[]\OMS/cmsy/m/n/10.95 h[]\OML/cmm/m/it/
+10.95 ; '[]\OMS/cmsy/m/n/10.95 i[]$\OT1/cmr/m/n/10.95 .
+ []
+
+
+Overfull \hbox (8.56465pt too wide) in paragraph at lines 3428--3438
+[]\OT1/cmr/m/n/10.95 Recall the rep-re-sen-ta-tions $\OT1/cmss/m/n/10.95 S[] \O
+T1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 "\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95
+ ^^N[] \OT1/cmr/m/n/10.95 + \OMS/cmsy/m/n/10.95 h\OML/cmm/m/it/10.95 ^^_[]; ^^_
+[]\OMS/cmsy/m/n/10.95 i[]\OT1/cmr/m/n/10.95 )$ and $\OT1/cmss/m/n/10.95 A[] \OT
+1/cmr/m/n/10.95 = \OMS/cmsy/m/n/10.95 h\OML/cmm/m/it/10.95 A^^_[]; ^^_[]\OMS/cm
+sy/m/n/10.95 i[]$\OT1/cmr/m/n/10.95 ,
+ []
+
+
+Overfull \hbox (14.4831pt too wide) in paragraph at lines 3428--3438
+\OMS/cmsy/m/n/10.95 h\OML/cmm/m/it/10.95 A^^_[]; ^^_[]\OMS/cmsy/m/n/10.95 i[] \
+OT1/cmr/m/n/10.95 = \OMS/cmsy/m/n/10.95 h\OML/cmm/m/it/10.95 A[]; []\OMS/cmsy/m
+/n/10.95 i[] \OT1/cmr/m/n/10.95 + \OMS/cmsy/m/n/10.95 h\OML/cmm/m/it/10.95 A^^_
+[]; ^^_[]\OMS/cmsy/m/n/10.95 i[]$\OT1/cmr/m/n/10.95 . Con-se-quently, from equa
+-tions []
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [45]
+[46] (./Murphy_Space_Time_Periodic_AMSA_2016_04-04.bbl [47] [48] [49] [50]
+[51] [52] [53] [54])
+Overfull \hbox (75.40283pt too wide) in paragraph at lines 3511--3511
+[][] 
+ []
+
+
+Overfull \hbox (59.33041pt too wide) in paragraph at lines 3511--3511
+[][] 
+ []
+
+
+Overfull \hbox (75.40283pt too wide) in paragraph at lines 3511--3511
+[][] 
+ []
+
+
+Overfull \hbox (59.33041pt too wide) in paragraph at lines 3511--3511
+[][] 
+ []
+
+
+Overfull \hbox (59.33041pt too wide) in paragraph at lines 3511--3511
+[][] 
+ []
+
+[55] [56] (./Murphy_Space_Time_Periodic_AMSA_2016_04-04.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 1.28pt have occurred.
+
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 3006 strings out of 493034
+ 37594 string characters out of 6125126
+ 99705 words of memory out of 5000000
+ 6514 multiletter control sequences out of 15000+600000
+ 18768 words of font info for 71 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 34i,14n,33p,1040b,298s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on Murphy_Space_Time_Periodic_AMSA_2016_04-04.dvi (56 pages, 229
+792 bytes).

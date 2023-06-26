@@ -1,0 +1,345 @@
+\documentclass{article}
+\usepackage[dvips]{epsfig,graphics,color,graphicx}
+\usepackage{amsfonts}
+\usepackage{amssymb, amsmath}
+\usepackage{graphicx}
+\usepackage[dvips]{epsfig,graphics,color}
+\newcommand{\no}{\nonumber}
+\newcommand{\ra}{\to}
+\newcommand{\eps}{\mbox{$\epsilon$}}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\ba}{\begin{eqnarray}}
+\newcommand{\ea}{\end{eqnarray}}
+\newcommand{\lam}{\mbox{$\lambda$}}
+\newtheorem{theorem}{Theorem}[section]
+ %\newcommand{\bth}{\begin{theorem}}
+%\newcommand{\eth}{\end{theorem}}
+\newtheorem{lemma}{Lemma}[section]
+   \newcommand{\blem}{\begin{lemma}}
+   \newcommand{\elem}{\end{lemma}}
+\newtheorem{proposition}{Proposition}[section]
+   \newcommand{\bprop}{\begin{proposition}}
+   \newcommand{\eprop}{\end{proposition}}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{algorithm}{Algorithm}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{remark}{Remark}[section]
+\renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
+\renewcommand{\thetheorem}{\arabic{section}.\arabic{theorem}}
+\renewcommand{\thelemma}{\arabic{section}.\arabic{lemma}}
+\renewcommand{\theproposition}{\arabic{section}.\arabic{proposition}}
+\renewcommand{\thedefinition}{\arabic{section}.\arabic{definition}}
+\renewcommand{\thecorollary}{\arabic{section}.\arabic{corollary}}
+\renewcommand{\thealgorithm}{\arabic{section}.\arabic{algorithm}}
+\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+\newcommand{\proof}{\vspace{1ex}\noindent{\em Proof}: \ }
+
+% Murphy's short cut commands
+\newcommand{\e}{\mathrm{e}}
+\newcommand{\I}{\mathrm{i}}
+\newcommand{\Hb}{\mathbf{H}}
+\newcommand\bkappa{\mbox{\boldmath${\kappa}$}}
+\newcommand\balpha{\mbox{\boldmath${\alpha}$}}
+\newcommand\Kbc{\mbox{\boldmath${\mathcal{K}}$}}
+\newcommand{\Hc}{\mathcal{H}}
+\newcommand{\Ac}{\mathcal{A}}
+\newcommand{\Tc}{\mathcal{T}}
+\newcommand{\Vc}{\mathcal{V}}
+\newcommand{\Fc}{\mathcal{F}}
+
+
+
+\begin{document}
+
+\title{Decomposing parabolic eigenvalue problem}
+\author{J. Xin and N. B. Murphy }
+\date{}
+\maketitle
+\begin{abstract}
+A decomposition of a time periodic parabolic eigenvalue problem and an
+application to our effective diffusivity problem.
+
+\end{abstract}
+\bigskip
+ 
+\section{An Example}
+Consider the parabolic eigenvalue problem:
+\be
+\psi_t -\Delta_x \, \psi + \cos (t) \; b(x) \, \psi = \lam \, \psi, \label{eig1}
+\ee
+subject to $2\pi$ periodic boundary conditions in $x$ and $t$. 
+\medskip
+
+Substituting $\cos t = (e^{it} + e^{-it})/2$, and $\psi = \sum_{\ell} \psi_\ell (x) e^{i \ell t}$ in (\ref{eig1}), 
+we have:
+\be
+\sum_\ell \,e^{i\ell t}\, (i \ell \, \psi_\ell\, - \Delta_x \psi_\ell) + {1\over 2} b(x)\, \sum_{\ell} (e^{i(\ell+1)t} + e^{i(\ell-1) t}) \psi_\ell 
+= \lam \sum_\ell \psi_\ell e^{i\ell t}, \no
+\ee
+or:
+\be
+ \sum_\ell \,e^{i\ell t}\, (i \ell \, \psi_\ell\, - \Delta_x \psi_\ell)  + {1\over 2} b(x)\, \sum_{\ell} (\psi_{\ell-1} + \psi_{\ell+1}) \, e^{i\ell t} 
+= \lam \sum_\ell \psi_\ell e^{i\ell t}. \no
+\ee
+Extracting the $\ell$-th mode on both sides gives:
+\be
+(-\Delta_x + i\, \ell)\, \psi_\ell +{1\over 2} \, b(x)\, (\psi_{\ell-1} + \psi_{\ell+1}) = \lam \, \psi_\ell, \;\; \ell \in Z, \label{eig2}
+\ee
+which can be put in a tri-diagonal matrix acting on $[\cdots, \psi_{\ell-1}, \psi_\ell, \psi_{\ell+1}, \cdots ]'$,
+  with $b(x)/2$ on the off-diagonals, 
+$-\Delta_x + i\, \ell $ on the diagonals.
+
+Let us find a similar derivation for the eigenvalue problem of the 
+advection-diffusion operator, with advection field being the time periodic cell flow:
+\be \label{eig3}
+\vec{u}(t,\vec{x})%=(\cos y + \cos t \, \sin y, \cos x + \cos t \sin x)
+       =(\cos y,\cos x)+\delta\cos t \,(\sin y,\sin x)
+       :=\vec{u}_1(\vec{x})+\delta\cos{t}\,\vec{u}_2(\vec{x}). 
+\ee
+
+Question: Is it possible to carry out a similar decomposition in $x$ and $y$ and fully reduce the 
+differential system like (\ref{eig2}) into an algebraic system ?
+
+%
+\subsection{An Application to our effective diffusivity problem}
+%
+Consider the eigenvalue problem $A\psi_j=\lambda_j\psi_j$, $j=1,2,3,\ldots$, involving
+the integro-differential operator $A=-\Delta^{-1}(\partial_t+\vec{u}\cdot\vec{\nabla})$, 
+introduced in equation (45) of our (attached) effective-diffusivity
+paper, with $\vec{u}\mapsto-\vec{u}$. Here $A$ is an anti-symmetric (normal)
+operator and the incompressible velocity field
+$\vec{u}(t,\vec{x})$
+%$=\vec{u}_1(\vec{x})+\delta\cos{t}\,\vec{u}_2(\vec{x})$
+is given in equation \eqref{eig3} above. The equation $A\psi_j=\lambda_j\psi_j$ may be
+rewritten as     
+%
+\begin{align}\label{eq:Eig_prob}
+  (\partial_t+\vec{u}\cdot\vec{\nabla})\psi_j=-\lambda_j\Delta\psi_j.
+\end{align}
+%
+The eigenfunctions $\psi_j$ satisfy the following orthogonality condition
+%$\langle\vec{\nabla}\psi_\ell^j\cdot\vec{\nabla}\psi_m^k\rangle=\delta_{jk}$,
+%
+\begin{align}\label{eq:Orthogonal}
+  \langle\vec{\nabla}\psi_j\cdot\vec{\nabla}\psi_k\rangle=\delta_{jk},
+\end{align}
+%
+where $\delta_{jk}$ is the Kronecker delta and $\langle\cdot\rangle$ denotes space-time
+averaging over the period cell $\Tc\times\Vc$, with $\Tc=[0,2\pi]$ and
+$\Vc=[0,2\pi]\times[0,2\pi]$.
+
+
+
+
+The eigenfunction $\psi_j$ satisfies $\psi_j\in\Fc\subset\Ac(\Tc)\otimes\Hc^1(\Vc)$, 
+i.e. it is mean-zero, absolutely continuous in time for $t\in\Tc$
+and is in the Sobelov space $\Hc^1(\Vc)$ for
+$\vec{x}\in\Vc$. Since the orthogonal set
+$\{\e^{\I\ell t}\}_{\ell\in\mathbb{Z}}$ is dense in $\Ac(\Tc)$, we may represent
+$\psi_j$ by
+%
+\begin{align}\label{eq:t_Expansion}
+  \psi_j(t,\vec{x})=\sum_\ell\psi_\ell^j(\vec{x})\,\e^{\I \ell t},
+\end{align}
+%
+where $\psi_\ell^j\in\Hc^1(\Vc)$. Write $\cos{t}=(\e^{\I t}+\e^{-\I t})/2$ and insert
+this and \eqref{eq:t_Expansion} into equation \eqref{eq:Eig_prob},
+yielding   
+%
+\begin{align}
+  \sum_\ell(\I \ell + \vec{u}_1\cdot\vec{\nabla}+\lambda_j\Delta)\psi_\ell^j(\vec{x})\e^{\I \ell t}
+ +\frac{\delta}{2}\sum_\ell(\e^{\I(\ell+1)t}+\e^{\I(\ell-1)t})\,\vec{u}_2\cdot\vec{\nabla}\psi_\ell^j(\vec{x})=0,
+\end{align}
+%
+or:
+%
+\begin{align}
+  \sum_\ell\left[(\I \ell + \vec{u}_1\cdot\vec{\nabla}+\lambda_j\Delta)\psi_\ell^j(\vec{x})
+ +\frac{\delta}{2}\vec{u}_2\cdot\vec{\nabla}(\psi^j_{\ell-1}(\vec{x})+\psi^j_{\ell+1}(\vec{x}))\right]\e^{\I \ell t}=0.
+\end{align}
+%
+By the completeness of the orthogonal set $\{\e^{\I \ell t}\}$ we
+have, for all $\ell\in\mathbb{Z}$, that
+%
+\begin{align}\label{eq:Eig_prob_shift}
+  (\I \ell + \vec{u}_1\cdot\vec{\nabla})\psi_\ell^j(\vec{x})
+ +\frac{\delta}{2}\vec{u}_2\cdot\vec{\nabla}(\psi_{\ell-1}^j(\vec{x})+\psi_{\ell+1}^j(\vec{x}))
+ =-\lambda_j\Delta\psi_\ell^j(\vec{x}).
+\end{align}
+%
+
+
+
+
+The system of partial differential equations in
+\eqref{eq:Eig_prob_shift} can be reduced to a system of algebraic
+equations as follows. Recall that
+$\vec{u}_1(\vec{x})=(\cos{y},\cos{x})$ and
+$\vec{u}_2(\vec{x})=(\sin{y},\sin{x})$, which implies that
+%
+\begin{align}\label{eq:material_Derivative_psi}
+  (\vec{u}_1\cdot\vec{\nabla})\psi_\ell^j(\vec{x})
+          &=\cos{y}\,\partial_x\psi_\ell^j(\vec{x})+\cos{x}\,\partial_y\psi_\ell^j(\vec{x})\\
+  (\vec{u}_2\cdot\vec{\nabla})\psi_\ell^j(\vec{x})
+          &=\sin{y}\,\partial_x\psi_\ell^j(\vec{x})+\sin{x}\,\partial_y\psi_\ell^j(\vec{x})\notag
+\end{align}
+%
+Since $\psi_\ell^j\in\Hc^1(\Vc)$ and the orthogonal set $\{\e^{\I (lx+my)}\}$,
+$m,n\in\mathbb{Z}$, is dense in this space, we can represent
+$\psi_\ell^j(\vec{x})$ by
+%
+\begin{align}
+  \psi_\ell^j(\vec{x})=\sum_{l,m}c^j{\ell,m,n}\,\e^{\I (mx+ny)}
+\end{align}
+%
+and write $\cos{x}=(\e^{\I x}+\e^{-\I x})/2$ and
+$\sin{x}=(\e^{\I x}-\e^{-\I x})/(2\I)$, for example. Inserting this
+into equation \eqref{eq:material_Derivative_psi} yields
+%
+\begin{align}
+  (\vec{u}_1\cdot\vec{\nabla})\psi_\ell^j
+    &=\frac{1}{2}\sum_{m,n}c^j_{\ell,m,n}\left[
+        \I l\,\e^{\I mx}(\e^{\I(n+1)y}+\e^{\I(n-1)y})
+        +\I m\,\e^{\I ny}(\e^{\I(m+1)x}+\e^{\I(m-1)x})
+                       \right]
+    \notag\\
+%    
+  (\vec{u}_2\cdot\vec{\nabla})\psi_\ell^j
+    &=\frac{1}{2\I}\sum_{m,n}c^j_{\ell,m,n}\left[
+        \I l\,\e^{\I mx}(\e^{\I(n+1)y}-\e^{\I(n-1)y})
+        +\I m\,\e^{\I ny}(\e^{\I(m+1)x}-\e^{\I(m-1)x})
+                       \right]
+\end{align}
+%
+or:
+%
+\begin{align}\label{eq:Algebraic_advection}
+  (\vec{u}_1\cdot\vec{\nabla})\psi_\ell^j
+    &=\frac{\I}{2}\sum_{m,n}
+    [l(c^j_{\ell,m,n-1}+c^j_{\ell,l,m+1})+m(c^j_{l-1,m}+c^j_{l+1,m})]\e^{\I (lx+my)}
+   \notag\\
+  (\vec{u}_2\cdot\vec{\nabla})\psi_\ell^j
+    &=\frac{1}{2}\sum_{l,m}
+    [l(c^j_{l,m-1}-c^j_{l,m+1})+m(c^j_{l-1,m}-c^j_{l+1,m})]\e^{\I (lx+my)} .
+\end{align}
+%
+We also have 
+%
+\begin{align}\label{eq:Algebraic_diffusion}
+  -\Delta\psi_\ell^j=\sum_{l,m}c^j_{l,m}(l^2+m^2)\e^{\I (lx+my)}
+\end{align}
+%
+By the completeness of the orthogonal set $\{\e^{\I (lx+my)}\}$, 
+inserting equations \eqref{eq:Algebraic_advection} and
+\eqref{eq:Algebraic_diffusion} into equaiton
+\eqref{eq:Eig_prob_shift} yields
+%
+\begin{align}
+&\I \ell+\frac{\I}{2}[l(c^j_{l,m-1}+c^j_{l,m+1})+m(c^j_{l-1,m}+c^j_{l+1,m})]
+\notag\\
++&\frac{\delta}{4}[l(c^{\ell-1}_{l,m-1}-c^{\ell-1}_{l,m+1})+m(c^{\ell-1}_{l-1,m}-c^{\ell-1}_{l+1,m})
+\notag\\
++&l(c^{\ell+1}_{l,m-1}-c^{\ell+1}_{l,m+1})+m(c^{\ell+1}_{l-1,m}-c^{\ell+1}_{l+1,m})]
+\notag\\
+=&\lambda(l^2+m^2)c^j_{l,m}.
+\end{align}
+%
+The orthogonality condition $\langle\vec{\nabla}\psi_\ell^j\cdot\vec{\nabla}\psi_\ell^k\rangle=\delta_{jk}$ in
+\eqref{eq:Orthogonal} becomes
+%
+\begin{align}
+  \delta_{nm}=\langle\vec{\nabla}\psi_n^j\cdot\vec{\nabla}\psi_m\rangle
+       =\left\langle
+           \sum_{l,m,n} 
+        \right\rangle  
+\end{align}
+%
+
+
+Since $\vec{u}_i$ is incompressible, there exists
+an anti-symmetric matrix $\Hb_i$ such that
+$\vec{u}_i=\vec{\nabla}\cdot\Hb_i$. This allows us to write
+$\vec{u}_i\cdot\vec{\nabla}=\vec{\nabla}\cdot\Hb_i\vec{\nabla}$, which is an anti-symmetric
+operator. When $\delta=0$, the velocity field $\vec{u}$ is time-independent
+and the operator $A$, which arises from the cell problem, becomes
+$A=\Delta^{-1}(\vec{u}_1\cdot\vec{\nabla})$. In this case, the eigenvalue problem in
+\eqref{eq:Eig_prob} becomes 
+%
+\begin{align}\label{eq:Eig_prob_steady}
+  \vec{\nabla}\cdot\Hb_1\vec{\nabla}\psi=\lambda\Delta\psi.
+\end{align}
+%
+Discretizing this equation leads to a generalized eigenvalue
+problem involving \emph{sparse} matrices. This matrix formulation has
+all the desired properties of the associated abstract Hilbert space
+formulation. (I will be adding the details of this to our paper soon.)
+From this matrix problem, we obtain a discrete approximation of the
+Stieltjes--Radon integral representation for the symmetric $\bkappa^*$
+and anti-symmetric $\balpha^*$ parts of the effective diffusivity
+tensor $\Kbc^*$, displayed in equation (35) of our (attached) paper.  
+
+
+\vspace{1em}
+\noindent\textbf{Question:} Can this approach be extended to cast
+equation \eqref{eq:Eig_prob_shift} as a sequence of generalized
+eigenvalue problems, which can be numerically solved to obtain the
+eigenvalues and eigenvectors associated with this spatial operator? If
+so, this would allow us to solve a sequence of smaller eigenvalue
+problems of size $N^2$ instead of solving an $N^3$ problem (two
+spatial dimensions and a time dimension). 
+
+
+
+
+
+
+\section{Three-Dim Steady Cellular Flows}
+The 3 dimensional (3D) steady cellular flows are:
+\be
+B =
+(\Phi_x(x,y)W'(z),\Phi_y(x,y)W'(z),k\Phi(x,y)W(z)), \label{3dcell}
+\ee
+with $-\Delta \Phi = k \Phi.$   
+\medskip
+
+A special case is $k=2$, then
+\be
+B(x,y,z) =
+(-\sin{x}\cos{y}\cos{z},-\cos{x}\sin{y}\cos{z},2\cos{x}\cos{y}\sin{z}).\label{3dcell-1}
+\ee
+\medskip
+
+Question: Is the effective diffusivity problem easier for (\ref{3dcell-1}) than (\ref{eig3})? 
+\medskip
+
+Effective diffusivity in (\ref{3dcell}) is unknown, see \cite{SXZ_13} for 
+related KPP problem, and \cite{RZ_07} for an upper bound. Extrapolating the KPP scaling in \cite{SXZ_13} on 
+the flow (\ref{3dcell-1}), effective diffusivity at small molecular diffusivity $\epsilon$ scales like $O(\epsilon^{p})$, $p \approx 0.26$. 
+In 2D, $p=1/2$, see \cite{fannjiang}, also Fig.3 in \cite{Biferale_95}.    
+
+
+\begin{thebibliography}{99}
+
+\bibitem{Biferale_95}L. Biferale, A. Crisanti, M. Vergassola, A. Vulpiani,
+{\em Eddy diffusivities in scalar transport}, Phys. Fluids 7(11), pp. 2725 --2734, 1995.
+
+\bibitem{fannjiang} A. Fannjiang and G. Papanicolaou,
+{\em Convection enhanced diffusion for periodic flows}, SIAM J.
+Appl. Math., {\bf 54} (1992), pp. 333-408.
+
+\bibitem{RZ_07}L. Ryzhik and A. Zlatos,
+{\em KPP pulsating front speed-up by flows}, Comm. Math. Sci., {\bf
+5} (2007), pp. 575-593.
+
+\bibitem{SXZ_13}L. Shen, J. Xin and A. Zhou, {\em Finite Element Computation of KPP
+Front Speeds in 3D Cellular and ABC Flows}, Math Model. Natural Phenom., 8(3), 2013, pp. 182-197. 
+
+
+
+
+\end{thebibliography}
+
+\end{document}

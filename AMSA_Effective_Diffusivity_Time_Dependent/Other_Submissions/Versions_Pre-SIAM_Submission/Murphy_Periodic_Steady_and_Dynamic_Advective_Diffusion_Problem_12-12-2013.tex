@@ -1,0 +1,769 @@
+\documentclass[11pt]{amsart}
+%\usepackage{latexsym, amssymb, enumerate, amsmath}
+\usepackage{graphicx,amssymb,amsmath,amsfonts,mathrsfs}
+
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{9.0in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\topmargin}{-0.5in}
+
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.55}%0.75
+
+
+\newcommand{\ph}{\hat{\phi}}
+\newcommand{\pt}{\tilde{\phi}} 
+\newcommand{\pc}{\check{\phi}}
+\newcommand{\gh}{\hat{\gamma}}
+\newcommand{\Dh}{\hat{\Delta}}
+\newcommand{\dha}{\hat{\delta}}
+\newcommand{\qh}{\hat{q}}
+\newcommand{\xh}{\hat{x}} 
+\newcommand{\HM}{\mathcal{H}_{\text{max}}}
+\newcommand{\Hm}{\mathcal{H}_{\text{min}}}
+\newcommand{\sech}{\rm \hspace{0.7mm}sech}
+\newcommand{\I}{\mathrm{i}}
+\newcommand{\e}{\mathrm{e}}
+\renewcommand{\d}{\mathrm{d}}
+\newcommand{\hh}{\hat{h}}
+\newcommand{\mh}{m_r}
+\newcommand{\mt}{m_i}
+
+\newcommand{\Mb}{\mathbf{M}}
+\newcommand{\Xb}{\mathbf{X}}
+\newcommand{\Tb}{\mathbf{T}}
+\newcommand{\Hb}{\mathbf{H}}
+\newcommand{\Kb}{\mathbf{K}}
+\newcommand{\Jb}{\mathbf{J}}
+\newcommand{\Ib}{\mathbf{I}}
+\newcommand{\Sb}{\mathbf{S}}
+
+\newcommand{\Tc}{\mathcal{T}}
+\newcommand{\Rc}{\mathcal{R}}
+
+\newcommand{\Hs}{\mathscr{H}}
+
+
+\newcommand\bsig{\mbox{\boldmath${\sigma}$}}
+\newcommand\beps{\mbox{\boldmath${\epsilon}$}}
+\newcommand\bxi{\mbox{\boldmath${\xi}$}}
+\newcommand\bmu{\mbox{\boldmath${\mu}$}}
+\newcommand\balpha{\mbox{\boldmath${\alpha}$}}
+\newcommand\brho{\mbox{\boldmath${\rho}$}}
+\newcommand\bDelta{\mbox{\boldmath${\Delta}$}}
+\newcommand\bkappa{\mbox{\boldmath${\kappa}$}}
+
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+
+    %\theoremstyle{definition}
+
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{notation}[thm]{Notation}
+\newtheorem{example}[thm]{Example}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{prob}[thm]{Problem}
+
+    %\theoremstyle{remark}
+
+\newtheorem{rem}[thm]{Remark}
+    % Use the standard latex environments for theorems, etc. Here is one
+          % possible method of declaring them: It numbers all results by the
+          % section, and uses a common numbering system for the different
+          % environmentts.
+
+\begin{document}
+
+\title{Spectral theory of advective diffusion \\
+  by dynamic and steady periodic flows}
+
+
+% AUTHORS 
+%\author{N. B. Murphy, A. Gully, E. Cherkaev, and K. M. Golden}
+\author{N. B. Murphy$^\ast$}
+\address{$^*$Department of Mathematics, 340 Rowland Hall, University of
+  California at Irvine, Irvine, CA 92697-3875, USA}
+\email{nbmurphy@math.uci.edu}
+
+\author{J. Xin$^\dag$}
+\address{$^{\dag}$Department of Mathematics, 340 Rowland Hall, University of
+  California at Irvine, Irvine, CA 92697-3875, USA} 
+\email{jxin@math.uci.edu}
+
+\author{J. Zhu$^\star$}
+\address{$^\star$University of Utah, Department of Mathematics, 155 S 1400 E
+  RM 233, Salt Lake City, UT 84112-009, USA}
+\email{zhu@math.utah.edu}
+
+\author{E. Cherkaev$^\ddagger$}
+\address{$^\ddagger$University of Utah, Department of Mathematics, 155 S 1400 E
+  RM 233, Salt Lake City, UT 84112-009, USA} 
+\email{elena@math.utah.edu}
+
+\maketitle
+\vspace{-3ex}
+\begin{center}
+  Department of Mathematics, University of California at Irvine
+\end{center}
+
+%\vspace{3ex}
+
+
+\begin{abstract}
+%
+The analytic continuation method for representing transport in
+composites provides Stieltjes integral representations for the
+effective coefficients of two-phase random media. Here we adapt this 
+method to characterize the effective thermal transport properties of
+advective diffusion, by steady and time-dependent, periodic flows. Our
+novel approach yields a Stieltjes integral representation for the
+effective diffusivity, which holds for dynamic and steady,
+incompressible flows, involving the spectral measure of a self-adjoint
+linear operator. In the case of steady fluid velocity fields, the
+spectral measure is associated with a Hermitian Hilbert-Schmidt
+integral operator, and in the case of dynamic flows, it is associated
+with an unbounded integro-differential operator. We utalize the
+integral representation to obtain asymptotic behavior of the effective 
+diffusivity, as the molecular diffusivity tends to zero, for model,
+steady and dynamic flows. Our analytical results are supported by
+numerical computations of the spectral measures and effective
+diffusivities.    
+%
+\end{abstract}
+
+\section{Introduction}\label{sec:Introduction}
+%
+The long time, large scale behavior of a diffusing particle   
+or tracer being advected by an incompressible velocity field 
+is equivalent to an enhanced diffusive process \cite{Taylor:PRSL:196} 
+with an effective diffusivity tensor $\bkappa^*$.
+Determining the effective transport properties of advection enhanced
+diffusion is a challenging problem with theoretical and practical 
+importance in many fields of science and engineering,
+ranging from turbulent combustion to mass, heat, and salt transport in
+geophysical flows \cite{Moffatt:RPP:621}. A broad range of
+mathematical techniques have been developed that reduce the analysis
+of complex fluid flows, with rapidly varying structures in space and
+time, to solving averaged or \textit{homogenized} equations that do
+not have rapidly varying data, and involve an effective parameter.
+
+
+
+
+Homogenization of the advection-diffusion equation for thermal
+transport by time-independent, random fluid velocity fields was
+treated in \cite{McLaughlin:SIAM_JAM:780}. This 
+reduced the analysis of turbulent diffusion to solving an anisotripic
+diffusion equation involving a homogenized temperature and an
+effective diffusivity tensor $\bkappa^*$. An important consequence of
+this analysis is that $\bkappa^*$ is given in terms  
+of a \emph{curl-free} stationary stochastic process which satisfies a
+steady state diffusion equation involving a skew-symmetric random
+matrix $\Hb$ \cite{Avellaneda:CMP-339,Avellaneda:PRL-753}. By adapting
+the analytic continuation method (ACM) of homogenization theory for
+composites \cite{Golden:CMP-473}, it was shown that the result in
+\cite{McLaughlin:SIAM_JAM:780} leads to a Stieltjes integral
+representation of $\bkappa^*$, involving a spectral measure of a
+self-adjoint random operator
+\cite{Avellaneda:CMP-339,Avellaneda:PRL-753}. This integral
+representation of $\bkappa^*$ was generalized to the time-dependent
+case in \cite{Avellaneda:PRE:3249,Biferale:PF:2725}. Remarkably, this 
+method has also been extended to flows with incompressible
+\emph{nonzero} effective drift 
+\cite{Pavliotis:PHD_Thesis}, flows where particles diffuse according
+to linear collisions \cite{Pavliotis:IMAJAM:951}, and solute transport
+in porous media \cite{Bhattacharya:AAP:1999:951}. All these approaches
+yield Stieltjes integral representations of the symmetric and, when
+appropriate, the antisymmetric part of $\bkappa^*$.
+
+
+
+
+Homogenization of the advection-diffusion equation for periodic or
+cellular, incompressible flow fields was treated in
+\cite{Fannjiang:SIAM_JAM:333,Fannjiang:1997:1033}. As in the case of
+random flows, the effective diffusivity tensor
+$\bkappa^*$ is given in terms of a \emph{curl-free} vector field which
+satisfies a diffusion equation involving a skew-symmetric
+matrix $\Hb$. Here, we demonstrate that the ACM can
+be adapted to this periodic setting to provide a Stieltjes
+integral representation for $\bkappa^*$, both for steady and
+time-dependent flows, involving a self-adjoint linear operator and the 
+(non-dimensional) molecular diffusivity $\varepsilon$. In the case of steady
+fluid velocity fields, the spectral measure is associated with a
+Hermitian Hilbert-Schmidt integral operator involving the Green's
+function of the Laplacian on a square. While in the case of dynamic
+flows, the spectral measure is associated with a Hermitian operator
+which is the sum of that for steady flows and an unbounded
+integro-differential operator which is a composition of the time
+derivative and the inverse Laplacian on a square.     
+ 
+
+We utalize the analytic structure of the Stieltjes integral
+representation for $\bkappa^*$ to obtain its asymptotic behavior for
+model flows, as the molecular diffusivity $\varepsilon$ tends to zero. This is
+the high P\'{e}clet number regime that is important for the
+understanding of transport processes in real fluid flows, where the
+molecular diffusivity is often quite small in comparison. In
+particular, FINISH THIS PARAGRAPH WHEN WE HAVE CONCRETE RESULTS.
+necessary and sufficient conditions for steady periodic flow
+fields $\kappa^*\sim\epsilon^{1/2}$, generically, for steady flows and $\kappa^*\sim O(1)$ for
+``chaotic'' time-dependent flows. 
+
+%
+\section{Mathematical Methods}\label{sec:Mathematical_Methods} 
+%
+In this section, we formulate the effective parameter problem for
+enhanced diffusive transport by advective, periodic flows, and provide
+an integral representation for the effective diffusivity tensor
+$\bkappa^*$, which holds for both steady and dynamic flows. The
+effective parameter problem 
+\cite{Fannjiang:SIAM_JAM:333} for such transport processes  is
+reviewed in Section \ref{sec:Eff_Trans}. Parallels existing between this
+problem of homogenization theory \cite{Bensoussan:Book:1978} and the
+ACM for representing transport in composites are put into
+correspondence in Section \ref{sec:ACM}. In particular, an abstract
+Hilbert space framework is provided which places these different
+effective parameter problems on equal mathematical footing. Within
+this Hilbert space setting, we derive in Section
+\ref{sec:Integral_Rep} a Stieltjes integral representation for
+$\bkappa^*$, involving the molecular diffusivity $\varepsilon$ and a
+\emph{spectral measure} of a self-adjoint linear operator. This
+integral representation is employed in Section \ref{sec:Assymptotics}
+to obtain asymptic behavior of $\bkappa^*$ in the scaling regime where
+$\varepsilon\ll1$. 
+
+
+
+\subsection{Effective transport by
+  advective-diffusion} \label{sec:Eff_Trans}  
+%
+Consider the advection enhanced diffusive transport of a passive
+tracer $\phi(t,\vec{x})$, $\vec{x}\in\mathbb{R}^d$, $t>0$, as described by
+the advection-diffusion equation 
+%
+\begin{align}\label{eq:ADE}
+  \partial_t\phi=\kappa_0\Delta \phi+\vec{v}\cdot\vec{\nabla}\phi, \quad
+  \phi(0,\vec{x})=\phi_0(\vec{x}),
+\end{align}
+%
+with $\phi_0(\vec{x})$ given. Here, $\partial_t$ denotes partial differentiation
+with respect to time $t$, $\Delta=\vec{\nabla}\cdot\vec{\nabla}=\nabla^2$ is the Laplacian,
+$\kappa_0>0$ is the molecular diffusivity, and $\vec{v}=\vec{v}(t,\vec{x})$
+is the fluid velocity field, which is assumed to be incompressible,
+i.e. $\vec{\nabla}\cdot\vec{v}=0$. We non-dimensionalize equation
+\eqref{eq:ADE} as follows. Let $\ell$ and $\tau$ be typical length and time 
+scales associated with the problem of interest. Mapping to
+non-dimensional coordinates $t\mapsto t/\tau$ and $x_i\mapsto x_i/\ell$ in
+\eqref{eq:ADE}, one finds that $\phi$ satisfies the advection-diffusion
+equation in \eqref{eq:ADE} with a non-dimensional molecular
+diffusivity $\varepsilon=\tau\kappa_0/\ell^2$ and velocity field $\vec{u}=\tau\vec{v}/\ell$,
+where $x_i$ is the $i^{\text{th}}$ component of the vector
+$\vec{x}$. Since $\vec{u}$ is incompressible, there is a
+(non-dimensional) skew-symmetric matrix $\Hb(t,\vec{x})$,
+$\Hb^{\,T}=-\Hb$, such that $\vec{u}=\vec{\nabla}\cdot\Hb$. 
+% %
+% \begin{align}
+%  \vec{u}=\vec{\nabla}\cdot\Hb, \qquad  \Hb^{\,T}=-\Hb.
+% \end{align}
+% %
+Using this representation of the velocity field $\vec{u}$, equation
+\eqref{eq:ADE} can be written as a diffusion equation, 
+%
+\begin{align}\label{eq:ADE_Divergence}
+  \partial_t\phi%&=\varepsilon\Delta \phi+\vec{u}\cdot\vec{\nabla}\phi\\
+    %&=\varepsilon\vec{\nabla}\cdot\vec{\nabla}\phi+(\vec{\nabla}\cdot\Hb)\cdot\vec{\nabla}\phi\\
+    %&=\vec{\nabla}\cdot[\varepsilon I+\Hb]\vec{\nabla}\phi\\
+    %&=\vec{\nabla}\cdot\bkappa\vec{\nabla}\phi
+    =\vec{\nabla}\cdot\bkappa\vec{\nabla}\phi, \quad
+    %\bkappa=\varepsilon I+\Hb,
+    \phi(0,\vec{x})=\phi_0(\vec{x}),
+    \qquad
+    \bkappa=\varepsilon\Ib+\Hb,
+\end{align}
+%
+where $\bkappa(t,\vec{x})=\varepsilon\Ib+\Hb(t,\vec{x})$ can be viewed as a local
+diffusivity tensor with coefficients
+%
+\begin{align}\label{eq:kappa_coeff}
+  \kappa_{jk}=\varepsilon\delta_{jk}+H_{jk},\quad j,k=1,\cdots,d,
+\end{align}
+%
+$\Ib$ is the identity matrix on $\mathbb{R}^d$, and $\delta_{jk}$ is 
+the Kronecker delta. 
+
+
+
+
+We are interested in the dynamics of $\phi$ for \emph{large} length and
+time scales. Anticipating that $\phi$ will have diffusive dynamics, we
+rescale space and time by $\vec{x}\mapsto\vec{x}/\delta$ and $t\mapsto t/\delta^2$,
+respectively, with $\delta\ll1$ while keeping the intital condition
+$\phi(0,\vec{x})=\phi_0(\vec{x})$ independent 
+of $\delta$. This is equivalent to assuming that the initial data is slowly
+varying relative to the velocity field $\vec{u}$ in the unscaled
+variables
+\cite{McLaughlin:SIAM_JAM:780,Fannjiang:SIAM_JAM:333,Fannjiang:1997:1033}. 
+For periodic diffusivity coefficients in \eqref{eq:kappa_coeff} which
+are uniformly elliptic but not necessarily symmetric, it can be shown 
+\cite{Fannjiang:SIAM_JAM:333} that the associated solution
+$\phi^\delta(t,\vec{x})=\phi(t/\delta^2,\vec{x}/\delta)$  of \eqref{eq:ADE_Divergence},
+involving the rescaled local diffusivity tensor
+$\bkappa(t/\delta^2,\vec{x}/\delta)$, converges to $\bar{\phi}(t,\vec{x})$, which
+satisfies a diffusion equation involving the (constant) effective
+diffusivity tensor $\bkappa^*$
+%
+\begin{align}
+  \partial_t\bar{\phi}=\vec{\nabla}\cdot\bkappa^*\vec{\nabla}\bar{\phi}, \quad
+  \bar{\phi}(0,\vec{x})=\phi_0(\vec{x}).
+\end{align}
+%
+The convergence is in $L^2$ \cite{Fannjiang:SIAM_JAM:333},
+%
+\begin{align}
+  \lim_{\delta\to0}\left[\,\sup_{0\leq t\leq t_0}
+    \int\left|\phi^\delta(t,\vec{x})-\bar{\phi}(t,\vec{x})\right|^2\d\vec{x}
+    \;\right]=0,
+\end{align}
+%
+for all $t_0<\infty$, where we used the notation $\d\vec{x}=\d x_1\cdots \d x_d$ for
+the product Lebesgue measure.
+
+
+
+
+
+The effective diffusivity tensor $\bkappa^*$ is
+obtained by solving the cell problem \cite{Fannjiang:SIAM_JAM:333}
+%
+\begin{align}\label{eq:Cell_Problem}
+  \partial_t\chi=\vec{\nabla}\cdot\bkappa(\vec{\nabla}\chi+\vec{e}_j\,), \quad
+    %=\vec{\nabla}\cdot[(\varepsilon\Ib+\Hb)(\vec{\nabla}\chi+\vec{e}_j\,)], \quad
+  \langle\vec{\nabla}\chi\rangle=0,
+\end{align}
+%
+for each standard basis vector $\vec{e}_j$, $j=1,\ldots,d$, where
+$\chi=\chi(t,\vec{x}\,;\vec{e}_j)$. Equation \eqref{eq:Cell_Problem} also holds
+\cite{Fannjiang:SIAM_JAM:333} when the velocity field is
+time-independent, $\vec{u}=\vec{u}(\vec{x})$, however, in this case $\chi$ 
+is time-independent and $\partial_t\chi=0$.  The 
+components $\kappa^*_{jk}=\bkappa^*\vec{e}_j\cdot\vec{e}_k$ of the effective
+diffusivity tensor are given in terms of the \emph{curl-free} vector
+field $\vec{\nabla}\chi$ \cite{Fannjiang:SIAM_JAM:333} 
+% 
+\begin{align}\label{eq:Eff_Diffusivity}  
+   \kappa^*_{jk}=\varepsilon\langle(\vec{\nabla}\chi+\vec{e}_i\,)\cdot(\vec{\nabla}\chi+\vec{e}_j\,)\rangle
+       =\varepsilon(\delta_{jk}+\langle\vec{\nabla}\chi\cdot\vec{\nabla}\chi\rangle).
+\end{align}
+%.
+Here, $\langle\cdot\rangle$ denotes spatial averaging over a period cell when the
+velocity field is time-independent, $\vec{u}=\vec{u}(\vec{x})$, and
+when the velocity field is time-dependent, $\vec{u}=\vec{u}(t,\vec{x})$,
+$\langle\cdot\rangle$ denotes time averaging over a temporal period in addition to
+spacial averaging. Equation \eqref{eq:Eff_Diffusivity} demonstrates
+that the effective transport of the tracer $\phi$ is always inhanced by the
+presence of a incompressible velocity field. 
+
+
+
+
+%Integral representation of the effective diffusivity for steady and
+%dynamic flows 
+\subsection{The analytic continuation method for advection enhanced 
+  diffusion} \label{sec:ACM} 
+%
+In this section, we recast equations \eqref{eq:Cell_Problem} and
+\eqref{eq:Eff_Diffusivity} into a form which parallels the problem of
+characterizing effective transport in composite media
+\cite{Golden:CMP-473}. The ACM for representing transport in
+composites gives a Hilbert space formulation of the effective
+parameter problem and provides a Stieltjes integral representation
+for the effective transport coefficients of composite media, involving
+a \emph{spectral measure} of a self-adjoint linear operator which
+depends only on the composite geometry
+\cite{Golden:CMP-473,Murphy:JMP:063506,MILTON:2002:TC}. Here, we adapt
+this Hilbert space formulation to treat the problem of effective
+transport by advection enhanced diffusion. In Section
+\ref{sec:Integral_Rep} we extend this method to obtain an integral
+representation for the effective diffusivity tensor $\bkappa^*$,
+involving a spectral measure which depends only on the fluid velocity
+field $\vec{u}$. 
+
+
+
+
+
+
+
+Toward this goal, we write the first formula in equation
+\eqref{eq:Cell_Problem} in a more suggestive, divergence form
+\cite{Fannjiang:SIAM_JAM:333} by
+writing  $\partial_t\chi=\Delta\Delta^{-1}\partial_t\chi=\vec{\nabla}\cdot(\Delta^{-1}\partial_t\Ib)\vec{\nabla}\chi$ and
+defining $\vec{E}_k=\vec{\nabla}\chi+\vec{e}_k$ and
+$\bsig
+=\bkappa-\Delta^{-1}\partial_t\Ib
+%=((\varepsilon-\Delta^{-1}\partial_t)\Ib+\Hb)
+$.
+With these definitions, the first formula in
+equation \eqref{eq:Cell_Problem} may be written as
+$\vec{\nabla}\cdot\bsig\vec{E}_k=0$, which is equivalent to
+\cite{Fannjiang:SIAM_JAM:333}      
+%
+\begin{align}\label{eq:Maxwells_Equations}    
+  \vec{\nabla}\cdot\vec{J}_k=0, \quad
+  \vec{\nabla}\times\vec{E}_k=0, \quad
+  \vec{J}_k=\bsig\vec{E}_k,\quad
+  \langle\vec{E}_k\rangle=\vec{e}_k,\qquad
+  \bsig%=\bkappa-\Delta^{-1}\partial_t\Ib
+       =((\varepsilon-\Delta^{-1}\partial_t)\Ib+\Hb),
+\end{align}
+%
+where $\Delta^{-1}$ is based on convolution with the Green's function for
+the Laplacian $\Delta$ and $\bsig=\bkappa$ in the case of steady fluid
+velocity fields, $\vec{u}=\vec{u}(\vec{x})$. The formulas in
+\eqref{eq:Maxwells_Equations} are  
+precisely the electrostatic version of Maxwell's equations for a
+conductive medium \cite{Golden:CMP-473}, where $\vec{E}_k$ and
+$\vec{J}_k$ are the local electric field and current density,
+respectively, and $\bsig$ is the local conductivity tensor of the
+medium. In the ACM for composites, the effective conductivity tensor
+$\bsig^*$ is defined as
+% 
+\begin{align}\label{eq:sigma*}
+  \langle\vec{J}_k\rangle=\bsig^*\langle\vec{E}_k\rangle.
+\end{align}
+%
+The linear constituative relation $\vec{J}_k=\bsig\vec{E}_k$ in
+\eqref{eq:Maxwells_Equations} relates the local intensity and flux,
+while the linear relation in \eqref{eq:sigma*} relates the mean
+intensity and mean flux. We now adapt the ACM to the treat the
+effective transport properties of advective diffusion, and demonstrate
+that the definition of the effective parameter given in equation
+\eqref{eq:sigma*} reduces to \eqref{eq:Eff_Diffusivity} 
+for diagonal components of the effective parameter.
+
+
+
+
+Consider the Hilbert spaces $\Hs_{\Tc}$ and 
+$\Hs_{\Rc}$ of periodic, square integrable, vector
+valued functions with temporal periodicity $T$ on the interval
+$\Tc=[0,T]$ and spatial periodicity $R$ on the $d$-dimensional
+region $\Rc=[0,R]^d$, respectively,
+%
+\begin{align}
+  &\Hs_{\Tc}=\{ 
+     \vec{Y}\in\otimes_{i=1}^dL^2(\Tc):
+     \vec{Y}(t+T)=\vec{Y}(t), \ \forall \ t\in\Tc
+                        \}, \\
+  &\Hs_{\Rc}=\{ 
+     \vec{Y}\in\otimes_{i=1}^dL^2(\Rc):
+     \vec{Y}(\vec{x}+R)=\vec{Y}(\vec{x}), \ \forall \ \vec{x}\in\Rc 
+                        \}, \notag
+\end{align}
+%
+where we have used the simplified notation $\vec{x}+R=(x_1+R,\ldots,x_d+R)$.
+By the Helmholtz theorem \cite{Denaro:2003:0271,Bhatia:IEE:1077}, the
+Hilbert space $\Hs_{\Rc}$ can be decomposed into 
+orthogonal subspaces of curl-free $\Hs_\times$, divergence-free
+$\Hs_\bullet$, and constant $\Hs_0$ vector valued functions,
+with associated orthogonal projectors
+$\Gamma_\times=\vec{\nabla}(\Delta^{-1})\vec{\nabla}\cdot$, $\Gamma_\bullet=-\vec{\nabla}\times(\Delta^{-1})\vec{\nabla}\times$, and
+$\Gamma_0$, respectively, \cite{Fannjiang:SIAM_JAM:333,MILTON:2002:TC}    
+%
+\begin{align}\label{eq:Helmholtz}
+  \Hs&=\Hs_\times\oplus\Hs_\bullet\oplus\Hs_0,\qquad
+  I=\Gamma_\times+\Gamma_\bullet+\Gamma_0, \\  
+  \Hs_\times
+      =\{\vec{Y}\in\Hs_{\Rc}:\vec{\nabla}\times\vec{Y}&=0\}, \quad
+  \Hs_\bullet
+      =\{\vec{Y}\in\Hs_{\Rc}:\vec{\nabla}\cdot\vec{Y}=0\},   \quad
+  \Hs_0
+      =\{\vec{Y}\in\Hs_{\Rc}:\vec{Y} \text{ constant}\},
+     \notag  
+\end{align}
+%
+where $I$ is the identity operator on $\mathbb{R}^d$. By equation
+\eqref{eq:Cell_Problem} the vector field $\vec{\nabla}\chi$ is 
+curl-free and mean-zero. Motivated by this, our analysis of the
+effective parameter problem for $\bkappa^*$ in
+\eqref{eq:Eff_Diffusivity} and the associated integral representation
+discussed in Section \ref{sec:Integral_Rep} will be conducted on the
+following Hilbert space $\Hs$ of mean-zero vector valued functions
+with inner-product $\langle\cdot,\cdot\rangle$ (over a \emph{real} field) defined by
+$\langle\vec{\xi},\vec{\zeta}\rangle=\langle\vec{\xi}\cdot\vec{\zeta}\rangle$ 
+%
+\begin{align}
+  \Hs=\{\vec{Y}\in\Hs_{\Tc}\otimes\Hs_\times: \langle\vec{Y}\rangle=0\},
+\end{align}
+%
+where we have used the simplified notation $\langle\vec{Y}\rangle=0\iff\langle Y_i\rangle=0$ for
+all $i=1,\ldots,d$. 
+
+
+
+
+We now show that equation \eqref{eq:sigma*} reduces to
+\eqref{eq:Eff_Diffusivity} for diagonal components of the effective
+parameter. The operator $\bsig$ in \eqref{eq:Maxwells_Equations} can
+be written as $\bsig=\varepsilon\Ib+\Sb$, where  $\Sb=-\Delta^{-1}\partial_t\Ib+\Hb$ is
+skew-symmetric on $\Hs$,
+$\langle\Sb\vec{\xi},\vec{\zeta}\,\rangle=-\langle\vec{\xi},\Sb\vec{\zeta}\,\rangle$. By this
+skew-symmetry, the intensity-flux relationship in
+\eqref{eq:Maxwells_Equations} is similar to that of a Hall medium
+\cite{Isichenko:JNS:1991:375}. The skew-symmetry of this 
+operator implies that 
+%$\langle\Sb\vec{E}_k\cdot\vec{E}_k\rangle=-\langle\Sb\vec{E}_k\cdot\vec{E}_k\rangle=0$.
+%
+\begin{align}\label{eq:Sb_Skew}
+  \langle\Sb\vec{E}_k\cdot\vec{E}_k\rangle=-\langle\Sb\vec{E}_k\cdot\vec{E}_k\rangle=0,
+  \qquad
+  \Sb=-\Delta^{-1}\partial_t\Ib+\Hb.
+\end{align}
+%
+Since $\vec{J}_k=\bsig\vec{E_k}$ in \eqref{eq:Maxwells_Equations}
+satisfies $\vec{J}_k\in\mathscr{H}_\bullet$ and $\vec{\nabla}\chi\in\mathscr{H}_\times$, the
+Helmholtz theorem displayed in \eqref{eq:Helmholtz} implies that
+$\langle\vec{J}_k\cdot\vec{\nabla}\chi\rangle=0$. Consequently, by equations
+\eqref{eq:Maxwells_Equations} and \eqref{eq:Sb_Skew}, equation
+\eqref{eq:sigma*} reduces to \eqref{eq:Eff_Diffusivity}:     
+%
+\begin{align}
+  \sigma^*_{kk}=\bsig^*\vec{e}_k\cdot\vec{e}_k 
+       =\langle\bsig\vec{E}_k\cdot\vec{e}_k\rangle
+       =\langle\bsig\vec{E}_k\cdot\vec{E}_k\rangle
+       =\langle[(\varepsilon\Ib+\Sb)]\vec{E}_k\cdot\vec{E}_k\rangle
+       =\varepsilon\langle\vec{E}_k\cdot\vec{E}_k\rangle.
+\end{align}
+%
+Another immediate consequence of equation \eqref{} is the existance
+and uniqueness of a solution $\vec{\nabla}\chi\in\Hs$ satisfying the cell
+problem \eqref{eq:Cell_Problem}, or equivalently equation
+\eqref{eq:Maxwells_Equations} written as
+$\vec{\nabla}\cdot\bsig(\vec{\nabla}\chi+\vec{e}_k)=0$. The weak form of this formula 
+is $\langle\bsig(\vec{\nabla}\chi+\vec{e}_k)\cdot\vec{\nabla}\xi\rangle=0$, where $\xi$ is a compactly
+supported, infinitely differentiable function, and we stress that
+$\vec{\nabla}\xi$ is \emph{curl free}. Motivated by this formulation, we
+consider the following variational problem: find
+$\vec{\nabla}\chi\in\mathscr{A}\otimes\Hs_\times$ such that 
+%
+\begin{align}
+  \langle\bsig(\vec{\nabla}\chi+\vec{e}_k)\cdot\vec{Y}\rangle=0, \text{ for all }
+  \vec{Y}\in\mathscr{A}\otimes\Hs_\times.
+\end{align}
+%
+In order to apply the Lax-Milgram Theorem, we
+rewrite equations \eqref{eq:Weak_Curl_Free_Variational_Form_E} and
+\eqref{eq:Weak_Curl_Free_Variational_Form_J} as
+%
+\begin{align}
+  \label{eq:Bilinear_functional_E}
+   &\Phi(\vec{E}_f^{\,\prime},\vec{\xi}^{\,\prime})
+     =\langle\bsig^{\,\prime}(\omega)\vec{E}_f^{\,\prime}(\omega)\cdot\vec{\xi}^{\,\prime}(\omega)\rangle
+     =-\langle\bsig^{\,\prime}(\omega)\vec{E}_0\cdot\vec{\xi}^{\,\prime}(\omega)\rangle
+     =f_\sigma(\vec{\xi}^{\,\prime}),
+  \\
+  \label{eq:Bilinear_functional_J}
+  &\Psi(\vec{J}_f^{\,\prime},\vec{\zeta}^{\,\prime})
+     =\langle\brho^{\,\prime}(\omega)\vec{J}_f^{\,\prime}(\omega)\cdot\vec{\zeta}^{\,\prime}(\omega)\rangle
+     =-\langle\brho^{\,\prime}(\omega)\vec{J}_0\cdot\vec{\zeta}^{\,\prime}(\omega)\rangle
+     =f_\rho(\vec{\zeta}^{\,\prime}),
+\end{align}
+%
+respectively.
+
+
+
+
+By the Cauchy--Schwartz inequality and equation
+\eqref{eq:Bounded_parameters}, each of the bilinear functionals $\Phi$
+and $\Psi$ are bounded, and $f_\sigma$ and $f_\rho$ are both bounded linear
+functionals on the Hilbert spaces $\mathscr{H}_\times$ and 
+$\mathscr{H}_\bullet$, respectively. For now, we will assume that $\Phi$ and
+$\Psi$ are coercive, e.g. that there exists a positive constant 
+$\kappa>0$ such that $\Phi(\vec{\xi},\vec{\xi}\,)\geq\kappa\|\vec{\xi}\,\|^2$ for all 
+$\vec{\xi}\in\mathscr{H}_\times$, where $\|\cdot\|$ denotes the norm induced by the
+$\mathscr{H}$-inner-product. Later, we will demonstrate that the
+coercivity condition determines analytic properties of the
+effective parameters. By the Lax-Milgram theorem, there exist unique
+$\vec{E}_f^{\,\prime}\in\mathscr{H}_\times$ and $\vec{J}_f^{\,\prime}\in\mathscr{H}_\bullet$
+that satisfy equations \eqref{eq:Bilinear_functional_E} and
+\eqref{eq:Bilinear_functional_J} for all $\vec{\xi}^{\,\prime}\in\mathscr{H}_\times$
+and $\vec{\zeta}^{\,\prime}\in\mathscr{H}_\bullet$, respectively. By construction,
+%
+\begin{align}\label{eq:Unique_Solutions}
+  \vec{E}^{\,\prime}(\omega)&=\vec{E}_0+\vec{E}_f^{\,\prime}(\omega), \qquad
+  \vec{J}^{\,\prime}(\omega)=\bsig^{\,\prime}(\omega)\vec{E}^{\,\prime}(\omega),
+  \\
+  \vec{J}^{\,\prime}(\omega)&=\vec{J}_0+\vec{J}_f^{\,\prime}(\omega), \qquad
+  \vec{E}^{\,\prime}(\omega)=\brho^{\,\prime}(\omega)\vec{J}^{\,\prime}(\omega),
+\end{align}
+%
+are the unique solutions of equations \eqref{eq:Maxwells_Equations_E}
+and \eqref{eq:Maxwells_Equations_J}, respectively, via equations
+\eqref{eq:Stationary_sig_rho} and \eqref{eq:Stationary_E_J}. 
+To simplify notation, we will henceforth drop
+the distinction between the primed variables $\vec{E}_f^{\,\prime}(\omega)$ and 
+$\vec{E}_f(\vec{x},\omega)$, for example, as the context of each notation
+is now clear.
+
+
+
+
+
+
+that is
+functions 
+$f(t)$, $f\in L^2(\Tc)$, such that $f^\prime\in L^2(\Tc)$. 
+$\vec{\nabla}\chi(\cdot,\vec{x})\in\Hs_\times$. Moreover,
+$\vec{\nabla}\chi(t,\vec{x})$ is absolutely continuous in $t$, i.e. its time
+derivative $[\partial_t\vec{\nabla}\chi](\cdot,\vec{x})\in L^2(\Rc)$ for each $t\in[0,T)$.
+WE NEED A DISCUSSION OF WHY THIS IS TRUE: Lax-Milgram shows that there
+is a unique solution $\vec{\nabla}\chi(\vec{x})\in\Hs_\times$ for the
+time-independent case since $\|\varepsilon\Ib+\Hb\|$ is uniformly bounded above
+and below and
+$\langle(\varepsilon\Ib+\Hb)\vec{\xi}\cdot\vec{\xi}\rangle=\varepsilon+\langle\Hb\vec{\xi}\cdot\vec{\xi}\rangle=\varepsilon>0$, hence
+coercive. What is the analogous theorem for the time dependent case?
+
+
+
+\subsection{Integral representation for effective
+  diffusivity}\label{sec:Integral_Rep}
+%
+
+
+Now consider the space $\mathscr{A}$ of functions that are
+\emph{absolutely continuous} on the interval $\Tc$,
+%
+\begin{align}\label{eq:Abs_Cont}
+  \mathscr{A}=\{f\in L^2(\Tc): \ f^\prime\in L^2(\Tc)\},
+\end{align}
+%
+where $f^\prime$ denotes differentiation of the function $f(t)$ with
+respect to the variable $t$.
+
+
+
+We now derive a Stieltjes integral representation for $\bkappa^*$
+involving the spectral measure of a self-adjoint linear operator
+$\Mb$, which follows from the following resolvent formula for
+$\vec{\nabla}\chi$  
+%
+\begin{align}\label{eq:Resolvent}
+  \vec{\nabla}\chi=(\varepsilon\Ib-\I\Mb)^{-1}\Gamma\Hb\vec{e}_k, \quad
+  \Mb=\I\Gamma[\Hb-\Delta^{-1}\partial_t\Ib]\Gamma.
+\end{align}
+%
+where we have defined $\Gamma=\Gamma_\times$ for notational simplicity. Equation
+\eqref{eq:Resolvent} follows from applying the integro-differential
+operator $\vec{\nabla}\Delta^{-1}$ to $\vec{\nabla}\cdot\bsig\vec{E}_k=0$ in equation 
+\eqref{eq:Maxwells_Equations}, with $\vec{E}_k=\vec{\nabla}\chi+\vec{e}_k$ and
+$\bsig=((\varepsilon-\Delta^{-1}\partial_t)\Ib+\Hb)$, yielding
+$\Gamma(\varepsilon\Ib+[\Hb-\Delta^{-1}\partial_t\Ib])\vec{\nabla}\chi=-\Gamma\Hb\vec{e}_k$. Equation
+\eqref{eq:Resolvent} now follows by writing $-\I^2=1$ and noting 
+$\vec{\nabla}\chi\in\Hs_\times$ implies that $\Gamma\vec{\nabla}\chi=\vec{\nabla}\chi$. In this paper
+we will consider only velocity fields $\vec{u}$ such that $\Hb$ is
+uniformly bounded, $\|\Hb\|<\infty$, in the operator norm on
+$\Hs_\times$. Therefore, since $\Hb$ is skew-symmetric and $\Gamma$ is a
+projection operator which is bounded by one in the operator norm,
+$\I\Gamma\Hb\Gamma$ is a self-adjoint linear operator on $\Hs_\times$ which
+is bounded by $\|\Hb\|$. Assuming the commutability condition $\Delta^{-1}\partial_t=\partial_t\Delta^{-1}$ The symmetric operator $\I\Gamma\Delta^{-1}\partial_t\Gamma$
+
+
+
+
+
+
+In two dimensions, $d=2$, the matrix $\Hb$ is determined by a stream
+function $H(t,\vec{x})$ 
+%
+\begin{align}\label{eq:u_H}  
+  \Hb=\left[
+  \begin{array}{cc}
+    0  & H\\
+    -H & 0
+  \end{array}
+  \right],
+  \qquad
+  \vec{u}=[\partial_{x_1}H, \ \partial_{x_2}H].
+\end{align}
+%
+
+\section{Assymptotic analysis of effective
+  diffusivity} \label{sec:Assymptotics} 
+
+
+\section{Numerical Results}\label{sec:Num_Results}
+%
+Since we are focusing on flows which are periodic on the spatial
+region $\Rc$, it is convenient to consider the Fourier
+representation of such a vector field $\vec{Y}(t,\vec{x})$, 
+%
+\begin{align}
+  \vec{Y}(t,\vec{x})
+    =\sum_{\vec{k}\in\mathbb{Z}^d}
+       \hat{Y}(t,\vec{k})\e^{\I\vec{k}\cdot\vec{x}},
+  \qquad
+  \hat{Y}(t,\vec{k})
+    =\frac{1}{(2\pi)^d}\int_{\Rc}
+       \hat{Y}(t,\vec{x})\e^{-\I\vec{k}\cdot\vec{x}} \d\vec{x}.
+\end{align}
+%
+%where $|\Rc|=(2\pi)^d$ is the Lebesgue measure of the region
+%$\Rc$.
+The associated action of the above projection opperators on a function
+$\vec{Y}\in\Hs$ is given by \cite{Fannjiang:SIAM_JAM:333} 
+%
+\begin{align}\label{eq:Projections}
+  \Gamma_0\vec{Y}(t,\vec{x})
+    =\langle\vec{Y}(t,\vec{x})\rangle_x
+    =\hat{Y}(t,0),
+    \qquad
+  \Gamma_\times\vec{Y}(t,\vec{x})
+    =\sum_{\vec{k}\neq0}
+       \frac{\vec{k}(\vec{k}\cdot\hat{Y}(t,\vec{k}))}{|\vec{k}|^2}
+       \e^{\I\vec{k}\cdot\vec{x}},
+    \\
+  \Gamma_\bullet\vec{Y}(t,\vec{x})
+    =\sum_{\vec{k}\neq0}
+       \frac{\vec{k}\times(\vec{k}\times\hat{Y}(t,\vec{k}))}{|\vec{k}|^2}
+       \e^{\I\vec{k}\cdot\vec{x}}
+    =\sum_{\vec{k}\neq0}\left(I-
+       \frac{\vec{k}\vec{k}\cdot}{|\vec{k}|^2}\right) 
+       \hat{Y}(t,\vec{k})  \e^{\I\vec{k}\cdot\vec{x}},
+       \notag
+\end{align}
+%
+where $\langle\cdot\rangle_x$ denotes spatial averaging over $\Rc$. From
+equation \eqref{eq:Projections} it is clear that $\Gamma_\times+\Gamma_\bullet+\Gamma_0=I$.
+
+
+
+
+\medskip
+
+{\bf Acknowledgements.}
+We gratefully acknowledge support from the Division of Mathematical
+Sciences and the Office of Polar Programs at the U.S. 
+National Science Foundation (NSF) through Grants
+DMS-1009704, ARC-0934721, and DMS-0940249. We are also grateful for 
+support from the Office of Naval Research (ONR) through
+Grants N00014-13-10291 and N00014-12-10861. Finally, we would like to 
+thank the NSF Math Climate Research Network (MCRN) for their support
+of this work. 
+
+
+\medskip
+
+\bibliographystyle{plain}
+\bibliography{murphy}
+\end{document}
+
+% LocalWords:  McMaster RM jk sig eps def Maxwells Milgram coercivity diag jX
+% LocalWords:  mh Cond mu kk PtI Fs Es Hashin Shtrikman extremized Decomp chi
+% LocalWords:  Acknowledgements DMS ONR MCRN murphy

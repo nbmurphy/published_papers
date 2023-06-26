@@ -1,0 +1,589 @@
+\begin{thebibliography}{100}
+
+\bibitem{Andreas:2010:QJ618}
+E.~L. Andreas, T.~W. Horst, A.~A. Grachev, P.~O.~G. Persson, C.~W. Fairall,
+  P.~S. Guest, and R.~E. Jordan.
+\newblock Parametrizing turbulent exchange over summer sea ice and the marginal
+  ice zone.
+\newblock {\em Q. J. R. Meteorol. Soc.}, 136(649):927--943, 2010.
+
+\bibitem{Andreas:JH:2010}
+E.~L. Andreas, P.~O.~G. Persson, A.~A. Grachev, R.~E. Jordan, T.~W. Horst,
+  P.~S. Guest, and C.~W. Fairall.
+\newblock Parameterizing turbulent exchange over sea ice in winter.
+\newblock {\em J. Hydrometeor.}, 11(1):87--104, 2010.
+
+\bibitem{Aslanyan:BF00790149}
+G.S. Aslanyan, I.L. Maikov, and I.Z. Filimonova.
+\newblock Simulation of pulverized coal combustion in a turbulent flow.
+\newblock {\em Combust., Expl., Shock Waves}, 30(4):448--453, 1994.
+
+\bibitem{Avellaneda:PRL-753}
+M.~Avellaneda and A.~Majda.
+\newblock Stieltjes integral representation and effective diffusivity bounds
+  for turbulent transport.
+\newblock {\em Phys. Rev. Lett.}, 62:753--755, 1989.
+
+\bibitem{Avellaneda:CMP-339}
+M.~Avellaneda and A.~Majda.
+\newblock An integral representation and bounds on the effective diffusivity in
+  passive advection by laminar and turbulent flows.
+\newblock {\em Comm. Math. Phys.}, 138:339--391, 1991.
+
+\bibitem{Avellaneda:PRE:3249}
+M.~Avellaneda and M.~Vergassola.
+\newblock Stieltjes integral representation of effective diffusivities in
+  time-dependent flows.
+\newblock {\em Phys. Rev. E}, 52(3):3249--3251, 1995.
+
+\bibitem{Baker:1996:Book:Pade}
+G.~A. Baker and P.~R. Graves-Morris.
+\newblock {\em {Pad{\'e}} Approximants}.
+\newblock Encyclopedia of Mathematics and its Applications. Cambridge
+  University Press, 1996.
+
+\bibitem{Banerjee:10.1007}
+S.~Banerjee.
+\newblock The air-water interface: Turbulence and scalar exchange.
+\newblock In C.~S. Garbe, R.~A. Handler, and B.~J{\"a}hne, editors, {\em
+  Transport at the Air-Sea Interface}, Environmental Science and Engineering,
+  pages 87--101. Springer Berlin Heidelberg, 2007.
+
+\bibitem{Bensoussan:Book:1978}
+A.~Bensoussan, J.-L. Lions, and G.~Papanicolaou.
+\newblock {\em Asymptotic Analysis for Periodic Structures}.
+\newblock North-Holland, Amsterdam, 1978.
+
+\bibitem{Bergman:PRC-377}
+D.~J. Bergman.
+\newblock The dielectric constant of a composite material -- {A} problem in
+  classical physics.
+\newblock {\em Phys. Rep. C}, 43(9):377--407, 1978.
+
+\bibitem{Beychok:1994:9780964458802}
+M.R. Beychok.
+\newblock {\em Fundamentals of Stack Gas Dispersion: Guide}.
+\newblock The Author, 1994.
+
+\bibitem{Bhatia:IEE:1077}
+H.~Bhatia, G.~Norgard, V.~Pascucci, and Peer-Timo Bremer.
+\newblock The helmholtz-hodge decomposition-a survey.
+\newblock {\em IEEE T. Vis. Comput. Gr.}, 19(8):1386--1404, 2013.
+
+\bibitem{Bhattacharya:1985:AnnProb:13:2:385}
+R.~Bhattacharya.
+\newblock A central limit theorem for diffusions with periodic coefficients.
+\newblock {\em Ann. Probab.}, 13(2):385--396, 05 1985.
+
+\bibitem{Bhattacharya:AAP:1999:951}
+R.~Bhattacharya.
+\newblock Multiscale diffusion processes with periodic coefficients and an
+  application to solute transport in porous media.
+\newblock {\em Ann. Appl. Probab.}, 9(4):951--1020, 1999.
+
+\bibitem{Bhattacharya:1989:ASD}
+R.~N. Bhattacharya, V.~K. Gupta, and H.~F. Walker.
+\newblock Asymptotics of solute dispersion in periodic porous media.
+\newblock {\em SIAM Journal on Applied Mathematics}, 49(1):86--98, February
+  1989.
+
+\bibitem{Biferale:PF:2725}
+L.~Biferale, A.~Crisanti, M.~Vergassola, and A.~Vulpiani.
+\newblock Eddy diffusivities in scalar transport.
+\newblock {\em Phys. Fluids}, 7:2725--2734, 1995.
+
+\bibitem{Bilger:05:10.1016}
+R.~W. Bilger, S.~B. Pope, K.~N.~C. Bray, and J.~F. Driscoll.
+\newblock {Paradigms in turbulent combustion research}.
+\newblock {\em Proc. Combust. Inst.}, 30:21--42, 2005.
+
+\bibitem{Bonn:McLaughlin:JFM:2001:345}
+J.~Bonn and R.~M. McLaughlin.
+\newblock Sensitive enhanced diffusivities for flows with fluctuating mean
+  winds: a two-parameter study.
+\newblock {\em J. Fluid Mech.}, 445:345--375, 10 2001.
+
+\bibitem{Bowden:JFM:1965}
+K.~F. Bowden.
+\newblock Horizontal mixing in the sea due to a shearing current.
+\newblock {\em J. Fluid Mech.}, 21(1):83-- 95, 1965.
+
+\bibitem{Bretherton:JOC:5655449}
+C.~S. Bretherton and S.~Park.
+\newblock A new moist turbulence parameterization in the community atmosphere
+  model.
+\newblock {\em Journal of Climate}, 22(12):3422--3448, 2009.
+
+\bibitem{canut00}
+V.~M. Canuto.
+\newblock The physics of subgrid scales in numerical simulations of stellar
+  convection: Are they dissipative, advective, or diffusive?
+\newblock {\em Astrophys. J. Lett.}, 541:L79--L82, 2000.
+
+\bibitem{canut98}
+V.~M. Canuto and J.~Christensen-Dalsgaard.
+\newblock Turbulence in astrophysics: Stars.
+\newblock {\em Annu. Rev. Fluid Mech.}, 30:167--198, 1998.
+
+\bibitem{canut98b}
+V.~M. Canuto and M.~Dubovikov.
+\newblock Stellar turbulent convection. {I}. {Theory}.
+\newblock {\em Astrophys. J.}, 493:834--847, 1998.
+
+\bibitem{Chaigneau:JGR:C11025}
+A.~Chaigneau, M.~Le Texier, G.~Eldin, C.~Grados, and O.~Pizarro.
+\newblock Vertical structure of mesoscale eddies in the eastern {South}
+  {Pacific} {Ocean}: A composite analysis from altimetry and {Argo} profiling
+  floats.
+\newblock {\em J. Geophys. Res.}, 116:C11025 (16pp.), 2011.
+
+\bibitem{Clark:1998:364}
+G.W. Clark.
+\newblock Derivation of microstructure models of fluid flow by homogenization.
+\newblock {\em J. Math. Anal. Appl.}, 226(2):364 -- 376, 1998.
+
+\bibitem{Bilger:10.1175}
+G.~T. Csanady.
+\newblock Turbulent diffusion of heavy particles in the atmosphere.
+\newblock {\em J. Atmos. Sci.}, 20(3):201--208, 1963.
+
+\bibitem{Csanady:1973:9789027702609}
+G.~T. Csanady.
+\newblock {\em Turbulent Diffusion in the Environment}.
+\newblock Geophysics and astrophysics monographs. D. Reidel Publishing Company,
+  1973.
+
+\bibitem{Eckart:JMR:1948}
+C.~Eckart.
+\newblock An analysis of stirring and mixing processes in incompressible
+  fluids.
+\newblock {\em J. Mar. Res.}, 7:265--275, 1948.
+
+\bibitem{Espinosa:MET1292}
+F.~Espinosa, R.~Avila, S.~S. Raza, A.~Basit, and J.~G. Cervantes.
+\newblock Turbulent dispersion of a gas tracer in a nocturnal atmospheric flow.
+\newblock {\em Met. Apps}, 20(3):338--348, 2013.
+
+\bibitem{Fairall:1996:JGRC6562}
+C.~W. Fairall, E.~F. Bradley, D.~P. Rogers, J.~B. Edson, and G.~S. Young.
+\newblock Bulk parameterization of air-sea fluxes for {Tropical Ocean-Global
+  Atmosphere Coupled-Ocean Atmosphere Response Experiment}.
+\newblock {\em J. Geophys. Res.-Oceans}, 101(C2):3747--3764, 1996.
+
+\bibitem{Fannjiang:1994:SIAM_JAM:333}
+A.~Fannjiang and G.~Papanicolaou.
+\newblock Convection enhanced diffusion for periodic flows.
+\newblock {\em SIAM Journal on Applied Mathematics}, 54(2):333--408, 1994.
+
+\bibitem{Fannjiang:1997:1033}
+A.~Fannjiang and G.~Papanicolaou.
+\newblock Convection-enhanced diffusion for random flows.
+\newblock {\em J. Stat. Phys.}, 88(5-6):1033--1076, 1997.
+
+\bibitem{Ferrari:JPO:1501}
+R.~Ferrari and M.~Nikurashin.
+\newblock Suppression of eddy diffusivity across jets in the {Southern}
+  {Ocean}.
+\newblock {\em J. Phys. Oceanogr.}, 40:1501--1519, 2010.
+
+\bibitem{Ferrari:ARFM:253}
+R.~Ferrari and C.~Wunsch.
+\newblock Ocean circulation kinetic energy: Reservoirs, sources and sinks.
+\newblock {\em Annu. Rev. Fluid Mech.}, 41:253--282, 2009.
+
+\bibitem{Folland:95:PDEs}
+G.~B. Folland.
+\newblock {\em Introduction to Partial Differential Equations}.
+\newblock Princeton University Press, Princeton, NJ, 1995.
+
+\bibitem{Folland:99:RealAnalysis}
+G.~B. Folland.
+\newblock {\em Real Analysis: Modern Techniques and Their Applications}.
+\newblock Wiley--Interscience, New York, NY, 1999.
+
+\bibitem{Gent:JPO:1995}
+P.~R. Gent, J.~Willebrand, T.~J. McDougall, and J.~C. McWilliams.
+\newblock Parameterizing eddy-induced tracer transports in ocean circulation
+  models.
+\newblock {\em J. Phys. Oceanog.}, 25:463--474, 1995.
+
+\bibitem{Golden:CMP-473}
+K.~M. Golden and G.~Papanicolaou.
+\newblock Bounds for effective parameters of heterogeneous media by analytic
+  continuation.
+\newblock {\em Commun. Math. Phys.}, 90:473--491, 1983.
+
+\bibitem{Griffies:JPO:1998}
+S.~M. Griffies.
+\newblock The {Gent--McWilliams} skew flux.
+\newblock {\em J. Phys. Oceanogr}, 28(5):831--841, 1998.
+
+\bibitem{Griffies:2003:10.1007}
+S.~M. Griffies.
+\newblock An introduction to {Ocean} climate modeling.
+\newblock In X.~Rod\'{o} and F.~A. Com\'{i}n, editors, {\em Global Climate},
+  pages 55--79. Springer Berlin Heidelberg, 2003.
+
+\bibitem{Gupta:WRCR3940}
+V.~K. Gupta and R.~N. Bhattacharya.
+\newblock Solute dispersion in multidimensional periodic saturated porous
+  media.
+\newblock {\em Water. Resour. Res.}, 22(2):156--164, 1986.
+
+\bibitem{Holmes:1995:94481954}
+M.~H. Holmes.
+\newblock {\em Introduction to Perturbation Methods}.
+\newblock Texts in Applied Mathematics. Springer, 1995.
+
+\bibitem{Holton:JGRC2495}
+J.~R. Holton.
+\newblock An advective model for two-dimensional transport of stratospheric
+  trace species.
+\newblock {\em J. Geophys. Res.-Oceans}, 86(C12):11989--11994, 1981.
+
+\bibitem{Hornung:1997:9780387947860}
+U.~Hornung.
+\newblock {\em Homogenization and Porous Media}.
+\newblock Interdisciplinary Applied Mathematics. Springer New York, 1997.
+
+\bibitem{Isichenko:JNS:1991:375}
+M.~B. Isichenko and J.~Kalda.
+\newblock Statistical topography {II}. {2D} transport of passive scalar.
+\newblock {\em J. Nonlinear Sci.}, 4:375--397, 1991.
+
+\bibitem{Jackson-1999}
+J.~D. Jackson.
+\newblock {\em Classical Electrodynamics}.
+\newblock John Wiley and Sons, Inc., New York, 1999.
+
+\bibitem{Knobloch:1992ApJ}
+E.~{Knobloch} and W.~J. {Merryfield}.
+\newblock Enhancement of diffusive transport in oscillatory flows.
+\newblock {\em Astrophys. J.}, 401:196--205, 1992.
+
+\bibitem{Koch:1988:965}
+D.~L. Koch and J.~F. Brady.
+\newblock Anomalous diffusion in heterogeneous porous media.
+\newblock {\em Phys. of Fluids}, 31(5):965--973, 1988.
+
+\bibitem{Koch:JFM:7961001}
+D.~L. Koch, R.~G. Cox, H.~Brenner, and J.~F. Brady.
+\newblock {The effect of order on dispersion in porous media}.
+\newblock {\em J. Fluid Mech.}, 200:173--188, 1989.
+
+\bibitem{Kullenberg:1972:TUS1529}
+G.~Kullenberg.
+\newblock Apparent horizontal diffusion in stratified vertical shear flow.
+\newblock {\em Tellus}, 24(1):17--28, 1972.
+
+\bibitem{Lester:PRL:111.174101}
+D.~R. Lester, G.~Metcalfe, and M.~G. Trefry.
+\newblock Is chaotic advection inherent to porous media flow?
+\newblock {\em Phys. Rev. Lett.}, 111(17):174101 (5pp.), Oct 2013.
+
+\bibitem{Liu:2015}
+D.~Liu, J.~Zhu, J.-L. Tison, and K.~M. Golden.
+\newblock Inversion schemes for recovering the thermal conductivity of sea ice
+  from temperature data.
+\newblock To be submitted, 2015.
+
+\bibitem{Lu:JGR:D50094}
+C.~Lu, Y.~Liu, S.~Niu, S.~Krueger, and T.~Wagner.
+\newblock Exploring parameterization for turbulent entrainment-mixing processes
+  in clouds.
+\newblock {\em J. Geophys. Res.-Atmospheres}, 118(1):185--194, 2013.
+
+\bibitem{Lukovich:AG:2015}
+J.~V. Lukovich, J.~K. Hutchings, and D.~G. Barber.
+\newblock On sea-ice dynamical regimes in the {Arctic Ocean}.
+\newblock {\em Ann. Glac.}, 56(69):323--331, 2015.
+
+\bibitem{Lytle:JGR-8853}
+V.~I. Lytle and S.~F. Ackley.
+\newblock {Heat flux through sea ice in the Western Weddell Sea: Convective and
+  conductive transfer processes}.
+\newblock {\em J. Geophys. Res.}, 101(C4):8853--8868, 1996.
+
+\bibitem{Denaro:2003:0271}
+F.~M-Denaro.
+\newblock On the application of the {Helmholtz-Hodge} decomposition in
+  projection methods for incompressible flows with general boundary conditions.
+\newblock {\em Int. J. Numer. Meth. Fl.}, 43(1):43--69, 2003.
+
+\bibitem{Majda:Kramer:1999:book}
+A.~Majda and P.~R. Kramer.
+\newblock {\em Simplified Models for Turbulent Diffusion: Theory, Numerical
+  Modelling, and Physical Phenomena}.
+\newblock Physics reports. North-Holland, 1999.
+
+\bibitem{Majda:1994:10.1088}
+A.~J. Majda and P.~E. Souganidis.
+\newblock Large scale front dynamics for turbulent reaction-diffusion equations
+  with separated velocity scales.
+\newblock {\em Nonlinearity}, 7(1):1--30, 1994.
+
+\bibitem{Mauri:1991:3:743}
+Roberto Mauri.
+\newblock Dispersion, convection, and reaction in porous media.
+\newblock {\em Phys. Fluids A: Fluid Dynamics}, 3(5):743--756, 1991.
+
+\bibitem{McDougall:2001:book}
+T.J. McDougall and CSIRO Marine Research~Hobart (Tasmania).
+\newblock {\em Representing the Effects of Mesoscale Eddies in
+  Coarse-Resolution Ocean Models}.
+\newblock Defense Technical Information Center, 2001.
+
+\bibitem{McLaughlin:SIAM_JAM:780}
+D.~{McLaughlin}, G.~Papanicolaou, and O.~Pironneau.
+\newblock Convection of microstructure and related problems.
+\newblock {\em SIAM J. Appl. Math.}, 45:780--797, 1985.
+
+\bibitem{McLaughlin:Forest:PF:1999:880}
+R.~M. {McLaughlin} and M.~G. Forest.
+\newblock An anelastic, scale-separated model for mixing, with application to
+  atmospheric transport phenomena.
+\newblock {\em Phys. Fluids}, 11(4):880--892, 1999.
+
+\bibitem{McOwen:2003:PDE}
+R.~C. McOwen.
+\newblock {\em Partial differential equations: methods and applications}.
+\newblock Prentice Hall PTR, 2003.
+
+\bibitem{Middleton:JPO:5840223}
+J.~F. Middleton and J.~W. Loder.
+\newblock Skew fluxes in polarized wave fields.
+\newblock {\em J. Phys. Oceanogr.}, 19(1):68--76, 1989.
+
+\bibitem{Milton:APL-300}
+G.~W. Milton.
+\newblock Bounds on the complex dielectric constant of a composite material.
+\newblock {\em Appl. Phys. Lett.}, 37:300--302, 1980.
+
+\bibitem{MILTON:2002:TC}
+G.~W. Milton.
+\newblock {\em Theory of Composites}.
+\newblock Cambridge University Press, Cambridge, 2002.
+
+\bibitem{Moffatt:RPP:621}
+H.~K. Moffatt.
+\newblock Transport effects associated with turbulence with particular
+  attention to the influence of helicity.
+\newblock {\em Rep. Prog. Phys.}, 46(5):621--664, 1983.
+
+\bibitem{Murphy:2015:CMS:13:4:825}
+N.~B. Murphy, E.~Cherkaev, C.~Hohenegger, and K.~M. Golden.
+\newblock Spectral measure computations for composite materials.
+\newblock {\em Commun. Math. Sci.}, 13(4):825--862, 2015.
+
+\bibitem{Murphy:JMP:063506}
+N.~B. Murphy and K.~M. Golden.
+\newblock The {Ising} model and critical behavior of transport in binary
+  composite media.
+\newblock {\em J. Math. Phys.}, 53:063506 (25pp.), 2012.
+
+\bibitem{Neelin:2010:CCCM}
+J.D. Neelin.
+\newblock {\em Climate Change and Climate Modeling}.
+\newblock Cambridge University Press, 2010.
+
+\bibitem{Novikov:2005:CPAM:867}
+A.~Novikov, G.~Papanicolaou, and L.~Ryzhik.
+\newblock Boundary layers for cellular flows at high {P{\'e}clet} numbers.
+\newblock {\em Comm. Pure Appl. Math}, 58(7):867--922, 2005.
+
+\bibitem{Papanicolaou:1981:36:8}
+G.~Papanicolaou and O.~Pironeau.
+\newblock {\em On the Asymptotic Behavior of Motions in Random Flows, in
+  Stochastic Nonlinear Systems in Physics, Chemistry, and Biology, L. Arnold
+  and R. Lefever, eds.}, volume~8, pages 36--41.
+\newblock Springer, Berlin Heidelberg, 1981.
+
+\bibitem{Papanicolaou:RF-835}
+G.~Papanicolaou and S.~Varadhan.
+\newblock Boundary value problems with rapidly oscillating coefficients.
+\newblock In {\em Colloquia Mathematica Societatis J{\'a}nos Bolyai 27, Random
+  Fields (Esztergom, Hungary 1979)}, pages 835--873. North-Holland, 1982.
+
+\bibitem{Parlett:1980}
+B.~N. Parlett.
+\newblock {\em The Symmetric Eigenvalue Problem}.
+\newblock Prentice-Hall, Inc., Upper Saddle River, NJ, USA, 1998.
+
+\bibitem{Pavliotis:PHD_Thesis}
+G.~A. Pavliotis.
+\newblock {\em Homogenization theory for advection-diffusion equations with
+  mean flow}.
+\newblock PhD thesis, Rensselaer Polytechnic Institute Troy, New York, 2002.
+
+\bibitem{Pavliotis:IMAJAM:951}
+G.~A. Pavliotis.
+\newblock Asymptotic analysis of the {Green}--{Kubo} formula.
+\newblock {\em IMA J. Appl. Math.}, 75:951--967, 2010.
+
+\bibitem{Pavliotis:CMS:2007:507}
+G.~A. Pavliotis, A.~M. Stuart, and K.~C. Zygalakis.
+\newblock Homogenization for inertial particles in a random flow.
+\newblock {\em Commun. Math. Sci.}, 5(3):507--531, 2007.
+
+\bibitem{Peters:2000:TC:9780521660822}
+N.~Peters.
+\newblock {\em Turbulent Combustion}.
+\newblock Cambridge Monographs on Mechanics. Cambridge University Press, 2000.
+
+\bibitem{Pitari:JGR:1986}
+G.~Pitari and G.~Visconti.
+\newblock Two-dimensional tracer transport: derivation of residual mean
+  circulation and eddy transport tensor from a three-dimensional model data
+  set.
+\newblock {\em J. Geophys. Res.}, 90:8019--8032, 1986.
+
+\bibitem{Plumb:JAS:1979}
+R.~A. Plumb.
+\newblock Eddy fluxes of conserved quantities by small-amplitude waves.
+\newblock {\em J. Atmos. Sci.}, 36(9):1699--1704, 1979.
+
+\bibitem{Plumb:JAS:1987}
+R.~A. Plumb and J.~D. Mahlman.
+\newblock The zonally averaged transport characteristics of the {GFDL} general
+  circulation/transport model.
+\newblock {\em J. Atmos. Sci.}, 44:298--327, 1987.
+
+\bibitem{Press:1981:ApJ}
+W.~H. {Press} and G.~B. {Rybicki}.
+\newblock Enhancement of passive diffusion and suppression of heat flux in a
+  fluid with time varying shear.
+\newblock {\em Astrophys. J.}, 248:751--766, 1981.
+
+\bibitem{Redi:JPO:1982:1154}
+M.~H. Redi.
+\newblock Oceanic isopycnal mixing by coordinate rotation.
+\newblock {\em J. Phys. Oceanogr.}, 12(10):1154--1158, 1982.
+
+\bibitem{Reed-1980}
+M.~C. Reed and B.~Simon.
+\newblock {\em Functional Analysis}.
+\newblock Academic Press, San Diego CA, 1980.
+
+\bibitem{Royden:1988:RA}
+H.~L. Royden.
+\newblock {\em Real Analysis}.
+\newblock Prentice-Hall Of India Pvt. Limited, third edition, 1988.
+
+\bibitem{Samson:1988:88009978}
+P.~J. Samson.
+\newblock Atmospheric transport and dispersion of air pollutants associated
+  with vehicular emissions.
+\newblock In A.~Y. Watson, R.~R. Bates, and D.~Kennedy, editors, {\em Air
+  Pollution, the Automobile, and Public Health}, pages 77--97. National Academy
+  Press (US), 1988.
+
+\bibitem{Solomon:OGR:1971:233}
+H.~Solomon.
+\newblock On the representation of isentropic mixing in ocean circulation
+  models.
+\newblock {\em J. Phys. Oceanogr.}, 1(3):233--234, 1971.
+
+\bibitem{Sorensen:TC:2014}
+L.~L. S{\o}rensen, B.~Jensen, R.~N. Glud, D.~F. McGinnis, M.~K. Sejr,
+  J.~Sievers, D.~H. S{\o}gaard, J.-L. Tison, and S.~Rysgaard.
+\newblock Parameterization of atmosphere--surface exchange of {CO$_{2}$} over
+  sea ice.
+\newblock {\em The Cryosphere}, 8(3):853--866, 2014.
+
+\bibitem{Souza:OS:317}
+J.~M. A.~C. Souza, C.~de~Boyer~Mont\'{e}gut, and P.~Y. {Le Traon}.
+\newblock Comparison between three implementations of automatic identification
+  algorithms for the quantification and characterization of mesoscale eddies in
+  the {South} {Atlantic} {Ocean}.
+\newblock {\em Ocean Sci. Discuss.}, 8:483--31, 2011.
+
+\bibitem{Stakgold:BVP:2000}
+I.~Stakgold.
+\newblock {\em Boundary Value Problems of Mathematical Physics}.
+\newblock Classics in Applied Mathematics. SIAM, 2000.
+\newblock 2-volume set.
+
+\bibitem{Stieltjes:1995}
+T.-J. Stieltjes.
+\newblock Recherches sur les fractions continues.
+\newblock {\em Annales de la facult\'{e} des sciences de Toulouse},
+  4(1):J1--J35, 1995.
+
+\bibitem{Stone:64}
+M.~H. Stone.
+\newblock {\em Linear Transformations in {Hilbert} Space}.
+\newblock American Mathematical Society, Providence, RI, 1964.
+
+\bibitem{Tabaczynski:1990:243}
+R.~J. Tabaczynski.
+\newblock Turbulent flows in reciprocating internal combustion engines.
+\newblock In J.~H. Weaving, editor, {\em Internal Combustion Engineering:
+  Science \& Technology}, pages 243--285. Springer Netherlands, 1990.
+
+\bibitem{Taylor:PRSL:196}
+G.~I. Taylor.
+\newblock Diffusion by continuous movements.
+\newblock {\em Proc. London Math. Soc.}, 2:196--211, 1921.
+
+\bibitem{Vihma:2014:9923}
+T.~Vihma, R.~Pirazzini, I.~Fer, I.~A. Renfrew, J.~Sedlar, M.~Tjernstr{\"o}m,
+  C.~L{\"u}pkes, T.~Nyg{\aa}rd, D.~Notz, J.~Weiss, D.~Marsan, B.~Cheng,
+  G.~Birnbaum, S.~Gerland, D.~Chechin, and J.~C. Gascard.
+\newblock Corrigendum to ``{Advances} in understanding and parameterization of
+  small-scale physical processes in the marine {Arctic} climate system: a
+  review'' published in {Atmos. Chem. Phys.}, 14, 9403--9450, 2014.
+\newblock {\em Atmospheric Chemistry and Physics}, 14(18):9923--9923, 2014.
+
+\bibitem{Washington:1986:9780935702521}
+W.~M. Washington and C.~L. Parkinson.
+\newblock {\em An Introduction to Three-dimensional Climate Modeling}.
+\newblock University Science Books, 1986.
+
+\bibitem{Watanabe:2009JPO4010}
+E.~Watanabe and H.~Hasumi.
+\newblock Pacific water transport in the western {Arctic Ocean} simulated by an
+  eddy-resolving coupled sea ice--ocean model.
+\newblock {\em J. Phys. Oceanogr.}, 39(9):2194--2211, 2009.
+
+\bibitem{Whitaker:AIC690130308}
+S.~Whitaker.
+\newblock Diffusion and dispersion in porous media.
+\newblock {\em AIChE Journal}, 13(3):420--427, 1967.
+
+\bibitem{Williams:1985:TC:9781611971064}
+F.~A. Williams.
+\newblock {\em Turbulent Combustion}, chapter~3, pages 97--131.
+\newblock Frontiers in Applied Mathematics. Society for Industrial and Applied
+  Mathematics, SIAM, 3600 Market Street, Floor 6, Philadelphia, PA 19104, 1985.
+
+\bibitem{Worster:PTRSA:2015}
+M.~G. Worster and D.~W.~Rees Jones.
+\newblock Sea-ice thermodynamics and brine drainage.
+\newblock {\em Phil. Trans. R. Soc. A}, 373:20140166, 2015.
+
+\bibitem{Xin:2009:Fronts:9780387876832}
+J.~Xin.
+\newblock {\em An Introduction to Fronts in Random Media}.
+\newblock Surveys and Tutorials in the Applied Mathematical Sciences. Springer
+  New York, 2009.
+
+\bibitem{Young:JPO:1982:515}
+W.~R. Young, P.~B. Rhines, and C.~J.~R. Garrett.
+\newblock Shear-flow dispersion, internal waves and horizontal mixing in the
+  {Ocean}.
+\newblock {\em J. Phys. Oceanogr.}, 12:515--527, 1982.
+
+\bibitem{Zappa:2007:67613}
+C.J. Zappa, W.R. McGillis, P.A. Raymond, J.~B. Edson, E.~J. Hintsa, H.~J.
+  Zemmelink, J.~W.~H. Dacey, and D.~T. Ho.
+\newblock Environmental turbulent mixing controls on air-water gas exchange in
+  marine and aquatic systems.
+\newblock {\em Geophys. Res. Lett.}, 34, 2007.
+
+\bibitem{ZCX_2015}
+P.~Zu, L.~Chen, and J.~Xin.
+\newblock A computational study of residual kpp front speeds in time-periodic
+  cellular flows in the small diffusion limit.
+\newblock {\em Physica D}, 311-312:37--44, 2015.
+
+\end{thebibliography}

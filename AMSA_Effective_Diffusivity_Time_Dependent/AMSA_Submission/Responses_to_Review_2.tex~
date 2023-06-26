@@ -1,0 +1,127 @@
+\documentclass[amsa]{article}
+\usepackage{mymacros}
+
+% \setlength{\textwidth}{6.5in}
+% \setlength{\textheight}{9.0in}
+% \setlength{\oddsidemargin}{0in}
+% \setlength{\evensidemargin}{0in}
+% %\setlength{\topmargin}{-0.5in}
+
+
+\begin{document}
+
+\title{Responses to Review 2 for\\
+  ``Spectral analysis and computation\\
+  of effective diffusivities in 
+  space-time periodic incompressible flows''}
+\author{N. B. Murphy}
+
+\maketitle
+
+\begin{itemize}
+\item[1.] Overall, the manuscript is difficult to follow. The text
+  would need more structure. The reader is sometimes lost in a very
+  long section, and does not know what has been addressed, what
+  remains to be done,...  It would be nice to split Sections 1 and 2
+  into several subsections, and to describe, at the beginning of each
+  of them, what will be done in that subsection. The reader needs a
+  better guideline.   
+%
+\item  In order to give the reader a better guide to the paper, in the
+  revised manuscript we have split various sections into subsections
+  with introductary paragraphs. We have also given more prompts about
+  where the current section is leading.  
+%
+\item[2.] In order to convey their message, I think that the authors
+  should work out a simple example (for instance, a purely diffusive
+  problem in a time-independent setting) very early in their
+  manuscript, in an informal manner. The different quantities at hand
+  in this work (the corrector problem, the eigenvalue problem (A)
+  below, the spectral measure $\mu$, the operators $Q(\lambda)$, . . . ) would
+  appear, and their relation one to each other would be very clear. It
+  would help the reader understand the overall strategy in a simple
+  case. 
+  
+%
+\item
+ 
+%
+\item[3.]
+ 
+%
+\item
+ 
+%
+\item[4.]
+ 
+%
+\item
+ 
+%
+\item[5.] 
+%
+\item
+ 
+\item[6.] 
+%
+\item 
+%
+\item[7.] 
+%
+\item 
+%
+\item[8.]  
+%  
+\item 
+%
+\item[9.] 
+%
+\item 
+  
+\item[10.]  
+\item
+%
+\item[11.] 
+\item 
+\item[12.] 
+%
+\item 
+%
+\item[13.] 
+%  
+\item 
+%
+\item[14.] 
+%
+\item 
+%
+\item[15.] 
+%
+\item 
+%
+\item[16.]  
+%
+\item 
+
+%
+\item[16.] 
+%
+\item 
+%
+\item[17.] 
+ 
+%
+\item 
+%  
+\item[19.] 
+%
+\item 
+%
+\item[20.] 
+%  
+\item 
+%  
+\end{itemize}
+
+
+\end{document}

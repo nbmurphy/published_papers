@@ -1,0 +1,734 @@
+\documentclass{article}
+\usepackage[dvips]{epsfig,graphics,color,graphicx,lscape}
+\usepackage{amsfonts}
+\usepackage{amssymb,amsmath}
+\usepackage{graphicx}
+\usepackage[dvips]{epsfig,graphics,color}
+\newcommand{\no}{\nonumber}
+\newcommand{\ra}{\to}
+\newcommand{\eps}{\mbox{$\epsilon$}}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\ba}{\begin{eqnarray}}
+\newcommand{\ea}{\end{eqnarray}}
+\newcommand{\lam}{\mbox{$\lambda$}}
+\newtheorem{theorem}{Theorem}[section]
+ %\newcommand{\bth}{\begin{theorem}}
+%\newcommand{\eth}{\end{theorem}}
+\newtheorem{lemma}{Lemma}[section]
+   \newcommand{\blem}{\begin{lemma}}
+   \newcommand{\elem}{\end{lemma}}
+\newtheorem{proposition}{Proposition}[section]
+   \newcommand{\bprop}{\begin{proposition}}
+   \newcommand{\eprop}{\end{proposition}}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{algorithm}{Algorithm}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{remark}{Remark}[section]
+\renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
+\renewcommand{\thetheorem}{\arabic{section}.\arabic{theorem}}
+\renewcommand{\thelemma}{\arabic{section}.\arabic{lemma}}
+\renewcommand{\theproposition}{\arabic{section}.\arabic{proposition}}
+\renewcommand{\thedefinition}{\arabic{section}.\arabic{definition}}
+\renewcommand{\thecorollary}{\arabic{section}.\arabic{corollary}}
+\renewcommand{\thealgorithm}{\arabic{section}.\arabic{algorithm}}
+\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+\newcommand{\proof}{\vspace{1ex}\noindent{\em Proof}: \ }
+
+
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{9.0in}
+
+%\setlength{\oddsidemargin}{-0.25in}
+\setlength{\oddsidemargin}{0in}
+%\setlength{\evensidemargin}{0.25in}
+\setlength{\topmargin}{-.50in}
+
+
+% Murphy's short cut commands
+\newcommand{\e}{\mathrm{e}}
+\newcommand{\I}{\mathrm{i}}
+\newcommand{\Hb}{\mathbf{H}}
+\newcommand\bkappa{\mbox{\boldmath${\kappa}$}}
+\newcommand\balpha{\mbox{\boldmath${\alpha}$}}
+\newcommand\Kbc{\mbox{\boldmath${\mathcal{K}}$}}
+\newcommand{\Hc}{\mathcal{H}}
+\newcommand{\Ac}{\mathcal{A}}
+\newcommand{\Tc}{\mathcal{T}}
+\newcommand{\Vc}{\mathcal{V}}
+\newcommand{\Fc}{\mathcal{F}}
+\newcommand{\Ec}{\mathcal{E}}
+\newcommand{\0}{\mathbf{0}}
+\newcommand{\1}{\mathbf{1}}
+\newcommand{\2}{\mathbf{2}}
+\newcommand{\3}{\mathbf{3}}
+\newcommand{\4}{\mathbf{4}}
+\newcommand{\5}{\mathbf{5}}
+\newcommand{\6}{\mathbf{6}}
+\newcommand{\7}{\mathbf{7}}
+\newcommand{\8}{\mathbf{8}}
+
+\begin{document}
+
+\title{Decomposing parabolic eigenvalue problem}
+\author{J. Xin and N. B. Murphy }
+\date{}
+\maketitle
+\begin{abstract}
+A decomposition of a time periodic parabolic eigenvalue problem and an
+application to our effective diffusivity problem.
+
+\end{abstract}
+\bigskip
+ 
+\section{An Example}
+Consider the parabolic eigenvalue problem:
+\be
+\psi_t -\Delta_x \, \psi + \cos (t) \; b(x) \, \psi = \lam \, \psi, \label{eig1}
+\ee
+subject to $2\pi$ periodic boundary conditions in $x$ and $t$. 
+\medskip
+
+Substituting $\cos t = (e^{it} + e^{-it})/2$, and $\psi = \sum_{\ell} \psi_\ell (x) e^{i \ell t}$ in (\ref{eig1}), 
+we have:
+\be
+\sum_\ell \,e^{i\ell t}\, (i \ell \, \psi_\ell\, - \Delta_x \psi_\ell) + {1\over 2} b(x)\, \sum_{\ell} (e^{i(\ell+1)t} + e^{i(\ell-1) t}) \psi_\ell 
+= \lam \sum_\ell \psi_\ell e^{i\ell t}, \no
+\ee
+or:
+\be
+ \sum_\ell \,e^{i\ell t}\, (i \ell \, \psi_\ell\, - \Delta_x \psi_\ell)  + {1\over 2} b(x)\, \sum_{\ell} (\psi_{\ell-1} + \psi_{\ell+1}) \, e^{i\ell t} 
+= \lam \sum_\ell \psi_\ell e^{i\ell t}. \no
+\ee
+Extracting the $\ell$-th mode on both sides gives:
+\be
+(-\Delta_x + i\, \ell)\, \psi_\ell +{1\over 2} \, b(x)\, (\psi_{\ell-1} + \psi_{\ell+1}) = \lam \, \psi_\ell, \;\; \ell \in Z, \label{eig2}
+\ee
+which can be put in a tri-diagonal matrix acting on $[\cdots, \psi_{\ell-1}, \psi_\ell, \psi_{\ell+1}, \cdots ]'$,
+  with $b(x)/2$ on the off-diagonals, 
+$-\Delta_x + i\, \ell $ on the diagonals.
+
+Let us find a similar derivation for the eigenvalue problem of the 
+advection-diffusion operator, with advection field being the time periodic cell flow:
+\be \label{eig3}
+\vec{u}(t,\vec{x})%=(\cos y + \cos t \, \sin y, \cos x + \cos t \sin x)
+       =(\cos y,\cos x)+\delta\cos t \,(\sin y,\sin x)
+       :=\vec{u}_1(\vec{x})+\delta\cos{t}\,\vec{u}_2(\vec{x}). 
+\ee
+
+Question: Is it possible to carry out a similar decomposition in $x$
+and $y$ and fully reduce the  
+differential system like (\ref{eig2}) into an algebraic system ?
+
+%
+\subsection{An Application to our effective diffusivity problem}
+%
+Consider the eigenvalue problem $A\psi_l=\imath\lambda_l\psi_l$, $\imath=\sqrt{-1}$,
+$\lambda_l\in\mathbb{R}$, $l=1,2,3,\ldots$, involving the integro-differential operator
+$A=(-\Delta)^{-1}(\partial_t+\vec{u}\cdot\vec{\nabla})$,  
+introduced in equation (45) of our (attached) effective-diffusivity
+paper, with $\vec{u}\mapsto-\vec{u}$. Here $A$ is an anti-symmetric (normal)
+operator and the incompressible velocity field
+$\vec{u}(t,\vec{x})$
+%$=\vec{u}_1(\vec{x})+\delta\cos{t}\,\vec{u}_2(\vec{x})$
+is given in equation \eqref{eig3} above. The equation $A\psi_l=\imath\lambda_l\psi_l$ may be
+rewritten as     
+%
+\begin{align}\label{eq:Eig_prob}
+  (\partial_t+\vec{u}\cdot\vec{\nabla})\psi_l=-\imath\lambda_l\Delta\psi_l.
+\end{align}
+%
+The eigenfunctions $\psi_l$ satisfy the following orthogonality condition
+%$\langle\vec{\nabla}\psi_\ell^{\,l}\cdot\vec{\nabla}\psi_m^k\rangle=\delta_{jk}$,
+%
+\begin{align}\label{eq:Orthogonal}
+  \langle\psi_l,\psi_i\rangle_1=\langle\vec{\nabla}\psi_l\cdot\vec{\nabla}\psi_i\rangle=\delta_{li},
+\end{align}
+%
+where $\delta_{li}$ is the Kronecker delta and $\langle\cdot\rangle$ denotes space-time
+averaging over the period cell $\Tc\times\Vc$, with $\Tc=[0,2\pi]$ and
+$\Vc=[0,2\pi]\times[0,2\pi]$.
+
+
+
+
+The eigenfunction $\psi_l$ is $\Tc\times\Vc$ periodic, mean-zero, and
+$\psi_l\in\Ac(\Tc)\otimes\Hc^1(\Vc)$, i.e. it is absolutely continuous in time
+for $t\in\Tc$, and is in the Sobolev space $\Hc^1(\Vc)$ for
+$\vec{x}\in\Vc$. We denote the class of such functions by $\Fc$
+%
+\begin{align}\label{eq:F}
+  \Fc=\{f\in\Ac(\Tc)\otimes\Hc^1(\Vc)\,|\, \langle f\rangle=0  \text{ and is periodic on }
+  \, \Tc\times\Vc\}. 
+\end{align}
+%
+Since the orthogonal set $\{\e^{\imath\ell t}\}$,
+${\ell\in\mathbb{Z}}$, is dense in $\Ac(\Tc)$, we may represent $\psi_l$ by 
+%
+\begin{align}\label{eq:t_Expansion}
+  \psi_l(t,\vec{x})=\sum_\ell\psi_\ell^{\,l}(\vec{x})\,\e^{\imath \ell t},
+\end{align}
+%
+where $\psi_\ell^{\,l}\in\Hc^1(\Vc)$. Write $\cos{t}=(\e^{\imath t}+\e^{-\imath t})/2$ and insert
+this and \eqref{eq:t_Expansion} into equation \eqref{eq:Eig_prob},
+yielding   
+%
+\begin{align}
+  \sum_\ell(\imath \ell + \vec{u}_1\cdot\vec{\nabla}+\imath\lambda_l\Delta)\psi_\ell^{\,l}(\vec{x})\e^{\imath \ell t}
+ +\frac{\delta}{2}\sum_\ell(\e^{\imath(\ell+1)t}+\e^{\imath(\ell-1)t})\,\vec{u}_2\cdot\vec{\nabla}\psi_\ell^{\,l}(\vec{x})=0,
+\end{align}
+%
+or:
+%
+\begin{align}
+  \sum_\ell\left[(\imath \ell + \vec{u}_1\cdot\vec{\nabla}+\imath\lambda_l\Delta)\psi_\ell^{\,l}(\vec{x})
+ +\frac{\delta}{2}\vec{u}_2\cdot\vec{\nabla}(\psi^{\,l}_{\ell-1}(\vec{x})+\psi^{\,l}_{\ell+1}(\vec{x}))\right]\e^{\imath \ell t}=0.
+\end{align}
+%
+By the completeness in $L^2(\Tc)$ of the orthogonal set $\{\e^{\imath \ell t}\}$ we
+have, for each $\ell\in\mathbb{Z}$, 
+%
+\begin{align}\label{eq:Eig_prob_shift}
+  (\imath \ell + \vec{u}_1\cdot\vec{\nabla})\psi_\ell^{\,l}(\vec{x})
+ +\frac{\delta}{2}\vec{u}_2\cdot\vec{\nabla}(\psi_{\ell-1}^{\,l}(\vec{x})+\psi_{\ell+1}^{\,l}(\vec{x}))
+ =-\imath\lambda_l\Delta\psi_\ell^{\,l}(\vec{x}).
+\end{align}
+%
+
+
+
+
+The system of partial differential equations in
+\eqref{eq:Eig_prob_shift} can be reduced to a system of algebraic
+equations as follows. Recall that
+$\vec{u}_1(\vec{x})=(\cos{y},\cos{x})$ and
+$\vec{u}_2(\vec{x})=(\sin{y},\sin{x})$, which implies 
+%
+\begin{align}\label{eq:material_Derivative_psi}
+  (\vec{u}_1\cdot\vec{\nabla})\psi_\ell^{\,l}(\vec{x})
+          &=\cos{y}\,\partial_x\psi_\ell^{\,l}(\vec{x})+\cos{x}\,\partial_y\psi_\ell^{\,l}(\vec{x})\\
+  (\vec{u}_2\cdot\vec{\nabla})\psi_\ell^{\,l}(\vec{x})
+          &=\sin{y}\,\partial_x\psi_\ell^{\,l}(\vec{x})+\sin{x}\,\partial_y\psi_\ell^{\,l}(\vec{x})\notag
+\end{align}
+%
+Since $\psi_\ell^{\,l}\in\Hc^1(\Vc)$ and the orthogonal set $\{\e^{\imath (mx+ny)}\}$,
+$m,n\in\mathbb{Z}$, is dense in this space, we can represent
+$\psi_\ell^{\,l}(\vec{x})$ by
+%
+\begin{align}\label{eq:x_Expansion}
+  \psi_\ell^{\,l}(\vec{x})=\sum_{m,n}a^{\,l}_{\ell,m,n}\,\e^{\imath (mx+ny)}
+\end{align}
+%
+Write $\cos{x}=(\e^{\imath x}+\e^{-\imath x})/2$ and
+$\sin{x}=(\e^{\imath x}-\e^{-\imath x})/(2\imath)$, for example, and insert this
+and \eqref{eq:x_Expansion} into equation
+\eqref{eq:material_Derivative_psi}, yielding
+%
+\begin{align}
+  (\vec{u}_1&\cdot\vec{\nabla})\psi_\ell^{\,l}\\
+    &=\frac{1}{2}\sum_{m,n}a^{\,l}_{\ell,m,n}\left[
+        \imath m\,\e^{\imath mx}(\e^{\imath(n+1)y}+\e^{\imath(n-1)y})
+        +\imath n\,\e^{\imath ny}(\e^{\imath(m+1)x}+\e^{\imath(m-1)x})
+                       \right]
+    \notag\\
+%    
+  (\vec{u}_2&\cdot\vec{\nabla})\psi_\ell^{\,l}\notag\\
+    &=\frac{1}{2\imath}\sum_{m,n}a^{\,l}_{\ell,m,n}\left[
+        \imath m\,\e^{\imath mx}(\e^{\imath(n+1)y}-\e^{\imath(n-1)y})
+        +\imath n\,\e^{\imath ny}(\e^{\imath(m+1)x}-\e^{\imath(m-1)x})
+                       \right]
+                       \notag
+\end{align}
+%
+or:
+%
+\begin{align}\label{eq:Algebraic_advection}
+  (\vec{u}_1\cdot\vec{\nabla})\psi_\ell^{\,l}
+    &=\frac{\imath}{2}\sum_{m,n}
+    [m(a^{\,l}_{\ell,m,n-1}+a^{\,l}_{\ell,m,n+1})+n(a^{\,l}_{\ell,m-1,n}+a^{\,l}_{\ell,m+1,n})]\e^{\imath (mx+ny)}
+   \notag\\
+  (\vec{u}_2\cdot\vec{\nabla})\psi_\ell^{\,l}
+    &=\frac{1}{2}\sum_{m,n}
+    [m(a^{\,l}_{\ell,m,n-1}-a^{\,l}_{\ell,m,n+1})+n(a^{\,l}_{\ell,m-1,n}-a^{\,l}_{\ell,m+1,n})]\e^{\imath (mx+ny)} .
+\end{align}
+%
+We also have 
+%
+\begin{align}\label{eq:Algebraic_diffusion}
+  -\Delta\psi_\ell^{\,l}=\sum_{m,n}a^{\,l}_{\ell,m,n}(m^2+n^2)\e^{\imath (mx+ny)}
+\end{align}
+%
+By the completeness of the orthogonal set $\{\e^{\imath (mx+ny)}\}$, 
+inserting equations \eqref{eq:Algebraic_advection} and
+\eqref{eq:Algebraic_diffusion} into equation
+\eqref{eq:Eig_prob_shift} yields
+%
+\begin{align}\label{eq:Fourier_Coef_System}
+\imath \ell\,a^{\,l}_{\ell,m,n}+\frac{\imath}{2}
+[&m(a^{\,l}_{\ell,m,n-1}+a^{\,l}_{\ell,m,n+1})+n(a^{\,l}_{\ell,m-1,n}+a^{\,l}_{\ell,m+1,n})]
+\notag\\
++\frac{\delta}{4}[&m(a^{\,l}_{\ell-1,m,n-1}-a^{\,l}_{\ell-1,m,n+1})+n(a^{\,l}_{\ell-1,m-1,n}-a^{\,l}_{\ell-1,m+1,n})
+\notag\\
++&m(a^{\,l}_{\ell+1,m,n-1}-a^{\,l}_{\ell+1,m,n+1})+n(a^{\,l}_{\ell+1,m-1,n}-a^{\,l}_{\ell+1,m+1,n})]
+\notag\\
+=\imath\lambda_l(&m^2+n^2)a^{\,l}_{\ell,m,n},
+\end{align}
+%
+which is an infinite system of algebraic equations for the unknown
+Fourier coefficients $a^{\,l}_{\ell,m,n}$ associated with the
+eigenfunctions $\psi_l(t,\vec{x})$ and eigenvalues $\imath\lambda_l$,
+$l\in\mathbb{N}$ and $\ell,m,n\in\mathbb{Z}$. Recalling that $\psi_l$ is
+mean-zero $\langle\psi_l\rangle=0$, we have that $\ell^2+m^2+n^2>0$.
+
+
+
+
+We now discuss how the orthogonality condition
+$\langle\psi_l,\psi_i\rangle_1=\delta_{li}$ in \eqref{eq:Orthogonal} is
+transformed by the Fourier expansion of the
+eigenfunctions $\psi_l(t,\vec{x})$. This expansion of $\psi_l(t,\vec{x})$ 
+implies that for $\vec{\nabla}\psi_l(t,\vec{x})$ as follows 
+%
+\begin{align}\label{eq:Eigenfunction_Grad_expansion}
+  \psi_l(t,\vec{x})=\sum_{\ell,m,n}a^{\,l}_{\ell,m,n}\e^{\imath (\ell t+mx+ny)}\Rightarrow
+  \vec{\nabla}\psi_l(t,\vec{x})=\sum_{\ell,m,n}a^{\,l}_{\ell,m,n}\,(m,n)\,\e^{\imath (\ell t+mx+ny)}.
+\end{align}
+%
+Recall the orthogonality relation 
+%
+\begin{align}\label{eq:Trig_orthogonal}  
+      \left\langle
+      \e^{\imath (\ell t+mx+ny)},\,\e^{\imath (\ell^\prime t+m^\prime x+n^\prime y)}
+      \right\rangle_2
+      =
+      (2\pi)^3\delta_{\ell,\ell^\prime}\delta_{m,m^\prime}\delta_{n,n^\prime},
+\end{align}
+%
+where $\langle\cdot,\cdot\rangle_2$ denotes the $L^2(\Tc\times\Vc)$ inner-product, and that
+$\langle\cdot\rangle$ denotes space-time averaging. Consequently, we have that the
+orthogonality relation in \eqref{eq:Orthogonal} is transformed to   
+%
+\begin{align}\label{eq:Ortho_Clmn}
+  \delta_{li}=\langle\vec{\nabla}\psi_l\cdot\vec{\nabla}\psi_i\rangle
+      = \sum_{\ell,m,n}(m^2+n^2)\overline{a^{\,l}_{\ell,m,n}}a^{\,i}_{\ell,m,n}
+\end{align}
+%
+
+
+Recall that $\sum_ii^{-p}$ converges for all $p>1$. From this and
+equation \eqref{eq:Ortho_Clmn} we see that the square modulus of the  
+Fourier coefficients $a^{\,l}_{0,m,n}$ must have the asymptotic behavior 
+$|a^{\,l}_{0,m,n}|^2\sim o((m^2+n^2)^{-3/2})$ as $m,n\to\pm\infty$. Since
+$\psi_l(\cdot,\vec{x})\in\Ac(\Tc)$, i.e. $\partial_t\psi_l(\cdot,\vec{x})\in L^2(\Tc)$, we also
+have $|a^{\,l}_{\ell,m,n}|^2\sim o(\ell^{\,-3})$ as $\ell\to\pm\infty$. Since
+$\partial_t\vec{\nabla}\psi_l\in L^2(\Tc\times\Vc)$ we may generalize 
+both of these statements by the following
+%
+\begin{align}\label{eq:Clmn_assymptotics}
+  |a^{\,l}_{\ell,m,n}|^2\sim o(\ell^{\,-3}(m^2+n^2)^{-3/2}), \text{ as } \,\ell,m,n\to\pm\infty.
+\end{align}
+%
+
+
+
+We now use the special nature of the velocity field in \eqref{eig3}
+and the Fourier expansion of the eigenfunctions in
+\eqref{eq:Eigenfunction_Grad_expansion} to show that the
+Radon--Stieltjes integral representation for the symmetric $\bkappa^*$
+and anti-symmetric $\balpha^*$ parts of the effective diffusivity
+tensor $\Kbc^*$ depend only on the Fourier coefficients
+$a^{\,l}_{\ell,m,n}$ for $\ell,m,n\in\{-1,0,1\}$. Recall that the Hilbert space
+$\Hc$ underlying this problem is
+%
+\begin{align}\label{eq:Hilbert_Space}
+  \Hc=\{f\in L^2(\Tc)\otimes\Hc^1(\Vc) \,|\, \langle f\rangle=0 \text{ and is periodic on}\; \Tc\times\Vc\}, 
+\end{align}
+% 
+with $A$ maximal normal, i.e. $\imath A$ self-adjoint, on $\Fc\subset\Hc$ defined
+in \eqref{eq:F}. Since the eigenfunctions $\psi_l$ and $\psi_i$ of $A$
+associated with distinct eigenvalues, $\lambda_l\neq\lambda_i$, are orthonormal,
+$\langle\psi_l,\psi_i\rangle_1=\langle\vec{\nabla}\psi_l\cdot\vec{\nabla}\psi_i\rangle=\delta_{li}$, the span of all
+eigenfunctions constitutes a closed linear manifold $\Ec$ in
+$\Fc$. Let $\Ec^\perp$ be its (closed) orthogonal complement in $\Hc$
+so that [Stone]
+%$\Hc=\Ec\oplus\Ec^\perp$
+\begin{align}\label{eq:Hilbert_Space_Decomposition}
+  \Hc=\Ec\oplus\Ec^\perp.
+\end{align}
+%
+
+
+
+Recall the cell problem
+% 
+\begin{align}\label{eq:Cell_Problem}
+  (\varepsilon-A)\chi_j=g_j, \quad g_j=-\Delta^{-1}u_j,
+\end{align}
+%
+where $u_j$ is the $j^{\text{th}}$ component of the velocity field
+$\vec{u}$. Since $\chi_j,g_j\in\Fc$ and $\Fc\subset\Ec\oplus\Ec^\perp$ they have the
+following representations 
+%
+\begin{align}\label{eq:chi_g_expansions}
+  \chi_j=\sum_l\langle\psi_l,\chi_j\rangle_1\,\psi_l +\chi_j^\perp, \quad  g_j=\sum_l\langle\psi_l,g_j\rangle_1\,\psi_l +g_j^\perp,
+\end{align}
+%
+where $\psi_l\in\Ec$ and $\chi_j^\perp,g_j^\perp\in\Ec^\perp$. Using $A\psi_l=\imath\lambda_l\psi_l$,
+$\lambda_l\in\mathbb{R}$, and the orthonormality of the set $\{\psi_l\}$, inserting 
+\eqref{eq:chi_g_expansions} into the cell problem
+\eqref{eq:Cell_Problem} yields
+%
+\begin{align}\label{eq:chi_g_cell}
+  \sum_l[(\varepsilon-\imath\lambda_l)\langle\psi_l,\chi_j\rangle_1-\langle\psi_l,g_j\rangle_1]\psi_l+(\varepsilon+A)\chi_j^\perp-g_j^\perp=0.
+\end{align}
+%
+By the orthonormality of the set $\{\psi_l\}$ and since
+$\langle A\chi_j^\perp,\psi_l\rangle_1=-\langle\chi_j^\perp,A\psi_l\rangle_1=-\imath\lambda_l\langle\chi_j^\perp,\psi_l\rangle_1=0$, taking the
+inner-product of both sides of \eqref{eq:chi_g_cell} with $\psi_l$ yields 
+%
+\begin{align}\label{eq:Coefficients}
+  \langle\psi_l,\chi_j\rangle_1=\frac{\langle\psi_l,g_j\rangle_1}{(\varepsilon-\imath\lambda_l)}\,, \quad
+  0<\varepsilon<\infty.
+\end{align}
+%
+
+
+
+
+Recall that the components $\kappa^*_{jk}$ and $\alpha^*_{jk}$ of $\bkappa^*$
+and $\balpha^*$ are given by 
+%
+\begin{align}
+  \kappa^*_{jk}=\varepsilon(\delta_{jk}+\langle\chi_j,\chi_k\rangle_1), \quad
+  \alpha^*_{jk}=\langle A\chi_j,\chi_k\rangle_1.
+\end{align}
+%
+From equations \eqref{eq:chi_g_expansions} and \eqref{eq:Coefficients}
+and the orthonormality of the set $\{\psi_l\}$, we have
+%
+\begin{align}\label{eq:Stieltjes-Radon_Rep}
+  \langle\chi_j,\chi_k\rangle_1-\langle\chi_j^\perp,\chi_k^\perp\rangle_1&=\sum_l\overline{\langle\psi_l,\chi_j\rangle}_1\langle\psi_l,\chi_k\rangle_1
+         =\sum_l\frac{\overline{\langle\psi_l,g_j\rangle}_1\langle\psi_l,g_k\rangle_1}{\varepsilon^2+\lambda_l^2}
+         \notag\\
+  \langle A\chi_j,\chi_k\rangle_1-\langle A\chi_j^\perp,\chi_k^\perp\rangle_1&=\sum_l(-\imath\lambda_l)\overline{\langle\psi_l,\chi_j\rangle}_1\langle\psi_l,\chi_k\rangle_1
+         =\sum_l\frac{(-\imath\lambda_l)\overline{\langle\psi_l,g_j\rangle}_1\langle\psi_l,g_k\rangle_1}{\varepsilon^2+\lambda_l^2}      
+\end{align}
+%
+The right hand sides of the formulas in equation
+\eqref{eq:Stieltjes-Radon_Rep} are Radon--Stieltjes integrals
+associated with a \emph{discrete} measure. The terms $\langle\chi_j^\perp,\chi_k^\perp\rangle_1$ and
+$\langle A\chi_j^\perp,\chi_k^\perp\rangle_1$ also have Radon--Stieltjes integral representations
+with respect to \emph{continuous} measures, and provides the standard
+decomposition of the \emph{spectral measure} into its discrete and
+continuous components, in the general setting [Stone].
+
+
+
+
+We now show that the special nature of the velocity field in
+\eqref{eig3} and the Fourier expansion of the eigenfunctions $\psi_l$ in  
+\eqref{eq:Eigenfunction_Grad_expansion} allow the spectral weights
+$\langle\psi_l,g_j\rangle$ in equation \eqref{eq:Stieltjes-Radon_Rep} to be given in
+terms of the Fourier coefficients $a^{\,l}_{\ell,m,n}$ for the reduced
+index set $\ell,m,n\in\{-1,0,1\}$. First note that, since
+$u_j(t,\cdot)\in\Hc^1(\Vc)\subset L^2(\Vc)$,
+%
+\begin{align}\label{eq:H1_to_L2}
+  \langle\psi_l,g_j\rangle_1=\langle\vec{\nabla}\psi_l\cdot\vec{\nabla}(-\Delta)^{-1}u_j\rangle
+         =\langle\psi_l,(-\Delta)(-\Delta)^{-1}u_j\rangle_2
+         =\langle\psi_l,u_j\rangle_2.
+\end{align}
+%
+Writing
+$\cos{x}=(\e^{\imath x}+\e^{-\imath x})/2$ and
+$\sin{x}=(\e^{\imath x}-\e^{-\imath x})/(2\imath)$, for example, from equation
+\eqref{eig3} we have that 
+%
+\begin{align}
+  u_1(t,x,y)&=\cos{y}+\cos{t}\sin{y}\\
+           &=\frac{1}{2}\left(\e^{\imath y}+\e^{-\imath y}\right)
+            +\frac{1}{4\imath}\left(\e^{\imath t}+\e^{-\imath t})(\e^{\imath y}-\e^{-\imath y}\right)
+            \notag\\
+           &=\frac{1}{2}\left(\e^{\imath y}+\e^{-\imath y}\right)
+            +\frac{1}{4\imath}\left(\e^{\imath(t+y)}-\e^{\imath(t-y)}+\e^{\imath(-t+y)}-\e^{\imath(-t-y)}\right), 
+\end{align}
+%
+and $u_2(t,x,y)=u_1(t,y,x)$. This, equation \eqref{eq:H1_to_L2}, and the
+orthogonality relation in \eqref{eq:Trig_orthogonal} imply that
+%
+\begin{align}\label{eq:Inner_Products_2D}
+  \langle\psi_l,g_1\rangle_1=\frac{1}{2}\left(a^{\,l}_{0,0,1}+a^{\,l}_{0,0,-1}\right)
+               +\frac{1}{4\imath}\left(a^{\,l}_{1,0,1}-a^{\,l}_{1,0,-1}+a^{\,l}_{-1,0,1}-a^{\,l}_{-1,0,-1}\right) 
+               \notag\\
+  \langle\psi_l,g_2\rangle_1=\frac{1}{2}\left(a^{\,l}_{0,1,0}+a^{\,l}_{0,-1,0}\right)
+               +\frac{1}{4\imath}\left(a^{\,l}_{1,1,0}-a^{\,l}_{1,-1,0}+a^{\,l}_{-1,1,0}-a^{\,l}_{-1,-1,0}\right)               
+\end{align}
+%
+
+
+
+
+Since $\vec{u}_i$ is incompressible, there exists
+an anti-symmetric matrix $\Hb_i$ such that
+$\vec{u}_i=\vec{\nabla}\cdot\Hb_i$. This allows us to write
+$\vec{u}_i\cdot\vec{\nabla}=\vec{\nabla}\cdot\Hb_i\vec{\nabla}$, which is an anti-symmetric
+operator. When $\delta=0$, the velocity field $\vec{u}$ is time-independent
+and the operator $A$, which arises from the cell problem, becomes
+$A=\Delta^{-1}(\vec{u}_1\cdot\vec{\nabla})$. In this case, the eigenvalue problem in
+\eqref{eq:Eig_prob} becomes 
+%
+\begin{align}\label{eq:Eig_prob_steady}
+  \vec{\nabla}\cdot\Hb_1\vec{\nabla}\psi=\lambda\Delta\psi.
+\end{align}
+%
+Discretizing this equation leads to a generalized eigenvalue
+problem involving \emph{sparse} matrices. This matrix formulation has
+all the desired properties of the associated abstract Hilbert space
+formulation. (I will be adding the details of this to our paper soon.)
+From this matrix problem, we obtain a discrete approximation of the
+Radon--Stieltjes integral representation for the symmetric $\bkappa^*$
+and anti-symmetric $\balpha^*$ parts of the effective diffusivity
+tensor $\Kbc^*$, displayed in equation (35) of our (attached) paper.  
+
+
+
+\subsubsection{Matrix representations of the eigenvalue problem}
+%
+In the \emph{time-independent case}, where $\delta=0$ in the velocity field
+of equation \eqref{eig3}, the system of equations in
+\eqref{eq:Fourier_Coef_System} corresponding to the eigenvalue problem
+becomes 
+%
+\begin{align}\label{eq:Fourier_Coef_System_Steady}
+  m(a_{m,n-1}+a_{m,n+1})+n(a_{m-1,n}+a_{m+1,n})=2\lambda(m^2+n^2)a_{m,n},
+  \quad m,n\in\mathbb{Z},
+\end{align}
+%
+where, for simplicity, we have dropped the super-script and
+sub-script, and have written $a_{m,n}=a^{\,l}_{m,n}$ and
+$\lambda=\lambda_l$. When the indices in equation
+\eqref{eq:Fourier_Coef_System_Steady} are restricted to be finite,
+$-M\leq m,n\leq M$ say, and suitable boundary conditions are imposed, it can
+be written in matrix form   
+%$B\vec{a}=2\lambda C\vec{a}$
+%
+\begin{align}\label{eq:Matrix_Equation}
+  B\vec{a}_l=2\lambda_l C\vec{a}_l,
+\end{align}
+%
+where $B$ and $C$ are $(2M+1)^2\times(2M+1)^2$ symmetric matrices and
+$l=1,\ldots,(2M+1)^2$. More specifically, $B$ is real-symmetric and $C$ is
+real-diagonal. Equation \eqref{eq:Matrix_Equation} is a generalized
+eigenvalue problem. Since $B$ and $C$ are symmetric matrices, the
+generalized eigenvalues are real $\lambda_l\in\mathbb{R}$ and the
+eigen-vectors $\vec{a}_l$ -- consisting of the Fourier coefficients for
+$\psi_l$ -- satisfy the orthogonality condition
+%
+\begin{align}\label{eq:Matrix_Ortho}
+  \vec{a}_j^{\,T}C\vec{a}_k=\delta_{jk}.
+\end{align}
+%
+The rows and columns of $B$ and $C$, corresponding to the $a_{0,0}$
+component of $\vec{a}$, consist entirely of zero elements. Therefore,
+without loss of generality, they can be removed from the generalized
+eigenvalue problem, making the matrix $C$ positive-definite. 
+
+
+In the \emph{time-dependent} case, where $\delta\neq0$ in the velocity field
+of equation \eqref{eig3}, slightly manipulating equation
+\eqref{eq:Fourier_Coef_System} yields 
+%
+\begin{align}\label{eq:Fourier_Coef_System_Dynamic}
+4\ell\,a_{\ell,m,n}
++2[&m(a_{\ell,m,n-1}+a_{\ell,m,n+1})+n(a_{\ell,m-1,n}+a_{\ell,m+1,n})]
+\notag\\
+-\imath\delta[&m(a_{\ell-1,m,n-1}-a_{\ell-1,m,n+1}+a_{\ell+1,m,n-1}-a_{\ell+1,m,n+1})\notag\\
+    +&n(a_{\ell-1,m-1,n}-a_{\ell-1,m+1,n}+a_{\ell+1,m-1,n}-a_{\ell+1,m+1,n})] 
+\notag\\
+=4\lambda(&m^2+n^2)a_{\ell,m,n}.
+\end{align}
+%
+By restricting the indices, $-M\leq l,m,n\leq M$, in equation
+\eqref{eq:Fourier_Coef_System_Dynamic} and imposing suitable boundary 
+conditions, it can also be
+written as the generalized eigenvalue problem in
+\eqref{eq:Matrix_Equation} and \eqref{eq:Matrix_Ortho}, where  $B$ and
+$C$ are $(2M+1)^3\times(2M+1)^3$ symmetric matrices. More specifically,
+$B$ is Hermitian-symmetric and $C$ is real-diagonal. The rows and
+columns of $B$ and $C$, corresponding to the $a_{0,0,0}$ component of
+$\vec{a}$, consist entirely of zero elements. Therefore, without loss
+of generality, they can be removed from the generalized eigenvalue
+problem, making the matrix $C$ positive-definite.  
+
+
+
+
+
+
+\section{Three-Dim Steady Cellular Flows}
+The 3 dimensional (3D) steady cellular flows are:
+\be
+B =
+(\Phi_x(x,y)W'(z),\Phi_y(x,y)W'(z),k\Phi(x,y)W(z)), \label{3dcell}
+\ee
+with $-\Delta \Phi = k \Phi.$   
+\medskip
+
+A special case is $k=2$, then
+%
+\begin{align}\label{3dcell-1}
+  \vec{u}(x,y,z) =
+  (-\sin{x}\,\cos{y}\,\cos{z},-\cos{x}\,\sin{y}\,\cos{z},2\cos{x}\,\cos{y}\,\sin{z}).  
+\end{align}
+
+\medskip
+
+% Question: Is the effective diffusivity problem easier for
+% (\ref{3dcell-1}) than (\ref{eig3})?  
+% \medskip
+
+% Effective diffusivity in (\ref{3dcell}) is unknown, see \cite{SXZ_13}
+% for related KPP problem, and \cite{RZ_07} for an upper
+% bound. Extrapolating the KPP scaling in \cite{SXZ_13} on the flow
+% (\ref{3dcell-1}), effective diffusivity at small molecular diffusivity
+% $\epsilon$ scales like $O(\epsilon^{p})$, $p \approx 0.26$. In 2D, $p=1/2$, see
+% \cite{fannjiang}, also Fig.3 in \cite{Biferale_95}.
+
+We now derive a system of algebraic equations, analogous to that of
+equation \eqref{eq:Fourier_Coef_System}, corresponding to the velocity
+field $\vec{u}$ displayed in \eqref{3dcell-1}. The steady state
+eigenvalue problem in equation \eqref{eq:Eig_prob} is given by
+%
+\begin{align}\label{eq:Steady_Eig_prob}
+  \vec{u}\cdot\vec{\nabla}\psi_l=-\imath\lambda_l\Delta\psi_l.
+\end{align}
+%
+The analog of equation \eqref{eq:material_Derivative_psi} is
+%
+\begin{align}\label{eq:Steady_material_Derivative_psi}
+  (\vec{u}\cdot\vec{\nabla})\psi_l(\vec{x})=
+         -\sin{x}\,\cos{y}\,\cos{z}\,\partial_x\psi_l(\vec{x})
+         -\cos{x}\,\sin{y}\,\cos{z}\,\partial_y\psi_l(\vec{x})
+         +2\cos{x}\,\cos{y}\,\sin{z}\,\partial_z\psi_l(\vec{x}).
+\end{align}
+%
+For this three dimensional flow, we use the following notation for the
+Fourier expansion of $\psi_l(\vec{x})$:
+%
+\begin{align}
+  \psi_l(\vec{x})=\sum_{\ell,m,n}a^{\,l}_{\ell,m,n}\e^{\imath (\ell x+my+nz)}.
+\end{align}
+%
+Using the identities
+%
+\begin{align}\label{eq:Velocity_Field_3D}
+  u_1(\vec{x})=-\sin{x}\,\cos{y}\,\cos{z}
+     =-\frac{1}{4}(&+\sin(x-y-z)+\sin(x-y+z)+\sin(x+y-z)+\sin(x+y+z))
+     \notag\\
+  u_2(\vec{x})=-\cos{x}\,\sin{y}\,\cos{z}
+     =\frac{1}{4}(&+\sin(x-y-z)+\sin(x-y+z)-\sin(x+y-z)-\sin(x+y+z))
+     \notag\\
+  u_3(\vec{x})=2\cos{x}\,\cos{y}\,\sin{z}
+     =\frac{1}{2}(&-\sin(x-y-z)+\sin(x-y+z)-\sin(x+y-z)+\sin(x+y+z)),   
+\end{align}
+%
+and writing $\sin{x}=(\e^{\imath x}-\e^{-\imath x})/(2\imath)$, for example, one can
+more easily see that the analogue of equation
+\eqref{eq:Fourier_Coef_System} for the velocity field in
+\eqref{3dcell-1} is given by 
+%
+\begin{align}\label{eq:Steady_3D_Fourier_Coef_System}
+-&\frac{\imath(\ell-1)}{8\imath}a_{\ell-1,m+1,n+1}+\frac{\imath(\ell+1)}{8\imath}a_{\ell+1,m-1,n-1}
+ -\frac{\imath(\ell-1)}{8\imath}a_{\ell-1,m+1,n-1}+\frac{\imath(\ell+1)}{8\imath}a_{\ell+1,m-1,n+1}\notag\\
+ -&\frac{\imath(\ell-1)}{8\imath}a_{\ell-1,m-1,n+1}+\frac{\imath(\ell+1)}{8\imath}a_{\ell+1,m+1,n-1}
+  -\frac{\imath(\ell-1)}{8\imath}a_{\ell-1,m-1,n-1}+\frac{\imath(\ell+1)}{8\imath}a_{\ell+1,m+1,n+1}
+\notag\\
+&\frac{\imath(m+1)}{8\imath}a_{\ell-1,m+1,n+1}-\frac{\imath(m-1)}{8\imath}a_{\ell+1,m-1,n-1}
+  +\frac{\imath(m+1)}{8\imath}a_{\ell-1,m+1,n-1}-\frac{\imath(m-1)}{8\imath}a_{\ell+1,m-1,n+1}\notag\\
+ -&\frac{\imath(m-1)}{8\imath}a_{\ell-1,m-1,n+1}+\frac{\imath(m+1)}{8\imath}a_{\ell+1,m+1,n-1}
+  -\frac{\imath(m-1)}{8\imath}a_{\ell-1,m-1,n-1}+\frac{\imath(m+1)}{8\imath}a_{\ell+1,m+1,n+1}
+\notag\\
+-&\frac{\imath(n+1)}{4\imath}a_{\ell-1,m+1,n+1}+\frac{\imath(n-1)}{4\imath}a_{\ell+1,m-1,n-1}
+  +\frac{\imath(n-1)}{4\imath}a_{\ell-1,m+1,n-1}-\frac{\imath(n+1)}{4\imath}a_{\ell+1,m-1,n+1}\notag\\
+ -&\frac{\imath(n+1)}{4\imath}a_{\ell-1,m-1,n+1}+\frac{\imath(n-1)}{4\imath}a_{\ell+1,m+1,n-1}
+  +\frac{\imath(n-1)}{4\imath}a_{\ell-1,m-1,n-1}-\frac{\imath(n+1)}{4\imath}a_{\ell+1,m+1,n+1}
+\notag\\
+=&\imath\lambda_l(m^2+n^2)a_{\ell,m,n},
+\end{align}
+%
+where we have suppressed the super-script notation and written
+$a^{\,l}_{\ell,m,n}=a_{\ell,m,n}$. Simplifying equation
+\eqref{eq:Steady_3D_Fourier_Coef_System} yields
+%
+\begin{align}\label{eq:Steady_3D_Fourier_Coef_System_Simp}
+ &\imath((\ell-1)-(m+1)+2(n+1))a_{\ell-1,m+1,n+1}+\imath(-(\ell+1)+(m-1)-2(n-1))a_{\ell+1,m-1,n-1}\notag\\
++&\imath((\ell-1)-(m+1)-2(n-1))a_{\ell-1,m+1,n-1}+\imath(-(\ell+1)+(m-1)+2(n+1))a_{\ell+1,m-1,n+1}\notag\\
++&\imath((\ell-1)+(m-1)+2(n+1))a_{\ell-1,m-1,n+1}+\imath(-(\ell+1)-(m+1)-2(n-1))a_{\ell+1,m+1,n-1}\notag\\
++&\imath((\ell-1)+(m-1)-2(n-1))a_{\ell-1,m-1,n-1}+\imath(-(\ell+1)-(m+1)+2(n+1))a_{\ell+1,m+1,n+1}\notag\\
+=&8\lambda_l(m^2+n^2)a_{\ell,m,n},
+\end{align}
+%
+From equations \eqref{eq:H1_to_L2} and \eqref{eq:Velocity_Field_3D},
+one can see that the analogue of equation \eqref{eq:Inner_Products_2D}
+is given by 
+%
+\begin{align}\label{eq:Inner_Products_3D}
+  \langle\psi_l,g_1\rangle_1=-\frac{1}{8\imath}&\left( +(a_{1,-1,-1}-a_{-1,1,1})
+                              +(a_{1,-1,1}-a_{-1,1,-1})
+                              +(a_{1,1,-1}-a_{-1,-1,1})
+                              +(a_{1,1,1}-a_{-1,-1,-1})
+  \right)               
+              \notag\\
+  \langle\psi_l,g_2\rangle_1=\frac{1}{8\imath}&\left( +(a_{1,-1,-1}-a_{-1,1,1})
+                             +(a_{1,-1,1}-a_{-1,1,-1})
+                             -(a_{1,1,-1}-a_{-1,-1,1})
+                             -(a_{1,1,1}-a_{-1,-1,-1})
+  \right)               
+               \notag\\
+  \langle\psi_l,g_3\rangle_1=\frac{1}{4\imath}&\left( -(a_{1,-1,-1}-a_{-1,1,1})
+                             +(a_{1,-1,1}-a_{-1,1,-1})
+                             -(a_{1,1,-1}-a_{-1,-1,1})
+                             +(a_{1,1,1}-a_{-1,-1,-1})
+  \right)               
+\end{align}
+%
+By restricting the indices, $-M\leq l,m,n\leq M$, in equation
+\eqref{eq:Steady_3D_Fourier_Coef_System_Simp} and imposing suitable
+boundary conditions, it can also be written as the generalized
+eigenvalue problem in \eqref{eq:Matrix_Equation} and
+\eqref{eq:Matrix_Ortho}, where  $B$ and $C$ are $(2M+1)^3\times(2M+1)^3$
+symmetric matrices. More specifically, $B$ is Hermitian-symmetric and
+$C$ is real-diagonal positive-semi-definite. The rows and
+columns of $B$ and $C$, corresponding to the $a_{0,0,0}$ component of
+$\vec{a}$, consist entirely of zero elements. Therefore, without loss
+of generality, they can be removed from the generalized eigenvalue
+problem, making the matrix $C$ positive-definite.  
+
+
+
+
+
+\begin{thebibliography}{99}
+
+\bibitem{Biferale_95}L. Biferale, A. Crisanti, M. Vergassola, A. Vulpiani,
+{\em Eddy diffusivities in scalar transport}, Phys. Fluids 7(11), pp. 2725 --2734, 1995.
+
+\bibitem{fannjiang} A. Fannjiang and G. Papanicolaou,
+{\em Convection enhanced diffusion for periodic flows}, SIAM J.
+Appl. Math., {\bf 54} (1992), pp. 333-408.
+
+\bibitem{RZ_07}L. Ryzhik and A. Zlatos,
+{\em KPP pulsating front speed-up by flows}, Comm. Math. Sci., {\bf
+5} (2007), pp. 575-593.
+
+\bibitem{SXZ_13}L. Shen, J. Xin and A. Zhou, {\em Finite Element Computation of KPP
+Front Speeds in 3D Cellular and ABC Flows}, Math Model. Natural Phenom., 8(3), 2013, pp. 182-197. 
+
+
+
+
+\end{thebibliography}
+
+\end{document}

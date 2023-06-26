@@ -1,0 +1,32 @@
+> restart; p[I] := 1-p[c]; sigma[1] := h*sigma[2]; h := 1-1/s; tau := -s*`&sigma;eff`/sigma[2]^2; `&sigma;eff` := sigma[2]*m(p); collect(simplify(expand(tau*(p*(sigma[2]-`&sigma;eff`)*(1+p[I]*(sigma[1]/`&sigma;eff`-1))+(1-p)*(sigma[1]-`&sigma;eff`)*(1+p[I]*(sigma[2]/`&sigma;eff`-1))) = 0)), m(p)); a := s*p[c]; b := s-2*s*p[c]-p+p[c]; C := 1+s*p[c]-p[c]-s; Disc := b^2-4*a*C; bo := expand(b+((2*p[c]-1)*s+p-p[c])); Co := expand(C-(1-p[c])*(1-s)); Do := expand(Disc-(s-p[c])^2-p*(2*s-1)*(2*p[c]-1)+p*(1-p)); s := lambda+I*`&epsilon;`; Dc := evalc(expand(Disc)); RDisc := -2*p[c]*lambda+p^2-2*p*p[c]-2*lambda*p+p[c]^2+lambda^2+4*p[c]*lambda*p-`&epsilon;`^2; IDisc := Typesetting[delayDotProduct](4*I, p, true)*p[c]*`&epsilon;`-(2*I)*p[c]*`&epsilon;`-Typesetting[delayDotProduct](2*I, p, true)*`&epsilon;`+(2*I)*lambda*`&epsilon;`; RIo := expand(Dc-RDisc-IDisc); Ro := expand(-2*p[c]*lambda+p^2-2*p*p[c]-2*lambda*p+p[c]^2+lambda^2+4*p[c]*lambda*p-(lambda-p[c])^2-p*(2*lambda-1)*(2*p[c]-1)+p*(1-p));
+      2                                                          
+s m(p)  p[c] + (s - 2 s p[c] - p + p[c]) m(p) + 1 + s p[c] - p[c]
+
+   - s = 0
+                               0
+                               0
+                               0
+                               0
+                               0
+> restart; p[I] := 1-p[c]; sigma[2] := z*sigma[1]; z := 1-1/t; a := -t*`&sigma;eff`/sigma[1]^2; `&sigma;eff` := sigma[1]*w(p); collect(simplify(expand(a*(p*(sigma[2]-`&sigma;eff`)*(1+p[I]*(sigma[1]/`&sigma;eff`-1))+(1-p)*(sigma[1]-`&sigma;eff`)*(1+p[I]*(sigma[2]/`&sigma;eff`-1))) = 0)), w(p)); a := t*p[c]; b := p[c]+t-1-2*t*p[c]+p; C := -p[c]+t*p[c]+1-t; Disc := b^2-4*a*C; bo := expand(b+((2*p[c]-1)*t+1-p-p[c])); Co := expand(C-(1-p[c])*(1-t)); Do := expand(Disc-(t-p[c])^2-(1-p)*(2*t-1)*(2*p[c]-1)+p*(1-p)); t := lambda+I*`&epsilon;`; Dc := evalc(expand(Disc)); R := 1+2*p[c]*lambda+p[c]^2+Typesetting[delayDotProduct](2*p[c], p, true)+lambda^2+Typesetting[delayDotProduct](2*lambda, p, true)+p^2-2*p[c]-2*p-Typesetting[delayDotProduct](4*p[c]*lambda, p, true)-2*lambda-`&epsilon;`^2; Ima := -Typesetting[delayDotProduct]((4*I)*p[c]*`&epsilon;`, p, true)+(2*I)*lambda*`&epsilon;`+Typesetting[delayDotProduct]((2*I)*`&epsilon;`, p, true)-(2*I)*`&epsilon;`+(2*I)*p[c]*`&epsilon;`; RIo := expand(Dc-R-Ima); Ro := expand(R+`&epsilon;`^2-((2*p[c]-1)*lambda+1-p-p[c])^2+4*lambda*p[c]*(1-p[c])*(1-lambda));
+       2                                                       
+ t w(p)  p[c] + (p[c] + t - 2 t p[c] - 1 + p) w(p) + t p[c] + 1
+
+    - p[c] - t = 0
+                               0
+                               0
+                               0
+                               0
+                               0
+> 
+> restart; A := -collect(expand(-(lambda-p[c])^2-p*(2*lambda-1)*(2*p[c]-1)+p*(1-p)), lambda); Ao := expand(-2*p+4*p*p[c]-2*p[c]+2*(p*(1-p[c])+p[c]*(1-p))); B := expand(-(p-p[c])^2+(p*(1-p[c])+p[c]*(1-p))^2); Bo := expand(B-(4*(p^2-p))*(p[c]^2-p[c]));
+      2                                       2                  2
+lambda  - (2 p - 4 p p[c] + 2 p[c]) lambda + p  - 2 p p[c] + p[c] 
+                               0
+                       2           2     2           2
+         4 p p[c] - 4 p  p[c] + 4 p  p[c]  - 4 p p[c] 
+                               0
+> restart; p[I] := 1-p[c]; DiscDT := (t-p[I])^2+p*(2*t-1)*(2*p[I]-1)-p*(1-p); DiscME := (t-p[c])^2+(1-p)*(2*t-1)*(2*p[c]-1)-p*(1-p); Do := expand(DiscDT-DiscME); bDT := -(1-2*p[I])*t-p[I]+p; bME := -(2*p[c]-1)*t-1+p+p[c]; bo := expand(bDT-bME);
+                               0
+                               0
+> 

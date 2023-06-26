@@ -1,0 +1,19 @@
+This is TeX, Version 3.1415 (C version 6.1.2.1) (format=latex 6.2.12)  4 AUG 2011 22:58
+**&latex2e 00readme.tex
+(00readme.tex
+LaTeX2e(BETA TEST RELEASE)  <2005/12/01>
+Babel <v3.7h> and hyphenation patterns for english, loaded.
+! Undefined control sequence.
+l.11 \maketitle
+               
+? x
+ 
+Here is how much of TeX's memory you used:
+ 8 strings out of 28583
+ 70 string characters out of 471185
+ 44808 words of memory out of 524286
+ 3067 multiletter control sequences out of 27000
+ 3640 words of font info for 14 fonts, out of 800000 for 255
+ 14 hyphenation exceptions out of 2003
+ 7i,0n,6p,102b,7s stack positions out of 300i,40n,60p,3000b,4000s
+No pages of output.

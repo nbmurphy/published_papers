@@ -1,0 +1,31 @@
+This is TeX, Version 3.1415 (C version 6.1.2.1) (format=latex 6.2.12)  24 SEP 2011 17:04
+**&latex2e
+
+*
+(Please type a command or say `\end')
+*\end
+
+*
+Runaway argument?
+! Paragraph ended before \end was complete.
+<to be read again> 
+                   \par 
+<*> 
+    
+? q
+OK, entering \batchmode...
+! Emergency stop.
+<*> 
+    
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 1 string out of 28583
+ 10 string characters out of 471185
+ 44808 words of memory out of 524286
+ 3063 multiletter control sequences out of 27000
+ 3640 words of font info for 14 fonts, out of 800000 for 255
+ 14 hyphenation exceptions out of 2003
+ 4i,0n,1p,6b,7s stack positions out of 300i,40n,60p,3000b,4000s
+No pages of output.

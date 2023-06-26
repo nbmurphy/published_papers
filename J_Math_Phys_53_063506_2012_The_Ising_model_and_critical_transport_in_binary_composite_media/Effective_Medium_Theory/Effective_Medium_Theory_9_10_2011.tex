@@ -1,0 +1,125 @@
+Day and Thorpe form of $\sigma eff$
+
+> restart; p[I] := 1-p[c]; sigma[1] := h*sigma[2]; h := 1-1/s; tau := -s*`&sigma;eff`/sigma[2]^2; `&sigma;eff` := sigma[2]*m(p); collect(simplify(expand(tau*(p*(sigma[2]-`&sigma;eff`)*(1+p[I]*(sigma[1]/`&sigma;eff`-1))+(1-p)*(sigma[1]-`&sigma;eff`)*(1+p[I]*(sigma[2]/`&sigma;eff`-1))) = 0)), m(p)); a := s*p[c]; b := -p-2*s*p[c]+p[c]+s; C := 1+s*p[c]-p[c]-s; Disc := b^2-4*a*C; bo := expand(b+((2*p[c]-1)*s+p-p[c])); Co := expand(C-(1-p[c])*(1-s)); Do := expand(Disc-(s-p[c])^2-p*(2*s-1)*(2*p[c]-1)+p*(1-p)); s := lambda+I*`&epsilon;`; Dc := evalc(expand(Disc)); RDisc := 4*p*lambda*p[c]+lambda^2+p^2-2*p*p[c]+p[c]^2-2*lambda*p[c]-2*p*lambda-`&epsilon;`^2; IDisc := -(2*I)*p[c]*`&epsilon;`-(2*I)*`&epsilon;`*p+(2*I)*lambda*`&epsilon;`+(4*I)*p*p[c]*`&epsilon;`; RIo := expand(Dc-RDisc-IDisc); Ro := expand(RDisc+`&epsilon;`^2+(p*(1-p)-(lambda-p[c])^2-p*(2*lambda-1)*(2*p[c]-1)));
+      2                                                          
+s m(p)  p[c] + (p[c] + s - p - 2 s p[c]) m(p) - p[c] + 1 + s p[c]
+
+   - s = 0
+                               0
+                               0
+                               0
+          2         2                                           2
+-&epsilon;  + lambda  - 2 lambda p + 4 I p p[c] &epsilon; + p[c] 
+
+                 2                                     
+   - 2 p[c] p + p  - 2 p[c] lambda - 2 I p[c] &epsilon;
+
+   + 4 p p[c] lambda + 2 I lambda &epsilon; - 2 I &epsilon; p
+                               0
+                               0
+> restart; `f&Assign;-collect`(expand((lambda-p[c])^2+p*(2*lambda-1)*(2*p[c]-1)-p*(1-p)), lambda);
+                    /      2                       2
+   f&Assign;-collect\lambda  - 2 lambda p[c] + p[c] 
+
+                                                   2        \
+      + 4 p lambda p[c] - 2 p lambda - 2 p p[c] + p , lambda/
+> #`restart:    #Gap Condition ` #` f:=-collect`(expand((lambda-p[c])^(2)  +p*(2*lambda-1) *(2* p[c]-1) -p*(1-p)),lambda); #` A:=-`(-2 p+4 p p[c]-2 p[c]): Ao:=expand(A-(2*(p*(1- p[c])+p[c]*(1- p)))); #` C:=2 p p`[c]-p[c]^2-p^2:  Co:=expand(C-(-(p-p[c])^(2))); #` b2:=expand`(C+((A)/(2))^(2)): b2o:=expand(b2-4*(p*(1-p)*p[c]*(1-p[c]))); #`b2=b`^(2)   #`thetao collapse at p=p`[c] #` p:=pc:  `  #`a:=p*`(1- pc)+pc*(1- p):       bpc:=2 pc*(1-pc):   #b(p,p[c])=2*sqrt(p*(1-p)*p[c]*(1-p[c])) #`abo:=expand`(a-bpc);  #`theta1 collapses at p=1-p`[c] ,   i.e.  a(1-p[c] ,p[c])+b(1-p[c] ,p[c])=1"?"   #`Cond:=-expand`(    b2-(1-a)^(2) );#`=0` #`Condo:=expand`(A-(p^(2)-2*(1- p[c])*p+(1-p[c])^(2)));#`=0` #`Condo1:=expand`(A-(p-(1- p[c]))^(2));#`=0`;
+Error, Got internal error in Typesetting:-Parse:-Postprocess : "internal error: invalid object ?"
+                       /                              
+                       |                              
+Typesetting:-mambiguous|#restart:    #Gap Condition  #
+                       \                              
+
+                          /      /                 2          
+   f&Assign;&minus;collect\expand\(&lambda; - p[c])   +psdot(2
+
+                                                            \ 
+  sdot&lambda; - 1) sdot(2sdot p[c] - 1) uminus0psdot(1 - p)/,
+
+          \                                                      
+  &lambda;/; # A&Assign;&minus;(uminus02 p+4 p p[c] - 2 p[c]): Ao
+
+  coloneqexpand(A - (2sdot(psdot(1uminus0 p[c])+p[c]sdot(1 -  p))
+
+  )); # C&Assign;2 p p[c] - Typesetting:-msubsup(p, c, 2, 
+
+                                                   2            
+  superscriptshift = "0", subscriptshift = "0") - p :  Cocoloneq
+
+                                                      /     2\  
+        /    /                 2\\                    |  /A\ |  
+  expand\C - \uminus0(p - p[c]) //; # b2&Assign;expand|C+|-| |: 
+                                                      \  \2/ /  
+
+  b2ocoloneqexpand(b2 - 4sdot(psdot(1 - p)sdotp[c]sdot(1 - p[c]))
+
+          2                                                   
+  ); #b2=b    #&theta;o collapse at p=p[c] # p&Assign;pc:    #
+
+  a&Assign;p&sdot;(1 -  pc)+pcsdot(1 -  p):       bpccoloneq2 pc
+
+  sdot(1 - pc):   #b(p,p[c])=2sdotsqrt(psdot(1 - p)sdotp[c]sdot(1
+
+   - p[c])) #abo&Assign;expand(a - bpc);  #
+
+  &theta;1 collapses at p=1&minus;p[c] ,   i.e.  a(1 - p[c] ,p[c]
+
+                                                     /         
+  )+b(1 - p[c] ,p[c])=1?   #Cond&Assign;&minus;expand\    b2 - 
+
+         2 \                         /    / 2              
+  (1 - a)  /;#=0 #Condo&Assign;expand\A - \p uminus02sdot(1
+
+                               2\\                          /    
+  uminus0 p[c])sdotp+(1 - p[c]) //;#=0 #Condo1&Assign;expand\A - 
+
+                       2\                               
+  (p - (1uminus0 p[c])) /;#=0, Typesetting:-merror("Got 
+
+   internal error in Typesetting:-Parse:-Postprocess : 
+
+                                       \
+                                       |
+   "internal error: invalid object ?"")|
+                                       /
+> 
+> 
+> 
+> restart; p[I] := 1-p[c]; sigma[2] := z*sigma[1]; z := 1-1/t; a := -t*`&sigma;eff`/sigma[1]^2; `&sigma;eff` := sigma[1]*w(p); collect(simplify(expand(a*(p*(sigma[2]-`&sigma;eff`)*(1+p[I]*(sigma[1]/`&sigma;eff`-1))+(1-p)*(sigma[1]-`&sigma;eff`)*(1+p[I]*(sigma[2]/`&sigma;eff`-1))) = 0)), w(p)); a := t*p[c]; b := p+t+p[c]-1-2*t*p[c]; C := -p[c]+t*p[c]+1-t; Disc := b^2-4*a*C; bo := expand(b+((2*p[c]-1)*t+1-p-p[c])); Co := expand(C-(1-p[c])*(1-t)); Do := expand(Disc-(t-p[c])^2-(1-p)*(2*t-1)*(2*p[c]-1)+p*(1-p)); t := lambda+I*`&epsilon;`; Dc := evalc(expand(Disc)); R := 1-2*lambda-2*p[c]-`&epsilon;`^2+2*p*lambda+lambda^2+p^2+2*p*p[c]+p[c]^2+2*lambda*p[c]-4*p*lambda*p[c]-2*p; Ima := -(4*I)*p*p[c]*`&epsilon;`+(2*I)*lambda*`&epsilon;`-(2*I)*`&epsilon;`+(2*I)*p*`&epsilon;`+(2*I)*p[c]*`&epsilon;`; Ro := expand(R+`&epsilon;`^2-(lambda-p[c])^2-(1-p)*(2*lambda-1)*(2*p[c]-1)+p*(1-p)); RIo := expand(Dc-R-Ima);
+      2                                                          
+t w(p)  p[c] + (p + t + p[c] - 1 - 2 t p[c]) w(p) - p[c] + t p[c]
+
+   + 1 - t = 0
+                               0
+                               0
+                               0
+              2                               2
+ 1 - &epsilon;  - 2 p[c] + 2 p lambda + lambda 
+
+                                                   2           
+    + 2 I p[c] &epsilon; + 2 I lambda &epsilon; + p  + 2 p p[c]
+
+          2                                                   
+    + p[c]  + 2 p[c] lambda - 2 lambda - 2 p - 4 p p[c] lambda
+
+    - 4 I p p[c] &epsilon; - 2 I &epsilon; + 2 I p &epsilon;
+                               0
+                               0
+> 
+> restart; Ao := expand(-2*p+4*p*p[c]-2*p[c]+2*(p*(1-p[c])+p[c]*(1-p))); B := expand(-(p-p[c])^2+(p*(1-p[c])+p[c]*(1-p))^2); Bo := expand(B-(4*(p^2-p))*(p[c]^2-p[c]));
+        2                                                   
+   -p[c]  - 4 t p[c] + 2 t + 2 p[c] - 1 + 4 p t p[c] - 2 p t
+
+                          2
+      - 2 p p[c] + 2 p - p 
+                               0
+                       2           2     2           2
+         4 p p[c] - 4 p  p[c] + 4 p  p[c]  - 4 p p[c] 
+                               0
+> restart; p[I] := 1-p[c]; DiscDT := (t-p[I])^2+p*(2*t-1)*(2*p[I]-1)-p*(1-p); DiscME := (t-p[c])^2+(1-p)*(2*t-1)*(2*p[c]-1)-p*(1-p); Do := expand(DiscDT-DiscME); bDT := -(1-2*p[I])*t-p[I]+p; bME := -(2*p[c]-1)*t-1+p+p[c]; bo := expand(bDT-bME);
+                               0
+                               0
+> NULL;
+> restart; p := 1-pc; theta := expand(p*(1-pc)+pc*(1-p)+2*pc*(1-pc));
+                               1
+> 

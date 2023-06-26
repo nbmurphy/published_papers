@@ -1,0 +1,496 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00002b4dda7a8270, pid=29187, tid=1078491456
+#
+# JRE version: 6.0_18-b07
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (16.0-b13 mixed mode linux-amd64 )
+# Problematic frame:
+# V  [libjvm.so+0x501270]
+#
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000056c2a000):  JavaThread "WMI:MapleClientSocket:Kernel Connection " daemon [_thread_in_vm, id=29664, stack(0x0000000040387000,0x0000000040488000)]
+
+siginfo:si_signo=SIGSEGV: si_errno=0, si_code=128 (), si_addr=0x0000000000000000
+
+Registers:
+RAX=0x0000000000000005, RBX=0x0200002aaaae6bac, RCX=0x00002b4ddabd1548, RDX=0x00002b4ddabb8530
+RSP=0x00000000404865e0, RBP=0x00000000404865f0, RSI=0x6000000000000000, RDI=0x0200002aaaae6bac
+R8 =0x0000000056b9d701, R9 =0x00002b4ddabcb8e8, R10=0x00002b4ddabd155c, R11=0x00002b4ddabd152c
+R12=0x00002aaaca1401f1, R13=0x00002b4ddabd1df0, R14=0x00002aaaaec29008, R15=0x00002aaaca140261
+RIP=0x00002b4dda7a8270, EFL=0x0000000000010246, CSGSFS=0x0000000000000033, ERR=0x0000000000000000
+  TRAPNO=0x000000000000000d
+
+Top of Stack: (sp=0x00000000404865e0)
+0x00000000404865e0:   00002aaaaec29008 0000000056c2a000
+0x00000000404865f0:   0000000040486680 00002b4dda940699
+0x0000000040486600:   00000000404866b0 00002b4dda4c8285
+0x0000000040486610:   0000000000000000 0000000056b9d738
+0x0000000040486620:   00002aaa00000005 0000000056c2a000
+0x0000000040486630:   00002aaaaf41c401 0000000000000000
+0x0000000040486640:   00002aaaaf387d00 0000000000000000
+0x0000000040486650:   0000000040486680 0000000040486770
+0x0000000040486660:   0000000056b9d738 0000000056c2a000
+0x0000000040486670:   00002aaaaec29008 0000000056c2a000
+0x0000000040486680:   00000000404866b0 00002b4dda93e53b
+0x0000000040486690:   00002aaab4425570 0000000056b9d738
+0x00000000404866a0:   0000000056c2a000 0000000040486770
+0x00000000404866b0:   00000000404866e0 00002b4dda93e434
+0x00000000404866c0:   00002aaaaf387a10 0000000056c2a000
+0x00000000404866d0:   00002aaaca11f758 0000000040486770
+0x00000000404866e0:   0000000040486740 00002b4dda8f3e29
+0x00000000404866f0:   0000000000000001 0000000056b9d738
+0x0000000040486700:   0000000056c2a000 0000000040486760
+0x0000000040486710:   0000000056c2a000 00002aaaab5df9bb
+0x0000000040486720:   00002aaab3b61ed8 00002aaaae6b4ed8
+0x0000000040486730:   0000000040486910 00000000404867b8
+0x0000000040486740:   00002aaaca11f758 00002aaaab5e0c7e
+0x0000000040486750:   00002aaaca11f758 00002aaaab6962a4
+0x0000000040486760:   00002aaab3b61ed8 00002aaab3b61ed8
+0x0000000040486770:   0000000000000003 00000000404867b8
+0x0000000040486780:   0000000000000001 00002aaaab8d6a34
+0x0000000040486790:   00002aaaaf396c10 0000000000000000
+0x00000000404867a0:   0000000040486800 00002aaaab57dcf4
+0x00000000404867b0:   00002aaaab57dcf4 00002aaabfc24ad0
+0x00000000404867c0:   00000000404867c0 00002aaaaf387431
+0x00000000404867d0:   0000000040486848 00002aaaaf41c4f0 
+
+Instructions: (pc=0x00002b4dda7a8270)
+0x00002b4dda7a8260:   48 8b 53 08 eb 93 48 8b 53 08 e9 9a fe ff ff 90
+0x00002b4dda7a8270:   48 8b 57 08 e9 59 fe ff ff 66 66 66 90 66 66 66 
+
+Stack: [0x0000000040387000,0x0000000040488000],  sp=0x00000000404865e0,  free space=3fd0000000000000018k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0x501270]
+V  [libjvm.so+0x699699]
+V  [libjvm.so+0x69753b]
+V  [libjvm.so+0x697434]
+V  [libjvm.so+0x64ce29]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+v  ~RuntimeStub::_complete_monitor_locking_Java
+J  java.util.Vector.size()I
+J  java.util.AbstractList$Itr.hasNext()Z
+j  com.maplesoft.worksheet.application.WmiWorksheetWindowManager.getWindowForModel(Lcom/maplesoft/worksheet/model/WmiWorksheetModel;)Lcom/maplesoft/worksheet/components/WmiWorksheetWindow;+17
+j  com.maplesoft.worksheet.connection.WmiGroupKernelAdapter.processComputationStateChange(Lcom/maplesoft/client/KernelEvent;)Z+323
+j  com.maplesoft.worksheet.controller.WmiInputLockingKernelAdapter.processComputationStateChange(Lcom/maplesoft/client/KernelEvent;)Z+72
+j  com.maplesoft.client.kernelresult.KernelDoneResult.fireEvent(Lcom/maplesoft/client/KernelListener;Lcom/maplesoft/client/KernelEvent;)Z+8
+j  com.maplesoft.client.kernelresult.AbstractKernelResult.processEvent(Lcom/maplesoft/client/KernelListener;Lcom/maplesoft/client/KernelEvent;)Z+12
+j  com.maplesoft.client.kernelresult.KernelResultsDescriptor.processEvent(ILcom/maplesoft/client/KernelListener;Lcom/maplesoft/client/KernelEvent;)Z+6
+j  com.maplesoft.client.MapleClientSocket.createAndProcessEvent(I)V+31
+j  com.maplesoft.client.MapleClientSocket.createResults()V+90
+j  com.maplesoft.client.MapleClientSocket.run()V+390
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00002aaae0321000 JavaThread "discard semantics" daemon [_thread_blocked, id=30069, stack(0x00000000435c4000,0x00000000436c5000)]
+  0x00002aaae031f800 JavaThread "discard semantics" daemon [_thread_blocked, id=30068, stack(0x00000000437c6000,0x00000000438c7000)]
+  0x00002aaae0320000 JavaThread "output2086729598" daemon [_thread_blocked, id=30067, stack(0x0000000042ebd000,0x0000000042fbe000)]
+=>0x0000000056c2a000 JavaThread "WMI:MapleClientSocket:Kernel Connection " daemon [_thread_in_vm, id=29664, stack(0x0000000040387000,0x0000000040488000)]
+  0x0000000056c25800 JavaThread "process reaper" daemon [_thread_in_native, id=29661, stack(0x00000000432c1000,0x00000000433c2000)]
+  0x00002aaad8384000 JavaThread "Timer-8" daemon [_thread_blocked, id=29658, stack(0x00000000439c8000,0x0000000043ac9000)]
+  0x0000000056478800 JavaThread "Timer-7" [_thread_blocked, id=29657, stack(0x0000000043ac9000,0x0000000043bca000)]
+  0x00002aaad82b9000 JavaThread "Quick Help popup thread" daemon [_thread_blocked, id=29237, stack(0x00000000424b3000,0x00000000425b4000)]
+  0x00002aaae028c800 JavaThread "DestroyJavaVM" [_thread_blocked, id=29188, stack(0x0000000040b80000,0x0000000040c81000)]
+  0x00002aaae019d000 JavaThread "palette position change updater" daemon [_thread_blocked, id=29215, stack(0x0000000042cbb000,0x0000000042dbc000)]
+  0x00002aaae0116000 JavaThread "TimerQueue" daemon [_thread_blocked, id=29214, stack(0x0000000042bba000,0x0000000042cbb000)]
+  0x00002aaae0124000 JavaThread "GLDrawableContainer purge thread" daemon [_thread_blocked, id=29211, stack(0x0000000040642000,0x0000000040743000)]
+  0x00002aaae00ac800 JavaThread "Timer-0" [_thread_blocked, id=29208, stack(0x00000000427b6000,0x00000000428b7000)]
+  0x00002aaae003a000 JavaThread "WMI:Background Task Runner" [_thread_blocked, id=29207, stack(0x00000000426b5000,0x00000000427b6000)]
+  0x00000000566bc000 JavaThread "AWT-EventQueue-0" [_thread_blocked, id=29204, stack(0x0000000041e7c000,0x0000000041f7d000)]
+  0x00000000566ba800 JavaThread "AWT-Shutdown" [_thread_blocked, id=29203, stack(0x00000000419ee000,0x0000000041aef000)]
+  0x00000000566b9800 JavaThread "AWT-XAWT" daemon [_thread_in_native, id=29202, stack(0x00000000418ed000,0x00000000419ee000)]
+  0x0000000056690000 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=29201, stack(0x00000000410a0000,0x00000000411a1000)]
+  0x00002aaad8028000 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=29199, stack(0x00000000422b1000,0x00000000423b2000)]
+  0x00002aaad8025800 JavaThread "CompilerThread1" daemon [_thread_blocked, id=29198, stack(0x00000000421b0000,0x00000000422b1000)]
+  0x00002aaad8022800 JavaThread "CompilerThread0" daemon [_thread_blocked, id=29197, stack(0x00000000420af000,0x00000000421b0000)]
+  0x00002aaad8020800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=29196, stack(0x0000000040541000,0x0000000040642000)]
+  0x00002aaad8001000 JavaThread "Finalizer" daemon [_thread_blocked, id=29195, stack(0x00000000414f4000,0x00000000415f5000)]
+  0x0000000056380800 JavaThread "Reference Handler" daemon [_thread_blocked, id=29194, stack(0x0000000041fae000,0x00000000420af000)]
+
+Other Threads:
+  0x000000005637c000 VMThread [stack: 0x00000000416b5000,0x00000000417b6000] [id=29193]
+  0x00002aaad802b000 WatcherThread [stack: 0x00000000423b2000,0x00000000424b3000] [id=29200]
+
+VM state:synchronizing (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000000005631d030] Threads_lock - owner thread: 0x000000005637c000
+[0x000000005631d530] Heap_lock - owner thread: 0x00000000566bc000
+
+Heap
+ PSYoungGen      total 17920K, used 160K [0x00002aaac8fa0000, 0x00002aaacaa10000, 0x00002aaad3a40000)
+  eden space 17728K, 0% used [0x00002aaac8fa0000,0x00002aaac8fa0028,0x00002aaaca0f0000)
+  from space 192K, 83% used [0x00002aaaca140000,0x00002aaaca168000,0x00002aaaca170000)
+  to   space 4672K, 0% used [0x00002aaaca580000,0x00002aaaca580000,0x00002aaacaa10000)
+ PSOldGen        total 225024K, used 198554K [0x00002aaab3a40000, 0x00002aaac1600000, 0x00002aaac8fa0000)
+  object space 225024K, 88% used [0x00002aaab3a40000,0x00002aaabfc26af8,0x00002aaac1600000)
+ PSPermGen       total 73600K, used 39118K [0x00002aaaae640000, 0x00002aaab2e20000, 0x00002aaab3a40000)
+  object space 73600K, 53% used [0x00002aaaae640000,0x00002aaab0c73bd0,0x00002aaab2e20000)
+
+Dynamic libraries:
+40000000-40009000 r-xp 00000000 00:1c 2633693                            /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/bin/java
+40108000-4010a000 rwxp 00008000 00:1c 2633693                            /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/bin/java
+4010a000-4010d000 ---p 4010a000 00:00 0 
+4010d000-4020b000 rwxp 4010d000 00:00 0 
+40387000-4038a000 ---p 40387000 00:00 0 
+4038a000-40488000 rwxp 4038a000 00:00 0 
+40541000-40544000 ---p 40541000 00:00 0 
+40544000-40642000 rwxp 40544000 00:00 0 
+40642000-40645000 ---p 40642000 00:00 0 
+40645000-40743000 rwxp 40645000 00:00 0 
+40b80000-40b83000 ---p 40b80000 00:00 0 
+40b83000-40c81000 rwxp 40b83000 00:00 0 
+40c81000-40c82000 ---p 40c81000 00:00 0 
+40c82000-40d82000 rwxp 40c82000 00:00 0 
+410a0000-410a3000 ---p 410a0000 00:00 0 
+410a3000-411a1000 rwxp 410a3000 00:00 0 
+414f4000-414f7000 ---p 414f4000 00:00 0 
+414f7000-415f5000 rwxp 414f7000 00:00 0 
+416b5000-416b6000 ---p 416b5000 00:00 0 
+416b6000-417b6000 rwxp 416b6000 00:00 0 
+418ed000-418f0000 ---p 418ed000 00:00 0 
+418f0000-419ee000 rwxp 418f0000 00:00 0 
+419ee000-419f1000 ---p 419ee000 00:00 0 
+419f1000-41aef000 rwxp 419f1000 00:00 0 
+41b79000-41b7a000 ---p 41b79000 00:00 0 
+41b7a000-41c7a000 rwxp 41b7a000 00:00 0 
+41c7a000-41c7b000 ---p 41c7a000 00:00 0 
+41c7b000-41d7b000 rwxp 41c7b000 00:00 0 
+41d7b000-41d7c000 ---p 41d7b000 00:00 0 
+41d7c000-41e7c000 rwxp 41d7c000 00:00 0 
+41e7c000-41e7f000 ---p 41e7c000 00:00 0 
+41e7f000-41f7d000 rwxp 41e7f000 00:00 0 
+41fae000-41fb1000 ---p 41fae000 00:00 0 
+41fb1000-420af000 rwxp 41fb1000 00:00 0 
+420af000-420b2000 ---p 420af000 00:00 0 
+420b2000-421b0000 rwxp 420b2000 00:00 0 
+421b0000-421b3000 ---p 421b0000 00:00 0 
+421b3000-422b1000 rwxp 421b3000 00:00 0 
+422b1000-422b4000 ---p 422b1000 00:00 0 
+422b4000-423b2000 rwxp 422b4000 00:00 0 
+423b2000-423b3000 ---p 423b2000 00:00 0 
+423b3000-424b3000 rwxp 423b3000 00:00 0 
+424b3000-424b6000 ---p 424b3000 00:00 0 
+424b6000-425b4000 rwxp 424b6000 00:00 0 
+425b4000-425b7000 ---p 425b4000 00:00 0 
+425b7000-426b5000 rwxp 425b7000 00:00 0 
+426b5000-426b8000 ---p 426b5000 00:00 0 
+426b8000-427b6000 rwxp 426b8000 00:00 0 
+427b6000-427b9000 ---p 427b6000 00:00 0 
+427b9000-428b7000 rwxp 427b9000 00:00 0 
+428b7000-428ba000 ---p 428b7000 00:00 0 
+428ba000-429b8000 rwxp 428ba000 00:00 0 
+429b8000-429bb000 ---p 429b8000 00:00 0 
+429bb000-42ab9000 rwxp 429bb000 00:00 0 
+42ab9000-42abc000 ---p 42ab9000 00:00 0 
+42abc000-42bba000 rwxp 42abc000 00:00 0 
+42bba000-42bbd000 ---p 42bba000 00:00 0 
+42bbd000-42cbb000 rwxp 42bbd000 00:00 0 
+42cbb000-42cbe000 ---p 42cbb000 00:00 0 
+42cbe000-42dbc000 rwxp 42cbe000 00:00 0 
+42dbc000-42dbf000 ---p 42dbc000 00:00 0 
+42dbf000-42ebd000 rwxp 42dbf000 00:00 0 
+42ebd000-42ec0000 ---p 42ebd000 00:00 0 
+42ec0000-42fbe000 rwxp 42ec0000 00:00 0 
+42fbe000-42fc1000 ---p 42fbe000 00:00 0 
+42fc1000-430bf000 rwxp 42fc1000 00:00 0 
+430bf000-430c2000 ---p 430bf000 00:00 0 
+430c2000-431c0000 rwxp 430c2000 00:00 0 
+431c0000-431c3000 ---p 431c0000 00:00 0 
+431c3000-432c1000 rwxp 431c3000 00:00 0 
+432c1000-432c4000 ---p 432c1000 00:00 0 
+432c4000-433c2000 rwxp 432c4000 00:00 0 
+433c2000-433c5000 ---p 433c2000 00:00 0 
+433c5000-434c3000 rwxp 433c5000 00:00 0 
+434c3000-434c6000 ---p 434c3000 00:00 0 
+434c6000-435c4000 rwxp 434c6000 00:00 0 
+435c4000-435c7000 ---p 435c4000 00:00 0 
+435c7000-436c5000 rwxp 435c7000 00:00 0 
+436c5000-436c8000 ---p 436c5000 00:00 0 
+436c8000-437c6000 rwxp 436c8000 00:00 0 
+437c6000-437c9000 ---p 437c6000 00:00 0 
+437c9000-438c7000 rwxp 437c9000 00:00 0 
+438c7000-438ca000 ---p 438c7000 00:00 0 
+438ca000-439c8000 rwxp 438ca000 00:00 0 
+439c8000-439cb000 ---p 439c8000 00:00 0 
+439cb000-43ac9000 rwxp 439cb000 00:00 0 
+43ac9000-43acc000 ---p 43ac9000 00:00 0 
+43acc000-43bca000 rwxp 43acc000 00:00 0 
+56315000-5799d000 rwxp 56315000 00:00 0                                  [heap]
+3cfcc00000-3cfcc1c000 r-xp 00000000 08:01 2392137                        /lib64/ld-2.5.so
+3cfce1c000-3cfce1d000 r-xp 0001c000 08:01 2392137                        /lib64/ld-2.5.so
+3cfce1d000-3cfce1e000 rwxp 0001d000 08:01 2392137                        /lib64/ld-2.5.so
+3cfd000000-3cfd14e000 r-xp 00000000 08:01 2228230                        /lib64/libc-2.5.so
+3cfd14e000-3cfd34e000 ---p 0014e000 08:01 2228230                        /lib64/libc-2.5.so
+3cfd34e000-3cfd352000 r-xp 0014e000 08:01 2228230                        /lib64/libc-2.5.so
+3cfd352000-3cfd353000 rwxp 00152000 08:01 2228230                        /lib64/libc-2.5.so
+3cfd353000-3cfd358000 rwxp 3cfd353000 00:00 0 
+3cfd400000-3cfd482000 r-xp 00000000 08:01 2228573                        /lib64/libm-2.5.so
+3cfd482000-3cfd681000 ---p 00082000 08:01 2228573                        /lib64/libm-2.5.so
+3cfd681000-3cfd682000 r-xp 00081000 08:01 2228573                        /lib64/libm-2.5.so
+3cfd682000-3cfd683000 rwxp 00082000 08:01 2228573                        /lib64/libm-2.5.so
+3cfd800000-3cfd802000 r-xp 00000000 08:01 2228572                        /lib64/libdl-2.5.so
+3cfd802000-3cfda02000 ---p 00002000 08:01 2228572                        /lib64/libdl-2.5.so
+3cfda02000-3cfda03000 r-xp 00002000 08:01 2228572                        /lib64/libdl-2.5.so
+3cfda03000-3cfda04000 rwxp 00003000 08:01 2228572                        /lib64/libdl-2.5.so
+3cfdc00000-3cfdc16000 r-xp 00000000 08:01 2228233                        /lib64/libpthread-2.5.so
+3cfdc16000-3cfde15000 ---p 00016000 08:01 2228233                        /lib64/libpthread-2.5.so
+3cfde15000-3cfde16000 r-xp 00015000 08:01 2228233                        /lib64/libpthread-2.5.so
+3cfde16000-3cfde17000 rwxp 00016000 08:01 2228233                        /lib64/libpthread-2.5.so
+3cfde17000-3cfde1b000 rwxp 3cfde17000 00:00 0 
+3cfe400000-3cfe405000 r-xp 00000000 08:01 5932955                        /usr/lib64/libXdmcp.so.6.0.0
+3cfe405000-3cfe604000 ---p 00005000 08:01 5932955                        /usr/lib64/libXdmcp.so.6.0.0
+3cfe604000-3cfe605000 rwxp 00004000 08:01 5932955                        /usr/lib64/libXdmcp.so.6.0.0
+3cfe800000-3cfe905000 r-xp 00000000 08:01 5932956                        /usr/lib64/libX11.so.6.2.0
+3cfe905000-3cfeb05000 ---p 00105000 08:01 5932956                        /usr/lib64/libX11.so.6.2.0
+3cfeb05000-3cfeb0c000 rwxp 00105000 08:01 5932956                        /usr/lib64/libX11.so.6.2.0
+3cfec00000-3cfec02000 r-xp 00000000 08:01 5932954                        /usr/lib64/libXau.so.6.0.0
+3cfec02000-3cfee01000 ---p 00002000 08:01 5932954                        /usr/lib64/libXau.so.6.0.0
+3cfee01000-3cfee02000 rwxp 00001000 08:01 5932954                        /usr/lib64/libXau.so.6.0.0
+3cff400000-3cff410000 r-xp 00000000 08:01 5932970                        /usr/lib64/libXext.so.6.4.0
+3cff410000-3cff610000 ---p 00010000 08:01 5932970                        /usr/lib64/libXext.so.6.4.0
+3cff610000-3cff611000 rwxp 00010000 08:01 5932970                        /usr/lib64/libXext.so.6.4.0
+3d00400000-3d00409000 r-xp 00000000 08:01 5932969                        /usr/lib64/libXrender.so.1.3.0
+3d00409000-3d00608000 ---p 00009000 08:01 5932969                        /usr/lib64/libXrender.so.1.3.0
+3d00608000-3d00609000 rwxp 00008000 08:01 5932969                        /usr/lib64/libXrender.so.1.3.0
+3d01c00000-3d01c0a000 r-xp 00000000 08:01 5932973                        /usr/lib64/libXcursor.so.1.0.2
+3d01c0a000-3d01e09000 ---p 0000a000 08:01 5932973                        /usr/lib64/libXcursor.so.1.0.2
+3d01e09000-3d01e0a000 rwxp 00009000 08:01 5932973                        /usr/lib64/libXcursor.so.1.0.2
+3d02400000-3d02405000 r-xp 00000000 08:01 5932972                        /usr/lib64/libXfixes.so.3.1.0
+3d02405000-3d02604000 ---p 00005000 08:01 5932972                        /usr/lib64/libXfixes.so.3.1.0
+3d02604000-3d02605000 rwxp 00004000 08:01 5932972                        /usr/lib64/libXfixes.so.3.1.0
+3d02800000-3d02807000 r-xp 00000000 08:01 2228234                        /lib64/librt-2.5.so
+3d02807000-3d02a07000 ---p 00007000 08:01 2228234                        /lib64/librt-2.5.so
+3d02a07000-3d02a08000 r-xp 00007000 08:01 2228234                        /lib64/librt-2.5.so
+3d02a08000-3d02a09000 rwxp 00008000 08:01 2228234                        /lib64/librt-2.5.so
+3d04000000-3d04015000 r-xp 00000000 08:01 2228571                        /lib64/libnsl-2.5.so
+3d04015000-3d04214000 ---p 00015000 08:01 2228571                        /lib64/libnsl-2.5.so
+3d04214000-3d04215000 r-xp 00014000 08:01 2228571                        /lib64/libnsl-2.5.so
+3d04215000-3d04216000 rwxp 00015000 08:01 2228571                        /lib64/libnsl-2.5.so
+3d04216000-3d04218000 rwxp 3d04216000 00:00 0 
+3d05c00000-3d05c11000 r-xp 00000000 08:01 2228618                        /lib64/libresolv-2.5.so
+3d05c11000-3d05e11000 ---p 00011000 08:01 2228618                        /lib64/libresolv-2.5.so
+3d05e11000-3d05e12000 r-xp 00011000 08:01 2228618                        /lib64/libresolv-2.5.so
+3d05e12000-3d05e13000 rwxp 00012000 08:01 2228618                        /lib64/libresolv-2.5.so
+3d05e13000-3d05e15000 rwxp 3d05e13000 00:00 0 
+3d08600000-3d08608000 r-xp 00000000 08:01 5934985                        /usr/lib64/libXi.so.6.0.0
+3d08608000-3d08807000 ---p 00008000 08:01 5934985                        /usr/lib64/libXi.so.6.0.0
+3d08807000-3d08808000 rwxp 00007000 08:01 5934985                        /usr/lib64/libXi.so.6.0.0
+3d0fc00000-3d0fc05000 r-xp 00000000 08:01 5935187                        /usr/lib64/libXtst.so.6.1.0
+3d0fc05000-3d0fe05000 ---p 00005000 08:01 5935187                        /usr/lib64/libXtst.so.6.1.0
+3d0fe05000-3d0fe06000 rwxp 00005000 08:01 5935187                        /usr/lib64/libXtst.so.6.1.0
+2aaaaaaab000-2aaaaaad3000 rwxp 2aaaaaaab000 00:00 0 
+2aaaaaad3000-2aaaaaae0000 r-xp 00000000 00:1c 2638502                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/libverify.so
+2aaaaaae0000-2aaaaabdf000 ---p 0000d000 00:1c 2638502                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/libverify.so
+2aaaaabdf000-2aaaaabe2000 rwxp 0000c000 00:1c 2638502                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/libverify.so
+2aaaaabe2000-2aaaaac0b000 r-xp 00000000 00:1c 2638499                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/libjava.so
+2aaaaac0b000-2aaaaad0a000 ---p 00029000 00:1c 2638499                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/libjava.so
+2aaaaad0a000-2aaaaad11000 rwxp 00028000 00:1c 2638499                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/libjava.so
+2aaaaad11000-2aaaaad12000 ---p 2aaaaad11000 00:00 0 
+2aaaaad12000-2aaaaad13000 rwxp 2aaaaad12000 00:00 0 
+2aaaaad13000-2aaaaad1a000 r-xp 00000000 00:1c 2638527                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/native_threads/libhpi.so
+2aaaaad1a000-2aaaaae1b000 ---p 00007000 00:1c 2638527                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/native_threads/libhpi.so
+2aaaaae1b000-2aaaaae1d000 rwxp 00008000 00:1c 2638527                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/native_threads/libhpi.so
+2aaaaae1d000-2aaaaae1e000 rwxp 2aaaaae1d000 00:00 0 
+2aaaaae1e000-2aaaaae26000 rwxs 00000000 08:01 10093535                   /tmp/hsperfdata_murphy/29187
+2aaaaae26000-2aaaaae38000 r-xs 000c7000 00:1c 2639853                    /home/archive/sys/maple/mapleV14/java/xercesImpl.jar
+2aaaaae38000-2aaaaae3e000 r-xs 00019000 00:1c 2639882                    /home/archive/sys/maple/mapleV14/java/xmlParserAPIs.jar
+2aaaaae3e000-2aaaaae45000 r-xs 00111000 00:1c 2638284                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/resources.jar
+2aaaaae45000-2aaaaae4c000 r-xp 00000000 08:01 2394103                    /lib64/libnss_compat-2.5.so
+2aaaaae4c000-2aaaab04c000 ---p 00007000 08:01 2394103                    /lib64/libnss_compat-2.5.so
+2aaaab04c000-2aaaab04d000 r-xp 00007000 08:01 2394103                    /lib64/libnss_compat-2.5.so
+2aaaab04d000-2aaaab04e000 rwxp 00008000 08:01 2394103                    /lib64/libnss_compat-2.5.so
+2aaaab04e000-2aaaab057000 r-xp 00000000 08:01 2394111                    /lib64/libnss_nis-2.5.so
+2aaaab057000-2aaaab257000 ---p 00009000 08:01 2394111                    /lib64/libnss_nis-2.5.so
+2aaaab257000-2aaaab258000 r-xp 00009000 08:01 2394111                    /lib64/libnss_nis-2.5.so
+2aaaab258000-2aaaab259000 rwxp 0000a000 08:01 2394111                    /lib64/libnss_nis-2.5.so
+2aaaab259000-2aaaab263000 r-xp 00000000 08:01 2394107                    /lib64/libnss_files-2.5.so
+2aaaab263000-2aaaab462000 ---p 0000a000 08:01 2394107                    /lib64/libnss_files-2.5.so
+2aaaab462000-2aaaab463000 r-xp 00009000 08:01 2394107                    /lib64/libnss_files-2.5.so
+2aaaab463000-2aaaab464000 rwxp 0000a000 08:01 2394107                    /lib64/libnss_files-2.5.so
+2aaaab464000-2aaaab472000 r-xp 00000000 00:1c 2638516                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/libzip.so
+2aaaab472000-2aaaab574000 ---p 0000e000 00:1c 2638516                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/libzip.so
+2aaaab574000-2aaaab577000 rwxp 00010000 00:1c 2638516                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/libzip.so
+2aaaab577000-2aaaabb58000 rwxp 2aaaab577000 00:00 0 
+2aaaabb58000-2aaaae578000 rwxp 2aaaabb58000 00:00 0 
+2aaaae578000-2aaaae590000 rwxp 2aaaae578000 00:00 0 
+2aaaae590000-2aaaae638000 rwxp 2aaaae590000 00:00 0 
+2aaaae640000-2aaab2e20000 rwxp 2aaaae640000 00:00 0 
+2aaab2e20000-2aaab3970000 ---p 2aaab2e20000 00:00 0 
+2aaab3970000-2aaab3a40000 rwxp 2aaab3970000 00:00 0 
+2aaab3a40000-2aaac1600000 rwxp 2aaab3a40000 00:00 0 
+2aaac1600000-2aaac8fa0000 rwxp 2aaac1600000 00:00 0 
+2aaac8fa0000-2aaacaa10000 rwxp 2aaac8fa0000 00:00 0 
+2aaacaa10000-2aaacf0b0000 ---p 2aaacaa10000 00:00 0 
+2aaacf0b0000-2aaad3a40000 rwxp 2aaacf0b0000 00:00 0 
+2aaad3a40000-2aaad3a64000 rwxp 2aaad3a40000 00:00 0 
+2aaad3a64000-2aaad3a6a000 ---p 2aaad3a64000 00:00 0 
+2aaad3a6a000-2aaad3ad8000 rwxp 2aaad3a6a000 00:00 0 
+2aaad3ad8000-2aaad3b14000 rwxp 2aaad3ad8000 00:00 0 
+2aaad3b14000-2aaad3b22000 rwxp 2aaad3b14000 00:00 0 
+2aaad3b22000-2aaad3b46000 ---p 2aaad3b22000 00:00 0 
+2aaad3b46000-2aaad3b6a000 rwxp 2aaad3b46000 00:00 0 
+2aaad3b6a000-2aaad3bd9000 rwxp 2aaad3b6a000 00:00 0 
+2aaad3bd9000-2aaad3c16000 rwxp 2aaad3bd9000 00:00 0 
+2aaad3c16000-2aaad3c3a000 rwxp 2aaad3c16000 00:00 0 
+2aaad3c3a000-2aaad3c40000 ---p 2aaad3c3a000 00:00 0 
+2aaad3c40000-2aaad3dd6000 r-xs 02fc6000 00:1c 2633717                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/rt.jar
+2aaad3dd6000-2aaad430e000 rwxp 2aaad3dd6000 00:00 0 
+2aaad430e000-2aaad78d9000 r-xp 00000000 08:01 11272258                   /usr/lib/locale/locale-archive
+2aaad78d9000-2aaad78e7000 r-xs 000e0000 00:1c 2639892                    /home/archive/sys/maple/mapleV14/java/xalan.jar
+2aaad78e7000-2aaad78e9000 r-xs 0000c000 00:1c 2639879                    /home/archive/sys/maple/mapleV14/java/activation.jar
+2aaad78e9000-2aaad78ea000 r-xs 00005000 00:1c 2639862                    /home/archive/sys/maple/mapleV14/java/dbtoolbox.jar
+2aaad78ea000-2aaad78ef000 r-xs 00048000 00:1c 2639884                    /home/archive/sys/maple/mapleV14/java/dom4j-1.6.1.jar
+2aaad78ef000-2aaad78f1000 r-xs 00000000 00:1c 2639878                    /home/archive/sys/maple/mapleV14/java/externalcall.jar
+2aaad78f1000-2aaad78ff000 r-xs 00096000 00:1c 2639887                    /home/archive/sys/maple/mapleV14/java/freehep-base.jar
+2aaad78ff000-2aaad7901000 r-xs 0001d000 00:1c 2639896                    /home/archive/sys/maple/mapleV14/java/freehep-graphics2d.jar
+2aaad7901000-2aaad7905000 r-xs 0002a000 00:1c 2639864                    /home/archive/sys/maple/mapleV14/java/freehep-graphicsio.jar
+2aaad7905000-2aaad7908000 r-xs 00010000 00:1c 2639851                    /home/archive/sys/maple/mapleV14/java/freehep-graphicsio-pdf.jar
+2aaad7908000-2aaad790a000 r-xs 0000a000 00:1c 2639854                    /home/archive/sys/maple/mapleV14/java/freehep-graphicsio-ps.jar
+2aaad790a000-2aaad790b000 r-xs 00004000 00:1c 2639852                    /home/archive/sys/maple/mapleV14/java/gluegen-rt.jar
+2aaad790b000-2aaad7916000 r-xs 000f9000 00:1c 2639897                    /home/archive/sys/maple/mapleV14/java/iText-2.1.2u.jar
+2aaad7916000-2aaad7918000 r-xs 00050000 00:1c 2639895                    /home/archive/sys/maple/mapleV14/java/iTextAsian.jar
+2aaad7918000-2aaad791c000 r-xs 00031000 00:1c 2639894                    /home/archive/sys/maple/mapleV14/java/jai_codec.jar
+2aaad791c000-2aaad792f000 r-xs 0016e000 00:1c 2639880                    /home/archive/sys/maple/mapleV14/java/jai_core.jar
+2aaad792f000-2aaad793b000 r-xs 00108000 00:1c 2639888                    /home/archive/sys/maple/mapleV14/java/jogl.jar
+2aaad793b000-2aaad793d000 r-xs 00002000 00:1c 2639881                    /home/archive/sys/maple/mapleV14/java/jopenmaple.jar
+2aaad793d000-2aaad793f000 r-xs 0000b000 00:1c 2639860                    /home/archive/sys/maple/mapleV14/java/jsr173_1.0_api.jar
+2aaad793f000-2aaad7944000 r-xs 00032000 00:1c 2639858                    /home/archive/sys/maple/mapleV14/java/log4j-1.2.3.jar
+2aaad7944000-2aaad794a000 r-xs 00045000 00:1c 2639889                    /home/archive/sys/maple/mapleV14/java/mail.jar
+2aaad794a000-2aaad796d000 r-xs 00275000 00:1c 2639871                    /home/archive/sys/maple/mapleV14/java/mapleclient.jar
+2aaad796d000-2aaad7975000 r-xs 00022000 00:1c 2639876                    /home/archive/sys/maple/mapleV14/java/mapleresource_el.jar
+2aaad7975000-2aaad797d000 r-xs 00018000 00:1c 2639857                    /home/archive/sys/maple/mapleV14/java/mapleresource_en.jar
+2aaad797d000-2aaad7984000 r-xs 0001c000 00:1c 2639869                    /home/archive/sys/maple/mapleV14/java/mapleresource_es.jar
+2aaad7984000-2aaad798b000 r-xs 0001c000 00:1c 2639877                    /home/archive/sys/maple/mapleV14/java/mapleresource_fr.jar
+2aaad798b000-2aaad7993000 r-xs 00049000 00:1c 2639891                    /home/archive/sys/maple/mapleV14/java/mapleresource_ja.jar
+2aaad7993000-2aaad7a04000 r-xs 008b9000 00:1c 2639867                    /home/archive/sys/maple/mapleV14/java/mapleresource.jar
+2aaad7a04000-2aaad7a0b000 r-xs 0001d000 00:1c 2639874                    /home/archive/sys/maple/mapleV14/java/mapleresource_ko.jar
+2aaad7a0b000-2aaad7a12000 r-xs 0001c000 00:1c 2639890                    /home/archive/sys/maple/mapleV14/java/mapleresource_pt_BR.jar
+2aaad7a12000-2aaad7a1a000 r-xs 0001c000 00:1c 2639855                    /home/archive/sys/maple/mapleV14/java/mapleresource_zh_CN.jar
+2aaad7a1a000-2aaad7a21000 r-xs 0001d000 00:1c 2639868                    /home/archive/sys/maple/mapleV14/java/mapleresource_zh_TW.jar
+2aaad7a21000-2aaad7a2a000 r-xs 00052000 00:1c 2639885                    /home/archive/sys/maple/mapleV14/java/mapletbuilder.jar
+2aaad7a2a000-2aaad7a36000 r-xs 0006d000 00:1c 2639863                    /home/archive/sys/maple/mapleV14/java/maplets.jar
+2aaad7a36000-2aaad7a95000 r-xs 0034a000 00:1c 2639875                    /home/archive/sys/maple/mapleV14/java/maplewks.jar
+2aaad7a95000-2aaad7ae7000 r-xs 002f5000 00:1c 2639866                    /home/archive/sys/maple/mapleV14/java/mathdoc.jar
+2aaad7ae7000-2aaad7ae9000 r-xs 00005000 00:1c 2639872                    /home/archive/sys/maple/mapleV14/java/mathworksheet.jar
+2aaad7ae9000-2aaad7aeb000 r-xs 0000a000 00:1c 2639865                    /home/archive/sys/maple/mapleV14/java/mathxmltools.jar
+2aaad7aeb000-2aaad7cfb000 r-xs 00b4b000 00:1c 2639873                    /home/archive/sys/maple/mapleV14/java/ooxml-schemas-1.0.jar
+2aaad7cfb000-2aaad7d0d000 r-xs 00080000 00:1c 2639861                    /home/archive/sys/maple/mapleV14/java/pen.jar
+2aaad7d0d000-2aaad7d2c000 r-xs 0015b000 00:1c 2639893                    /home/archive/sys/maple/mapleV14/java/poi-3.5.jar
+2aaad7d2c000-2aaad7d32000 r-xs 0004e000 00:1c 2639856                    /home/archive/sys/maple/mapleV14/java/poi-ooxml-3.5.jar
+2aaad7d32000-2aaad7d33000 r-xs 0001c000 00:1c 2639870                    /home/archive/sys/maple/mapleV14/java/swing-layout-1.0.3.jar
+2aaad7d33000-2aaad7d37000 r-xs 0004f000 00:1c 2639886                    /home/archive/sys/maple/mapleV14/java/update.jar
+2aaad7d37000-2aaad7d87000 r-xs 00401000 00:1c 2639859                    /home/archive/sys/maple/mapleV14/java/wksloader.jar
+2aaad7d87000-2aaad7d88000 r-xs 00004000 00:1c 2639883                    /home/archive/sys/maple/mapleV14/java/WMFWriter.jar
+2aaad7d88000-2aaad7dc5000 r-xs 0024f000 00:1c 2639850                    /home/archive/sys/maple/mapleV14/java/xmlbeans-2.3.0.jar
+2aaad7dc5000-2aaad7e57000 r-xp 00000000 00:1c 2638517                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/libawt.so
+2aaad7e57000-2aaad7f56000 ---p 00092000 00:1c 2638517                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/libawt.so
+2aaad7f56000-2aaad7f6f000 rwxp 00091000 00:1c 2638517                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/libawt.so
+2aaad7f6f000-2aaad7f94000 rwxp 2aaad7f6f000 00:00 0 
+2aaad8000000-2aaad95fb000 rwxp 2aaad8000000 00:00 0 
+2aaad95fb000-2aaadc000000 ---p 2aaad95fb000 00:00 0 
+2aaadc000000-2aaadc042000 r-xp 00000000 00:1c 2638514                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/xawt/libmawt.so
+2aaadc042000-2aaadc141000 ---p 00042000 00:1c 2638514                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/xawt/libmawt.so
+2aaadc141000-2aaadc14c000 rwxp 00041000 00:1c 2638514                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/xawt/libmawt.so
+2aaadc14c000-2aaadc14e000 rwxp 2aaadc14c000 00:00 0 
+2aaadc14e000-2aaadc1cc000 r-xp 00000000 00:1c 2638528                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/libfontmanager.so
+2aaadc1cc000-2aaadc2cb000 ---p 0007e000 00:1c 2638528                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/libfontmanager.so
+2aaadc2cb000-2aaadc2e1000 rwxp 0007d000 00:1c 2638528                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/libfontmanager.so
+2aaadc2e1000-2aaadc2f2000 rwxp 2aaadc2e1000 00:00 0 
+2aaadc2f2000-2aaadc305000 r-xp 00000000 00:1c 2638542                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/libnet.so
+2aaadc305000-2aaadc406000 ---p 00013000 00:1c 2638542                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/libnet.so
+2aaadc406000-2aaadc409000 rwxp 00014000 00:1c 2638542                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/libnet.so
+2aaadc409000-2aaadc410000 r-xp 00000000 00:1c 2638546                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/libnio.so
+2aaadc410000-2aaadc50f000 ---p 00007000 00:1c 2638546                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/libnio.so
+2aaadc50f000-2aaadc511000 rwxp 00006000 00:1c 2638546                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/libnio.so
+2aaadc511000-2aaadc53d000 r-xp 00000000 00:1c 2638503                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/libjpeg.so
+2aaadc53d000-2aaadc63d000 ---p 0002c000 00:1c 2638503                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/libjpeg.so
+2aaadc63d000-2aaadc643000 rwxp 0002c000 00:1c 2638503                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/libjpeg.so
+2aaadc6a5000-2aaadc6ac000 r-xs 00000000 08:01 10911997                   /var/cache/fontconfig/beeeeb3dfe132a8a0633a017c99ce0c0-x86-64.cache-2
+2aaadc6ac000-2aaadc6b7000 r-xs 00000000 08:01 10911864                   /var/cache/fontconfig/e19de935dec46bbf3ed114ee4965548a-x86-64.cache-2
+2aaadc6b7000-2aaadc6ba000 r-xs 00000000 08:01 10911857                   /var/cache/fontconfig/e3ead4b767b8819993a6fa3ae306afa9-x86-64.cache-2
+2aaadc6ba000-2aaadc6c1000 r-xs 00000000 08:01 10911994                   /var/cache/fontconfig/7ddba6133ef499da58de5e8c586d3b75-x86-64.cache-2
+2aaadc6c1000-2aaadc6c5000 r-xs 00000000 08:01 10911993                   /var/cache/fontconfig/b67b32625a2bb51b023d3814a918f351-x86-64.cache-2
+2aaadc6c5000-2aaadc6cd000 r-xs 00000000 08:01 10911865                   /var/cache/fontconfig/b79f3aaa7d385a141ab53ec885cc22a8-x86-64.cache-2
+2aaadc6cd000-2aaadc6cf000 r-xs 00000000 08:01 10911863                   /var/cache/fontconfig/87f5e051180a7a75f16eb6fe7dbd3749-x86-64.cache-2
+2aaadc6cf000-2aaadc6d3000 r-xp 00000000 08:01 2394105                    /lib64/libnss_dns-2.5.so
+2aaadc6d3000-2aaadc8d2000 ---p 00004000 08:01 2394105                    /lib64/libnss_dns-2.5.so
+2aaadc8d2000-2aaadc8d3000 r-xp 00003000 08:01 2394105                    /lib64/libnss_dns-2.5.so
+2aaadc8d3000-2aaadc8d4000 rwxp 00004000 08:01 2394105                    /lib64/libnss_dns-2.5.so
+2aaadc8d4000-2aaadc8ea000 r-xp 00000000 00:1c 2638537                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/libdcpr.so
+2aaadc8ea000-2aaadc9ec000 ---p 00016000 00:1c 2638537                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/libdcpr.so
+2aaadc9ec000-2aaadca04000 rwxp 00018000 00:1c 2638537                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/libdcpr.so
+2aaadca04000-2aaadcc92000 rwxs 00000000 00:09 25493524                   /SYSV00000000 (deleted)
+2aaae0000000-2aaae1918000 rwxp 2aaae0000000 00:00 0 
+2aaae1918000-2aaae4000000 ---p 2aaae1918000 00:00 0 
+2b4dda171000-2b4dda173000 rwxp 2b4dda171000 00:00 0 
+2b4dda19a000-2b4dda19b000 rwxp 2b4dda19a000 00:00 0 
+2b4dda19b000-2b4dda1a2000 r-xp 00000000 00:1c 2638505                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/jli/libjli.so
+2b4dda1a2000-2b4dda2a3000 ---p 00007000 00:1c 2638505                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/jli/libjli.so
+2b4dda2a3000-2b4dda2a5000 rwxp 00008000 00:1c 2638505                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/jli/libjli.so
+2b4dda2a5000-2b4dda2a7000 rwxp 2b4dda2a5000 00:00 0 
+2b4dda2a7000-2b4ddaa5b000 r-xp 00000000 00:1c 2638532                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/server/libjvm.so
+2b4ddaa5b000-2b4ddab5b000 ---p 007b4000 00:1c 2638532                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/server/libjvm.so
+2b4ddab5b000-2b4ddace5000 rwxp 007b4000 00:1c 2638532                    /home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/server/libjvm.so
+2b4ddace5000-2b4ddad1e000 rwxp 2b4ddace5000 00:00 0 
+7fffe47f9000-7fffe4810000 rwxp 7ffffffe7000 00:00 0                      [stack]
+7fffe49f0000-7fffe49f3000 r-xp 7fffe49f0000 00:00 0                      [vdso]
+ffffffffff600000-ffffffffffe00000 ---p 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Xmx512m -Dsun.java2d.pmoffscreen=false -Dmaple.bin.path=/usr/local/sys/maple/mapleV14/bin.X86_64_LINUX 
+java_command: com.maplesoft.worksheet.application.WmiWorksheet -locale en
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+CLASSPATH=.
+PATH=/usr/local/sys/maple/mapleV14/bin.X86_64_LINUX:/usr/local/sys/maple/mapleV14/jre.X86_64_LINUX/bin/:/usr/local/share/bin:/usr/local/bin/X11:/usr/local/bin:/usr/local/netpbm/bin:/usr/local/pbmplus:/usr/X11R6/bin:/usr/bin/X11:/usr/local/plot79:/usr/sbin:/usr/bin:/bin:/sbin:/usr/local/ashare/sys/solstudio12.2/bin:/usr/local/java/bin:/usr/local/etc:/usr/etc:/etc:.:/opt/intel/cce/current/bin:/opt/intel/fce/current/bin:/opt/intel/idbe/current/bin:/opt/pgi/6.2/linux86-64/6.2/bin:/usr/local/ashare/mono/mono/bin:/opt/lsb/bin:/opt/pgi/7.0.2/linux86-64/7.0-2/bin
+LD_LIBRARY_PATH=/home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/server:/home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64:/home/archive/sys/maple/mapleV14/jre.X86_64_LINUX/../lib/amd64:/usr/local/sys/maple/mapleV14/bin.X86_64_LINUX::/usr/local/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64:/usr/local/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/server:/usr/local/sys/maple/mapleV14/jre.X86_64_LINUX/lib/amd64/native_threads:
+SHELL=/usr/local/bin/tcsh
+DISPLAY=:1.0
+HOSTTYPE=x86_64-linux
+OSTYPE=linux
+MACHTYPE=x86_64
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x70f1a0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGBUS: [libjvm.so+0x70f1a0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGFPE: [libjvm.so+0x5d7f70], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGPIPE: [libjvm.so+0x5d7f70], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGXFSZ: [libjvm.so+0x5d7f70], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGILL: [libjvm.so+0x5d7f70], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.so+0x5da790], sa_mask[0]=0x00000000, sa_flags=0x10000004
+SIGHUP: [libjvm.so+0x5da4e0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGINT: [libjvm.so+0x5da4e0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGTERM: [libjvm.so+0x5da4e0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGQUIT: [libjvm.so+0x5da4e0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+
+
+---------------  S Y S T E M  ---------------
+
+OS:Red Hat Enterprise Linux Server release 5.7 (Tikanga)
+
+uname:Linux 2.6.18-274.el5 #1 SMP Fri Jul 8 17:36:59 EDT 2011 x86_64
+libc:glibc 2.5 NPTL 2.5 
+rlimit: STACK 10240k, CORE 512k, NPROC 70144, NOFILE 1024, AS infinity
+load average:0.01 0.05 0.07
+
+CPU:total 4 (2 cores per cpu, 1 threads per core) family 15 model 65 stepping 2, cmov, cx8, fxsr, mmx, sse, sse2, sse3, mmxext, 3dnow, 3dnowext
+
+Memory: 4k page, physical 8245240k(2202308k free), swap 16386292k(14394724k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (16.0-b13) for linux-amd64 JRE (1.6.0_18-b07), built on Dec 17 2009 13:42:22 by "java_re" with gcc 3.2.2 (SuSE Linux)
+
+time: Sun Sep 11 10:34:24 2011
+elapsed time: 4454 seconds
+
